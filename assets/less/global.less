@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
+@import url("https://fonts.googleapis.com/css?family=Lato:400,300,700");
+
+// Global Style
+// ======================================================================== /
+body {
+    font-family: @font-body;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 25px;
+    color: @color-body;
+    background-color: @w;
+    vertical-align: baseline;
+    outline: 0;
+    -webkit-font-smoothing: antialiased!important;
+    -webkit-text-size-adjust: 100%!important
+}
+
+::selection{
+    background-color: @color-selection;
+    color: @color-link;
+}
+
+a {
+    color: @color-link;
+    transition: all 0.3s ease 0s;
+
+    &:hover, &:active, &:focus {
+        color: @color-link-hover;
+        text-decoration: none;
+    }
+}
+
+// ======================================================================== /
+// Global Class
+// ======================================================================== /
+.fixed {
+    position: fixed;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder {
+  color: pink;
+}
+
+
+// Form
+// ======================================================================== /
+// Table for select categories of item
+table.catselect {
+	input#new_category_name {
+		width: 98% !important;
+	}
+}
+
+// Form elements on item edit page
+label.control-label[for=post_title] {
+	width: auto;
+}
+
+// A form to create a new message/thread
+textarea.message_text {
+	width: 95%;
+}
+
+
+// Sitewide Header
+// ======================================================================== /
+.sitewide_header {
+    box-shadow: none !important;
+}

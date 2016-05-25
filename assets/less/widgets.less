@@ -1,0 +1,59 @@
+// ======================================================================== /
+// Widget Style
+// ======================================================================== /
+
+// --------- Universal item list widget & Recent posts widget ---------
+@import "../../rsc/less/_universal_item_list_widget.module.less";
+// --------------------------------------------------------------------
+
+// ------------------- Media Index widget --------------------
+@import "../../rsc/less/_coll_media_index_widget.module.less";
+// -----------------------------------------------------------
+
+// ----------- User Avatars (User List) widget ------------
+@import "../../rsc/less/_user_avatars_widget.module.less";
+// --------------------------------------------------------
+
+// ------------- Organization Members widget -------------
+@import "../../rsc/less/_org_members_widget.module.less";
+	// Override constants used in the module:
+	@widget_core_org_members-color: #333;
+	@widget_core_org_members-user-link-color: #000;
+	@widget_core_org_members-user-link-hover-color: #23527c;
+
+
+// Search WIdget Style
+// ======================================================================== /
+// A search button
+input.search_field {
+	margin-bottom: 0;
+	display: inline-block;
+}
+form.search .search_options {
+	width: 100%;
+	.search_option input {
+		margin-right: 5px;
+	}
+	.search_option label {
+		margin-bottom: 0;
+		margin-top: 5px;
+	}
+}
+div.compact_search_form {
+	input.search_field {
+		width: 100%;
+		margin: 0;
+	}
+}
+div.extended_search_form {
+	text-align: center;
+	margin: 0 auto 2em auto;
+	max-width: 530px;
+	.search_options {
+		text-align: center;
+		.search_option {
+			display: inline-block;
+			margin-right: 10px;
+		}
+	}
+}
