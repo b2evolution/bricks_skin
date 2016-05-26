@@ -1,0 +1,97 @@
+// ======================================================================== /
+// FOOTER STYLE
+// ======================================================================== /
+#footer {
+    padding: 80px 0 60px;
+    border-top: 2px solid @e;
+
+    // FOOTER WIDGETS
+    // ======================================================================== /
+    .footer_widgets {
+
+    }
+
+    // FOOTER BOTTOM
+    // ======================================================================== /
+    .footer_bottom {
+        border-top: 1px solid @e;
+        margin-top: 20px;
+        padding-top: 10px;
+
+        // SOCIAL ICON
+        // ======================================================================== /
+        .social_icon {
+            position: relative;
+            display: block;
+            float: right;
+
+            .ufld_icon_links {
+
+                a {
+                    background-color: transparent;
+                    color: @color-link;
+                    width: 36px;
+                    transition: color 0.32s ease;
+
+                    &:hover, &:active, &:focus {
+                        &.ufld_twitter {
+                            color: @twitter;
+                        }
+                        &.ufld_facebook {
+                            color: @facebook;
+                        }
+                        &.ufld_googleplus {
+                            color: @googleplus;
+                        }
+                        &.ufld_linkedin {
+                            color: @linkedin;
+                        }
+                        &.ufld_github {
+                            color: @github;
+                        }
+                    }
+
+
+                    .fa {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        // COPYRIGHT
+        // ======================================================================== /
+        .copyright {
+            float: left;
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            line-height: 45px;
+            text-transform: uppercase;
+            margin-bottom: 0;
+        }
+
+        @media screen and ( max-width: @screen-sm ) {
+            .social_icon,
+            .copyright {
+                float: none;
+                text-align: center;
+            }
+        }
+    }
+
+}
+
+
+// SITEWIDE FOOTER
+// ======================================================================== /
+.sitewide_footer {
+    border-top: 0 !important;
+    box-shadow: none !important;
+    background-color: @e !important;
+    color: @b !important;
+
+    a {
+        color: @color-link !important;
+    }
+}

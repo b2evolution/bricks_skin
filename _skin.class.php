@@ -82,203 +82,237 @@ class bricks_Skin extends Skin
 	function get_param_definitions( $params )
 	{
 		$r = array_merge( array(
-				'section_layout_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Layout Settings')
+
+			/* LAYOUT OPTIONS
+			 * ========================================================================== */
+			'section_layout_start' => array(
+				'layout' => 'begin_fieldset',
+				'label'  => T_('Layout Settings')
+			),
+				'layout' => array(
+					'label' => T_('Layout'),
+					'note' => '',
+					'defaultvalue' => 'right_sidebar',
+					'options' => array(
+						'single_column'              => T_('Single Column Large'),
+						'single_column_normal'       => T_('Single Column'),
+						'single_column_narrow'       => T_('Single Column Narrow'),
+						'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
+						'left_sidebar'               => T_('Left Sidebar'),
+						'right_sidebar'              => T_('Right Sidebar'),
+					),
+					'type' => 'select',
 				),
-					'layout' => array(
-						'label' => T_('Layout'),
-						'note' => '',
-						'defaultvalue' => 'right_sidebar',
-						'options' => array(
-								'single_column'              => T_('Single Column Large'),
-								'single_column_normal'       => T_('Single Column'),
-								'single_column_narrow'       => T_('Single Column Narrow'),
-								'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
-								'left_sidebar'               => T_('Left Sidebar'),
-								'right_sidebar'              => T_('Right Sidebar'),
-							),
-						'type' => 'select',
-					),
-					'max_image_height' => array(
-						'label' => T_('Max image height'),
-						'note' => 'px',
-						'defaultvalue' => '',
-						'type' => 'integer',
-						'allow_empty' => true,
-					),
-					'font_size' => array(
-						'label' => T_('Font size'),
-						'note' => '',
-						'defaultvalue' => 'default',
-						'options' => array(
-								'default'        => T_('Default (14px)'),
-								'standard'       => T_('Standard (16px)'),
-								'medium'         => T_('Medium (18px)'),
-								'large'          => T_('Large (20px)'),
-								'very_large'     => T_('Very large (22px)'),
-							),
-						'type' => 'select',
-					),
-				'section_layout_end' => array(
-					'layout' => 'end_fieldset',
+				'max_image_height' => array(
+					'label' => T_('Max image height'),
+					'note' => 'px',
+					'defaultvalue' => '',
+					'type' => 'integer',
+					'allow_empty' => true,
 				),
+				'font_size' => array(
+					'label' => T_('Font size'),
+					'note' => '',
+					'defaultvalue' => 'default',
+					'options' => array(
+						'default'        => T_('Default (14px)'),
+						'standard'       => T_('Standard (16px)'),
+						'medium'         => T_('Medium (18px)'),
+						'large'          => T_('Large (20px)'),
+						'very_large'     => T_('Very large (22px)'),
+					),
+					'type' => 'select',
+				),
+			'section_layout_end' => array(
+				'layout' => 'end_fieldset',
+			),
+
+			/* CUSTOM OPTIONS
+			 * ========================================================================== */
+			'section_color_start' => array(
+				'layout' => 'begin_fieldset',
+				'label'  => T_('Custom Settings')
+			),
+				'page_bg_color' => array(
+					'label' => T_('Background color'),
+					'note' => T_('E-g: #ff0000 for red'),
+					'defaultvalue' => '#fff',
+					'type' => 'color',
+				),
+				'page_text_color' => array(
+					'label' => T_('Text color'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#333',
+					'type' => 'color',
+				),
+				'page_link_color' => array(
+					'label' => T_('Link color'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#337ab7',
+					'type' => 'color',
+				),
+				'page_hover_link_color' => array(
+					'label' => T_('Hover link color'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#23527c',
+					'type' => 'color',
+				),
+				'bgimg_text_color' => array(
+					'label' => T_('Text color on background image'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#fff',
+					'type' => 'color',
+				),
+				'bgimg_link_color' => array(
+					'label' => T_('Link color on background image'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#6cb2ef',
+					'type' => 'color',
+				),
+				'bgimg_hover_link_color' => array(
+					'label' => T_('Hover link color on background image'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#6cb2ef',
+					'type' => 'color',
+				),
+				'current_tab_text_color' => array(
+					'label' => T_('Current tab text color'),
+					'note' => T_('E-g: #00ff00 for green'),
+					'defaultvalue' => '#333',
+					'type' => 'color',
+				),
+			'section_color_end' => array(
+				'layout' => 'end_fieldset',
+			),
+
+			/* NAVIGATION OPTIONS
+			 * ========================================================================== */
+			 'section_nav_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Navigation Options' ),
+			 ),
+			 	'nav_sticky' => array(
+					'label'			=> T_( 'Sticky Top Menu' ),
+					'note'			=> T_( 'Checklist to enabling sticky navigation.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+			 'section_nav_end' => array(
+				 'layout'	=> 'end_fieldset',
+			 ),
+
+			/* MAIN HEADER OPTIONS
+			* ========================================================================== */
+			'section_header_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Main Header Options' ),
+			),
+			'section_header_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
 
 
-				'section_color_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Custom Settings')
+			/* COLOR IMAGE ZOOM OPTIONS
+			 * ========================================================================== */
+			'section_colorbox_start' => array(
+				'layout' => 'begin_fieldset',
+				'label'  => T_('Colorbox Image Zoom')
+			),
+				'colorbox' => array(
+					'label' => T_('Colorbox Image Zoom'),
+					'note' => T_('Check to enable javascript zooming on images (using the colorbox script)'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
 				),
-					'page_bg_color' => array(
-						'label' => T_('Background color'),
-						'note' => T_('E-g: #ff0000 for red'),
-						'defaultvalue' => '#fff',
-						'type' => 'color',
-					),
-					'page_text_color' => array(
-						'label' => T_('Text color'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#333',
-						'type' => 'color',
-					),
-					'page_link_color' => array(
-						'label' => T_('Link color'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#337ab7',
-						'type' => 'color',
-					),
-					'page_hover_link_color' => array(
-						'label' => T_('Hover link color'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#23527c',
-						'type' => 'color',
-					),
-					'bgimg_text_color' => array(
-						'label' => T_('Text color on background image'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#fff',
-						'type' => 'color',
-					),
-					'bgimg_link_color' => array(
-						'label' => T_('Link color on background image'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#6cb2ef',
-						'type' => 'color',
-					),
-					'bgimg_hover_link_color' => array(
-						'label' => T_('Hover link color on background image'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#6cb2ef',
-						'type' => 'color',
-					),
-					'current_tab_text_color' => array(
-						'label' => T_('Current tab text color'),
-						'note' => T_('E-g: #00ff00 for green'),
-						'defaultvalue' => '#333',
-						'type' => 'color',
-					),
-				'section_color_end' => array(
-					'layout' => 'end_fieldset',
+				'colorbox_vote_post' => array(
+					'label' => T_('Voting on Post Images'),
+					'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
 				),
+				'colorbox_vote_post_numbers' => array(
+					'label' => T_('Display Votes'),
+					'note' => T_('Check to display number of likes and dislikes'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
+				),
+				'colorbox_vote_comment' => array(
+					'label' => T_('Voting on Comment Images'),
+					'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
+				),
+				'colorbox_vote_comment_numbers' => array(
+					'label' => T_('Display Votes'),
+					'note' => T_('Check to display number of likes and dislikes'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
+				),
+				'colorbox_vote_user' => array(
+					'label' => T_('Voting on User Images'),
+					'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
+				),
+				'colorbox_vote_user_numbers' => array(
+					'label' => T_('Display Votes'),
+					'note' => T_('Check to display number of likes and dislikes'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
+				),
+			'section_colorbox_end' => array(
+				'layout' => 'end_fieldset',
+			),
 
+			/* USERNAME OPTIONS
+			 * ========================================================================== */
+			'section_username_start' => array(
+				'layout' => 'begin_fieldset',
+				'label'  => T_('Username options')
+			),
+				'gender_colored' => array(
+					'label' => T_('Display gender'),
+					'note' => T_('Use colored usernames to differentiate men & women.'),
+					'defaultvalue' => 0,
+					'type' => 'checkbox',
+				),
+				'bubbletip' => array(
+					'label' => T_('Username bubble tips'),
+					'note' => T_('Check to enable bubble tips on usernames'),
+					'defaultvalue' => 0,
+					'type' => 'checkbox',
+				),
+				'autocomplete_usernames' => array(
+					'label' => T_('Autocomplete usernames'),
+					'note' => T_('Check to enable auto-completion of usernames entered after a "@" sign in the comment forms'),
+					'defaultvalue' => 1,
+					'type' => 'checkbox',
+				),
+			'section_username_end' => array(
+				'layout' => 'end_fieldset',
+			),
 
-				'section_colorbox_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Colorbox Image Zoom')
-				),
-					'colorbox' => array(
-						'label' => T_('Colorbox Image Zoom'),
-						'note' => T_('Check to enable javascript zooming on images (using the colorbox script)'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
+			/* ACCESS DENID OPTIONS
+			 * ========================================================================== */
+			'section_access_start' => array(
+				'layout' => 'begin_fieldset',
+				'label'  => T_('When access is denied or requires login...')
+			),
+				'access_login_containers' => array(
+					'label' => T_('Display on login screen'),
+					'note' => '',
+					'type' => 'checklist',
+					'options' => array(
+						array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
+						array( 'page_top', sprintf( T_('"%s" container'), NT_('Page Top') ),  1 ),
+						array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      0 ),
+						array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),   0 ),
+						array( 'sidebar2', sprintf( T_('"%s" container'), NT_('Sidebar 2') ), 0 ),
+						array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    1 ) ),
 					),
-					'colorbox_vote_post' => array(
-						'label' => T_('Voting on Post Images'),
-						'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-					'colorbox_vote_post_numbers' => array(
-						'label' => T_('Display Votes'),
-						'note' => T_('Check to display number of likes and dislikes'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-					'colorbox_vote_comment' => array(
-						'label' => T_('Voting on Comment Images'),
-						'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-					'colorbox_vote_comment_numbers' => array(
-						'label' => T_('Display Votes'),
-						'note' => T_('Check to display number of likes and dislikes'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-					'colorbox_vote_user' => array(
-						'label' => T_('Voting on User Images'),
-						'note' => T_('Check this to enable AJAX voting buttons in the colorbox zoom view'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-					'colorbox_vote_user_numbers' => array(
-						'label' => T_('Display Votes'),
-						'note' => T_('Check to display number of likes and dislikes'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-				'section_colorbox_end' => array(
-					'layout' => 'end_fieldset',
-				),
-
-
-				'section_username_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('Username options')
-				),
-					'gender_colored' => array(
-						'label' => T_('Display gender'),
-						'note' => T_('Use colored usernames to differentiate men & women.'),
-						'defaultvalue' => 0,
-						'type' => 'checkbox',
-					),
-					'bubbletip' => array(
-						'label' => T_('Username bubble tips'),
-						'note' => T_('Check to enable bubble tips on usernames'),
-						'defaultvalue' => 0,
-						'type' => 'checkbox',
-					),
-					'autocomplete_usernames' => array(
-						'label' => T_('Autocomplete usernames'),
-						'note' => T_('Check to enable auto-completion of usernames entered after a "@" sign in the comment forms'),
-						'defaultvalue' => 1,
-						'type' => 'checkbox',
-					),
-				'section_username_end' => array(
-					'layout' => 'end_fieldset',
-				),
-
-
-				'section_access_start' => array(
-					'layout' => 'begin_fieldset',
-					'label'  => T_('When access is denied or requires login...')
-				),
-					'access_login_containers' => array(
-						'label' => T_('Display on login screen'),
-						'note' => '',
-						'type' => 'checklist',
-						'options' => array(
-							array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
-							array( 'page_top', sprintf( T_('"%s" container'), NT_('Page Top') ),  1 ),
-							array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      0 ),
-							array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),   0 ),
-							array( 'sidebar2', sprintf( T_('"%s" container'), NT_('Sidebar 2') ), 0 ),
-							array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    1 ) ),
-						),
-				'section_access_end' => array(
-					'layout' => 'end_fieldset',
-				),
+			'section_access_end' => array(
+				'layout' => 'end_fieldset',
+			),
 
 			), parent::get_param_definitions( $params ) );
 
@@ -310,6 +344,32 @@ class bricks_Skin extends Skin
 
 		// Required Scripts
 		require_js( $this->get_url().'assets/scripts/scripts.js' );
+
+		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
+			add_js_headline("
+			jQuery( document ).ready( function(event){
+				var sticky = function() {
+			        // var num = 68; //number of pixels before modifying styles
+			        var num = 68;
+
+			        if( $(window).width() > 1024 ) {
+			            $(window).bind('scroll', function () {
+			                if ($(window).scrollTop() > num) {
+			                    $('#nav').addClass('fixed');
+			                    $('.nav_fixed').addClass( 'static' );
+			                } else {
+			                    $('#nav').removeClass('fixed');
+			                    $('.nav_fixed').removeClass( 'static' );
+			                }
+			            });
+			        }
+
+			    }
+
+				sticky();	
+			});
+			");
+		}
 
 		// Skin specific initializations:
 		global $media_url, $media_path;

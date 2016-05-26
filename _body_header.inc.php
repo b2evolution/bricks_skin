@@ -10,6 +10,9 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
+
+global $baseurl, $skin_url;
+
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
 siteskin_include( '_site_body_header.inc.php' );
@@ -25,7 +28,20 @@ siteskin_include( '_site_body_header.inc.php' );
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Brand</a>
+            <!-- <?php
+                skin_widget( array(
+                    // CODE for the widget:
+    				'widget'              => 'coll_title',
+                    'block_start'         => '<div class="navbar-brand">',
+                    'block_end'           => '</div>',
+                    'block_title_start'   => '<h3>',
+                    'block_title_end'     => '</h3>',
+                    // 'item_class'          => 'navbar-brand',
+                ) );
+            ?> -->
+            <a class="navbar-brand-img" href="<?php echo $baseurl; ?>">
+                <img src="<?php echo $skin_url.'logo.png'; ?>" />
+            </a>
         </div>
         <nav id="nav_tabs" class="nav_tabs collapse navbar-collapse">
     		<ul class="main_nav">
@@ -51,6 +67,7 @@ siteskin_include( '_site_body_header.inc.php' );
     		?>
     		</ul>
         </nav>
+
         <div class="search_icon">
             <a href="#cd_search" class="search_tringger">
                 <span></span>
@@ -70,49 +87,49 @@ siteskin_include( '_site_body_header.inc.php' );
                 ) );
             ?>
         </div>
+
     </div><!-- .container-fluid -->
-</header>
-<div class="nav_fixed"></div>
+</header><!-- #nav -->
 
 <header id="main_header">
     <div class="container">
         <div class="row">
-            <div class="coll-xs-12 coll-sm-12 col-md-4 col-md-push-8">
-                <div class="evo_container evo_container__page_top">
-                <?php
-                    // ------------------------- "Page Top" CONTAINER EMBEDDED HERE --------------------------
-                    // Display container and contents:
-                    skin_container( NT_('Page Top'), array(
-                            // The following params will be used as defaults for widgets included in this container:
-                            'block_start'         => '<div class="evo_widget $wi_class$">',
-                            'block_end'           => '</div>',
-                            'block_display_title' => false,
-                            'list_start'          => '<ul>',
-                            'list_end'            => '</ul>',
-                            'item_start'          => '<li>',
-                            'item_end'            => '</li>',
-                        ) );
-                    // ----------------------------- END OF "Page Top" CONTAINER -----------------------------
-                ?>
-                </div>
-            </div><!-- .col -->
-
-            <div class="coll-xs-12 col-sm-12 col-md-8 col-md-pull-4">
-                <div class="evo_container evo_container__header">
+            <div class="col-xs-12 col-sm-12 col-md-6">
+                <div class="site_brand">
                 <?php
                     // ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
                     // Display container and contents:
                     skin_container( NT_('Header'), array(
-                            // The following params will be used as defaults for widgets included in this container:
-                            'block_start'       => '<div class="evo_widget $wi_class$">',
-                            'block_end'         => '</div>',
-                            'block_title_start' => '<h1>',
-                            'block_title_end'   => '</h1>',
-                        ) );
+                        // The following params will be used as defaults for widgets included in this container:
+                        'block_start'       => '<div class="evo_widget $wi_class$">',
+                        'block_end'         => '</div>',
+                        'block_title_start' => '<h1>',
+                        'block_title_end'   => '</h1>',
+                    ) );
                     // ----------------------------- END OF "Header" CONTAINER -----------------------------
                 ?>
                 </div>
             </div><!-- .col -->
-        </div>
-    </div>
-</header>
+
+            <div class="col-xs-12 coll-sm-12 col-md-6">
+                <div class="bc_content">
+                <?php
+                    // ------------------------- "Breadcrumbs" CONTAINER EMBEDDED HERE --------------------------
+                    // Breadcrumbs
+                    skin_widget( array(
+                		// CODE for the widget:
+                		'widget'           => 'breadcrumb_path',
+                		// Optional display params
+                		'block_start'      => '<ul class="breadcrumb">',
+                		'block_end'        => '</ul><div class="clear"></div>',
+                		'separator'        => '',
+                		'item_mask'        => '<li><a href="$url$">$title$</a></li>',
+                		'item_active_mask' => '<li class="active">$title$</li>',
+                	) );
+                    // ----------------------------- END OF "Page Top" CONTAINER -----------------------------
+                ?>
+                </div>
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+</header><!-- #main_header -->
