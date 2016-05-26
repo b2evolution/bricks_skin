@@ -142,19 +142,19 @@ class bricks_Skin extends Skin
 				'page_text_color' => array(
 					'label' => T_('Text color'),
 					'note' => T_('E-g: #00ff00 for green'),
-					'defaultvalue' => '#333',
+					'defaultvalue' => '#7e8082',
 					'type' => 'color',
 				),
 				'page_link_color' => array(
 					'label' => T_('Link color'),
 					'note' => T_('E-g: #00ff00 for green'),
-					'defaultvalue' => '#337ab7',
+					'defaultvalue' => '#4b4e53',
 					'type' => 'color',
 				),
 				'page_hover_link_color' => array(
 					'label' => T_('Hover link color'),
 					'note' => T_('E-g: #00ff00 for green'),
-					'defaultvalue' => '#23527c',
+					'defaultvalue' => '#101010',
 					'type' => 'color',
 				),
 				'bgimg_text_color' => array(
@@ -366,7 +366,7 @@ class bricks_Skin extends Skin
 
 			    }
 
-				sticky();	
+				sticky();
 			});
 			");
 		}

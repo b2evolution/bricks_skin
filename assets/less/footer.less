@@ -2,13 +2,58 @@
 // FOOTER STYLE
 // ======================================================================== /
 #footer {
-    padding: 80px 0 60px;
+    padding: 80px 0 50px;
     border-top: 2px solid @e;
+
+    @media screen and ( max-width: @screen-sm ) {
+        padding: 60px 0 40px;
+    }
+
+    @media screen and ( max-width: @screen-xs ) {
+        padding: 40px 0 25px;
+    }
 
     // FOOTER WIDGETS
     // ======================================================================== /
     .footer_widgets {
+        padding-bottom: 25px;
 
+        .widget_title {
+            margin-top: 0;
+            margin-bottom: 25px;
+            font-family: @font-heading;
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: @b;
+        }
+
+        .evo_widget {
+
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+
+                li {
+                    padding: 6px 0;
+                }
+
+                a {
+                    font-size: 13px;
+                    line-height: 1.2 !important;
+                    text-transform: uppercase;
+                    color: @color-body;
+
+                    &:hover, &:active, &:focus {
+                        color: @color-link-hover2;
+                        background-color: transparent;
+                    }
+                }
+            }
+
+        }
     }
 
     // FOOTER BOTTOM
@@ -18,7 +63,7 @@
         margin-top: 20px;
         padding-top: 10px;
 
-        // SOCIAL ICON
+        // SOCIAL ICONS
         // ======================================================================== /
         .social_icon {
             position: relative;
@@ -49,11 +94,31 @@
                         &.ufld_github {
                             color: @github;
                         }
+                        &.ufld_yahooim {
+                            color: @yahoo;
+                        }
+                        &.ufld_skype {
+                            color: @skype;
+                        }
+                        &.ufld_flickr {
+                            color: @flickr;
+                        }
+                        &.ufld_youtube {
+                            color: @youtube;
+                        }
+                        &.ufld_digg {
+                            color: @digg;
+                        }
+                        &.ufld_stumbleupon {
+                            color: @stumbleupon;
+                        }
+                        &.ufld_pinterest {
+                            color: @pinterest;
+                        }
                     }
 
-
                     .fa {
-                        font-size: 16px;
+                        font-size: 15px;
                     }
                 }
             }
@@ -69,6 +134,10 @@
             line-height: 45px;
             text-transform: uppercase;
             margin-bottom: 0;
+
+            .contact_link {
+                text-decoration: none;
+            }
         }
 
         @media screen and ( max-width: @screen-sm ) {
@@ -76,6 +145,11 @@
             .copyright {
                 float: none;
                 text-align: center;
+            }
+
+            .copyright {
+                font-size: 11px;
+                line-height: 1.6;
             }
         }
     }

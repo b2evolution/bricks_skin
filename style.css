@@ -4,7 +4,7 @@ body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 25px;
+  line-height: 1.6;
   color: #7e8082;
   background-color: #ffffff;
   vertical-align: baseline;
@@ -1283,8 +1283,51 @@ div.extended_search_form .search_options .search_option {
   margin-right: 10px;
 }
 #footer {
-  padding: 80px 0 60px;
+  padding: 80px 0 50px;
   border-top: 2px solid #eeeeee;
+}
+@media screen and (max-width: 768px) {
+  #footer {
+    padding: 60px 0 40px;
+  }
+}
+@media screen and (max-width: 480px) {
+  #footer {
+    padding: 40px 0 25px;
+  }
+}
+#footer .footer_widgets {
+  padding-bottom: 25px;
+}
+#footer .footer_widgets .widget_title {
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #333333;
+}
+#footer .footer_widgets .evo_widget ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#footer .footer_widgets .evo_widget ul li {
+  padding: 6px 0;
+}
+#footer .footer_widgets .evo_widget ul a {
+  font-size: 13px;
+  line-height: 1.2 !important;
+  text-transform: uppercase;
+  color: #7e8082;
+}
+#footer .footer_widgets .evo_widget ul a:hover,
+#footer .footer_widgets .evo_widget ul a:active,
+#footer .footer_widgets .evo_widget ul a:focus {
+  color: #101010;
+  background-color: transparent;
 }
 #footer .footer_bottom {
   border-top: 1px solid #eeeeee;
@@ -1328,8 +1371,43 @@ div.extended_search_form .search_options .search_option {
 #footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_github {
   color: #333333;
 }
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_yahooim,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_yahooim,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_yahooim {
+  color: #7b0099;
+}
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_skype,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_skype,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_skype {
+  color: #00aff0;
+}
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_flickr,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_flickr,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_flickr {
+  color: #ff0084;
+}
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_youtube,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_youtube,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_youtube {
+  color: #bb0000;
+}
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_digg,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_digg,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_digg {
+  color: #356aa0;
+}
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_stumbleupon,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_stumbleupon,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_stumbleupon {
+  color: #eb4924;
+}
+#footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_pinterest,
+#footer .footer_bottom .social_icon .ufld_icon_links a:active.ufld_pinterest,
+#footer .footer_bottom .social_icon .ufld_icon_links a:focus.ufld_pinterest {
+  color: #cb2027;
+}
 #footer .footer_bottom .social_icon .ufld_icon_links a .fa {
-  font-size: 16px;
+  font-size: 15px;
 }
 #footer .footer_bottom .copyright {
   float: left;
@@ -1340,11 +1418,18 @@ div.extended_search_form .search_options .search_option {
   text-transform: uppercase;
   margin-bottom: 0;
 }
+#footer .footer_bottom .copyright .contact_link {
+  text-decoration: none;
+}
 @media screen and (max-width: 768px) {
   #footer .footer_bottom .social_icon,
   #footer .footer_bottom .copyright {
     float: none;
     text-align: center;
+  }
+  #footer .footer_bottom .copyright {
+    font-size: 11px;
+    line-height: 1.6;
   }
 }
 .sitewide_footer {

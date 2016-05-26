@@ -22,14 +22,19 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 					// The following params will be used as defaults for widgets included in this container:
 					'block_start'       => '<div class="evo_widget $wi_class$ col-md-3">',
 					'block_end'         => '</div>',
+                    'block_title_start' => '<h3 class="widget_title">',
+                    'block_title_end'   => '</h3>',
+                    'item_start'        => '<li class="evo_widget $wi_class$">',
+					'item_end'          => '</li>',
+                    // 'author_link_text'  => $params['author_link_text']
 				) );
     			// Note: Double quotes have been used around "Footer" only for test purposes.
     		?>
             <div class="clearfix"></div>
         </div>
+        <!-- .footer_widgets -->
 
         <div class="footer_bottom">
-
             <?php
                 /* SOCIAL ICON
                  * ========================================================================== */
@@ -40,10 +45,6 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
                     'block_start'         => '<div class="social_icon">',
                     'block_end'           => '</div>',
                     'block_display_title' => false,
-					'item_start'          => '<ul>',
-					'item_end'            => '</ul>',
-                    'list_start'          => '',
-					'list_end'            => '',
                 ));
             ?>
 
@@ -85,9 +86,9 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 					) );
     			?>
     		</p>
-    	</div><!-- .col -->
+    	</div><!-- .footer_bottom -->
     </div><!-- .container -->
-</footer><!-- .row -->
+</footer><!-- #footer -->
 
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
