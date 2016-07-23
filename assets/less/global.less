@@ -1,8 +1,16 @@
+// ======================================================================== /
+// FONT ICLUDE
+// ======================================================================== /
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,300,700");
 
-// Global Style
+// GLOBAL STYLE
 // ======================================================================== /
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
 body {
     font-family: @font-body;
     font-size: 14px;
@@ -12,8 +20,12 @@ body {
     background-color: @w;
     vertical-align: baseline;
     outline: 0;
+
+    // Text Smooting
     -webkit-font-smoothing: antialiased!important;
-    -webkit-text-size-adjust: 100%!important
+    -webkit-text-size-adjust: 100% !important;
+    text-rendering: optimizelegibility !important;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 ::selection{
@@ -31,8 +43,9 @@ a {
     }
 }
 
+
 // ======================================================================== /
-// Global Class
+// GLOBAL CLASS
 // ======================================================================== /
 .fixed {
     position: fixed;
@@ -46,7 +59,34 @@ a {
 }
 
 
-// Form
+// COLOMNS DECLARATION
+// ======================================================================== /
+.one_column{
+    width: @1-column;
+    max-width: @1-column;
+}
+
+.two_columns {
+    width: @2-columns;
+    max-width: @2-columns;
+    // float: left;
+}
+
+.three_columns {
+    width: @3-columns;
+    // max-width: @3-columns;
+    float: left;
+}
+
+.four_columns {
+    width: @4-columns;
+    max-width: @4-columns;
+    // float: left;
+}
+
+
+
+// FORM STYLE
 // ======================================================================== /
 // Table for select categories of item
 table.catselect {
@@ -66,7 +106,7 @@ textarea.message_text {
 }
 
 
-// Sitewide Header
+// SITWIDE HEADER
 // ======================================================================== /
 .sitewide_header {
     box-shadow: none !important;

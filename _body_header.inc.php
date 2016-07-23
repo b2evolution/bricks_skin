@@ -17,9 +17,16 @@ global $baseurl, $skin_url;
 // If site headers are enabled, they will be included here:
 siteskin_include( '_site_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
+
+$header_md = $Skin->change_class( 'header_content_mode' );
+$trans = '';
+if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
+    $trans = 'class="nav_bgt"';
+}
+
 ?>
 
-<header id="nav">
+<header id="nav" <?php echo $trans; ?> >
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_tabs" aria-expanded="false">
@@ -28,7 +35,7 @@ siteskin_include( '_site_body_header.inc.php' );
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!-- <?php
+            <?php
                 skin_widget( array(
                     // CODE for the widget:
     				'widget'              => 'coll_title',
@@ -38,10 +45,10 @@ siteskin_include( '_site_body_header.inc.php' );
                     'block_title_end'     => '</h3>',
                     // 'item_class'          => 'navbar-brand',
                 ) );
-            ?> -->
-            <a class="navbar-brand-img" href="<?php echo $baseurl; ?>">
-                <img src="<?php echo $skin_url.'logo.png'; ?>" />
-            </a>
+            ?>
+            <!-- <a class="navbar-brand-img" href="<?php echo $baseurl; ?>">
+                <img src="<?php echo $skin_url.'logo_white.png'; ?>" />
+            </a> -->
         </div>
         <nav id="nav_tabs" class="nav_tabs collapse navbar-collapse">
     		<ul class="main_nav">
@@ -68,6 +75,7 @@ siteskin_include( '_site_body_header.inc.php' );
     		</ul>
         </nav>
 
+        <?php if( $Skin->get_setting( 'nav_search_icon' ) == 1 ) : ?>
         <div class="search_icon">
             <a href="#cd_search" class="search_tringger">
                 <span></span>
@@ -87,6 +95,7 @@ siteskin_include( '_site_body_header.inc.php' );
                 ) );
             ?>
         </div>
+        <?php endif; ?>
 
     </div><!-- .container-fluid -->
 </header><!-- #nav -->
@@ -94,7 +103,7 @@ siteskin_include( '_site_body_header.inc.php' );
 <header id="main_header">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6">
+            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
                 <div class="site_brand">
                 <?php
                     // ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
@@ -111,7 +120,8 @@ siteskin_include( '_site_body_header.inc.php' );
                 </div>
             </div><!-- .col -->
 
-            <div class="col-xs-12 coll-sm-12 col-md-6">
+            <?php if( $Skin->get_setting('header_breadcrumb') == 1 ) : ?>
+            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
                 <div class="bc_content">
                 <?php
                     // ------------------------- "Breadcrumbs" CONTAINER EMBEDDED HERE --------------------------
@@ -130,6 +140,8 @@ siteskin_include( '_site_body_header.inc.php' );
                 ?>
                 </div>
             </div><!-- .col -->
+            <?php endif; ?>
+
         </div><!-- .row -->
     </div><!-- .container -->
 </header><!-- #main_header -->

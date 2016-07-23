@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,300,700");
+html,
+html a {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
 body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -11,6 +16,8 @@ body {
   outline: 0;
   -webkit-font-smoothing: antialiased!important;
   -webkit-text-size-adjust: 100% !important;
+  text-rendering: optimizelegibility !important;
+  -moz-osx-font-smoothing: grayscale;
 }
 ::-moz-selection {
   background-color: #ffea00;
@@ -39,6 +46,22 @@ a:focus {
 :-ms-input-placeholder,
 :-moz-placeholder {
   color: pink;
+}
+.one_column {
+  width: 100%;
+  max-width: 100%;
+}
+.two_columns {
+  width: 50%;
+  max-width: 50%;
+}
+.three_columns {
+  width: 33.33333333%;
+  float: left;
+}
+.four_columns {
+  width: 25%;
+  max-width: 25%;
 }
 table.catselect input#new_category_name {
   width: 98% !important;
@@ -70,8 +93,8 @@ textarea.message_text {
   }
 }
 #nav .container-fluid {
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 @media screen and (max-width: 1024px) {
   #nav .container-fluid {
@@ -86,16 +109,16 @@ textarea.message_text {
 @media screen and (min-width: 1024px) {
   #nav .navbar-header .navbar-brand {
     padding: 36px 15px 10px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     height: auto;
   }
 }
 #nav .navbar-header .navbar-brand h3 {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-weight: 400;
+  font-size: 24px;
+  font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
-  font-size: 20px;
   text-transform: uppercase;
 }
 #nav .navbar-header .navbar-brand h3 a {
@@ -113,8 +136,8 @@ textarea.message_text {
 }
 @media screen and (min-width: 1024px) {
   #nav .navbar-header .navbar-brand-img {
-    padding: 25px 10px 15px;
-    margin-bottom: 12px;
+    padding: 25px 10px 15px 5px;
+    margin-bottom: 10px;
     height: auto;
   }
 }
@@ -140,7 +163,7 @@ textarea.message_text {
   }
   #nav .navbar-header .navbar-toggle {
     display: block;
-    background-color: #ffffff;
+    background-color: transparent;
     margin-right: 0;
     margin-top: 16px;
     margin-bottom: 12px;
@@ -188,7 +211,7 @@ textarea.message_text {
   text-shadow: none;
   line-height: 20px;
   color: #4b4e53;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 #nav .nav_tabs ul a:hover,
@@ -230,27 +253,28 @@ textarea.message_text {
     margin: 0;
   }
   #nav .nav_tabs ul li.active a {
-    color: #ffffff;
+    color: #ffffff !important;
+    border-color: #555555 !important;
   }
   #nav .nav_tabs ul li.active a:before {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   #nav .nav_tabs ul a {
     position: relative;
     font-size: 13px;
     padding: 13px 5px !important;
     margin-bottom: 0 !important;
-    color: #d3d3d3;
+    color: #d3d3d3 !important;
   }
   #nav .nav_tabs ul a:hover,
   #nav .nav_tabs ul a:active,
   #nav .nav_tabs ul a:focus {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   #nav .nav_tabs ul a:hover:before,
   #nav .nav_tabs ul a:active:before,
   #nav .nav_tabs ul a:focus:before {
-    color: #ffffff;
+    color: #ffffff !important;
   }
   #nav .nav_tabs ul a:before {
     content: "\e753";
@@ -277,7 +301,7 @@ textarea.message_text {
   position: absolute;
   padding: 0;
   top: 25px;
-  right: 30px;
+  right: 25px;
   z-index: 29;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -332,6 +356,7 @@ textarea.message_text {
   height: 2px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  background-color: #4b4e53;
 }
 #nav .search_icon .search_tringger.active:before {
   border-radius: 0;
@@ -343,6 +368,7 @@ textarea.message_text {
 #nav .search_icon .search_tringger.active:after {
   -webkit-transform: rotateZ(-224deg);
   transform: rotateZ(-224deg);
+  background-color: #4b4e53 !important;
 }
 @media screen and (max-width: 480px) {
   #nav .search_icon .search_tringger.active:before,
@@ -386,7 +412,7 @@ textarea.message_text {
   transform: translateZ(0);
 }
 #nav #cd_search .SearchField {
-  height: 90px;
+  height: 92px;
   border: none;
   border-radius: 0;
   font-size: 28px;
@@ -427,6 +453,7 @@ textarea.message_text {
   width: 100%;
   margin-top: 0;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
   -webkit-transition: background 0.3s ease, height 0.4s ease;
   transition: background 0.3s ease, height 0.4s ease;
 }
@@ -436,7 +463,7 @@ textarea.message_text {
     margin-bottom: 10px;
   }
   #nav.fixed .navbar-brand-img {
-    padding: 15px 10px 5px;
+    padding: 15px 10px 5px 5px;
   }
   #nav.fixed .navbar-brand-img img {
     height: 35px;
@@ -452,7 +479,7 @@ textarea.message_text {
     width: 26px;
   }
   #nav.fixed #cd_search .SearchField {
-    height: 60px;
+    height: 66px;
     font-size: 22px;
   }
 }
@@ -529,7 +556,7 @@ textarea.message_text {
 }
 #main_header .site_brand .widget_core_coll_tagline {
   color: #ffffff;
-  opacity: 0.8;
+  opacity: 0.7;
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 3px;
@@ -581,6 +608,31 @@ textarea.message_text {
 #main_header .bc_content .breadcrumb a {
   color: #ffffff;
 }
+#main_header .col-md-12.center .breadcrumb {
+  position: relative;
+  text-align: center;
+  padding-top: 10px;
+}
+#main_header .col-md-12.center .breadcrumb:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  height: 1px;
+  width: 50px;
+  background-color: #ffffff;
+}
+#content {
+  padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  #content {
+    padding: 50px 0;
+  }
+}
 .evo_post {
   margin-bottom: 2em;
 }
@@ -621,194 +673,6 @@ div.bSideItem h4 {
   display: table-cell;
   padding: 20px 0 10px 30px;
   vertical-align: middle;
-}
-.widget_core_user_login #login_form .form-group {
-  margin: 0;
-}
-.widget_core_user_login #login_form label {
-  text-align: left;
-  width: 160px;
-  padding-left: 0;
-}
-.widget_core_user_login #login_form .controls {
-  padding: 0;
-  width: 100%;
-}
-.widget_core_user_login #login_form .form_text_input.form-control {
-  width: 100%;
-}
-.widget_core_user_login .submit {
-  font-size: 12px;
-}
-.widget_core_user_login .field_login_btn .panel {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-.widget_core_user_login .field_login_btn .panel .panel-body {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-}
-.widget_core_user_login .field_login_btn .panel .panel-body #submit_login_form {
-  margin-right: 10px;
-}
-.widget_core_user_login .register_link {
-  display: block;
-  padding-top: 10px;
-}
-.widget_core_user_register #register_form .form-group {
-  margin: 0;
-}
-.widget_core_user_register #register_form label {
-  text-align: left;
-  width: 160px;
-  padding-left: 0;
-}
-.widget_core_user_register #register_form .controls {
-  padding: 0;
-  width: 100%;
-}
-.widget_core_user_register #register_form .form_text_input.form-control {
-  width: 100%;
-}
-.widget_core_user_register .submit {
-  font-size: 12px;
-}
-.widget_core_user_register .field_register_btn .panel {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-}
-.widget_core_user_register .field_register_btn .panel .panel-body {
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-}
-.widget_core_user_register .field_register_btn .panel .panel-body #submit_login_form {
-  margin-right: 10px;
-}
-ul.profile_tabs {
-  margin: 0 2ex 2ex;
-  position: relative;
-  top: 1px;
-}
-.profile_avatar {
-  float: right;
-  padding: 10px;
-  margin-left: 10px;
-}
-.form-horizontal .controls textarea.form-control {
-  width: 100%;
-}
-.skin-form .panel-body .panel {
-  border: none;
-  box-shadow: none;
-}
-.skin-form .panel-body .panel-body {
-  padding: 0;
-}
-.skin-form .fieldset {
-  margin: 0;
-}
-.skin-form .fieldset div.input {
-  margin: 0;
-}
-.skin-form .control-buttons,
-.skin-form div.input {
-  padding: 0;
-  width: 100%;
-  text-align: center;
-}
-.evo_panel__login,
-.evo_panel__lostpass,
-.evo_panel__register,
-.evo_panel__activation {
-  min-width: 290px;
-  margin: 1.5em auto auto;
-}
-.evo_panel__login .panel,
-.evo_panel__lostpass .panel,
-.evo_panel__register .panel,
-.evo_panel__activation .panel {
-  margin: 5px 0;
-}
-.evo_panel__login .panel-body,
-.evo_panel__lostpass .panel-body,
-.evo_panel__register .panel-body,
-.evo_panel__activation .panel-body {
-  padding-top: 20px;
-  padding-bottom: 0;
-}
-.evo_panel__login {
-  max-width: 400px;
-}
-.evo_panel__lostpass {
-  max-width: 480px;
-}
-.evo_panel__lostpass #ffield_x label {
-  display: none;
-}
-.evo_panel__activation {
-  max-width: 530px;
-}
-.evo_panel__activation #activateinfo_form .control-buttons {
-  text-align: left;
-}
-.evo_panel__register {
-  max-width: 580px;
-}
-.evo_panel__register .control-buttons {
-  text-align: left;
-}
-.evo_panel__register.register-disabled {
-  width: 350px;
-}
-.evo_panel__register .form-control#country,
-.evo_panel__register .form-control#u {
-  width: 100%;
-}
-.evo_form__login_links {
-  padding: 0 5px;
-  font-size: 92%;
-}
-.evo_form__login fieldset {
-  margin-bottom: 20px;
-}
-.evo_form__login .controls {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-.evo_form__login .control-buttons {
-  margin-left: 0;
-}
-.evo_form__login input.form-control[type=text],
-.evo_form__login input.form-control[type=password] {
-  width: 100%;
-}
-.evo_form__login .btn {
-  margin-top: 5px;
-}
-#login_form .control-buttons {
-  text-align: left;
-}
-.standard_login_link {
-  text-align: center;
-  margin: 3em 0 1ex 0;
-}
-.form_footer_notes {
-  margin-top: 0;
-}
-div.action_messages,
-div.log_container {
-  margin: 0;
-}
-.evo_comment_title a,
-.pull-right .evo_comment_type {
-  color: #337ab7;
 }
 div.widget_core_coll_item_list.evo_layout_rwd .widget_rwd_content,
 div.widget_core_coll_featured_posts.evo_layout_rwd .widget_rwd_content,
@@ -1059,28 +923,128 @@ div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_content p,
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_content p,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_content p,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_content p,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content p {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content p,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_content p,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_content p,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_content p,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_content p,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_content p,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_content p,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_content p,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_content p,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_content p,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_content p,
+div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt p,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_excerpt p,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_excerpt p,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt p,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_excerpt p,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt p {
   margin: 0;
 }
 div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type,
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type,
+div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type {
   display: inline;
 }
 div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type:after,
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type:after,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type:after,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type:after,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type:after {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_content p:last-of-type:after,
+div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type:after,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt p:last-of-type:after {
   content: '...';
 }
 div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_content blockquote,
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_content blockquote,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_content blockquote,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_content blockquote,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content blockquote {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content blockquote,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_content blockquote,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_content blockquote,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_content blockquote,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_content blockquote,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_content blockquote,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_content blockquote,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_content blockquote,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_content blockquote,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_content blockquote,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_content blockquote,
+div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt blockquote,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_excerpt blockquote,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_excerpt blockquote,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt blockquote,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_excerpt blockquote,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt blockquote {
   display: block;
   margin: 0;
   padding: 5px 15px;
@@ -1089,7 +1053,32 @@ div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_content > a
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_content > a,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_content > a,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_content > a,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content > a {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content > a,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_content > a,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_content > a,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_content > a,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_content > a,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_content > a,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_content > a,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_content > a,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_content > a,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_content > a,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_content > a,
+div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_excerpt > a,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a {
   margin-left: -3px;
   display: inline-block;
   height: 22px;
@@ -1115,7 +1104,32 @@ div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_content > a
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_content > a:hover,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_content > a:hover,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_content > a:hover,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content > a:hover {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_content > a:hover,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_content > a:hover,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_content > a:hover,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_content > a:hover,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_content > a:hover,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_content > a:hover,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_content > a:hover,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_content > a:hover,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_content > a:hover,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_content > a:hover,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_content > a:hover,
+div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser div.item_excerpt > a:hover,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a:hover,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser div.item_excerpt > a:hover,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a:hover,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a:hover,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser div.item_excerpt > a:hover {
   border: 1px solid #adadad;
   color: #333;
   background-color: #e6e6e6;
@@ -1125,7 +1139,17 @@ div.widget_core_coll_item_list.evo_noexcerpt.evo_withteaser.evo_1pic__special ul
 div.widget_core_coll_featured_posts.evo_noexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
 div.widget_core_coll_post_list.evo_noexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
 div.widget_core_coll_page_list.evo_noexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
-div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote {
+div.widget_core_coll_related_post_list.evo_noexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_withteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_item_list.evo_withexcerpt.evo_noteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_featured_posts.evo_withexcerpt.evo_noteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_post_list.evo_withexcerpt.evo_noteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_page_list.evo_withexcerpt.evo_noteaser.evo_1pic__special ul li div.item_content blockquote,
+div.widget_core_coll_related_post_list.evo_withexcerpt.evo_noteaser.evo_1pic__special ul li div.item_content blockquote {
   margin-left: 86px;
 }
 div.widget_core_coll_item_list.evo_1pic__special.evo_noexcerpt.evo_noteaser div.item_title a,
@@ -1282,9 +1306,247 @@ div.extended_search_form .search_options .search_option {
   display: inline-block;
   margin-right: 10px;
 }
+.disp_posts #grid_posts {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+.disp_posts #grid_posts .evo_post_article {
+  padding: 0 15px;
+  margin-bottom: 70px;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_title h2 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 2px;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_info {
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_info .identity_link_username {
+  font-weight: 400;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_info .divider {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link {
+  display: block;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid #eeeeee;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link a,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link a,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link a,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link a {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.widget_core_user_login #login_form .form-group {
+  margin: 0;
+}
+.widget_core_user_login #login_form label {
+  text-align: left;
+  width: 160px;
+  padding-left: 0;
+}
+.widget_core_user_login #login_form .controls {
+  padding: 0;
+  width: 100%;
+}
+.widget_core_user_login #login_form .form_text_input.form-control {
+  width: 100%;
+}
+.widget_core_user_login .submit {
+  font-size: 12px;
+}
+.widget_core_user_login .field_login_btn .panel {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.widget_core_user_login .field_login_btn .panel .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.widget_core_user_login .field_login_btn .panel .panel-body #submit_login_form {
+  margin-right: 10px;
+}
+.widget_core_user_login .register_link {
+  display: block;
+  padding-top: 10px;
+}
+.widget_core_user_register #register_form .form-group {
+  margin: 0;
+}
+.widget_core_user_register #register_form label {
+  text-align: left;
+  width: 160px;
+  padding-left: 0;
+}
+.widget_core_user_register #register_form .controls {
+  padding: 0;
+  width: 100%;
+}
+.widget_core_user_register #register_form .form_text_input.form-control {
+  width: 100%;
+}
+.widget_core_user_register .submit {
+  font-size: 12px;
+}
+.widget_core_user_register .field_register_btn .panel {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.widget_core_user_register .field_register_btn .panel .panel-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+.widget_core_user_register .field_register_btn .panel .panel-body #submit_login_form {
+  margin-right: 10px;
+}
+ul.profile_tabs {
+  margin: 0 2ex 2ex;
+  position: relative;
+  top: 1px;
+}
+.profile_avatar {
+  float: right;
+  padding: 10px;
+  margin-left: 10px;
+}
+.form-horizontal .controls textarea.form-control {
+  width: 100%;
+}
+.skin-form .panel-body .panel {
+  border: none;
+  box-shadow: none;
+}
+.skin-form .panel-body .panel-body {
+  padding: 0;
+}
+.skin-form .fieldset {
+  margin: 0;
+}
+.skin-form .fieldset div.input {
+  margin: 0;
+}
+.skin-form .control-buttons,
+.skin-form div.input {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+.evo_panel__login,
+.evo_panel__lostpass,
+.evo_panel__register,
+.evo_panel__activation {
+  min-width: 290px;
+  margin: 1.5em auto auto;
+}
+.evo_panel__login .panel,
+.evo_panel__lostpass .panel,
+.evo_panel__register .panel,
+.evo_panel__activation .panel {
+  margin: 5px 0;
+}
+.evo_panel__login .panel-body,
+.evo_panel__lostpass .panel-body,
+.evo_panel__register .panel-body,
+.evo_panel__activation .panel-body {
+  padding-top: 20px;
+  padding-bottom: 0;
+}
+.evo_panel__login {
+  max-width: 400px;
+}
+.evo_panel__lostpass {
+  max-width: 480px;
+}
+.evo_panel__lostpass #ffield_x label {
+  display: none;
+}
+.evo_panel__activation {
+  max-width: 530px;
+}
+.evo_panel__activation #activateinfo_form .control-buttons {
+  text-align: left;
+}
+.evo_panel__register {
+  max-width: 580px;
+}
+.evo_panel__register .control-buttons {
+  text-align: left;
+}
+.evo_panel__register.register-disabled {
+  width: 350px;
+}
+.evo_panel__register .form-control#country,
+.evo_panel__register .form-control#u {
+  width: 100%;
+}
+.evo_form__login_links {
+  padding: 0 5px;
+  font-size: 92%;
+}
+.evo_form__login fieldset {
+  margin-bottom: 20px;
+}
+.evo_form__login .controls {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.evo_form__login .control-buttons {
+  margin-left: 0;
+}
+.evo_form__login input.form-control[type=text],
+.evo_form__login input.form-control[type=password] {
+  width: 100%;
+}
+.evo_form__login .btn {
+  margin-top: 5px;
+}
+#login_form .control-buttons {
+  text-align: left;
+}
+.standard_login_link {
+  text-align: center;
+  margin: 3em 0 1ex 0;
+}
+.form_footer_notes {
+  margin-top: 0;
+}
+div.action_messages,
+div.log_container {
+  margin: 0;
+}
+.evo_comment_title a,
+.pull-right .evo_comment_type {
+  color: #337ab7;
+}
 #footer {
-  padding: 80px 0 50px;
-  border-top: 2px solid #eeeeee;
+  padding: 100px 0 40px;
+  border-top: 1px solid #eeeeee;
 }
 @media screen and (max-width: 768px) {
   #footer {
@@ -1296,18 +1558,17 @@ div.extended_search_form .search_options .search_option {
     padding: 40px 0 25px;
   }
 }
-#footer .footer_widgets {
-  padding-bottom: 25px;
-}
 #footer .footer_widgets .widget_title {
   margin-top: 0;
   margin-bottom: 25px;
-  font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
-  letter-spacing: 1px;
+  letter-spacing: normal;
   text-transform: uppercase;
-  color: #333333;
+  color: #4b4e53;
+}
+#footer .footer_widgets .evo_widget {
+  margin-bottom: 30px;
 }
 #footer .footer_widgets .evo_widget ul {
   list-style-type: none;
@@ -1318,9 +1579,8 @@ div.extended_search_form .search_options .search_option {
   padding: 6px 0;
 }
 #footer .footer_widgets .evo_widget ul a {
-  font-size: 13px;
-  line-height: 1.2 !important;
-  text-transform: uppercase;
+  font-weight: 400;
+  line-height: 21px;
   color: #7e8082;
 }
 #footer .footer_widgets .evo_widget ul a:hover,
@@ -1332,7 +1592,14 @@ div.extended_search_form .search_options .search_option {
 #footer .footer_bottom {
   border-top: 1px solid #eeeeee;
   margin-top: 20px;
-  padding-top: 10px;
+  padding-top: 20px;
+}
+#footer .footer_bottom.center {
+  text-align: center;
+}
+#footer .footer_bottom.center .social_icon,
+#footer .footer_bottom.center .copyright {
+  float: none;
 }
 #footer .footer_bottom .social_icon {
   position: relative;
@@ -1411,9 +1678,9 @@ div.extended_search_form .search_options .search_option {
 }
 #footer .footer_bottom .copyright {
   float: left;
-  font-size: 12px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
   line-height: 45px;
   text-transform: uppercase;
   margin-bottom: 0;
@@ -1421,7 +1688,7 @@ div.extended_search_form .search_options .search_option {
 #footer .footer_bottom .copyright .contact_link {
   text-decoration: none;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   #footer .footer_bottom .social_icon,
   #footer .footer_bottom .copyright {
     float: none;
@@ -1430,6 +1697,36 @@ div.extended_search_form .search_options .search_option {
   #footer .footer_bottom .copyright {
     font-size: 11px;
     line-height: 1.6;
+  }
+}
+.cd_top {
+  position: fixed;
+  right: 25px;
+  bottom: 40px;
+  z-index: 800;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+.cd_top .ei,
+.cd_top .fa {
+  font-size: 34px;
+  speak: none;
+}
+.cd_top.cd-is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+.cd_top.cd-is-visible:hover {
+  opacity: 1;
+}
+.cd_top.cd-fade-out {
+  opacity: 0.7;
+}
+@media screen and (max-width: 992px) {
+  .cd_top.cd-fade-out {
+    opacity: 0.9;
   }
 }
 .sitewide_footer {

@@ -2,8 +2,8 @@
 // FOOTER STYLE
 // ======================================================================== /
 #footer {
-    padding: 80px 0 50px;
-    border-top: 2px solid @e;
+    padding: 100px 0 40px;
+    border-top: 1px solid @e;
 
     @media screen and ( max-width: @screen-sm ) {
         padding: 60px 0 40px;
@@ -16,20 +16,20 @@
     // FOOTER WIDGETS
     // ======================================================================== /
     .footer_widgets {
-        padding-bottom: 25px;
 
         .widget_title {
             margin-top: 0;
             margin-bottom: 25px;
-            font-family: @font-heading;
-            font-size: 20px;
+            // font-family: @font-heading;
+            font-size: 18px;
             font-weight: 700;
-            letter-spacing: 1px;
+            letter-spacing: normal;
             text-transform: uppercase;
-            color: @b;
+            color: @color-link;
         }
 
         .evo_widget {
+            margin-bottom: 30px;
 
             ul {
                 list-style-type: none;
@@ -41,9 +41,8 @@
                 }
 
                 a {
-                    font-size: 13px;
-                    line-height: 1.2 !important;
-                    text-transform: uppercase;
+                    font-weight: 400;
+                    line-height: 21px;
                     color: @color-body;
 
                     &:hover, &:active, &:focus {
@@ -61,7 +60,16 @@
     .footer_bottom {
         border-top: 1px solid @e;
         margin-top: 20px;
-        padding-top: 10px;
+        padding-top: 20px;
+
+        &.center {
+            text-align: center;
+
+            .social_icon,
+            .copyright {
+                float: none;
+            }
+        }
 
         // SOCIAL ICONS
         // ======================================================================== /
@@ -128,9 +136,9 @@
         // ======================================================================== /
         .copyright {
             float: left;
-            font-size: 12px;
-            font-weight: 300;
-            letter-spacing: 1px;
+            font-size: 11px;
+            font-weight: 400;
+            letter-spacing: 0.2px;
             line-height: 45px;
             text-transform: uppercase;
             margin-bottom: 0;
@@ -140,7 +148,7 @@
             }
         }
 
-        @media screen and ( max-width: @screen-sm ) {
+        @media screen and ( max-width: @screen-md ) {
             .social_icon,
             .copyright {
                 float: none;
@@ -154,6 +162,43 @@
         }
     }
 
+}
+
+
+// BACK TO TOP
+// ======================================================================== /
+.cd_top {
+    position: fixed;
+    right: 25px;
+    bottom: 40px;
+
+    z-index: 800;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.32s ease-in-out;
+
+    .ei, .fa {
+        font-size: 34px;
+        speak: none;
+    }
+
+    &.cd-is-visible {
+       opacity: 1;
+       visibility: visible;
+
+       &:hover {
+           opacity: 1;
+       }
+   }
+
+
+   &.cd-fade-out {
+       // if the user keeps scrolling down, the button is out of focus and becomes less visible
+       opacity: 0.7;
+       @media screen and ( max-width: @screen-md ){
+           opacity: 0.9;
+       }
+   }
 }
 
 

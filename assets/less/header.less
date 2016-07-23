@@ -20,8 +20,8 @@
     // Container
     // ======================================================================== /
     .container-fluid {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 25px;
+        padding-right: 25px;
 
         @media screen and (max-width: @screen-l){
             padding-left: 0;
@@ -38,16 +38,16 @@
 
             @media screen and ( min-width: @screen-l ){
                 padding: 36px 15px 10px;
-                margin-bottom: 20px;
+                margin-bottom: 16px;
                 height: auto;
             }
 
             h3 {
                 font-family: @font-heading;
-                font-weight: 400;
+                font-size: 24px;
+                font-weight: 700;
                 letter-spacing: 2px;
                 margin: 0;
-                font-size: 20px;
                 text-transform: uppercase;
 
                 a {
@@ -67,8 +67,8 @@
             transition: padding 0.3s ease;
 
             @media screen and ( min-width: @screen-l ){
-                padding: 25px 10px 15px;
-                margin-bottom: 12px;
+                padding: 25px 10px 15px 5px;
+                margin-bottom: 10px;
                 height: auto;
             }
 
@@ -94,7 +94,7 @@
 
             .navbar-toggle {
                 display: block;
-                background-color: @w;
+                background-color: transparent;
                 margin-right: 0;
                 margin-top: 16px;
                 margin-bottom: 12px;
@@ -154,7 +154,7 @@
                 text-shadow: none;
                 line-height: 20px;
                 color: @color-link;
-                letter-spacing: 2px;
+                letter-spacing: 1px;
                 text-transform: uppercase;
 
                 &:hover, &:active, &:focus {
@@ -203,10 +203,11 @@
 
                 li.active{
                     a {
-                        color: @w;
+                        color: @w !important;
+                        border-color: @c-5 !important;
 
                         &:before {
-                            color: @w;
+                            color: @w !important;
                         }
                     }
                 }
@@ -216,13 +217,13 @@
                     font-size: 13px;
                     padding: 13px 5px !important;
                     margin-bottom: 0 !important;
-                    color: @c-d3;
+                    color: @c-d3 !important;
 
                     &:hover, &:active, &:focus{
-                        color: @w;
+                        color: @w !important;
 
                         &:before {
-                            color: @w;
+                            color: @w !important;
                         }
                     }
 
@@ -264,7 +265,7 @@
         position: absolute;
         padding: 0;
         top: 25px;
-        right: 30px;
+        right: 25px;
         z-index: 29;
         transition: all 0.3s ease 0s;
 
@@ -314,6 +315,7 @@
                     width: 30px;
                     height: 2px;
                     transform-style: preserve-3d;
+                    background-color: @color-link;
                 }
 
                 &:before {
@@ -325,6 +327,7 @@
 
                 &:after {
                     transform: rotateZ(-224deg);
+                    background-color: @color-link !important;
                 }
 
                 @media screen and ( max-width: @screen-xs ) {
@@ -375,7 +378,7 @@
         transform: translateZ(0);
 
         .SearchField {
-            height: 90px;
+            height: 92px;
             border: none;
             border-radius: 0;
             font-size: 28px;
@@ -418,6 +421,7 @@
         width: 100%;
         margin-top: 0;
         box-shadow: 0 1px 15px rgba( 0, 0, 0, .15 );
+        background-color: @w;
         transition: background 0.3s ease, height 0.4s ease;
 
         @media screen and ( min-width: @screen-l ) {
@@ -427,7 +431,7 @@
             }
 
             .navbar-brand-img {
-                padding: 15px 10px 5px;
+                padding: 15px 10px 5px 5px;
 
                 img {
                     height: 35px;
@@ -449,7 +453,7 @@
             // ======================================================================== /
             #cd_search {
                 .SearchField {
-                    height: 60px;
+                    height: 66px;
                     font-size: 22px;
                 }
             }
@@ -540,7 +544,7 @@
 
         .widget_core_coll_tagline {
             color: @w;
-            opacity: 0.8;
+            opacity: 0.7;
             font-size: 12px;
             line-height: 15px;
             letter-spacing: 3px;
@@ -595,6 +599,29 @@
 
             a {
                 color: @w;
+            }
+        }
+    }
+
+    // CENTER MODE
+    // ======================================================================== /
+    .col-md-12.center {
+        .breadcrumb {
+            position: relative;
+            text-align: center;
+            padding-top: 10px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                text-align: center;
+                height: 1px;
+                width: 50px;
+                background-color: @w;
             }
         }
     }

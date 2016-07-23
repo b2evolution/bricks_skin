@@ -30,13 +30,13 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 skin_init( $disp );
 
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
-skin_include( '_html_header.inc.php' );
+skin_include( '_html_header.inc.php', array() );
 // -------------------------------- END OF HEADER --------------------------------
 
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-siteskin_include( '_site_body_header.inc.php' );
+skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
@@ -342,7 +342,7 @@ if( $Skin->is_visible_container( 'menu' ) )
 				) );
 		?>
 	</div><!-- .col -->
-	
+
 </footer><!-- .row -->
 
 
@@ -352,7 +352,7 @@ if( $Skin->is_visible_container( 'menu' ) )
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
 // If site footers are enabled, they will be included here:
-siteskin_include( '_site_body_footer.inc.php' );
+skin_include( '_body_footer.inc.php' );
 // ------------------------------- END OF SITE FOOTER --------------------------------
 
 

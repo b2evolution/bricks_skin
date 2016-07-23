@@ -21,7 +21,7 @@ class bricks_Skin extends Skin
 	 * Skin version
 	 * @var string
 	 */
-	var $version = '6.7.0';
+	var $version = '1.0';
 
 	/**
 	 * Do we want to use style.min.css instead of style.css ?
@@ -71,6 +71,83 @@ class bricks_Skin extends Skin
 		return 'bootstrap';
 	}
 
+	/**
+	* Get supported collection kinds.
+	*
+	* This should be overloaded in skins.
+	*
+	* For each kind the answer could be:
+	* - 'yes' : this skin does support that collection kind (the result will be was is expected)
+	* - 'partial' : this skin is not a primary choice for this collection kind (but still produces an output that makes sense)
+	* - 'maybe' : this skin has not been tested with this collection kind
+	* - 'no' : this skin does not support that collection kind (the result would not be what is expected)
+	* There may be more possible answers in the future...
+	*/
+	public function get_supported_coll_kinds()
+	{
+		$supported_kinds = array(
+			'main'   => 'no',
+			'std'    => 'yes',		// Blog
+			'photo'  => 'yes',
+			'forum'  => 'no',
+			'manual' => 'maybe',
+			'group'  => 'no',  // Tracker
+			// Any kind that is not listed should be considered as "maybe" supported
+		);
+		return $supported_kinds;
+	}
+
+
+	/**
+	* Judge if the file is the image we want to use
+	*
+	* @param string filepath: the path of a file
+	* array arr_types: the file type we want to use
+	* @return array
+	*/
+	function isImage( $filepath, $arr_types=array( ".gif", ".jpeg", ".png", ".bmp", ".jpg" ) )
+	{
+		if(file_exists($filepath)) {
+			$info = getimagesize($filepath);
+			$ext  = image_type_to_extension($info['2']);
+			return in_array($ext,$arr_types);
+		} else {
+			return false;
+		}
+	}
+
+
+	/**
+	* Get the pictures of one local folder as an array
+	*
+	* @param string img_folder; the image folder;
+	* string img_folder_url; folder url, we would like to show the img of this folder on the screen for user viewing;
+	* int thumb_width: thumb image whdth shown on the skin setting page
+	* int thumb_height: thumb image height shown on the skin setting page
+	* @return array
+	*/
+	function get_arr_pics_from_folder( $img_folder, $img_folder_url, $thumb_width = 50, $thumb_height = 50 )
+	{
+		$arr_filenames = $filesnames =array();
+		if(file_exists($img_folder))
+		{
+			$filesnames = scandir($img_folder);
+		}
+		$count = 0;
+		foreach ( $filesnames as $name )
+		{
+			$count++;
+			if ( $name != "." && $name != ".." && $name != "_evocache" && $this->isImage($img_folder.$name) ) //not the folder and other files
+			{
+				$arr_filenames[] = array( $img_folder_url.$name,
+				"<a href='".$img_folder_url.$name."' target='blank'><img src='".$img_folder_url.$name."' width=".$thumb_width."px heigh=".$thumb_height."px /></a>" );
+			}
+			if ($count==30) break; // The max number of the images we want to show
+		}
+		$arr_filenames[] = array("none",T_("Transparent"));
+		return $arr_filenames;
+	}
+
 
 	/**
 	 * Get definitions for editable params
@@ -81,13 +158,27 @@ class bricks_Skin extends Skin
 	 */
 	function get_param_definitions( $params )
 	{
+		global $Blog;
+
+		// Load to use function get_available_thumb_sizes()
+		load_funcs( 'files/model/_image.funcs.php' );
+		load_class( 'widgets/model/_widget.class.php', 'ComponentWidget' );
+
+		// System provide bg images
+		$bodybg_cat = 'assets/images/header/'; // Background images folder relative to this skin folder
+		$arr_bodybg = $this ->get_arr_pics_from_folder( $this->get_path().$bodybg_cat, $this->get_url().$bodybg_cat, 80, 80 );
+		// User Custom bg images
+		$custom_headerbg_cat = "headerbg/"; // Background images folder which created by users themselves, and it's relative to collection media dir
+		$arr_custom_headerbg = $this->get_arr_pics_from_folder( $Blog->get_media_dir().$custom_headerbg_cat, $Blog->get_media_url().$custom_headerbg_cat, 65 ,65);
+
+
 		$r = array_merge( array(
 
 			/* LAYOUT OPTIONS
 			 * ========================================================================== */
 			'section_layout_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Layout Settings')
+				'label'  => T_('General Settings (All disps)')
 			),
 				'layout' => array(
 					'label' => T_('Layout'),
@@ -123,6 +214,12 @@ class bricks_Skin extends Skin
 					),
 					'type' => 'select',
 				),
+				'back_to_top' => array(
+					'label'			=> T_( 'Back To Top Button' ),
+					'note'			=> T_( 'Check to show back to top button.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
 			'section_layout_end' => array(
 				'layout' => 'end_fieldset',
 			),
@@ -131,12 +228,12 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_color_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Custom Settings')
+				'label'  => T_('Custom Settings (All disps)')
 			),
 				'page_bg_color' => array(
 					'label' => T_('Background color'),
 					'note' => T_('E-g: #ff0000 for red'),
-					'defaultvalue' => '#fff',
+					'defaultvalue' => '#ffffff',
 					'type' => 'color',
 				),
 				'page_text_color' => array(
@@ -160,7 +257,7 @@ class bricks_Skin extends Skin
 				'bgimg_text_color' => array(
 					'label' => T_('Text color on background image'),
 					'note' => T_('E-g: #00ff00 for green'),
-					'defaultvalue' => '#fff',
+					'defaultvalue' => '#ffffff',
 					'type' => 'color',
 				),
 				'bgimg_link_color' => array(
@@ -178,7 +275,7 @@ class bricks_Skin extends Skin
 				'current_tab_text_color' => array(
 					'label' => T_('Current tab text color'),
 					'note' => T_('E-g: #00ff00 for green'),
-					'defaultvalue' => '#333',
+					'defaultvalue' => '#333333',
 					'type' => 'color',
 				),
 			'section_color_end' => array(
@@ -186,37 +283,279 @@ class bricks_Skin extends Skin
 			),
 
 			/* NAVIGATION OPTIONS
-			 * ========================================================================== */
-			 'section_nav_start' => array(
+			* ========================================================================== */
+			'section_nav_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Navigation Options' ),
-			 ),
-			 	'nav_sticky' => array(
-					'label'			=> T_( 'Sticky Top Menu' ),
-					'note'			=> T_( 'Checklist to enabling sticky navigation.' ),
+				'label'		=> T_( 'Navigation Settings (All disps)' ),
+			),
+				'nav_sticky' => array(
+					'label'			=> T_( 'Sticky Menu' ),
+					'note'			=> T_( 'Checklist to enabling sticky navigation when scrooling.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 1,
 				),
-			 'section_nav_end' => array(
-				 'layout'	=> 'end_fieldset',
-			 ),
+				'nav_background' => array(
+					'label'			=> T_( 'Background Color' ),
+					'note'			=> T_( 'Choose your favorite background color for Main Menu. Default background color is <code>#ffffff</code>' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#ffffff',
+				),
+				'nav_color_link'	=> array(
+					'label'			=> T_( 'Color Link Menu' ),
+					'note'			=> T_( 'Choose your favorite color link for navigation. Default color is <code>#4b4e53</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#4b4e53'
+				),
+				'nav_color_link_hover' => array(
+					'label'			=> T_( 'Color Link Hover Menu' ),
+					'note'			=> T_( 'Choose your favorite color link when the menu is hovering. Default color is <code>#111111</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#111111'
+				),
+				'nav_bg_transparent' => array(
+					'label'			=> T_( 'Background Transparent' ),
+					'note'			=> T_( 'Check to make main menu with transparent background.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'nav_cl_transparent' => array(
+					'label'			=> T_( 'Color Link Nav Background Transparent' ),
+					'note'			=> T_( 'Choose your favorite color link when the navigation background transparent. Default color is <code>#ffffff</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#ffffff',
+				),
+				'nav_clh_transparent' => array(
+					'label'			=> T_( 'Color Link Hover Nav Background Transparent' ),
+					'note'			=> T_( 'Choose your favorite color link hover when the navigation background transparent. Default color is <code>#D40000</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#D40000',
+				),
+				'nav_search_icon' => array(
+					'label'			=> T_( 'Enable Search Icon' ),
+					'note'			=> T_( 'Check to enable search icon in main menu.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+			'section_nav_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
+
 
 			/* MAIN HEADER OPTIONS
 			* ========================================================================== */
 			'section_header_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Main Header Options' ),
+				'label'		=> T_( 'Main Header Settings (All disps)' ),
 			),
+				'header_padding_top' => array(
+					'label'			=> T_( 'Padding Top Header Content' ),
+					'note'			=> T_( 'px. Add or encrease padding top content header. Default value is <code>320px</code>.' ),
+					'type'			=> 'integer',
+					'allow_empty'	=> false,
+					'defaultvalue'	=> '320',
+					'size'			=> 4,
+				),
+				'header_content_mode' => array(
+					'label'			=> T_( 'Header Content Mode' ),
+					'note'			=> T_( 'Select your favorite content mode for conten in header. Default value is <code>Float Mode</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'col-md-6 float'	=> T_( 'Float Mode' ),
+						'col-md-12 center'	=> T_( 'Center Mode' ),
+					),
+					'defaultvalue'	=> 'col-md-6 float'
+				),
+				'header_breadcrumb' => array(
+					'label'			=> T_( 'Enable Breadcrumb' ),
+					'note'			=> T_( 'Check to enable Breadcrumb content for Header.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'header_bgi_source' => array(
+					'label'			=> T_( 'Background Image Source' ),
+					'note'			=> T_( 'Set the background image  source for header.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'image_asset' => T_( 'Image Asset' ),
+						'custom_bg_image' => T_( 'Custom Banckground Image' ),
+					),
+					'defaultvalue'	=> 'image_asset',
+				),
+				'header_bg_image' => array(
+					'label'			=> T_( 'Background Images' ),
+					'note'			=> T_( 'Choose your favorite image for set the header background image.' ),
+					'type'			=> 'radio',
+					'options'		=> $arr_bodybg,
+					'defaultvalue'	=> reset( $arr_bodybg[0] ),
+				),
+				'header_custom_bgi'	=> array(
+					'label'			=> T_( 'Custom Background Image' ),
+					'note'			=> T_( '(Please create a folder named <code><b>'.str_replace("/","",$custom_headerbg_cat).'</b></code> in your collection media folder and put the images into it. Now <a href="admin.php?ctrl=files" target="_blank"><i>Create folder or Upload images</i></a>)' ),
+					'type'			=> 'radio',
+					'options'		=> $arr_custom_headerbg,
+					'defaultvalue'	=> reset( $arr_custom_headerbg[0] ),
+				),
+				'header_bg_pos_x' => array(
+					'label'			=> T_( 'Bakcground Position X' ),
+					'note'			=> T_( '%. Default value is <code>50%</code>.' ),
+					'type'			=> 'integer',
+					'allow_empty'	=> false,
+					'size'			=> 3,
+					'defaultvalue'	=> 50,
+				),
+				'header_bg_pos_y' => array(
+					'label'			=> T_( 'Background Position Y' ),
+					'note'			=> T_( '%. Default value is <code>50%</code>.' ),
+					'type'			=> 'integer',
+					'allow_empty'	=> false,
+					'size'			=> 3,
+					'defaultvalue'	=> 50,
+				),
+				'header_bg_attachment'	=> array(
+					'label'			=> T_( 'Bakcground Attachment' ),
+					'note'			=> T_( '' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'initial' => T_( 'Initial' ),
+						'fixed'	=> T_( 'Fixed' ),
+					),
+					'defaultvalue'	=> 'initial',
+				),
+				'header_bg_size' => array(
+					'label'			=> T_( 'Background Size' ),
+					'note'			=> T_( 'Set the background size.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'initial' => T_( 'Initial' ),
+						'contain' => T_( 'Contain' ),
+						'cover'	  => T_( 'Cover' ),
+					),
+					'defaultvalue'	=> 'cover',
+				),
+				'header_overlay' => array(
+					'label'			=> T_( 'Color Overlay' ),
+					'note'			=> T_( 'Checkbox to enable color overlay for header.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'header_color_overlay' => array(
+					'label'			=> T_( 'Change Color Overlay' ),
+					'note'			=> T_( 'Choose your favorite color for content overlay in header. Default color is <code>#000000</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#000000'
+				),
+				'header_co_opacity' => array(
+					'label'			=> T_( 'Opacity Color Overlay' ),
+					'note'			=> T_( 'Choose value for opacity color overlay. Default value is <code>0.5</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'0'		=> T_( '0' ),
+						'0.05'	=> T_( '0.5' ),
+						'0.1'	=> T_( '0.1' ),
+						'0.15'	=> T_( '0.15' ),
+						'0.2'	=> T_( '0.2' ),
+						'0.25'	=> T_( '0.25' ),
+						'0.3'	=> T_( '0.3' ),
+						'0.35'	=> T_( '0.35' ),
+						'0.4'	=> T_( '0.4' ),
+						'0.45'	=> T_( '0.45' ),
+						'0.5'	=> T_( '0.5' ),
+						'0.55'	=> T_( '0.55' ),
+						'0.6'	=> T_( '0.6' ),
+						'0.65'	=> T_( '0.65' ),
+						'0.7'	=> T_( '0.7' ),
+						'0.75'	=> T_( '0.75' ),
+						'0.8'	=> T_( '0.8' ),
+						'0.85'	=> T_( '0.85' ),
+						'0.9'	=> T_( '0.9' ),
+						'0.95'	=> T_( '0.95' ),
+						'1'		=> T_( '0.1' ),
+					),
+					'defaultvalue'	=> '0.5'
+				),
 			'section_header_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
 
+			/* FOOTER OPTIONS
+			 * ========================================================================== */
+			'section_footer_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Footer Settings (All disps)' ),
+			),
+				'footer_background'	=> array(
+					'label'			=> T_( 'Background Color' ),
+					'note'			=> T_( 'Choose your favorite background color for footer container. Default background color is <code>#ffffff</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#ffffff'
+				),
+				'footer_widget'	=> array(
+					'label'			=> T_( 'Enable Footer Widget' ),
+					'note'			=> T_( 'Check to enable footer widget content' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1
+				),
+				'footer_widgets_columns' => array(
+					'label'			=> T_( 'Widget Footer Column' ),
+					'note'			=> T_( 'Select column for widget footer area. Default value is <code>3 Columns</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'col-md-12' => T_( '1 Column' ),
+						'col-md-6'	=> T_( '2 Columns' ),
+						'col-md-4'	=> T_( '3 Columns' ),
+						'col-md-3'	=> T_( '4 Columns' ),
+					),
+					'defaultvalue'	=> 'col-md-3',
+				),
+				'footer_wd_title_color' => array(
+					'label'			=> T_( 'Widget Color Title' ),
+					'note'			=> T_( 'Choose your favorite color for widget title. Default color is <code>#4b4e53</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#4b4e53'
+				),
+				'footer_wd_color_link' => array(
+					'label'			=> T_( 'Widget Color Link' ),
+					'note'			=> T_( 'Choose your favorite color for link in widget. Default color is <code>#7e8082</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#7e8082',
+				),
+				'footer_wd_color_lh' => array(
+					'label'			=> T_( 'Widget Color Link Hover' ),
+					'note'			=> T_( 'Choose your favorite hover color link for widget. Default color is <code>#101010</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#101010'
+				),
+				'footer_bottom_mode' => array(
+					'label'			=> T_( 'Footer Bottom Mode' ),
+					'note'			=> T_( 'Change footer bottom content with mode view. Default value is <code>Float Mode</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'float'		=> T_( 'Float Mode' ),
+						'center'	=> T_( 'Center Mode' ),
+					),
+					'defaultvalue'	=> 'float'
+				),
+				'footer_copyright' => array(
+					'label'			=> T_( 'Enable Footer Copyright' ),
+					'note'			=> T_( 'Check to enable Footer Copyright.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'footer_social_icon' => array(
+					'label'			=> T_( 'Enable Social Icon' ),
+					'note'			=> T_( 'Check to enable footer social icon.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+			'section_footer_end' => array(
+				'layout'	=> 'end_fieldset'
+			),
 
 			/* COLOR IMAGE ZOOM OPTIONS
 			 * ========================================================================== */
 			'section_colorbox_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Colorbox Image Zoom')
+				'label'  => T_('Colorbox Image Zoom (All disps)')
 			),
 				'colorbox' => array(
 					'label' => T_('Colorbox Image Zoom'),
@@ -268,7 +607,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_username_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Username options')
+				'label'  => T_('Username options (All disps)')
 			),
 				'gender_colored' => array(
 					'label' => T_('Display gender'),
@@ -296,7 +635,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_access_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('When access is denied or requires login...')
+				'label'  => T_('When access is denied or requires login... (disp=access_denied and disp=access_requires_login)')
 			),
 				'access_login_containers' => array(
 					'label' => T_('Display on login screen'),
@@ -317,6 +656,16 @@ class bricks_Skin extends Skin
 			), parent::get_param_definitions( $params ) );
 
 		return $r;
+	}
+
+
+	/* CHANGE CLASS
+	* ========================================================================== */
+	function change_class( $id ) {
+		$id = $this->get_setting( $id );
+		if ( $id == $id ) {
+			return $id;
+		}
 	}
 
 
@@ -341,6 +690,13 @@ class bricks_Skin extends Skin
 			'bootstrap_init_tooltips', // Inline JS to init Bootstrap tooltips (E.g. on comment form for allowed file extensions)
 			'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
 		) );
+
+		// INCLUDE THE SCRIPTS
+		require_js( $this->get_url().'assets/scripts/shuffle.min.js' );
+		require_js( $this->get_url().'assets/scripts/jquery.filterizr.min.js' );
+		require_js( $this->get_url().'assets/scripts/masonry.pkgd.min.js' );
+		// require_js( $this->get_url().'assets/scripts/viewport.js' );
+		// require_js( $this->get_url().'assets/scripts/animate-in.js' );
 
 		// Required Scripts
 		require_js( $this->get_url().'assets/scripts/scripts.js' );
@@ -377,6 +733,8 @@ class bricks_Skin extends Skin
 		// Add custom CSS:
 		$custom_css = '';
 
+		/* CUSTOM SETTINGS
+		 * ========================================================================== */
 		if( $color = $this->get_setting( 'page_bg_color' ) )
 		{ // Custom page background color:
 			$custom_css .= 'body { background-color: '.$color." }\n";
@@ -423,7 +781,8 @@ class bricks_Skin extends Skin
 			$custom_css .= '.evo_image_block img { max-height: '.$max_image_height.'px; width: auto; }'." }\n";
 		}
 
-		// Font size customization
+		/* FONT SIZE COSTUMIZE
+		 * ========================================================================== */
 		if( $font_size = $this->get_setting( 'font_size' ) )
 		{
 			switch( $font_size )
@@ -482,6 +841,91 @@ class bricks_Skin extends Skin
 			}
 		}
 
+
+		/* NAVIGATION SETTINGS
+		 * ========================================================================== */
+		if( $bg = $this->get_setting( 'nav_background' ) ) {
+			$custom_css .= '#nav, #nav.fixed { background-color: '.$bg.' }';
+		}
+		if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
+			$custom_css .= '#nav { background-color: transparent }';
+		}
+		if( $this->get_setting( 'nav_bg_transparent' ) == 1 ) {
+			$color_nav_bgt = $this->get_setting( 'nav_cl_transparent' );
+			$custom_css .= '#nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' }';
+			$custom_css .= '#nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' }';
+			$custom_css .= '#nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' }';
+			$custom_css .= '#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; }';
+
+			$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
+			$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
+			$custom_css .= '#nav.nav_bgt .nav_tabs ul li.active > a { color: '.$color_hov_nav_bgt.'; border-color: '.$color_hov_nav_bgt.' }';
+		}
+
+		// SETTING DEFAULT
+		if( $color  = $this->get_setting( 'nav_color_link' ) ) {
+			$custom_css .= '#nav .nav_tabs ul a, #nav .navbar-header .navbar-brand h3 a { color: '.$color.' }';
+			$custom_css .= '#nav .search_icon .search_tringger:before { border-color: '.$color.' }';
+			$custom_css .= '#nav .search_icon .search_tringger:after { background-color: '.$color.' }';
+			$custom_css .= '#nav .navbar-header .navbar-toggle .icon-bar { background-color: '.$color.'; }';
+
+			$custom_css .= '#nav.fixed .nav_tabs ul a, #nav.fixed .navbar-header .navbar-brand h3 a { color: '.$color.' }';
+			$custom_css .= '#nav.fixed .search_icon .search_tringger:before { border-color: '.$color.' }';
+			$custom_css .= '#nav.fixed .search_icon .search_tringger:after { background-color: '.$color.' }';
+			$custom_css .= '#nav.fixed .navbar-header .navbar-toggle .icon-bar { background-color: '.$color.'; }';
+		}
+		if( $hover = $this->get_setting( 'nav_color_link_hover' ) ) {
+			$custom_css .= '#nav .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav .nav_tabs ul a:focus { color: '.$hover.' }';
+			$custom_css .= '#nav .nav_tabs ul li.active > a { color: '.$hover.'; border-color: '.$hover.' }';
+
+			$custom_css .= '#nav.fixed .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.fixed .nav_tabs ul a:focus { color: '.$hover.' }';
+			$custom_css .= '#nav.fixed .nav_tabs ul li.active > a { color: '.$hover.'; border-color: '.$hover.' }';
+		}
+
+
+		/* MAIN HEADER SETTINGS
+		 * ========================================================================== */
+		if( $padding = $this->get_setting( 'header_padding_top' ) ) {
+			$custom_css .= '@media screen and ( min-width: 1024px ) { #main_header { padding-top: '.$padding.'px } }';
+		}
+
+		if( $this->get_setting( 'header_bgi_source' ) == 'image_asset' ) {
+			$header_bgi_asset = $this->get_setting( 'header_bg_image' );
+			$custom_css .= '#main_header { background-image: url( \''.$header_bgi_asset.'\' ) }';
+		} else {
+			$header_bgi_custom = $this->get_setting( 'header_custom_bgi' );
+			$custom_css .= '#main_header { background-image: url( \''.$header_bgi_custom.'\' ) }';
+		}
+
+		$bg_header_x = $this->get_setting( 'header_bg_pos_x');
+		$bg_header_y = $this->get_setting( 'header_bg_pos_y');
+		if( !empty($bg_header_x) || !empty($bg_header_y)  ) {
+			$custom_css .= '#main_header{ background-position: '.$bg_header_x.'% '.$bg_header_y.'%; }';
+		}
+
+		if( $bg_header_attach = $this->get_setting( 'header_bg_attachment' ) ) {
+			$custom_css .= '#main_header { background-attachment: '.$bg_header_attach.' }';
+		}
+		if( $bg_header_size  = $this->get_setting( 'header_bg_size' ) ) {
+			$custom_css .= '#main_header { background-size: '.$bg_header_size.' }';
+		}
+		if( $this->get_setting( 'header_overlay' ) == 0 ) {
+			$custom_css .= '#main_header:after{ display: none; }';
+		} else {
+			$header_color_overlay = $this->get_setting( 'header_color_overlay' );
+			$header_cov_opacity = $this->get_setting( 'header_co_opacity' );
+			$custom_css .= '#main_header:after { background-color: '.$header_color_overlay.'; opacity: '.$header_cov_opacity.' }';
+		}
+
+		/* FOOTER SETTINGS
+		 * ========================================================================== */
+		if( $bg = $this->get_setting( 'footer_background' ) ) {
+			$custom_css .= '#footer { background-color: '.$bg.' }';
+		}
+
+
+		/* STYLE OUTPUT
+		 * ========================================================================== */
 		if( ! empty( $custom_css ) )
 		{	// Function for custom_css:
 			$custom_css = '<style type="text/css">

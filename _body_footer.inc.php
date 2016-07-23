@@ -10,21 +10,26 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
+
+$columns = $Skin->get_setting( 'footer_widgets_columns' );
+$footer_mode = $Skin->change_class( 'footer_bottom_mode' );
+
 ?>
 
 <footer id="footer">
     <div class="container">
     	<!-- =================================== START OF FOOTER =================================== -->
+        <?php if( $Skin->get_setting( 'footer_widget' ) == 1 ) : ?>
     	<div class="footer_widgets row">
     		<?php
     			// Display container and contents:
     			skin_container( NT_("Footer"), array(
 					// The following params will be used as defaults for widgets included in this container:
-					'block_start'       => '<div class="evo_widget $wi_class$ col-md-3">',
+					'block_start'       => '<div class="evo_widget $wi_class$ col-xs-12 col-sm-6 '.$columns.'">',
 					'block_end'         => '</div>',
                     'block_title_start' => '<h3 class="widget_title">',
                     'block_title_end'   => '</h3>',
-                    'item_start'        => '<li class="evo_widget $wi_class$">',
+                    'item_start'        => '<li class="evo_widget_list">',
 					'item_end'          => '</li>',
                     // 'author_link_text'  => $params['author_link_text']
 				) );
@@ -33,11 +38,14 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
             <div class="clearfix"></div>
         </div>
         <!-- .footer_widgets -->
+        <?php endif; ?>
 
-        <div class="footer_bottom">
+        <?php if( $Skin->get_setting( 'footer_copyright' ) == 1 || $Skin->get_setting( 'footer_social_icon' ) == 1 ) : ?>
+        <div class="footer_bottom clearfix <?php echo $footer_mode; ?>">
             <?php
                 /* SOCIAL ICON
                  * ========================================================================== */
+                if( $Skin->get_setting( 'footer_social_icon' ) == 1 ) :
                 skin_widget( array(
                     // CODE for the widget:
     				'widget'              => 'user_links',
@@ -46,8 +54,10 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
                     'block_end'           => '</div>',
                     'block_display_title' => false,
                 ));
+                endif;
             ?>
 
+            <?php if( $Skin->get_setting( 'footer_copyright' ) == 1 ) : ?>
     		<p class="copyright">
     			<?php
     				// Display footer text (text can be edited in Blog Settings):
@@ -86,9 +96,15 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 					) );
     			?>
     		</p>
+            <?php endif; ?>
     	</div><!-- .footer_bottom -->
+        <?php endif; ?>
     </div><!-- .container -->
 </footer><!-- #footer -->
+
+<?php if ( $Skin->get_setting( 'back_to_top' ) == 1 ) { ?>
+<a href="#0" class="cd_top"><i class="ei ei-arrow_up"></i></a>
+<?php } ?>
 
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------
