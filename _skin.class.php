@@ -1022,6 +1022,18 @@ class bricks_Skin extends Skin
 				return 'col-md-9';
 		}
 	}
+
+	function show_cat_with_id() {
+		global $Item, $cat;
+
+		$current_cat = param( 'cat', 'integer', 0 );
+		if( $current_cat == 0 )
+		{ // Use main category by default because the category wasn't set
+			// echo $Item->main_cat_ID;
+		}
+	}
+
+
 }
 
 ?>

@@ -68,27 +68,27 @@
     }
 
     var filterizd = function() {
-        var id_cat = document.getElementById('cat_list');
-        var id = id_cat.getElementsByTagName('a');
-        var text = '';
-        var i;
-
-        for( i = 0; i < id.length; i++ ) {
-
-            var value = id[i].innerHTML;
-
-            id[i].setAttribute("data-sort", "value");
-
-            // console.log(value);
-
-            id[i].addEventListener("click", function(event) {
-
-                $('#cat_list li a').removeClass('active');
-                $(this).addClass('active');
-                 event.preventDefault();
-             });
-
-        }
+        // var id_cat = document.getElementById('cat_list');
+        // var id = id_cat.getElementsByTagName('a');
+        // var text = '';
+        // var i;
+        //
+        // for( i = 0; i < id.length; i++ ) {
+        //
+        //     var value = id[i].innerHTML;
+        //
+        //     id[i].setAttribute("data-sort", "value");
+        //
+        //     // console.log(value);
+        //
+        //     id[i].addEventListener("click", function(event) {
+        //
+        //         $('#cat_list li a').removeClass('active');
+        //         $(this).addClass('active');
+        //          event.preventDefault();
+        //      });
+        //
+        // }
 
         var filterizd = $('.grid').filterizr({
            //options object
@@ -116,8 +116,8 @@
         search_nav();
         back_top();
 
-        post_masonry();
-        // filterizd();
+        // post_masonry();
+        filterizd();
     });
 
 

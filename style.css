@@ -48,20 +48,44 @@ a:focus {
   color: pink;
 }
 .one_column {
-  width: 100%;
   max-width: 100%;
+  width: 100%;
+  float: none;
 }
 .two_columns {
-  width: 50%;
   max-width: 50%;
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 480px) {
+  .two_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
 }
 .three_columns {
+  max-width: 33.33333333%;
   width: 33.33333333%;
   float: left;
 }
+@media screen and (max-width: 768px) {
+  .three_columns {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .three_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
 .four_columns {
-  width: 25%;
   max-width: 25%;
+  width: 25%;
+  float: left;
 }
 table.catselect input#new_category_name {
   width: 98% !important;
@@ -1310,12 +1334,13 @@ div.extended_search_form .search_options .search_option {
   display: block;
   position: relative;
   overflow: hidden;
-  margin-right: -20px;
-  margin-left: -20px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .disp_posts #grid_posts .evo_post_article {
+  position: relative;
   padding: 0 15px;
-  margin-bottom: 70px;
+  margin-bottom: 120px;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_title h2 {
   font-size: 16px;
@@ -1339,22 +1364,50 @@ div.extended_search_form .search_options .search_option {
   margin-left: 3px;
   margin-right: 3px;
 }
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text {
+  position: relative;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_text,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_text {
+  margin-bottom: 5px;
+}
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link,
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link {
-  display: block;
-  margin-top: 25px;
-  padding-top: 20px;
-  border-top: 1px solid #eeeeee;
+  position: absolute;
+  left: 0;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link a,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link a,
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link a,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link a {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link {
+  bottom: -50px;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link {
+  bottom: -40px;
+}
+.disp_posts #grid_posts .evo_post_article .post_comments_link {
+  display: inline-block;
+  position: relative;
+  float: right;
+  top: -22px;
+  margin-right: 10px;
+  font-size: 13px;
+}
+.disp_posts #grid_posts .evo_post_article .post_comments_link a {
+  color: #7e8082;
 }
 .widget_core_user_login #login_form .form-group {
   margin: 0;

@@ -13,7 +13,7 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $Item, $Skin, $app_version, $cat, $disp;
+global $Item, $Skin, $app_version, $disp;
 
 // Default params:
 $params = array_merge( array(
@@ -51,8 +51,15 @@ if ( $disp == 'single' ) {
 	$layout = ' three_columns';
 }
 
+$Chapters = $Item->get_Chapters();
+$cat_id = '';
+foreach ( $Chapters as $Chapter ) {
+	$cat_id .= $Chapter->get( 'ID' ).', ';
+}
 
-echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-category="2" >'; // Beginning of post display
+$cat_id = substr($cat_id, 0, strlen($cat_id) - 2);
+
+echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-category="'.$cat_id.'" >'; // Beginning of post display
 ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
@@ -181,45 +188,33 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 	?>
 
 	<footer>
+		<nav class="post_comments_link">
 		<?php
-			if( ! $Item->is_intro() ) // Do NOT apply tags, comments and feedback on intro posts
-			{ // List all tags attached to this post:
-				// $Item->tags( array(
-				// 	'before'    => '<nav class="small post_tags">',
-				// 	'after'     => '</nav>',
-				// 	'separator' => ' ',
-				// ) );
-		?>
-		<?php if( $disp !== 'posts' ) { ?>
-			<nav class="post_comments_link">
-			<?php
-				// Link to comments, trackbacks, etc.:
-				$Item->feedback_link( array(
-					'type' => 'comments',
-					'link_before' => '',
-					'link_after' => '',
-					'link_text_zero' => '#',
-					'link_text_one' => '#',
-					'link_text_more' => '#',
-					'link_title' => '#',
-					// fp> WARNING: creates problem on home page: 'link_class' => 'btn btn-default btn-sm',
-					// But why do we even have a comment link on the home page ? (only when logged in)
-				) );
+			// Link to comments, trackbacks, etc.:
+			$Item->feedback_link( array(
+				'type' => 'comments',
+				'link_before' => '<span class="ei ei-comment_alt"></span>',
+				'link_after' => '',
+				'link_text_zero' => ' 0',
+				'link_text_one' => ' 1',
+				'link_text_more' => ' %d',
+				'link_title' => '',
+				// fp> WARNING: creates problem on home page: 'link_class' => 'btn btn-default btn-sm',
+				// But why do we even have a comment link on the home page ? (only when logged in)
+			) );
 
-				// Link to comments, trackbacks, etc.:
-				$Item->feedback_link( array(
-					'type' => 'trackbacks',
-					'link_before' => ' &bull; ',
-					'link_after' => '',
-					'link_text_zero' => '#',
-					'link_text_one' => '#',
-					'link_text_more' => '#',
-					'link_title' => '#',
-				) );
-			?>
-			</nav>
-		<?php }
-		} ?>
+			// Link to comments, trackbacks, etc.:
+			$Item->feedback_link( array(
+				'type' => 'trackbacks',
+				'link_before' => ' &bull; ',
+				'link_after' => '',
+				'link_text_zero' => ' 0',
+				'link_text_one' => ' 1',
+				'link_text_more' => ' %d',
+				'link_title' => '',
+			) );
+		?>
+		</nav>
 	</footer>
 
 	<?php

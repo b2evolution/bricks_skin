@@ -25,7 +25,6 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 // Do inits depending on current $disp:
 skin_init( $disp );
 
-
 // -------------------------- HTML HEADER INCLUDED HERE --------------------------
 skin_include( '_html_header.inc.php', array() );
 // -------------------------------- END OF HEADER --------------------------------
@@ -69,6 +68,7 @@ skin_include( '_body_header.inc.php' );
 				?>
 
 				<?php
+
 					// skin_widget( array(
 					// 	// CODE for the widget:
 					// 	'widget'              => 'coll_category_list',
@@ -76,12 +76,22 @@ skin_include( '_body_header.inc.php' );
 					// 	'block_start'         => '<div class="evo_widget $wi_class$">',
 					// 	'block_end'           => '</div>',
 					// 	'block_display_title' => false,
-					// 	'list_start' 		  => '<ul id="cat_list">',
+					// 	'list_start' 		  => '<ul id="cat_list $wi_ID$">',
 					// 	'list_end' 			  => '</ul>',
 					// 	'link_selected_class' => 'swhead_item swhead_item_selected',
 					// 	'link_default_class'  => 'swhead_item ',
 					// ) );
+
+					// $Skin->show_cat_with_id();
 				?>
+
+				<ul>
+				   <!-- For filtering controls add -->
+				   <li data-filter="all"> All items </li>
+				   <li data-filter="1"> Category 1 </li>
+				   <li data-filter="2"> Category 2 </li>
+				   <li data-filter="3"> Category 3 </li>
+				</ul>
 
 				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
