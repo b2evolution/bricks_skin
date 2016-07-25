@@ -477,6 +477,18 @@ class bricks_Skin extends Skin
 				'layout'	=> 'end_fieldset',
 			),
 
+			/* POSTS SETTINGS
+			 * ========================================================================== */
+			'section_posts_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Posts Settings ( Posts disps )' ),
+			),
+			
+			'section_posts_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
+
+
 			/* FOOTER OPTIONS
 			 * ========================================================================== */
 			'section_footer_start' => array(

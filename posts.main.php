@@ -145,18 +145,10 @@ skin_include( '_body_header.inc.php' );
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
-						'item_class'	=> 'evo_post_article',
-
+						'item_class'	   => 'evo_post_article',
+						'content_mode'     => 'auto',
 						'author_link_text' => 'auto',
-						// Profile tabs to switch between user edit forms
-						'profile_tabs' => array(
-							'block_start'         => '<nav><ul class="nav nav-tabs profile_tabs">',
-							'item_start'          => '<li>',
-							'item_end'            => '</li>',
-							'item_selected_start' => '<li class="active">',
-							'item_selected_end'   => '</li>',
-							'block_end'           => '</ul></nav>',
-						),
+
 						// Pagination
 						'pagination' => array(
 							'block_start'           => '<div class="center nav"><ul class="pagination">',
@@ -171,48 +163,17 @@ skin_include( '_body_header.inc.php' );
 						),
 						// Item content:
 						'url_link_position'     => 'top',
-						// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
-						'skin_form_before'      => '<div class="panel panel-default skin-form">'
-													.'<div class="panel-heading">'
-														.'<h3 class="panel-title">$form_title$</h3>'
-													.'</div>'
-													.'<div class="panel-body">',
-						'skin_form_after'       => '</div></div>',
-						// Login
-						'display_form_messages' => true,
-						'form_title_login'      => T_('Log in to your account').'$form_links$',
-						'form_title_lostpass'   => get_request_title().'$form_links$',
-						'lostpass_page_class'   => 'evo_panel__lostpass',
-						'login_form_inskin'     => false,
-						'login_page_class'      => 'evo_panel__login',
-						'login_page_before'     => '<div class="$form_class$">',
-						'login_page_after'      => '</div>',
-						'display_reg_link'      => true,
-						'abort_link_position'   => 'form_title',
-						'abort_link_text'       => '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
-						// Register
-						'register_page_before'      => '<div class="evo_panel__register">',
-						'register_page_after'       => '</div>',
-						'register_form_title'       => T_('Register'),
-						'register_links_attrs'      => '',
-						'register_use_placeholders' => true,
-						'register_field_width'      => 252,
-						'register_disabled_page_before' => '<div class="evo_panel__register register-disabled">',
-						'register_disabled_page_after'  => '</div>',
+
 						// Activate form
 						'activate_form_title'  	=> T_('Account activation'),
 						'activate_page_before' 	=> '<div class="evo_panel__activation">',
 						'activate_page_after'  	=> '</div>',
+
 						// Search
 						'search_input_before'  	=> '<div class="input-group">',
 						'search_input_after'   	=> '',
 						'search_submit_before' 	=> '<span class="input-group-btn">',
 						'search_submit_after'  	=> '</span></div>',
-						// Front page
-						'featured_intro_before' => '<div class="jumbotron">',
-						'featured_intro_after'  => '</div>',
-						// Form "Sending a message"
-						'msgform_form_title' 	=> T_('Sending a message'),
 					) );
 					// Note: you can customize any of the sub templates included here by
 					// copying the matching php file into your skin directory.

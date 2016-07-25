@@ -1342,6 +1342,23 @@ div.extended_search_form .search_options .search_option {
   padding: 0 15px;
   margin-bottom: 120px;
 }
+.disp_posts #grid_posts .evo_post_article .evo_post_image {
+  margin-bottom: 25px;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_image .evo_image_block {
+  margin: 0;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_image img {
+  border-radius: 2px;
+  opacity: 0.75;
+  -webkit-transition: opacity 0.32s ease-in-out;
+  transition: opacity 0.32s ease-in-out;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post_image:hover img,
+.disp_posts #grid_posts .evo_post_article .evo_post_image:active img,
+.disp_posts #grid_posts .evo_post_article .evo_post_image:focus img {
+  opacity: 1;
+}
 .disp_posts #grid_posts .evo_post_article .evo_post_title h2 {
   font-size: 16px;
   font-weight: 700;
@@ -1389,6 +1406,32 @@ div.extended_search_form .search_options .search_option {
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link a .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link a .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link a .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link a .ei {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+  left: 0;
+  opacity: 0.8;
+  -webkit-transition: all 0.32s ease;
+  transition: all 0.32s ease;
+}
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link:hover .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link:hover .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link:hover .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link:hover .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link:active .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link:active .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link:active .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link:active .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link:focus .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link:focus .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link:focus .ei,
+.disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link:focus .ei {
+  left: 10px;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link {

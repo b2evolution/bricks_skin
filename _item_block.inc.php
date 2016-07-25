@@ -13,7 +13,7 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $Item, $Skin, $app_version, $disp;
+global $Item, $Skin, $app_version, $disp, $Blog;
 
 // Default params:
 $params = array_merge( array(
@@ -30,16 +30,17 @@ $params = array_merge( array(
 	'item_title_single_before'   => '<h1>',	// This replaces the above in case of disp=single or disp=page
 	'item_title_single_after'    => '</h1>',
 	'item_title_line_after'      => '</div>',
+
 	// Controlling the content:
-	'content_mode'               => 'auto',		// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
+	'content_mode'               => 'excerpt',		// excerpt|full|normal|auto -- auto will auto select depending on $disp-detail
 	'image_class'                => 'img-responsive',
 	'image_size'                 => 'fit-1280x720',
-	'author_link_text'           => 'auto',
 
-	'excerpt_more_text'        => T_('Read More'),
+	'excerpt_more_text'          => T_('Read More <span class="ei ei-arrow_right"></span>'),
 ), $params );
 
-
+/* LAYOUT POST AND SINGLE DISP
+ * ========================================================================== */
 $content_class = '';
 $layout = '';
 if ( $disp == 'single' ) {
@@ -51,18 +52,63 @@ if ( $disp == 'single' ) {
 	$layout = ' three_columns';
 }
 
+/* CATEGORY POST ID
+ * ========================================================================== */
 $Chapters = $Item->get_Chapters();
 $cat_id = '';
 foreach ( $Chapters as $Chapter ) {
 	$cat_id .= $Chapter->get( 'ID' ).', ';
 }
-
 $cat_id = substr($cat_id, 0, strlen($cat_id) - 2);
+
+/* IMAGE POSTS SETTINGS
+ * ========================================================================== */
+$content_mode = $Blog->get_setting('main_content');
+$content_post = '';
+$img_position = '';
+
+if ( $content_mode == 'excerpt' ) {
+	$content_post .= 'excerpt';
+	$img_position .= 'teaser';
+} elseif( $content_mode == 'full') {
+	$content_post .= 'full';
+	$img_position .= 'cover';
+} elseif( $content_mode == 'normal') {
+	$content_post .= 'normal';
+	$img_position .= 'cover';
+}
+
 
 echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-category="'.$cat_id.'" >'; // Beginning of post display
 ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
+
+	<?php
+		if( $content_mode == $content_post )
+		{	// Display images that are linked to this post:
+			$Item->images( array(
+				'before'					 => '<div class="evo_post_image">',
+				'before_images'				 => '',
+				'before_image'				 => '<figure class="evo_image_block">',
+				'before_image_legend'		 => '<figcaption class="evo_image_legend">',
+				'after_image_legend'		 => '</figcaption>',
+				'after_image'				 => '</figure>',
+				'after_images'				 => '',
+				'after'						 => '</div>',
+
+				'image_class'				 => 'img-responsive',
+				'image_size'				 => 'fit-1280x720',
+				'image_limit'				 =>  1,
+				'image_link_to'				 => 'single', // Can be 'original', 'single' or empty
+				// We DO NOT want to display galleries here, only one cover image
+				'gallery_image_limit'		 => 0,
+				'gallery_colls'				 => 0,
+				// We want ONLY cover image to display here
+				'restrict_to_image_position' => $img_position,
+			) );
+		}
+	?>
 
 	<header>
 	<?php
@@ -193,12 +239,12 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 			// Link to comments, trackbacks, etc.:
 			$Item->feedback_link( array(
 				'type' => 'comments',
-				'link_before' => '<span class="ei ei-comment_alt"></span>',
+				'link_before' => '',
 				'link_after' => '',
-				'link_text_zero' => ' 0',
-				'link_text_one' => ' 1',
-				'link_text_more' => ' %d',
-				'link_title' => '',
+				'link_text_zero' => '<span class="ei ei-comment_alt"></span> 0',
+				'link_text_one' => '<span class="ei ei-comment_alt"></span> 1',
+				'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
+				'link_title' => '#',
 				// fp> WARNING: creates problem on home page: 'link_class' => 'btn btn-default btn-sm',
 				// But why do we even have a comment link on the home page ? (only when logged in)
 			) );
@@ -208,10 +254,10 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 				'type' => 'trackbacks',
 				'link_before' => ' &bull; ',
 				'link_after' => '',
-				'link_text_zero' => ' 0',
-				'link_text_one' => ' 1',
-				'link_text_more' => ' %d',
-				'link_title' => '',
+				'link_text_zero' => '<span class="ei ei-comment_alt"></span> 0',
+				'link_text_one' => '<span class="ei ei-comment_alt"></span> 1',
+				'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
+				'link_title' => '#',
 			) );
 		?>
 		</nav>
