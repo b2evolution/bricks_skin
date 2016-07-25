@@ -183,7 +183,7 @@ class bricks_Skin extends Skin
 				'layout' => array(
 					'label' => T_('Layout'),
 					'note' => '',
-					'defaultvalue' => 'right_sidebar',
+					'defaultvalue' => 'single_column',
 					'options' => array(
 						'single_column'              => T_('Single Column Large'),
 						'single_column_normal'       => T_('Single Column'),
@@ -483,7 +483,7 @@ class bricks_Skin extends Skin
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Posts Settings ( Posts disps )' ),
 			),
-			
+
 			'section_posts_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
