@@ -17,7 +17,7 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 if( $Skin->is_visible_sidebar() )
 { // Display sidebar:
 ?>
-<aside id="main_sidebar" class="col-md-3<?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
+<aside id="main_sidebar" class="col-sm-4 col-md-3<?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
     <!-- =================================== START OF SIDEBAR =================================== -->
     <div class="evo_container evo_container__sidebar">
     <?php

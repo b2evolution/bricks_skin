@@ -1,10 +1,52 @@
 .disp_posts {
 
+	// EVO INTRO BLOCK
+	// ======================================================================== /
+	.evo_intro_block {
+		margin-bottom: 30px;
+
+		.evo_image_block {
+			margin-bottom: 0;
+		}
+
+		.evo_intro_post {
+			color: @color-body;
+			box-shadow: none;
+			border-radius: 0;
+			padding: 30px;
+			border-color: @e;
+
+			.evo_post_title {
+				h2{
+					font-weight: 700;
+					letter-spacing: -1px;
+					padding-top: 0;
+					color: @c-5;
+				}
+
+				.btn-group {
+					padding-top: 0;
+				}
+			}
+
+			.evo_post__full_text {
+				p {
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
 	// NAV GALLERY FILTERS
 	// ======================================================================== /
 	.filters {
+		display: block;
 		width: 100%;
 		margin: 0 auto 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		text-align: center;
 
 		.nav-gallery {
@@ -24,8 +66,8 @@
 
 				&.active {
 					color: @w;
-					background-color: @c-7;
-					border-color: @c-7;
+					background-color: @color-link;
+					border-color: @color-link;
 				}
 
 				&:hover, &:active, &:focus {
@@ -41,6 +83,8 @@
 		overflow: hidden;
 		margin-right: -15px;
 		margin-left: -15px;
+
+		transition: height 0.32s ease;
 
 		.evo_post_lists {
 			// margin-right: -20px;

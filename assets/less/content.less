@@ -9,23 +9,39 @@
 	}
 }
 
+// EVO POST TITLE
+// ======================================================================== /
+// Positions on the action buttons near page titles
+.evo_post_title {
+	display: table;
+	h2 {
+		display: table-cell;
+		margin: 0;
+		padding: 20px 0 10px;
+	}
+	.btn-group {
+		display: table-cell;
+		padding: 20px 0 10px 30px;
+		vertical-align: middle;
+	}
+}
 
-// Evo Posts
+
+
+// EVO POST
 // ======================================================================== /
 .evo_post {
 	margin-bottom: 2em;
+
 	.small.text-muted {
 		margin: 4px 0 10px;
+
 		a, a .glyphicon {
 			color: inherit;
 		}
 	}
-// MILOS > @fp - This makes both "Comments" and "Full Story" button are displayed inline
-//	.more_link_button, .post_comments_link {
-//		display: inline-block;
-//		margin-right: 5px;
-//	}
 }
+
 .evo_hasbgimg {
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -43,22 +59,29 @@ div.bSideItem {
 	}
 }
 
-// Pagination
+
+// PAGINATION
+// ======================================================================== /
 .pagination {
 	margin: 0;
-}
 
-// Positions on the action buttons near page titles
-.evo_post_title {
-	display: table;
-	h2 {
-		display: table-cell;
-		margin: 0;
-		padding: 20px 0 10px;
-	}
-	.btn-group {
-		display: table-cell;
-		padding: 20px 0 10px 30px;
-		vertical-align: middle;
+	li {
+
+		a, span {
+			font-family: @font-heading;
+			// padding: 6px 14px;
+			padding: 0;
+			height: 34px;
+			width: 38px;
+			text-align: center;
+			line-height: 34px;
+			border: 0;
+			border-radius: 2px !important;
+
+			.ei {
+				font-size: 18px;
+				line-height: 34px;
+			}
+		}
 	}
 }

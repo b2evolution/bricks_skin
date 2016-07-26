@@ -51,7 +51,7 @@ if ( $disp == 'single' ) {
 	$content_class = 'evo_post_lists picture-item filtr-item';
 	$layout = ' three_columns';
 } elseif(  $Item->is_intro() ) {
-	$content_class = 'evo_post_intro';
+	$content_class = 'evo_intro_block';
 	$layout = ' one_columns';
 }
 
@@ -84,12 +84,36 @@ if ( $content_mode == 'excerpt' ) {
 
 echo '<div class="'.$content_class.$layout.'" data-category="'.$cat_id.'" >'; // Beginning of post display
 
+if( $disp == 'single' || $Item->is_intro() )
+{	// Display images that are linked to this post:
+	$Item->images( array(
+		'before'					 => '<div class="evo_post_image">',
+		'before_images'				 => '',
+		'before_image'				 => '<figure class="evo_image_block">',
+		'before_image_legend'		 => '<figcaption class="evo_image_legend">',
+		'after_image_legend'		 => '</figcaption>',
+		'after_image'				 => '</figure>',
+		'after_images'				 => '',
+		'after'						 => '</div>',
+
+		'image_class'				 => 'img-responsive',
+		'image_size'				 => 'fit-1280x720',
+		'image_limit'				 =>  1,
+		'image_link_to'				 => 'original', // Can be 'original', 'single' or empty
+		// We DO NOT want to display galleries here, only one cover image
+		'gallery_image_limit'		 => 0,
+		'gallery_colls'				 => 0,
+		// We want ONLY cover image to display here
+		'restrict_to_image_position' => 'cover',
+	) );
+}
+
 ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
 	<?php
-		if( $content_mode == $content_post && $disp == 'posts' )
+		if( $content_mode == $content_post && $disp == 'posts' && ! $Item->is_intro() )
 		{	// Display images that are linked to this post:
 			$Item->images( array(
 				'before'					 => '<div class="evo_post_image">',
@@ -110,30 +134,6 @@ echo '<div class="'.$content_class.$layout.'" data-category="'.$cat_id.'" >'; //
 				'gallery_colls'				 => 0,
 				// We want ONLY cover image to display here
 				'restrict_to_image_position' => $img_position,
-			) );
-		}
-
-		if( $disp == 'single' )
-		{	// Display images that are linked to this post:
-			$Item->images( array(
-				'before'					 => '<div class="evo_post_image">',
-				'before_images'				 => '',
-				'before_image'				 => '<figure class="evo_image_block">',
-				'before_image_legend'		 => '<figcaption class="evo_image_legend">',
-				'after_image_legend'		 => '</figcaption>',
-				'after_image'				 => '</figure>',
-				'after_images'				 => '',
-				'after'						 => '</div>',
-
-				'image_class'				 => 'img-responsive',
-				'image_size'				 => 'fit-1280x720',
-				'image_limit'				 =>  1,
-				'image_link_to'				 => 'original', // Can be 'original', 'single' or empty
-				// We DO NOT want to display galleries here, only one cover image
-				'gallery_image_limit'		 => 0,
-				'gallery_colls'				 => 0,
-				// We want ONLY cover image to display here
-				'restrict_to_image_position' => 'cover',
 			) );
 		}
 	?>

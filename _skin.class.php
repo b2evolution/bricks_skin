@@ -483,7 +483,24 @@ class bricks_Skin extends Skin
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Posts Settings ( Posts disps )' ),
 			),
-
+				'category_list_filter' => array(
+					'label'			=> T_( 'Category List Filters' ),
+					'note'			=> T_( 'Check to enable Category list Filters Posts.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'posts_column' => array(
+					'label'			=> T_( 'Posts Column' ),
+					'note'			=> T_( 'Select column for posts layout.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'one_column'	=> T_( '1 Column' ),
+						'two_columns'	=> T_( '2 Column' ),
+						'three_columns'	=> T_( '3 Column' ),
+						'four_columns'	=> T_( '4 Column' ),
+					),
+					'defaultvalue'	=> 'three_columns'
+				),
 			'section_posts_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
@@ -707,8 +724,6 @@ class bricks_Skin extends Skin
 		require_js( $this->get_url().'assets/scripts/shuffle.min.js' );
 		require_js( $this->get_url().'assets/scripts/jquery.filterizr.min.js' );
 		require_js( $this->get_url().'assets/scripts/masonry.pkgd.min.js' );
-		// require_js( $this->get_url().'assets/scripts/viewport.js' );
-		// require_js( $this->get_url().'assets/scripts/animate-in.js' );
 
 		// Required Scripts
 		require_js( $this->get_url().'assets/scripts/scripts.js' );
@@ -1006,7 +1021,7 @@ class bricks_Skin extends Skin
 	 */
 	function get_column_class()
 	{
-		
+
 		switch( $this->get_setting( 'layout' ) )
 		{
 			case 'single_column':
@@ -1027,12 +1042,12 @@ class bricks_Skin extends Skin
 
 			case 'left_sidebar':
 				// Left Sidebar
-				return 'col-md-9 pull-right';
+				return 'col-sm-8 col-md-9 pull-right';
 
 			case 'right_sidebar':
 				// Right Sidebar
 			default:
-				return 'col-md-9';
+				return 'col-sm-8 col-md-9';
 		}
 	}
 
