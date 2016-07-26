@@ -75,13 +75,19 @@ div.bSideItem {
 			width: 38px;
 			text-align: center;
 			line-height: 34px;
-			border: 0;
+			margin: 0 2px;
+			border: 1px solid transparent;
 			border-radius: 2px !important;
 
 			.ei {
 				font-size: 18px;
 				line-height: 34px;
 			}
+
+			&:hover, &:active, &:focus {
+				border-color: @e;
+			}
 		}
+
 	}
 }

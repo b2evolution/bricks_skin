@@ -2,7 +2,7 @@
 // FOOTER STYLE
 // ======================================================================== /
 #footer {
-    padding: 100px 0 40px;
+    padding: 30px 0;
     border-top: 1px solid @e;
 
     @media screen and ( max-width: @screen-sm ) {
@@ -16,6 +16,10 @@
     // FOOTER WIDGETS
     // ======================================================================== /
     .footer_widgets {
+        border-bottom: 1px solid @e;
+        padding-top: 30px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
 
         .widget_title {
             margin-top: 0;
@@ -58,9 +62,6 @@
     // FOOTER BOTTOM
     // ======================================================================== /
     .footer_bottom {
-        border-top: 1px solid @e;
-        margin-top: 20px;
-        padding-top: 20px;
 
         &.center {
             text-align: center;
@@ -190,7 +191,6 @@
            opacity: 1;
        }
    }
-
 
    &.cd-fade-out {
        // if the user keeps scrolling down, the button is out of focus and becomes less visible

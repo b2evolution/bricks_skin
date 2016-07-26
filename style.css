@@ -706,13 +706,22 @@ div.bSideItem h4 {
   width: 38px;
   text-align: center;
   line-height: 34px;
-  border: 0;
+  margin: 0 2px;
+  border: 1px solid transparent;
   border-radius: 2px !important;
 }
 .pagination li a .ei,
 .pagination li span .ei {
   font-size: 18px;
   line-height: 34px;
+}
+.pagination li a:hover,
+.pagination li span:hover,
+.pagination li a:active,
+.pagination li span:active,
+.pagination li a:focus,
+.pagination li span:focus {
+  border-color: #eeeeee;
 }
 div.widget_core_coll_item_list.evo_layout_rwd .widget_rwd_content,
 div.widget_core_coll_featured_posts.evo_layout_rwd .widget_rwd_content,
@@ -1718,7 +1727,7 @@ div.log_container {
   color: #337ab7;
 }
 #footer {
-  padding: 100px 0 40px;
+  padding: 30px 0;
   border-top: 1px solid #eeeeee;
 }
 @media screen and (max-width: 768px) {
@@ -1730,6 +1739,12 @@ div.log_container {
   #footer {
     padding: 40px 0 25px;
   }
+}
+#footer .footer_widgets {
+  border-bottom: 1px solid #eeeeee;
+  padding-top: 30px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
 #footer .footer_widgets .widget_title {
   margin-top: 0;
@@ -1761,11 +1776,6 @@ div.log_container {
 #footer .footer_widgets .evo_widget ul a:focus {
   color: #101010;
   background-color: transparent;
-}
-#footer .footer_bottom {
-  border-top: 1px solid #eeeeee;
-  margin-top: 20px;
-  padding-top: 20px;
 }
 #footer .footer_bottom.center {
   text-align: center;
