@@ -21,6 +21,8 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 	die( 'This skin is designed for b2evolution 6.4 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
 }
 
+global $cat, $disp;
+
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
 skin_init( $disp );
@@ -68,32 +70,6 @@ skin_include( '_body_header.inc.php' );
 				?>
 
 				<?php
-
-					// skin_widget( array(
-					// 	// CODE for the widget:
-					// 	'widget'              => 'coll_category_list',
-					// 	// Optional display params
-					// 	'block_start'         => '<div class="evo_widget $wi_class$">',
-					// 	'block_end'           => '</div>',
-					// 	'block_display_title' => false,
-					// 	'list_start' 		  => '<ul id="cat_list $wi_ID$">',
-					// 	'list_end' 			  => '</ul>',
-					// 	'link_selected_class' => 'swhead_item swhead_item_selected',
-					// 	'link_default_class'  => 'swhead_item ',
-					// ) );
-
-					// $Skin->show_cat_with_id();
-				?>
-
-				<ul>
-				   <!-- For filtering controls add -->
-				   <li data-filter="all"> All items </li>
-				   <li data-filter="1"> Category 1 </li>
-				   <li data-filter="2"> Category 2 </li>
-				   <li data-filter="3"> Category 3 </li>
-				</ul>
-
-				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
 					request_title( array(
 						'title_before'      => '<h2>',
@@ -135,12 +111,41 @@ skin_include( '_body_header.inc.php' );
 						'feature_block' => true,
 						'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
 						'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post adasdsd' : 'well evo_featured_post').( empty( $intro_item_style ) ? '' : ' evo_hasbgimg' ),
+						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post').( empty( $intro_item_style ) ? '' : ' evo_hasbgimg' ),
 						'item_style'    => $intro_item_style,
 					) );
 					// ----------------------------END ITEM BLOCK  ----------------------------
 				}
 				?>
+
+				<div class="filters">
+					<ul id="filters-nav" class="nav nav-gallery">
+					<?php
+						// Get only root categories of this blog
+						$ChapterCache = & get_ChapterCache();
+						$Chapters = $ChapterCache->get_chapters( $Blog->ID, $cat, true );
+
+						echo '<li class="filtr-button filtr active" data-filter="all">All</li>';
+						if( count( $Chapters ) > 0 ) {
+							foreach( $Chapters as $root_Chapter )
+							{ // Loop through categories:Chapter...
+								$count_post = get_postcount_in_category( $root_Chapter->ID );
+								if ( $count_post > 0 ) {
+									echo '<li class="filtr-button filtr" data-filter="' . $root_Chapter->get('ID') . '">' . $root_Chapter->get('name') . '</li>';
+								}
+								$chapters_children = $root_Chapter->get_children( true );
+								foreach( $chapters_children as $Chapter ) {
+									$count_post_parent = get_postcount_in_category( $Chapter->ID );
+
+									if( $count_post_parent > 0 ) {
+										echo '<li class="filtr-button filtr" data-filter="' . $Chapter->get('ID') . '">' . $Chapter->get('name') . '</li>';
+									}
+								}
+							}
+						}
+					?>
+					</ul>
+				</div>
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------

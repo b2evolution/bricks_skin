@@ -1006,6 +1006,7 @@ class bricks_Skin extends Skin
 	 */
 	function get_column_class()
 	{
+		
 		switch( $this->get_setting( 'layout' ) )
 		{
 			case 'single_column':

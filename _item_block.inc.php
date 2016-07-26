@@ -47,10 +47,14 @@ if ( $disp == 'single' ) {
 	$content_class = 'evo_content_block';
 	$layout = ' one_column';
 
-} elseif( $disp == 'posts' ) {
-	$content_class = 'evo_post_lists';
+} elseif( $disp == 'posts' && !$Item->is_intro() ) {
+	$content_class = 'evo_post_lists picture-item filtr-item';
 	$layout = ' three_columns';
+} elseif(  $Item->is_intro() ) {
+	$content_class = 'evo_post_intro';
+	$layout = ' one_columns';
 }
+
 
 /* CATEGORY POST ID
  * ========================================================================== */
@@ -78,14 +82,14 @@ if ( $content_mode == 'excerpt' ) {
 	$img_position .= 'cover';
 }
 
+echo '<div class="'.$content_class.$layout.'" data-category="'.$cat_id.'" >'; // Beginning of post display
 
-echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-category="'.$cat_id.'" >'; // Beginning of post display
 ?>
 
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
 	<?php
-		if( $content_mode == $content_post )
+		if( $content_mode == $content_post && $disp == 'posts' )
 		{	// Display images that are linked to this post:
 			$Item->images( array(
 				'before'					 => '<div class="evo_post_image">',
@@ -108,14 +112,36 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 				'restrict_to_image_position' => $img_position,
 			) );
 		}
+
+		if( $disp == 'single' )
+		{	// Display images that are linked to this post:
+			$Item->images( array(
+				'before'					 => '<div class="evo_post_image">',
+				'before_images'				 => '',
+				'before_image'				 => '<figure class="evo_image_block">',
+				'before_image_legend'		 => '<figcaption class="evo_image_legend">',
+				'after_image_legend'		 => '</figcaption>',
+				'after_image'				 => '</figure>',
+				'after_images'				 => '',
+				'after'						 => '</div>',
+
+				'image_class'				 => 'img-responsive',
+				'image_size'				 => 'fit-1280x720',
+				'image_limit'				 =>  1,
+				'image_link_to'				 => 'original', // Can be 'original', 'single' or empty
+				// We DO NOT want to display galleries here, only one cover image
+				'gallery_image_limit'		 => 0,
+				'gallery_colls'				 => 0,
+				// We want ONLY cover image to display here
+				'restrict_to_image_position' => 'cover',
+			) );
+		}
 	?>
 
 	<header>
 	<?php
-
 		// ------- Title -------
-		if( $params['disp_title'] )
-		{
+		if( $params['disp_title'] ) {
 			echo $params['item_title_line_before'];
 
 			if( $disp == 'single' || $disp == 'page' )
@@ -153,9 +179,8 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 
 	<?php
 	if( ! $Item->is_intro() ) { // Don't display the following for intro posts
-	?>
-		<div class="evo_post_info">
-		<?php
+		echo '<div class="evo_post_info">';
+
 			if( $Item->status != 'published' ) {
 				$Item->format_status( array(
 					'template' => '<div class="evo_status evo_status__$status$ badge pull-right">$status_title$</div>',
@@ -180,48 +205,38 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 				'link_text' => $params['author_link_text'],
 			) );
 
-			// Categories
-	        // echo $category;
-
-
 			// Link for editing
 			$Item->edit_link( array(
 				'before'    => ' &bull; ',
 				'after'     => '',
 			) );
-		?>
-		</div>
-	<?php
+		echo '</div>';
 	}
 	?>
 	</header>
 
 	<?php
 	if( $disp == 'single' ) {
-	?>
-		<div class="evo_container evo_container__item_single">
-		<?php
-		// ------------------------- "Item Single" CONTAINER EMBEDDED HERE --------------------------
-		// Display container contents:
-		skin_container( /* TRANS: Widget container name */ NT_('Item Single'), array(
-			'widget_context' 			 => 'item',	// Signal that we are displaying within an Item
-			// The following (optional) params will be used as defaults for widgets included in this container:
-			// This will enclose each widget in a block:
-			'block_start' 				 => '<div class="$wi_class$">',
-			'block_end' 				 => '</div>',
-			// This will enclose the title of each widget:
-			'block_title_start' 		 => '<h3>',
-			'block_title_end' 			 => '</h3>',
-			// Template params for "Item Tags" widget
-			'widget_item_tags_before'    => '<div class="small">'.T_('Tags').': ',
-			'widget_item_tags_after'     => '</div>',
-			// Params for skin file "_item_content.inc.php"
-			'widget_item_content_params' => $params,
-		) );
-		// ----------------------------- END OF "Item Single" CONTAINER -----------------------------
-		?>
-		</div>
-	<?php
+		echo '<div class="evo_container evo_container__item_single">';
+			// ------------------------- "Item Single" CONTAINER EMBEDDED HERE --------------------------
+			// Display container contents:
+			skin_container( /* TRANS: Widget container name */ NT_('Item Single'), array(
+				'widget_context' 			 => 'item',	// Signal that we are displaying within an Item
+				// The following (optional) params will be used as defaults for widgets included in this container:
+				// This will enclose each widget in a block:
+				'block_start' 				 => '<div class="$wi_class$">',
+				'block_end' 				 => '</div>',
+				// This will enclose the title of each widget:
+				'block_title_start' 		 => '<h3>',
+				'block_title_end' 			 => '</h3>',
+				// Template params for "Item Tags" widget
+				'widget_item_tags_before'    => '<div class="small">'.T_('Tags').': ',
+				'widget_item_tags_after'     => '</div>',
+				// Params for skin file "_item_content.inc.php"
+				'widget_item_content_params' => $params,
+			) );
+			// ----------------------------- END OF "Item Single" CONTAINER -----------------------------
+		echo '</div>';
 	} else {
 		// this will create a <section>
 		// ---------------------- POST CONTENT INCLUDED HERE ----------------------
@@ -236,29 +251,31 @@ echo '<div class="'.$content_class.$layout.' picture-item filtr-item" data-categ
 	<footer>
 		<nav class="post_comments_link">
 		<?php
-			// Link to comments, trackbacks, etc.:
-			$Item->feedback_link( array(
-				'type' => 'comments',
-				'link_before' => '',
-				'link_after' => '',
-				'link_text_zero' => '<span class="ei ei-comment_alt"></span> 0',
-				'link_text_one' => '<span class="ei ei-comment_alt"></span> 1',
-				'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
-				'link_title' => '#',
-				// fp> WARNING: creates problem on home page: 'link_class' => 'btn btn-default btn-sm',
-				// But why do we even have a comment link on the home page ? (only when logged in)
-			) );
+			if ( ! $Item->is_intro() ) {
+				// Link to comments, trackbacks, etc.:
+				$Item->feedback_link( array(
+					'type' 			 => 'comments',
+					'link_before' 	 => '',
+					'link_after'	 => '',
+					'link_text_zero' => '<span class="ei ei-comment_alt"></span> 0',
+					'link_text_one'  => '<span class="ei ei-comment_alt"></span> 1',
+					'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
+					'link_title' 	 => '#',
+					// fp> WARNING: creates problem on home page: 'link_class' => 'btn btn-default btn-sm',
+					// But why do we even have a comment link on the home page ? (only when logged in)
+				) );
 
-			// Link to comments, trackbacks, etc.:
-			$Item->feedback_link( array(
-				'type' => 'trackbacks',
-				'link_before' => ' &bull; ',
-				'link_after' => '',
-				'link_text_zero' => '<span class="ei ei-comment_alt"></span> 0',
-				'link_text_one' => '<span class="ei ei-comment_alt"></span> 1',
-				'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
-				'link_title' => '#',
-			) );
+				// Link to comments, trackbacks, etc.:
+				$Item->feedback_link( array(
+					'type' 			 => 'trackbacks',
+					'link_before' 	 => ' &bull; ',
+					'link_after' 	 => '',
+					'link_text_zero' => '<span class="ei ei-comment_alt"></span> 0',
+					'link_text_one'  => '<span class="ei ei-comment_alt"></span> 1',
+					'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
+					'link_title' 	 => '#',
+				) );
+			}
 		?>
 		</nav>
 	</footer>

@@ -28,9 +28,8 @@ if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.'
 // 	'next_text'             => '<i class="fa fa-angle-double-right"></i>',
 // ) );
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
-?>
-<div id="grid_posts" class="grid clearfix">
-<?php
+
+echo '<div id="grid_posts" class="grid clearfix">';
 // --------------------------------- START OF POSTS -------------------------------------
 // Display message if no post:
 display_if_empty();
@@ -45,11 +44,8 @@ while( mainlist_get_item() )
 
 
 } // ---------------------------------- END OF POSTS ------------------------------------
-?>
+echo '</div>';
 
-
-</div>
-<?
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
 mainlist_page_links( array(
 	'block_start'           => '<div class="center"><ul class="pagination">',
