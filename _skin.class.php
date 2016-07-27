@@ -160,7 +160,7 @@ class bricks_Skin extends Skin
 	{
 		global $Blog;
 
-		// Load to use function get_available_thumb_sizes()
+		// Load to use function get_available_thumb_sizes();
 		load_funcs( 'files/model/_image.funcs.php' );
 		load_class( 'widgets/model/_widget.class.php', 'ComponentWidget' );
 
@@ -483,6 +483,7 @@ class bricks_Skin extends Skin
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Posts Settings ( Posts disps )' ),
 			),
+
 				'category_list_filter' => array(
 					'label'			=> T_( 'Category List Filters' ),
 					'note'			=> T_( 'Check to enable Category list Filters Posts.' ),
@@ -491,15 +492,40 @@ class bricks_Skin extends Skin
 				),
 				'posts_column' => array(
 					'label'			=> T_( 'Posts Column' ),
-					'note'			=> T_( 'Select column for posts layout.' ),
+					'note'			=> T_( 'Select column for posts layout. Default value is <code>3 Columns</code>.' ),
 					'type'			=> 'select',
 					'options'		=> array(
 						'one_column'	=> T_( '1 Column' ),
-						'two_columns'	=> T_( '2 Column' ),
-						'three_columns'	=> T_( '3 Column' ),
-						'four_columns'	=> T_( '4 Column' ),
+						'two_columns'	=> T_( '2 Columns' ),
+						'three_columns'	=> T_( '3 Columns' ),
+						'four_columns'	=> T_( '4 Columns' ),
 					),
 					'defaultvalue'	=> 'three_columns'
+				),
+				'posts_padding_column' => array(
+					'label'			=> T_( 'Padding Post Column' ),
+					'note'			=> T_( 'px. Set the padding for column post. Default value is <code>15px</code>.' ),
+					'type'			=> 'integer',
+					'defaultvalue'	=> '15',
+					'size'			=> 3,
+					'allow_empty'	=> false,
+				),
+				'posts_top_pagination' => array(
+					'label'			=> T_( 'Top Pagination' ),
+					'note'			=> T_( 'Check to enable posts pagination on the top of content. Default value is <code>uncheck</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'posts_pagination_align' => array(
+					'label'			=> T_( 'Pagination Align' ),
+					'note'			=> T_( 'Select align for pagination on disp posts. Default value is <code>Left</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'left'		=> T_( 'Left' ),
+						'center'	=> T_( 'Center' ),
+						'right'		=> T_( 'Right' ),
+					),
+					'defaultvalue'	=> 'left',
 				),
 			'section_posts_end' => array(
 				'layout'	=> 'end_fieldset',
@@ -522,7 +548,7 @@ class bricks_Skin extends Skin
 					'label'			=> T_( 'Enable Footer Widget' ),
 					'note'			=> T_( 'Check to enable footer widget content' ),
 					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1
+					'defaultvalue'	=> 0,
 				),
 				'footer_widgets_columns' => array(
 					'label'			=> T_( 'Widget Footer Column' ),
@@ -942,6 +968,13 @@ class bricks_Skin extends Skin
 			$header_color_overlay = $this->get_setting( 'header_color_overlay' );
 			$header_cov_opacity = $this->get_setting( 'header_co_opacity' );
 			$custom_css .= '#main_header:after { background-color: '.$header_color_overlay.'; opacity: '.$header_cov_opacity.' }';
+		}
+
+		/* POSTS SETTINGS
+		 * ========================================================================== */
+		if ( $padding = $this->get_setting( 'posts_padding_column' ) ) {
+			$custom_css .= '.disp_posts #grid_posts .evo_post_article { padding: 0 '.$padding.'px; }';
+			$custom_css .= '.disp_posts #grid_posts { margin-left: -'.$padding.'px; margin-right: -'.$padding.'px; }';
 		}
 
 		/* FOOTER SETTINGS

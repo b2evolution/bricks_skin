@@ -15,18 +15,26 @@
  * @package evoskins
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
+
+global $Skin;
+
+$pag_align = $Skin->change_class( 'posts_pagination_align' );
+
+
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
-// mainlist_page_links( array(
-// 	'block_start'           => '<div class="center"><ul class="pagination">',
-// 	'block_end'             => '</ul></div>',
-// 	'page_item_before'      => '<li>',
-// 	'page_item_after'       => '</li>',
-// 	'page_item_current_before' => '<li class="active">',
-// 	'page_item_current_after'  => '</li>',
-// 	'page_current_template' => '<span>$page_num$</span>',
-// 	'prev_text'             => '<i class="fa fa-angle-double-left"></i>',
-// 	'next_text'             => '<i class="fa fa-angle-double-right"></i>',
-// ) );
+if ( $Skin->get_setting( 'posts_top_pagination' ) == 1 ) :
+	mainlist_page_links( array(
+		'block_start'           => '<div class="evo_post_pagination '.$pag_align.' top_pagin"><ul class="pagination">',
+		'block_end'             => '</ul></div>',
+		'page_item_before'      => '<li>',
+		'page_item_after'       => '</li>',
+		'page_item_current_before' => '<li class="active">',
+		'page_item_current_after'  => '</li>',
+		'page_current_template' => '<span>$page_num$</span>',
+		'prev_text'             => '<i class="ei ei-arrow_carrot-left"></i>',
+		'next_text'             => '<i class="ei ei-arrow_carrot-right"></i>',
+	) );
+endif;
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
 
 echo '<div id="grid_posts" class="grid clearfix">';
@@ -48,7 +56,7 @@ echo '</div>';
 
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
 mainlist_page_links( array(
-	'block_start'           => '<div class="evo_post_pagination left"><ul class="pagination">',
+	'block_start'           => '<div class="evo_post_pagination '.$pag_align.'"><ul class="pagination">',
 	'block_end'             => '</ul></div>',
 	'page_current_template' => '<span>$page_num$</span>',
 	'page_item_before'      => '<li>',

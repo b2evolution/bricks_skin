@@ -43,16 +43,18 @@ $params = array_merge( array(
  * ========================================================================== */
 $content_class = '';
 $layout = '';
+$posts_column = $Skin->change_class( 'posts_column' );
+
 if ( $disp == 'single' ) {
-	$content_class = 'evo_content_block';
-	$layout = ' one_column';
+	$content_class  = 'evo_content_block';
+	$layout 		= ' one_column';
 
 } elseif( $disp == 'posts' && !$Item->is_intro() ) {
-	$content_class = 'evo_post_lists picture-item filtr-item';
-	$layout = ' three_columns';
+	$content_class  = 'evo_post_lists picture-item filtr-item';
+	$layout 		= " $posts_column";
 } elseif(  $Item->is_intro() ) {
-	$content_class = 'evo_intro_block';
-	$layout = ' one_columns';
+	$content_class  = 'evo_intro_block';
+	$layout 		= ' one_columns';
 }
 
 
@@ -97,7 +99,7 @@ if( $disp == 'single' || $Item->is_intro() )
 		'after'						 => '</div>',
 
 		'image_class'				 => 'img-responsive',
-		'image_size'				 => 'fit-1280x720',
+		'image_size'				 => $params['image_size'],
 		'image_limit'				 =>  1,
 		'image_link_to'				 => 'original', // Can be 'original', 'single' or empty
 		// We DO NOT want to display galleries here, only one cover image
@@ -126,7 +128,7 @@ if( $disp == 'single' || $Item->is_intro() )
 				'after'						 => '</div>',
 
 				'image_class'				 => 'img-responsive',
-				'image_size'				 => 'fit-1280x720',
+				'image_size'				 => $params['image_size'],
 				'image_limit'				 =>  1,
 				'image_link_to'				 => 'single', // Can be 'original', 'single' or empty
 				// We DO NOT want to display galleries here, only one cover image
@@ -248,7 +250,12 @@ if( $disp == 'single' || $Item->is_intro() )
 	}
 	?>
 
-	<footer>
+	<?php if( $disp == 'posts' && ! $Item->is_intro() ) : ?>
+	<footer class="evo_post_footer_info">
+		<div class="evo_readmore_link">
+			<a href="<?php echo $Item->get_permanent_url(); ?>">Read More <span class="ei ei-arrow_right"></span></a>
+		</div>
+
 		<nav class="post_comments_link">
 		<?php
 			if ( ! $Item->is_intro() ) {
@@ -279,6 +286,7 @@ if( $disp == 'single' || $Item->is_intro() )
 		?>
 		</nav>
 	</footer>
+	<?php endif; ?>
 
 	<?php
 		// ------------------ FEEDBACK (COMMENTS/TRACKBACKS) INCLUDED HERE ------------------

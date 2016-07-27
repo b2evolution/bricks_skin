@@ -81,27 +81,35 @@
         var options = {
            animationDuration: 0.5, //in seconds
            filter: 'all', //Initial filter
-           delay: 25, //Transition delay in ms
+           delay: 50, //Transition delay in ms
            delayMode: 'alternate', //'progressive' or 'alternate'
            easing: 'ease-out',
            filterOutCss: { //Filtering out animation
               opacity: 0,
-              transform: 'scale(0.75)'
+              transform: 'scale(0.3)'
            },
            filterInCss: { //Filtering in animation
               opacity: 1,
               transform: 'scale(1)'
            },
            layout: 'sameWidth', //See layouts
-        //    selector: '.filtr-container',
+           selector: '.grid',
            setupControls: true
         }
 
         if( grid != null ){
             var filterizd = $( grid ).filterizr(options);
         }
-
     };
+
+    var post_masonry = function() {
+        $('.grid').masonry({
+            // options
+            itemSelector: '.filtr-item',
+            // columnWidth: 200
+        });
+    };
+
 
     // DOCUMENT ON LOAD
     // =========================================================================
@@ -112,7 +120,9 @@
         // sticky();
         search_nav();
         back_top();
-        filterizd();
+        // filterizd();
+
+        post_masonry();
     });
 
 

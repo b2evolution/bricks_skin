@@ -101,6 +101,17 @@ a {
     max-width: @4-columns;
     width: @4-columns;
     float: left;
+
+    @media screen and ( max-width: @screen-sm ) {
+        max-width: @2-columns;
+        width: @2-columns;
+    }
+
+    @media screen and ( max-width: @screen-xs ) {
+        max-width: @1-column;
+        width: @1-column;
+        float: none;
+    }
 }
 
 

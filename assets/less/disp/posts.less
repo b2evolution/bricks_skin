@@ -77,6 +77,9 @@
 		}
 	}
 
+
+	// POST LIST STYLE
+	// ======================================================================== /
 	#grid_posts {
         display: block;
 		position: relative;
@@ -84,7 +87,7 @@
 		margin-right: -15px;
 		margin-left: -15px;
 
-		transition: height 0.32s ease;
+		// transition: height 0.32s ease;
 
 		.evo_post_lists {
 			// margin-right: -20px;
@@ -96,7 +99,7 @@
 		.evo_post_article {
 			position: relative;
 			padding: 0 15px;
-			margin-bottom: 120px;
+			margin-bottom: 80px;
 
 			// EVO POST IMAGE
 			// ======================================================================== /
@@ -157,7 +160,7 @@
 			.evo_post__excerpt,
 			.evo_post__full_text {
 				position: relative;
-				margin-bottom: 40px;
+				margin-bottom: 15px;
 				padding-bottom: 15px;
 				border-bottom: 1px solid @e;
 
@@ -167,6 +170,7 @@
 
 				.evo_post_more_link,
 				.evo_post__excerpt_more_link {
+					display: none;
 					position: absolute;
 					left: 0;
 
@@ -177,10 +181,10 @@
 
 						.ei {
 							font-size: 20px;
-						    position: relative;
-						    top: 4px;
+							position: relative;
+							top: 4px;
 							left: 0;
-						    opacity: 0.8;
+							opacity: 0.8;
 							transition: all 0.32s ease;
 						}
 					}
@@ -202,13 +206,41 @@
 
 			}
 
+			// EVO READMORE LINK
+			// ======================================================================== /
+			.evo_readmore_link {
+
+				a {
+					font-size: 13px;
+					font-weight: 700;
+					letter-spacing: 0.5px;
+					text-transform: uppercase;
+
+					.ei {
+						font-size: 20px;
+						position: relative;
+						top: 3.5px;
+						left: 0;
+						opacity: 0.8;
+						transition: all 0.32s ease-in-out;
+					}
+
+					&:hover, &:active, &:focus {
+						.ei {
+							left: 15px;
+						}
+					}
+				}
+			}
+
+			// POST COMMENTS LINK
+			// ======================================================================== /
 			.post_comments_link {
 				display: inline-block;
 				position: relative;
 				float: right;
-				top: -22px;
-				margin-right: 10px;
-
+				top: -20px;
+				// margin-right: 10px;
 				font-size: 13px;
 
 				.ei {
@@ -218,6 +250,7 @@
 					color: @color-body;
 				}
 			}
+
 		}
 
 	}
