@@ -5,8 +5,6 @@
     // =========================================================================
     // var sticky = function() {
     //     // var num = 68; //number of pixels before modifying styles
-    //     var num = 68;
-    //
     //     if( $(window).width() > 1024 ) {
     //         $(window).bind('scroll', function () {
     //             if ($(window).scrollTop() > num) {
@@ -17,9 +15,8 @@
     //                 $('.nav_fixed').removeClass( 'static' );
     //             }
     //         });
-    //     }
-    //
-    // }
+    //     };
+    // };
 
 
     // SEARCH NAV
@@ -67,6 +64,8 @@
         });
     };
 
+    // FILTERIZD FUNCTION
+    // ======================================================================== /
     var filterizd = function() {
         var id = $( '#filters-nav li' );
         var grid = $( '.grid' );
@@ -79,7 +78,7 @@
 
         //Default options
         var options = {
-           animationDuration: 0.5, //in seconds
+           animationDuration: 0.4, //in seconds
            filter: 'all', //Initial filter
            delay: 50, //Transition delay in ms
            delayMode: 'alternate', //'progressive' or 'alternate'
@@ -114,15 +113,22 @@
     // DOCUMENT ON LOAD
     // =========================================================================
     $(function() {
+
     });
 
     $(window).load(function() {
+        // executes when complete page is fully loaded, including all frames, objects and images
         // sticky();
         search_nav();
         back_top();
         // filterizd();
 
-        post_masonry();
+        // post_masonry();
+    });
+
+    $(document).ready(function() {
+        // executes when HTML-Document is loaded and DOM is ready
+        // filterizd();
     });
 
 

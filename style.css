@@ -1341,6 +1341,49 @@ div.widget_core_user_avatars.evo_layout_rwd img {
     line-height: 45px;
   }
 }
+.evo_widget {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 768px) {
+  .evo_widget {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .evo_widget {
+    margin-bottom: 30px;
+  }
+}
+.evo_widget .evo_widget_title {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  color: #4b4e53;
+  margin: 12px 0 10px;
+  line-height: 25px;
+}
+.evo_widget .evo_widget_body ul {
+  margin: 0;
+}
+.evo_widget .evo_widget_body ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 8px;
+  line-height: 25px;
+}
+.evo_widget .evo_widget_body > ul > li:last-child {
+  padding-bottom: 0;
+}
+.evo_widget.widget_core_coll_category_list .evo_widget_body ul {
+  list-style-type: none;
+  padding: 0;
+}
+.evo_widget.widget_core_coll_category_list .evo_widget_body ul li {
+  list-style-type: circle;
+  margin: 0;
+  padding: 0 0 8px;
+  letter-spacing: 0.2px;
+}
 input.search_field {
   margin-bottom: 0;
   display: inline-block;
@@ -1436,6 +1479,8 @@ div.extended_search_form .search_options .search_option {
   overflow: hidden;
   margin-right: -15px;
   margin-left: -15px;
+  -webkit-transition: height 0.32s ease;
+  transition: height 0.32s ease;
 }
 .disp_posts #grid_posts .evo_post_article {
   position: relative;
@@ -1560,7 +1605,7 @@ div.extended_search_form .search_options .search_option {
 .disp_posts #grid_posts .evo_post_article .evo_readmore_link a:hover .ei,
 .disp_posts #grid_posts .evo_post_article .evo_readmore_link a:active .ei,
 .disp_posts #grid_posts .evo_post_article .evo_readmore_link a:focus .ei {
-  left: 15px;
+  left: 12px;
 }
 .disp_posts #grid_posts .evo_post_article .post_comments_link {
   display: inline-block;

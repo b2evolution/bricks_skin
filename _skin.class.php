@@ -224,6 +224,7 @@ class bricks_Skin extends Skin
 				'layout' => 'end_fieldset',
 			),
 
+
 			/* CUSTOM OPTIONS
 			 * ========================================================================== */
 			'section_color_start' => array(
@@ -281,6 +282,7 @@ class bricks_Skin extends Skin
 			'section_color_end' => array(
 				'layout' => 'end_fieldset',
 			),
+
 
 			/* NAVIGATION OPTIONS
 			* ========================================================================== */
@@ -477,16 +479,16 @@ class bricks_Skin extends Skin
 				'layout'	=> 'end_fieldset',
 			),
 
+
 			/* POSTS SETTINGS
 			 * ========================================================================== */
 			'section_posts_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Posts Settings ( Posts disps )' ),
+				'label'		=> T_( 'Posts Settings (Posts disps)' ),
 			),
-
 				'category_list_filter' => array(
-					'label'			=> T_( 'Category List Filters' ),
-					'note'			=> T_( 'Check to enable Category list Filters Posts.' ),
+					'label'			=> T_( 'Category List Posts Filters' ),
+					'note'			=> T_( 'Check to enable Category list Filters Posts. Default value is <code>Uncheck</code>.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 0,
 				),
@@ -512,7 +514,7 @@ class bricks_Skin extends Skin
 				),
 				'posts_top_pagination' => array(
 					'label'			=> T_( 'Top Pagination' ),
-					'note'			=> T_( 'Check to enable posts pagination on the top of content. Default value is <code>uncheck</code>.' ),
+					'note'			=> T_( 'Check to enable posts pagination on the top of content. Default value is <code>Uncheck</code>.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 0,
 				),
@@ -606,6 +608,7 @@ class bricks_Skin extends Skin
 				'layout'	=> 'end_fieldset'
 			),
 
+
 			/* COLOR IMAGE ZOOM OPTIONS
 			 * ========================================================================== */
 			'section_colorbox_start' => array(
@@ -658,6 +661,7 @@ class bricks_Skin extends Skin
 				'layout' => 'end_fieldset',
 			),
 
+
 			/* USERNAME OPTIONS
 			 * ========================================================================== */
 			'section_username_start' => array(
@@ -685,6 +689,7 @@ class bricks_Skin extends Skin
 			'section_username_end' => array(
 				'layout' => 'end_fieldset',
 			),
+
 
 			/* ACCESS DENID OPTIONS
 			 * ========================================================================== */
@@ -747,38 +752,101 @@ class bricks_Skin extends Skin
 		) );
 
 		// INCLUDE THE SCRIPTS
-		require_js( $this->get_url().'assets/scripts/shuffle.min.js' );
-		require_js( $this->get_url().'assets/scripts/jquery.filterizr.min.js' );
+		// require_js( $this->get_url().'assets/scripts/shuffle.min.js' );
 		require_js( $this->get_url().'assets/scripts/masonry.pkgd.min.js' );
-
-		// Required Scripts
-		require_js( $this->get_url().'assets/scripts/scripts.js' );
 
 		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
 			add_js_headline("
 			jQuery( document ).ready( function(event){
+				'use strict';
 				var sticky = function() {
-			        // var num = 68; //number of pixels before modifying styles
-			        var num = 68;
-
-			        if( $(window).width() > 1024 ) {
-			            $(window).bind('scroll', function () {
-			                if ($(window).scrollTop() > num) {
-			                    $('#nav').addClass('fixed');
-			                    $('.nav_fixed').addClass( 'static' );
-			                } else {
-			                    $('#nav').removeClass('fixed');
-			                    $('.nav_fixed').removeClass( 'static' );
-			                }
-			            });
-			        }
-
-			    }
+					var num = 68; //number of pixels before modifying styles
+					if( $(window).width() > 1024 ) {
+						$(window).bind('scroll', function () {
+							if ($(window).scrollTop() > num) {
+								$('#nav').addClass('fixed');
+								$('.nav_fixed').addClass( 'static' );
+							} else {
+								$('#nav').removeClass('fixed');
+								$('.nav_fixed').removeClass( 'static' );
+							}
+						});
+					};
+				};
 
 				sticky();
 			});
 			");
 		}
+
+		// Required Scripts
+		require_js( $this->get_url().'assets/scripts/scripts.js' );
+
+		if ( $this->get_setting( 'category_list_filter' ) == 1 ) {
+			require_js( $this->get_url().'assets/scripts/jquery.filterizr.min.js' );
+			$layout_cat_list_filter = 'sameWidth';
+			add_js_headline("
+			jQuery( document ).ready( function(event){
+				'use strict';
+				var filterizd_var = function() {
+					var id = $( '#filters-nav li' );
+					var grid = $( '.grid' );
+
+					$( id ).click( function(event) {
+						$(id).removeClass('active');
+						$(this).addClass('active');
+						event.preventDefault();
+					});
+
+					//Default options
+					var options = {
+					   animationDuration: 0.4, //in seconds
+					   filter: 'all', //Initial filter
+					   delay: 50, //Transition delay in ms
+					   delayMode: 'alternate', //'progressive' or 'alternate'
+					   easing: 'ease-out',
+					   filterOutCss: { //Filtering out animation
+					      opacity: 0,
+					      transform: 'scale(0.3)'
+					   },
+					   filterInCss: { //Filtering in animation
+					      opacity: 1,
+					      transform: 'scale(1)'
+					   },
+					   layout: '$layout_cat_list_filter', //See layouts
+					   selector: '.grid',
+					   setupControls: true,
+					}
+
+					if( grid != null ){
+						var filterizd = $( grid ).filterizr(options);
+					}
+				};
+
+				$(window).load( function() {
+					filterizd_var();
+				});
+			});
+			");
+		} else {
+			add_js_headline("
+			jQuery( document ).ready( function(event){
+				'use strict';
+				var posts_masonry = function() {
+					$('.grid').masonry({
+						// options
+						itemSelector: '.filtr-item',
+						// columnWidth: 200
+					});
+				};
+
+				$(window).load( function() {
+					posts_masonry();
+				});
+			});
+			");
+		};
+
 
 		// Skin specific initializations:
 		global $media_url, $media_path;
@@ -1075,25 +1143,14 @@ class bricks_Skin extends Skin
 
 			case 'left_sidebar':
 				// Left Sidebar
-				return 'col-sm-8 col-md-9 pull-right';
+				return 'col-sm-8 col-md-8 pull-right';
 
 			case 'right_sidebar':
 				// Right Sidebar
 			default:
-				return 'col-sm-8 col-md-9';
+				return 'col-sm-8 col-md-8';
 		}
 	}
-
-	function show_cat_with_id() {
-		global $Item, $cat;
-
-		$current_cat = param( 'cat', 'integer', 0 );
-		if( $current_cat == 0 )
-		{ // Use main category by default because the category wasn't set
-			// echo $Item->main_cat_ID;
-		}
-	}
-
 
 }
 

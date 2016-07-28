@@ -118,6 +118,7 @@ skin_include( '_body_header.inc.php' );
 				}
 				?>
 
+				<?php if( $Skin->get_setting( 'category_list_filter' ) == 1 ) : ?>
 				<div class="filters">
 					<ul id="filters-nav" class="nav nav-gallery">
 					<?php
@@ -146,6 +147,7 @@ skin_include( '_body_header.inc.php' );
 					?>
 					</ul>
 				</div>
+				<?php endif; ?>
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------

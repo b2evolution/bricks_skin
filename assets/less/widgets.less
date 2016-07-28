@@ -1,5 +1,4 @@
-// ======================================================================== /
-// Widget Style
+// WIDGET STYLE IMPORT
 // ======================================================================== /
 
 // --------- Universal item list widget & Recent posts widget ---------
@@ -20,6 +19,77 @@
 	@widget_core_org_members-color: #333;
 	@widget_core_org_members-user-link-color: #000;
 	@widget_core_org_members-user-link-hover-color: #23527c;
+
+
+
+// ======================================================================== /
+// WIDGET STYLE
+// ======================================================================== /
+.evo_widget {
+	margin-bottom: 60px;
+
+	@media screen and ( max-width: @screen-sm ) {
+		margin-bottom: 50px;
+	}
+
+	@media screen and ( max-width: @screen-xs ) {
+		margin-bottom: 30px;
+	}
+
+	.evo_widget_title {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 700;
+		color: @color-link;
+		margin: 12px 0 10px;
+		line-height: 25px;
+	}
+
+	.evo_widget_body {
+		ul {
+			margin: 0;
+
+			li {
+				list-style-type: none;
+				margin: 0;
+				padding: 0 0 8px;
+				line-height: 25px;
+			}
+		}
+
+		& > ul {
+			// margin: 0 0 0 20px;
+
+			& > li {
+
+				&:last-child {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+	}
+
+
+	// WIDGET CATEGORY LIST
+	// ======================================================================== /
+	&.widget_core_coll_category_list {
+		.evo_widget_body {
+			ul {
+				list-style-type: none;
+				padding: 0;
+
+				li {
+					list-style-type: circle;
+					margin: 0;
+					padding: 0 0 8px;
+					letter-spacing: 0.2px;
+				}
+			}
+		}
+	}
+
+}
 
 
 // Search WIdget Style
