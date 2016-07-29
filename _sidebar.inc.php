@@ -38,7 +38,7 @@ if( $Skin->is_visible_sidebar() )
             'list_start'           => '<ul>',
             'list_end'             => '</ul>',
             // This will enclose each item in a list:
-            'item_start'           => '<li>',
+            'item_start'           => '<li class="evo_widget_list">',
             'item_end'             => '</li>',
             // This will enclose sub-lists in a list:
             'group_start'          => '<ul>',
@@ -76,7 +76,7 @@ if( $Skin->is_visible_sidebar() )
             'list_start'           => '<ul>',
             'list_end'             => '</ul>',
             // This will enclose each item in a list:
-            'item_start'           => '<li>',
+            'item_start'           => '<li class="evo_widget_list">',
             'item_end'             => '</li>',
             // This will enclose sub-lists in a list:
             'group_start'          => '<ul>',
