@@ -67,6 +67,11 @@ foreach ( $Chapters as $Chapter ) {
 }
 $cat_id = substr($cat_id, 0, strlen($cat_id) - 2);
 
+$data_cat = '';
+if ( $disp == 'posts' ) {
+	$data_cat = "data-category=\"$cat_id\"";
+}
+
 /* IMAGE POSTS SETTINGS
  * ========================================================================== */
 $content_mode = $Blog->get_setting('main_content');
@@ -84,7 +89,7 @@ if ( $content_mode == 'excerpt' ) {
 	$img_position .= 'cover';
 }
 
-echo '<div class="'.$content_class.$layout.'" data-category="'.$cat_id.'" >'; // Beginning of post display
+echo '<div class="'.$content_class.$layout.'" '.$data_cat.'>'; // Beginning of post display
 
 if( $disp == 'single' || $Item->is_intro() )
 {	// Display images that are linked to this post:
@@ -287,6 +292,30 @@ if( $disp == 'single' || $Item->is_intro() )
 		</nav>
 	</footer>
 	<?php endif; ?>
+
+	<?php
+	// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
+
+	$link_all_blog = $Blog->get( 'recentpostsurl' );
+
+	if ( $disp == 'single' ) {
+		item_prevnext_links( array(
+			'block_start' => '<nav><ul class="pager">',
+			'prev_start'  => '<li class="previous">',
+			'prev_text'   => 'Prev',
+			'prev_class'  => '',
+			'prev_end'    => '</li>',
+			'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Post').'</a></li>',
+			'next_start'  => '<li class="next">',
+			'next_text'   => 'Next',
+			'next_class'  => '',
+			'next_end'    => '</li>',
+			'block_end'   => '</ul></nav>',
+		) );
+	}
+	// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
+	?>
+
 
 	<?php
 		// ------------------ FEEDBACK (COMMENTS/TRACKBACKS) INCLUDED HERE ------------------

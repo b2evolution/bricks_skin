@@ -11,7 +11,7 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $baseurl, $skin_url;
+global $baseurl, $skin_url, $disp, $Item;
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
@@ -100,6 +100,54 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
     </div><!-- .container-fluid -->
 </header><!-- #nav -->
 
+<?php if ( $disp == 'single' || $disp == 'page' ) { ?>
+<header id="main_header_single">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
+                <div class="single_title_post">
+                <?php
+                    // ------------------------- SHOW THE TITLE POST --------------------------
+                    $Item->locale_temp_switch(); // Temporarily switch to post locale (useful for multilingual blogs)
+                        $Item->title( array(
+                            'before'    => '<h1>',
+                            'after'     => '</h1>',
+                            'link_type' => '#'
+                        ) );
+                    locale_restore_previous();	// Restore previous locale (Blog locale)
+
+                    // ----------------------------- END OF TITLE POST -----------------------------
+                ?>
+                </div>
+            </div><!-- .col -->
+
+            <?php if( $Skin->get_setting('header_breadcrumb') == 1 ) : ?>
+            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
+                <div class="bc_content">
+                <?php
+                    // ------------------------- "Breadcrumbs" CONTAINER EMBEDDED HERE --------------------------
+                    // Breadcrumbs
+                    skin_widget( array(
+                		// CODE for the widget:
+                		'widget'           => 'breadcrumb_path',
+                		// Optional display params
+                		'block_start'      => '<ul class="breadcrumb">',
+                		'block_end'        => '</ul><div class="clear"></div>',
+                		'separator'        => '',
+                		'item_mask'        => '<li><a href="$url$">$title$</a></li>',
+                		'item_active_mask' => '<li class="active">$title$</li>',
+                	) );
+                    // ----------------------------- END OF "Page Top" CONTAINER -----------------------------
+                ?>
+                </div>
+            </div><!-- .col -->
+            <?php endif; ?>
+
+        </div><!-- .row -->
+    </div><!-- .container -->
+</header><!-- #main_header -->
+
+<?php } else { ?>
 <header id="main_header">
     <div class="container">
         <div class="row">
@@ -145,3 +193,4 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
         </div><!-- .row -->
     </div><!-- .container -->
 </header><!-- #main_header -->
+<?php } ?>

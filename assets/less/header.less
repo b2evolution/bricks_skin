@@ -491,7 +491,8 @@
 // ======================================================================== /
 // Main Header
 // ======================================================================== /
-#main_header {
+#main_header,
+#main_header_single {
     position: relative;
     padding: 320px 0 80px;
     background-image: url("assets/images/header/header-6.jpg");
@@ -625,4 +626,45 @@
             }
         }
     }
+}
+
+
+// MAIN HEADER SINGLE
+// ======================================================================== /
+#main_header_single {
+    padding: 160px 0 60px;
+    background-image: none;
+    background-color: @e;
+
+    &:after {
+        display: none;
+    }
+
+    .single_title_post {
+        h1 {
+            margin-top: 16px;
+            font-size: 28px;
+            font-weight: 400;
+            letter-spacing: 3px;
+            line-height: 32px;
+            color: @color-link;
+            text-transform: uppercase;
+        }
+    }
+
+    .col-md-12.center  {
+        .breadcrumb:before {
+            background-color: @color-link;
+        }
+    }
+
+    .bc_content {
+        .breadcrumb {
+            & > .active,
+            a {
+                color: @color-link;
+            }
+        }
+    }
+
 }

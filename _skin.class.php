@@ -753,7 +753,7 @@ class bricks_Skin extends Skin
 
 		// INCLUDE THE SCRIPTS
 		// require_js( $this->get_url().'assets/scripts/shuffle.min.js' );
-		require_js( $this->get_url().'assets/scripts/masonry.pkgd.min.js' );
+		require_js( 'assets/scripts/masonry.pkgd.min.js', 'relative' );
 
 		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
 			add_js_headline("
@@ -779,11 +779,8 @@ class bricks_Skin extends Skin
 			");
 		}
 
-		// Required Scripts
-		require_js( $this->get_url().'assets/scripts/scripts.js' );
-
 		if ( $this->get_setting( 'category_list_filter' ) == 1 ) {
-			require_js( $this->get_url().'assets/scripts/jquery.filterizr.min.js' );
+			require_js( 'assets/scripts/jquery.filterizr.min.js', 'relative' );
 			$layout_cat_list_filter = 'sameWidth';
 			add_js_headline("
 			jQuery( document ).ready( function(event){
@@ -847,6 +844,8 @@ class bricks_Skin extends Skin
 			");
 		};
 
+		// Required Scripts
+		require_js( 'assets/scripts/scripts.js', 'relative' );
 
 		// Skin specific initializations:
 		global $media_url, $media_path;
