@@ -636,6 +636,10 @@
     background-image: none;
     background-color: @e;
 
+    @media screen and ( max-width: @screen-sm ){
+        padding: 40px 0;
+    }
+
     &:after {
         display: none;
     }
@@ -649,6 +653,10 @@
             line-height: 32px;
             color: @color-link;
             text-transform: uppercase;
+
+            @media screen and ( max-width: @screen-sm ) {
+                letter-spacing: 1px;
+            }
         }
     }
 
@@ -664,6 +672,10 @@
             a {
                 color: @color-link;
             }
+        }
+
+        @media screen and ( max-width: @screen-sm ) {
+            margin-top: 10px;
         }
     }
 

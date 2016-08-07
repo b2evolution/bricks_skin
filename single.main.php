@@ -56,19 +56,6 @@ skin_include( '_body_header.inc.php' );
 				?>
 
 				<?php
-					// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
-					// item_prevnext_links( array(
-					// 	'block_start' => '<nav><ul class="pager">',
-					// 	'prev_start'  => '<li class="previous">',
-					// 	'prev_end'    => '</li>',
-					// 	'next_start'  => '<li class="next">',
-					// 	'next_end'    => '</li>',
-					// 	'block_end'   => '</ul></nav>',
-					// ) );
-					// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
-				?>
-
-				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
 					request_title( array(
 						'title_before'      => '<h2>',
@@ -93,7 +80,7 @@ skin_include( '_body_header.inc.php' );
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
-						'item_class'	=> 'picture-item__inner ',
+						'item_class'	=> 'evo_single_article',
 
 						'author_link_text' => 'auto',
 						// Profile tabs to switch between user edit forms

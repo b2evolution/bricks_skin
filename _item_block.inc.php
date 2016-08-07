@@ -46,7 +46,7 @@ $layout = '';
 $posts_column = $Skin->change_class( 'posts_column' );
 
 if ( $disp == 'single' ) {
-	$content_class  = 'evo_content_block';
+	$content_class  = 'evo_content_single';
 	$layout 		= ' one_column';
 
 } elseif( $disp == 'posts' && !$Item->is_intro() ) {
@@ -94,7 +94,7 @@ echo '<div class="'.$content_class.$layout.'" '.$data_cat.'>'; // Beginning of p
 if( $disp == 'single' || $Item->is_intro() )
 {	// Display images that are linked to this post:
 	$Item->images( array(
-		'before'					 => '<div class="evo_post_image">',
+		'before'					 => '<div class="evo_cover_image">',
 		'before_images'				 => '',
 		'before_image'				 => '<figure class="evo_image_block">',
 		'before_image_legend'		 => '<figcaption class="evo_image_legend">',
@@ -207,14 +207,25 @@ if( $disp == 'single' || $Item->is_intro() )
 
 			// Author
 			$Item->author( array(
-				'before'    => ' '.T_('<span class="divider">/</span>').' ',
-				'after'     => ' ',
+				'before'    => T_('<span class="divider">/</span>'),
+				'after'     => '',
 				'link_text' => $params['author_link_text'],
 			) );
 
+			if ( $disp !== 'posts' ) {
+				$Item->categories( array(
+					'before'          => T_('<span class="divider">/</span>'),
+        			'after'           => '',
+        			'include_main'    => true,
+        			'include_other'   => true,
+        			'include_external'=> true,
+        			'link_categories' => true,
+				) );
+			}
+
 			// Link for editing
 			$Item->edit_link( array(
-				'before'    => ' &bull; ',
+				'before'    => T_('<span class="divider">/</span>'),
 				'after'     => '',
 			) );
 		echo '</div>';
@@ -237,8 +248,9 @@ if( $disp == 'single' || $Item->is_intro() )
 				'block_title_start' 		 => '<h3>',
 				'block_title_end' 			 => '</h3>',
 				// Template params for "Item Tags" widget
-				'widget_item_tags_before'    => '<div class="small">'.T_('Tags').': ',
+				'widget_item_tags_before'    => '<div class="item_tags">',
 				'widget_item_tags_after'     => '</div>',
+				'widget_item_tags_separator' => '',
 				// Params for skin file "_item_content.inc.php"
 				'widget_item_content_params' => $params,
 			) );
@@ -295,19 +307,17 @@ if( $disp == 'single' || $Item->is_intro() )
 
 	<?php
 	// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
-
 	$link_all_blog = $Blog->get( 'recentpostsurl' );
-
 	if ( $disp == 'single' ) {
 		item_prevnext_links( array(
-			'block_start' => '<nav><ul class="pager">',
+			'block_start' => '<nav class="single_pager clearfix"><ul>',
 			'prev_start'  => '<li class="previous">',
-			'prev_text'   => 'Prev',
+			'prev_text'   => T_('<i class="ei ei-arrow_carrot-left"></i> Prev'),
 			'prev_class'  => '',
 			'prev_end'    => '</li>',
 			'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Post').'</a></li>',
 			'next_start'  => '<li class="next">',
-			'next_text'   => 'Next',
+			'next_text'   => T_('Next <i class="ei ei-arrow_carrot-right"></i>'),
 			'next_class'  => '',
 			'next_end'    => '</li>',
 			'block_end'   => '</ul></nav>',
@@ -316,38 +326,61 @@ if( $disp == 'single' || $Item->is_intro() )
 	// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
 	?>
 
+	<div class="evo_single_comments">
+		<?php
+			global $Session;
+			// ------------------ FEEDBACK (COMMENTS/TRACKBACKS) INCLUDED HERE ------------------
+			skin_include( '_item_feedback.inc.php', array_merge( array(
+				'before_section_title' => '<div class="clearfix"></div><h3 class="evo_comment__list_title">',
+				'after_section_title'  => '</h3>',
+				'comment_start'         => '<article class="evo_comment">',
+				'comment_end'           => '</article>',
+				'comment_post_before'   => '<h3 class="evo_comment_post_title">',
+				'comment_post_after'    => '</h3>',
+				'comment_title_before'  => '<h4 class="evo_comment_title">',
+				'comment_title_after'   => '</h4>',
+				'comment_avatar_before' => '<span class="evo_comment_avatar">',
+				'comment_avatar_after'  => '</span>',
+				'comment_rating_before' => '<div class="evo_comment_rating">',
+				'comment_rating_after'  => '</div>',
+				'comment_text_before'   => '<div class="evo_comment_text">',
+				'comment_text_after'    => '</div>',
+				'comment_info_before'   => '<footer class="evo_comment_footer clear text-muted"><small>',
+				'comment_info_after'    => '</small></footer>',
+				'preview_start'         => '<article class="evo_comment evo_comment__preview panel panel-warning" id="comment_preview">',
+				'preview_end'           => '</article>',
+				'comment_error_start'   => '<article class="evo_comment evo_comment__error panel panel-default" id="comment_error">',
+				'comment_error_end'     => '</article>',
+				'form_title_start'      => '<div class="single_comment_form panel '.( $Session->get('core.preview_Comment') ? 'panel-danger' : 'panel-default' ).'"><div class="panel-heading"><h4 class="panel-title">',
+			), $params ) );
+			// Note: You can customize the default item feedback by copying the generic
+			// /skins/_item_feedback.inc.php file into the current skin folder.
+			// ---------------------- END OF FEEDBACK (COMMENTS/TRACKBACKS) ---------------------
+		?>
 
-	<?php
-		// ------------------ FEEDBACK (COMMENTS/TRACKBACKS) INCLUDED HERE ------------------
-		skin_include( '_item_feedback.inc.php', array_merge( array(
-			'before_section_title' => '<div class="clearfix"></div><h3 class="evo_comment__list_title">',
-			'after_section_title'  => '</h3>',
-		), $params ) );
-		// Note: You can customize the default item feedback by copying the generic
-		// /skins/_item_feedback.inc.php file into the current skin folder.
-		// ---------------------- END OF FEEDBACK (COMMENTS/TRACKBACKS) ---------------------
-	?>
+		<?php
+		if( evo_version_compare( $app_version, '6.7' ) >= 0 )
+		{	// We are running at least b2evo 6.7, so we can include this file:
+			// ------------------ WORKFLOW PROPERTIES INCLUDED HERE ------------------
+			skin_include( '_item_workflow.inc.php' );
+			// ---------------------- END OF WORKFLOW PROPERTIES ---------------------
+		}
+		?>
 
-	<?php
-	if( evo_version_compare( $app_version, '6.7' ) >= 0 )
-	{	// We are running at least b2evo 6.7, so we can include this file:
-		// ------------------ WORKFLOW PROPERTIES INCLUDED HERE ------------------
-		skin_include( '_item_workflow.inc.php' );
-		// ---------------------- END OF WORKFLOW PROPERTIES ---------------------
-	}
-	?>
-
-	<?php
-	if( evo_version_compare( $app_version, '6.7' ) >= 0 )
-	{	// We are running at least b2evo 6.7, so we can include this file:
-		// ------------------ META COMMENTS INCLUDED HERE ------------------
-		skin_include( '_item_meta_comments.inc.php', array(
-			'comment_start'         => '<article class="evo_comment evo_comment__meta panel panel-default">',
-			'comment_end'           => '</article>',
-		) );
-		// ---------------------- END OF META COMMENTS ---------------------
-	}
-	?>
+		<?php
+		if( evo_version_compare( $app_version, '6.7' ) >= 0 )
+		{	// We are running at least b2evo 6.7, so we can include this file:
+			echo '<div class="evo_comment_meta">';
+			// ------------------ META COMMENTS INCLUDED HERE ------------------
+			skin_include( '_item_meta_comments.inc.php', array(
+				'comment_start'         => '<article class="evo_comment evo_comment__meta panel panel-default">',
+				'comment_end'           => '</article>',
+			) );
+			// ---------------------- END OF META COMMENTS ---------------------
+			echo '</div>';
+		}
+		?>
+	</div>
 
 	<?php
 		locale_restore_previous();	// Restore previous locale (Blog locale)
