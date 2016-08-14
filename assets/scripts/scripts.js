@@ -113,13 +113,12 @@
     // DOCUMENT ON LOAD
     // =========================================================================
     $(function() {
-
+        search_nav();
     });
 
     $(window).load(function() {
         // executes when complete page is fully loaded, including all frames, objects and images
         // sticky();
-        search_nav();
         back_top();
         // filterizd();
 

@@ -36,7 +36,6 @@ if ( $Skin->get_setting( 'posts_top_pagination' ) == 1 ) :
 	) );
 endif;
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
-
 echo '<div id="grid_posts" class="grid clearfix">';
 // --------------------------------- START OF POSTS -------------------------------------
 // Display message if no post:
@@ -46,14 +45,13 @@ while( mainlist_get_item() )
 	// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
 
 	skin_include( '_item_block.inc.php', array_merge( array(
-			'content_mode' => 'auto', // 'auto' will auto select depending on $disp-detail
-		), $params ) );
+		'content_mode' => 'auto', // 'auto' will auto select depending on $disp-detail
+	), $params ) );
 	// ----------------------------END ITEM BLOCK  ----------------------------
 
 
 } // ---------------------------------- END OF POSTS ------------------------------------
 echo '</div>';
-
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
 mainlist_page_links( array(
 	'block_start'           => '<div class="evo_post_pagination '.$pag_align.'"><ul class="pagination">',

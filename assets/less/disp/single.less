@@ -8,10 +8,15 @@
         }
     }
 
-    .evo_content_single {
+    .evo_content_single,
+    .evo_post_lists {
 
         .evo_cover_image {
             margin-bottom: 40px;
+
+            @media screen and ( max-width: @screen-xs ) {
+                margin-bottom: 20px;
+            }
 
             .evo_image_block {
                 margin: 0;
@@ -20,6 +25,7 @@
 
         // EVO SINGLE ARTICLE
         // ======================================================================== /
+        .evo_post_article,
         .evo_single_article {
 
             .evo_post_title {
@@ -53,6 +59,14 @@
                 border-bottom: 1px solid @e;
                 padding-bottom: 20px;
                 margin-bottom: 40px;
+
+                .evo_image_block {
+                    margin-bottom: 20px;
+
+                    img {
+                        border-radius: 0;
+                    }
+                }
             }
 
             // EVO POST FULL
@@ -92,17 +106,28 @@
 
                 pre {
                     border-color: @c-e4;
-                    border-radius: 3px;
-                    padding: 20px;
+                    border-radius: 2px;
+                    padding: 18px;
                     margin-bottom: 20px;
                     white-space: pre-wrap;
                     word-break: break-all;
                 }
 
                 blockquote {
+                    font-style: italic;
+                    letter-spacing: 0.5px;
+                    line-height: 1.4;
                     margin-bottom: 20px;
+
                     p{
                         margin-bottom: 0;
+                    }
+                }
+
+                table {
+                    th, td {
+                        padding: 5px 10px;
+                        border: 1px solid @e;
                     }
                 }
 
@@ -127,7 +152,12 @@
             }
 
             .item_attachments {
-
+                a {
+                    &:hover, &:active, &:focus {
+                        text-decoration: underline;
+                        background-color: transparent;
+                    }
+                }
             }
 
             .widget_core_item_tags {
@@ -164,6 +194,16 @@
                         border-radius: 100%;
                         margin-top: 0px;
                     }
+                }
+
+                a {
+                    &:active, &:focus, &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                .fa-edit {
+                    margin-left: 5px;
                 }
             }
 
@@ -286,6 +326,12 @@
                         padding-bottom: 30px;
                         margin-bottom: 30px;
 
+                        a {
+                            &:hover, &:active, &:focus {
+                                background-color: transparent;
+                            }
+                        }
+
                         &.replied_comment {
                             @media screen and ( min-width: @screen-sm ) {
                                 margin-left: 30px !important;
@@ -299,7 +345,6 @@
                         .evo_comment_title {
                             font-size: 15px;
                             font-weight: 600;
-                            // letter-spacing: 1px;
                             text-transform: uppercase;
                             margin-bottom: 10px;
                             color: @color-link;
@@ -321,6 +366,10 @@
                             margin-top: 5px;
                             margin-bottom: 15px;
 
+                            img {
+                                border-radius: 2px;
+                            }
+
                             @media screen and ( max-width: @screen-xs ){
                                 margin-right: 12px;
 
@@ -329,11 +378,50 @@
                                     height: 50px;
                                 }
                             }
+
+                            @media screen and ( max-width: @screen-xs ) {
+                                display: block;
+                                float: none;
+                                margin: 0 0 15px 0;
+                                text-align: center;
+
+                                img {
+                                    float: none;
+                                    margin: 0;
+                                }
+                            }
                         }
 
                         .evo_comment_text {
                             display: table;
                             line-height: 1.4;
+
+                            h1, h2, h3, h4, h5, h6 {
+                                font-weight: 700;
+                            }
+
+                            a {
+                                text-decoration: underline;
+                            }
+
+                            p {
+                                margin-bottom: 12px;
+                            }
+
+                            ul {
+                                ul {
+                                    padding-bottom: 5px;
+                                }
+
+                                p {
+                                    margin-bottom: 5px;
+                                }
+                            }
+
+                            pre {
+                                margin-bottom: 12px;
+                                padding: 15px;
+                            }
                         }
 
                         .evo_comment_footer {
@@ -434,6 +522,7 @@
                     border-radius: 0;
                     background-color: @e;
                     border-color: @e;
+                    outline: 0;
                     box-shadow: none;
                     margin: 0 0 25px;
 
@@ -445,6 +534,7 @@
                         padding: 30px;
                         background-color: transparent;
                         border-bottom: 0;
+                        border-color: @e;
 
                         @media screen and ( max-width: @screen-xs ) {
                             padding: 20px;
@@ -566,32 +656,53 @@
                 .evo_comment_meta {
 
                     .panel {
-                        background-color: @e;
+                        background-color: @f5;
                         border-radius: 0;
                         box-shadow: none;
+                        border: 0;
 
                         .panel-heading {
-                            padding: 30px 30px 15px;
+                            padding: 20px 30px 15px;
                             font-size: 16px;
                             font-weight: 700;
                             text-transform: uppercase;
                             background-color: transparent;
-                            border-bottom-color: @c-d3;
+
+                            @media screen and ( max-width: @screen-sm ) {
+                                padding: 15px;
+                            }
                         }
 
                         .panel-body {
                             padding: 15px 30px 30px;
+
+                            @media screen and ( max-width: @screen-sm ){
+                                padding: 15px;
+                            }
                         }
 
                         .evo_comment__meta {
+                            padding-bottom: 0 !important;
+                            margin-bottom: 0 !important;
+
                             .panel-heading {
-                                padding: 20px 0 10px;
-                                border-bottom: 1px solid @c-d3;
+                                padding: 20px 0 0;
+                                margin-bottom: 5px;
+                                border-bottom: 1px solid @d;
 
                                 .evo_comment_title {
                                     font-size: 15px;
                                     font-weight: 700;
                                 }
+                            }
+
+                            .panel-body {
+                                .evo_comment_text {
+                                    pre {
+                                        background-color: @w;
+                                    }
+                                }
+
                             }
                         }
                     }
@@ -607,6 +718,25 @@
 
         }
 
+    }
+
+
+    // CUSTOM EVO POST LIST
+    // ======================================================================== /
+    .evo_post_lists {
+        .evo_post_article {
+
+            .evo_post__full {
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
+
+            .evo_post__full_text {
+                border: 0;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
     }
 
 }

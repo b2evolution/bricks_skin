@@ -232,6 +232,81 @@
 		}
 	}
 
+	// WIDGET AVATAR
+	// ======================================================================== /
+	&.widget_core_coll_avatar {
+		img {
+			border-radius: 2px;
+		}
+	}
+
+	// WIDGET CALENDAR
+	// ======================================================================== /
+	&.widget_plugin_evo_Calr {
+		.bCalendarTable {
+			font-size: 90%;
+		}
+
+		caption {
+			font-size: 17px;
+			font-weight: 700;
+			text-transform: uppercase;
+			padding: 8px 5px;
+			border: 1px solid @e;
+			background-color: @e;
+		}
+
+		#bCalendarToday {
+			border-radius: 0px;
+			border-color: @b;
+			background-color: @b;
+			a {
+				color: @w;
+			}
+		}
+
+		tr, td, th {
+			text-align: center;
+			padding: 5px;
+			width: 6ex;
+		}
+
+		th {
+			font-size: 96%;
+		}
+
+		td {
+			border-bottom: 1px solid @e;
+			border-left: 1px solid @e;
+		}
+
+		tr {
+
+			&:nth-child(odd) {
+				background-color: @e;
+			}
+
+			th {
+				border-bottom: 1px solid @e;
+				border-left: 1px solid @e;
+
+				&:last-child {
+					border-right: 1px solid @e;
+				}
+			}
+
+			td:last-child {
+				border-right: 1px solid @e;
+			}
+		}
+
+		tfoot, thead {
+			tr {
+				background-color: transparent !important;
+			}
+		}
+	}
+
 }
 
 

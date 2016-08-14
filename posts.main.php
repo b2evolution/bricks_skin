@@ -152,9 +152,9 @@ skin_include( '_body_header.inc.php' );
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
-						'item_class'	   => 'evo_post_article',
-						'content_mode'     => 'auto',
-						'author_link_text' => 'auto',
+						'item_class'	   		=> 'evo_post_article',
+						'content_mode'     		=> 'auto',
+						'author_link_text' 		=> 'auto',
 
 						// Item content:
 						'url_link_position'     => 'top',

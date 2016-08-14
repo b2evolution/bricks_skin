@@ -11,7 +11,7 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $baseurl, $skin_url, $disp, $Item;
+global $baseurl, $skin_url, $disp, $preview;
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
@@ -25,7 +25,6 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
 }
 
 ?>
-
 <header id="nav" <?php echo $trans; ?> >
     <div class="container-fluid">
         <div class="navbar-header">
@@ -108,14 +107,15 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
                 <div class="single_title_post">
                 <?php
                     // ------------------------- SHOW THE TITLE POST --------------------------
-                    $Item->locale_temp_switch(); // Temporarily switch to post locale (useful for multilingual blogs)
+                    if( ! $preview )  {
                         $Item->title( array(
                             'before'    => '<h1>',
                             'after'     => '</h1>',
                             'link_type' => '#'
                         ) );
-                    locale_restore_previous();	// Restore previous locale (Blog locale)
-
+                    } else {
+                        echo "<h1>Post Preview</h1>"; // Show title post on the preview
+                    }
                     // ----------------------------- END OF TITLE POST -----------------------------
                 ?>
                 </div>
@@ -146,7 +146,6 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
         </div><!-- .row -->
     </div><!-- .container -->
 </header><!-- #main_header -->
-
 <?php } else { ?>
 <header id="main_header">
     <div class="container">

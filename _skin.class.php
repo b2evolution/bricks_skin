@@ -328,9 +328,9 @@ class bricks_Skin extends Skin
 				),
 				'nav_clh_transparent' => array(
 					'label'			=> T_( 'Color Link Hover Nav Background Transparent' ),
-					'note'			=> T_( 'Choose your favorite color link hover when the navigation background transparent. Default color is <code>#D40000</code>.' ),
+					'note'			=> T_( 'Choose your favorite color link hover when the navigation background transparent. Default color is <code>#ff3b3b</code>.' ),
 					'type'			=> 'color',
-					'defaultvalue'	=> '#D40000',
+					'defaultvalue'	=> '#ff3b3b',
 				),
 				'nav_search_icon' => array(
 					'label'			=> T_( 'Enable Search Icon' ),
@@ -967,19 +967,21 @@ class bricks_Skin extends Skin
 		if( $bg = $this->get_setting( 'nav_background' ) ) {
 			$custom_css .= '#nav, #nav.fixed { background-color: '.$bg.' }';
 		}
-		if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
-			$custom_css .= '#nav { background-color: transparent }';
-		}
-		if( $this->get_setting( 'nav_bg_transparent' ) == 1 ) {
-			$color_nav_bgt = $this->get_setting( 'nav_cl_transparent' );
-			$custom_css .= '#nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' }';
-			$custom_css .= '#nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' }';
-			$custom_css .= '#nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' }';
-			$custom_css .= '#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; }';
-
-			$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
-			$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
-			$custom_css .= '#nav.nav_bgt .nav_tabs ul li.active > a { color: '.$color_hov_nav_bgt.'; border-color: '.$color_hov_nav_bgt.' }';
+		if( $disp != 'page' && $disp != 'single' ) {
+			if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
+				$custom_css .= '#nav { background-color: transparent }';
+			}
+			if( $this->get_setting( 'nav_bg_transparent' ) == 1 ) {
+				$color_nav_bgt = $this->get_setting( 'nav_cl_transparent' );
+				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' } }';
+				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' } }';
+				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' } }';
+				$custom_css .= '@media screen and ( min-width: 1024px ){#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; } }';
+				
+				$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
+				$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
+				$custom_css .= '#nav.nav_bgt .nav_tabs ul li.active > a { color: '.$color_hov_nav_bgt.'; border-color: '.$color_hov_nav_bgt.' }';
+			}
 		}
 
 		// SETTING DEFAULT

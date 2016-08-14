@@ -19,9 +19,10 @@ global $Item, $Skin, $app_version, $disp, $Blog;
 $params = array_merge( array(
 	'feature_block'              => false,			// fp>yura: what is this for??
 	// Classes for the <article> tag:
-	'item_class'                 => 'evo_post evo_content_block',
+	'item_class'                 => 'evo_single_article evo_post evo_content_block',
 	'item_type_class'            => 'evo_post__ptyp_',
 	'item_status_class'          => 'evo_post__',
+	'author_link_text'        	 => 'name', // avatar_name | avatar_login | only_avatar | name | login | nickname | firstname | lastname | fullname | preferredname
 	// Controlling the title:
 	'disp_title'                 => true,
 	'item_title_line_before'     => '<div class="evo_post_title">',	// Note: we use an extra class because it facilitates styling
@@ -45,7 +46,7 @@ $content_class = '';
 $layout = '';
 $posts_column = $Skin->change_class( 'posts_column' );
 
-if ( $disp == 'single' ) {
+if ( $disp == 'single' || $disp == 'page' ) {
 	$content_class  = 'evo_content_single';
 	$layout 		= ' one_column';
 
@@ -91,7 +92,7 @@ if ( $content_mode == 'excerpt' ) {
 
 echo '<div class="'.$content_class.$layout.'" '.$data_cat.'>'; // Beginning of post display
 
-if( $disp == 'single' || $Item->is_intro() )
+if( $disp == 'single' || $Item->is_intro() || $disp == 'page' )
 {	// Display images that are linked to this post:
 	$Item->images( array(
 		'before'					 => '<div class="evo_cover_image">',
@@ -102,7 +103,6 @@ if( $disp == 'single' || $Item->is_intro() )
 		'after_image'				 => '</figure>',
 		'after_images'				 => '',
 		'after'						 => '</div>',
-
 		'image_class'				 => 'img-responsive',
 		'image_size'				 => $params['image_size'],
 		'image_limit'				 =>  1,
@@ -120,6 +120,8 @@ if( $disp == 'single' || $Item->is_intro() )
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
 
 	<?php
+		$Item->locale_temp_switch();
+
 		if( $content_mode == $content_post && $disp == 'posts' && ! $Item->is_intro() )
 		{	// Display images that are linked to this post:
 			$Item->images( array(
@@ -164,10 +166,10 @@ if( $disp == 'single' || $Item->is_intro() )
 
 			// POST TITLE:
 			$Item->title( array(
-					'before'    => $title_before,
-					'after'     => $title_after,
-					'link_type' => '#'
-				) );
+				'before'    => $title_before,
+				'after'     => $title_after,
+				'link_type' => '#'
+			) );
 
 			// EDIT LINK:
 			if( $Item->is_intro() )
@@ -331,8 +333,8 @@ if( $disp == 'single' || $Item->is_intro() )
 			global $Session;
 			// ------------------ FEEDBACK (COMMENTS/TRACKBACKS) INCLUDED HERE ------------------
 			skin_include( '_item_feedback.inc.php', array_merge( array(
-				'before_section_title' => '<div class="clearfix"></div><h3 class="evo_comment__list_title">',
-				'after_section_title'  => '</h3>',
+				'before_section_title'  => '<div class="clearfix"></div><h3 class="evo_comment__list_title">',
+				'after_section_title'   => '</h3>',
 				'comment_start'         => '<article class="evo_comment">',
 				'comment_end'           => '</article>',
 				'comment_post_before'   => '<h3 class="evo_comment_post_title">',

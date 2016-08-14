@@ -57,30 +57,32 @@ skin_include( '_body_header.inc.php' );
 
 				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-					request_title( array(
-						'title_before'      => '<h2>',
-						'title_after'       => '</h2>',
-						'title_none'        => '',
-						'glue'              => ' - ',
-						'title_single_disp' => false,
-						'title_page_disp'   => false,
-						'format'            => 'htmlbody',
-						'register_text'     => '',
-						'login_text'        => '',
-						'lostpassword_text' => '',
-						'account_activation' => '',
-						'msgform_text'      => '',
-						'user_text'         => '',
-						'users_text'        => '',
-						'display_edit_links'=> false,
-					) );
+					if( ! $preview ) {
+						request_title( array(
+							'title_before'      => '<h2>',
+							'title_after'       => '</h2>',
+							'title_none'        => '',
+							'glue'              => ' - ',
+							'title_single_disp' => false,
+							'title_page_disp'   => false,
+							'format'            => 'htmlbody',
+							'register_text'     => '',
+							'login_text'        => '',
+							'lostpassword_text' => '',
+							'account_activation' => '',
+							'msgform_text'      => '',
+							'user_text'         => '',
+							'users_text'        => '',
+							'display_edit_links'=> false,
+						) );
+					}
 					// ----------------------------- END OF REQUEST TITLE ----------------------------
 				?>
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
-						'item_class'	=> 'evo_single_article',
+						// 'item_class'	   => 'evo_single_article',
 
 						'author_link_text' => 'auto',
 						// Profile tabs to switch between user edit forms
