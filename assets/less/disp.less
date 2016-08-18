@@ -2,11 +2,43 @@
 // ======================================================================== /
 @import "disp/posts";
 @import "disp/single";
+@import "disp/profile";
+@import "disp/comments";
+@import "disp/404";
+
+// GLOBAL DISP STYLE
+// ======================================================================== /
+.disp_catdir {
+	#main_content {
+		.widget_core_coll_category_list {
+			ul{
+				list-style-type: circle;
+				margin: 0 0 0 20px;
+
+				ul {
+					margin: 0;
+				}
+
+				li {
+					list-style-type: circle;
+					padding: 8px 0;
+				}
+
+				a {
+					font-size: 13px;
+					letter-spacing: 1px;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+}
 
 // Login - Register Style
 // ======================================================================== /
 // Login widget form
 .widget_core_user_login {
+
 	#login_form {
 		.form-group {
 			margin: 0;
@@ -24,9 +56,11 @@
 			width: 100%;
 		}
 	}
+
 	.submit {
 		font-size: 12px;
 	}
+
 	.field_login_btn {
 		.panel {
 			margin: 0;
@@ -68,9 +102,11 @@
 			width: 100%;
 		}
 	}
+
 	.submit {
 		font-size: 12px;
 	}
+
 	.field_register_btn {
 		.panel {
 			margin: 0;
@@ -89,22 +125,10 @@
 	}
 }
 
-// Profile tabs on ?disp=profile
-ul.profile_tabs {
-	margin: 0 2ex 2ex;
-	position: relative;
-	top: 1px;
-}
-
 .profile_avatar {
 	float: right;
 	padding: 10px;
 	margin-left: 10px;
-}
-
-// Use full width for all textarea
-.form-horizontal .controls textarea.form-control {
-	width: 100%;
 }
 
 // Login/Register forms:
@@ -130,6 +154,7 @@ ul.profile_tabs {
 		text-align: center;
 	}
 }
+
 .evo_panel__login,
 .evo_panel__lostpass,
 .evo_panel__register,
@@ -144,21 +169,25 @@ ul.profile_tabs {
 		padding-bottom: 0;
 	}
 }
+
 .evo_panel__login {
 	max-width: 400px;
 }
+
 .evo_panel__lostpass {
 	max-width: 480px;
 	#ffield_x label {
 		display: none;
 	}
 }
+
 .evo_panel__activation {
 	max-width: 530px;
 	#activateinfo_form .control-buttons{
 		text-align: left;
 	}
 }
+
 .evo_panel__register {
 	max-width: 580px;
 	.control-buttons{
@@ -173,10 +202,12 @@ ul.profile_tabs {
 		}
 	}
 }
+
 .evo_form__login_links {
 	padding: 0 5px;
 	font-size: 92%;
 }
+
 .evo_form__login {
 	fieldset {
 		margin-bottom: 20px;
@@ -196,15 +227,18 @@ ul.profile_tabs {
 		margin-top: 5px;
 	}
 }
+
 #login_form {
 	.control-buttons {
 		text-align: left;
 	}
 }
+
 .standard_login_link {
 	text-align: center;
 	margin: 3em 0 1ex 0;
 }
+
 .form_footer_notes {
 	margin-top: 0;
 }
@@ -214,12 +248,4 @@ ul.profile_tabs {
 // ======================================================================== /
 div.action_messages, div.log_container {
 	margin: 0;
-}
-
-
-// Links disp=comment
-// ======================================================================== /
-.evo_comment_title a,
-.pull-right .evo_comment_type {
-	color: #337ab7;
 }

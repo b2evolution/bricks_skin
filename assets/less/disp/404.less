@@ -1,0 +1,94 @@
+// ======================================================================== /
+// 404 Page Style
+// ======================================================================== /
+.disp_404,
+.disp_none,
+.item_none {
+    #main_content {
+
+        .icon_404 {
+            position: relative;
+            display: block;
+            text-align: center;
+            margin-bottom: 30px;
+
+            .ei {
+                font-size: 120px;
+            }
+
+            .circle {
+                position: relative;
+                display: block;
+                width: 150px;
+                height: 150px;
+                border-radius: 100%;
+                border: 10px solid @color-body;
+
+                .circle2 {
+                    position: absolute;
+                    top: 20px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 15px;
+                    height: 50%;
+                    background-color: #7e8082;
+                    border-radius: 30px;
+                }
+
+                .circle3 {
+                    position: absolute;
+                    bottom: 22px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    width: 15px;
+                    height: 15px;
+                    background-color: @color-body;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        .error_404 {
+            margin: 0 0 50px;
+            text-align: center;
+
+            @media screen and ( max-width: @screen-sm ){
+                margin-bottom: 30px;
+            }
+
+            .evo_title_widget {
+                font-size: 18px;
+                font-weight: 600;
+                text-transform: uppercase;
+                margin-top: 0;
+            }
+
+            &.widget_core_page_404_not_found {
+                font-size: 15px;
+                letter-spacing: 0;
+
+                .evo_title_widget {
+                    font-size: 45px;
+                    font-weight: 700;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+
+            &.widget_core_coll_search_form {
+                .compact_search_form {
+                    display: inline-block;
+                    margin: 0 auto;
+                    width: 50%;
+
+                    .input-group {
+                        width: 100%;
+                    }
+                }
+            }
+
+        }
+    }
+}

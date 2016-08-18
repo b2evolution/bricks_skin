@@ -61,7 +61,7 @@ $footer_mode = $Skin->change_class( 'footer_bottom_mode' );
         <?php endif; ?>
 
         <?php if( $Skin->get_setting( 'footer_copyright' ) == 1 || $Skin->get_setting( 'footer_social_icon' ) == 1 ) : ?>
-        <div class="footer_bottom clearfix <?php echo $footer_mode; ?>">
+        <div class="footer_bottom clearfix <?php echo $footer_mode; ?> row">
             <?php
                 /* SOCIAL ICON
                  * ========================================================================== */

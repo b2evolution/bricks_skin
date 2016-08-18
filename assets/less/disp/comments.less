@@ -1,0 +1,57 @@
+// DISP COMMENTS STYLE
+// ======================================================================== /
+.disp_comments {
+
+    #main_content {
+
+        .evo_comment {
+            border-radius: 0;
+            border-color: @e;
+            padding-bottom: 0;
+
+            .panel-heading {
+                padding: 15px 20px;
+                border-bottom-color: @e;
+
+                .evo_comment_title,
+                .panel-title {
+                    margin-bottom: 0;
+                }
+
+                .evo_comment_title {
+                    a {
+                        text-decoration: underline;
+                    }
+
+                    @media screen and ( max-width: @screen-sm ) {
+                        margin-bottom: 5px;
+                    }
+                }
+
+                .panel-title {
+                    font-size: 12px;
+
+                    @media screen and ( min-width: @screen-md ) {
+                        width: 50%;
+
+                        &.pull-right {
+                            text-align: right;
+                        }
+                    }
+                }
+
+                .evo_status {
+                    font-size: 10px;
+                    margin-left: 5px;
+                    border-radius: 2px;
+                }
+            }
+
+            .panel-body {
+                padding: 20px;
+            }
+        }
+
+    }
+
+}

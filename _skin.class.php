@@ -570,6 +570,12 @@ class bricks_Skin extends Skin
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
 				),
+				'footer_wd_content_color' => array(
+					'label'			=> T_( 'Widget Color Content' ),
+					'note'			=> T_( 'Choose your favorite color for widget title. Default color is <code>#7e8082</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#7e8082',
+				),
 				'footer_wd_color_link' => array(
 					'label'			=> T_( 'Widget Color Link' ),
 					'note'			=> T_( 'Choose your favorite color for link in widget. Default color is <code>#7e8082</code>.' ),
@@ -591,6 +597,12 @@ class bricks_Skin extends Skin
 						'center'	=> T_( 'Center Mode' ),
 					),
 					'defaultvalue'	=> 'float'
+				),
+				'footer_border_color' => array(
+					'label'			=> T_( 'Border Color' ),
+					'note'			=> T_( 'Change the border color for footer widget bottom. Default value is <code>#eeeeee</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee',
 				),
 				'footer_copyright' => array(
 					'label'			=> T_( 'Enable Footer Copyright' ),
@@ -967,7 +979,7 @@ class bricks_Skin extends Skin
 		if( $bg = $this->get_setting( 'nav_background' ) ) {
 			$custom_css .= '#nav, #nav.fixed { background-color: '.$bg.' }';
 		}
-		if( $disp != 'page' && $disp != 'single' ) {
+		if( $disp != 'page' && $disp != 'single' && $disp != '404' ) {
 			if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
 				$custom_css .= '#nav { background-color: transparent }';
 			}
@@ -977,7 +989,7 @@ class bricks_Skin extends Skin
 				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' } }';
 				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' } }';
 				$custom_css .= '@media screen and ( min-width: 1024px ){#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; } }';
-				
+
 				$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
 				$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
 				$custom_css .= '#nav.nav_bgt .nav_tabs ul li.active > a { color: '.$color_hov_nav_bgt.'; border-color: '.$color_hov_nav_bgt.' }';
@@ -1050,6 +1062,27 @@ class bricks_Skin extends Skin
 		 * ========================================================================== */
 		if( $bg = $this->get_setting( 'footer_background' ) ) {
 			$custom_css .= '#footer { background-color: '.$bg.' }';
+		}
+		if( $color = $this->get_setting( 'footer_wd_title_color' ) ) {
+			$custom_css .= ".footer_widgets .evo_widget .evo_widget_title{ color: $color; }";
+		}
+		if( $color = $this->get_setting( 'footer_wd_content_color' ) ) {
+			$custom_css .= ".footer_widgets .evo_widget .evo_widget_body{ color: $color; }";
+			$custom_css .= "#footer .footer_bottom .copyright { color: $color; }";
+		}
+		if( $color = $this->get_setting( 'footer_wd_color_link' ) ) {
+			$custom_css .= "#footer .footer_widgets .evo_widget ul a{ color: $color }";
+			$custom_css .= "#footer .footer_widgets .evo_widget a{ color: $color }";
+			$custom_css .= "#footer .footer_bottom .copyright a { color: $color; }";
+			$custom_css .= "#footer .footer_bottom .social_icon .ufld_icon_links a{ color: $color; }";
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a{ border-color: $color; }";
+		}
+		if( $color = $this->get_setting( 'footer_wd_color_lh' ) ) {
+			$custom_css .= "#footer .footer_widgets .evo_widget ul a:hover, #footer .footer_widgets .evo_widget ul a:active, #footer .footer_widgets .evo_widget ul a:focus{ color: $color; }";
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:hover, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:active, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:focus { background-color: $color; border-color: $color; }";
+		}
+		if( $color = $this->get_setting( 'footer_border_color' ) ) {
+			$custom_css .= "#footer .footer_widgets{ border-bottom-color: $color; }";
 		}
 
 

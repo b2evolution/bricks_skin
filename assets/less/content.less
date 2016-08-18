@@ -1,5 +1,5 @@
 // ======================================================================== /
-// CONTENT TYLE GENERAL
+// CONTENT STYLE GENERAL
 // ======================================================================== /
 #content {
 	padding: 100px 0 140px;
@@ -9,11 +9,23 @@
 	}
 }
 
+// EVO TITLE DISP
+// ======================================================================== /
+.evo_title_disp {
+	font-size: 26px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
 // EVO POST TITLE
 // ======================================================================== /
 // Positions on the action buttons near page titles
 .evo_post_title {
 	display: table;
+
 	h2 {
 		display: table-cell;
 		margin: 0;
@@ -54,8 +66,188 @@ div.bSideItem {
 	padding: 10px;
 	margin-bottom: 10px;
 	text-shadow: 0 1px 0 #FFFFFF;
+
 	h4 {
 		margin-top: 0;
+	}
+}
+
+
+// EVO FORM BUTTON STYLE
+// ======================================================================== /
+.evo_form {
+	.SaveButton {
+		background-color: @color-link;
+		border-color: @color-link;
+		font-size: 12px;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 10px 20px;
+		color: @w;
+		border-radius: 0;
+		outline: 0;
+		transition: all 0.2s ease-in-out;
+
+		&:hover, &:active, &:focus {
+			background-color: @color-link-hover2;
+			border-color: @color-link-hover2;
+			outline: 0;
+		}
+	}
+}
+
+
+// EVO COMMENT
+// ======================================================================== /
+.evo_comment {
+	border-bottom: 1px solid @e;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+
+	a {
+		&:hover, &:active, &:focus {
+			background-color: transparent;
+		}
+	}
+
+	&.replied_comment {
+		@media screen and ( min-width: @screen-sm ) {
+			margin-left: 30px !important;
+		}
+
+		@media screen and ( max-width: @screen-sm ){
+			margin-left: 0 !important;
+		}
+	}
+
+	.evo_comment_title,
+	.panel-title {
+		font-size: 15px;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+		color: @color-link;
+
+		a {
+			// text-decoration: underline;
+
+			&:hover, &:active, &:focus {
+				text-decoration: underline;
+				background-color: transparent;
+				// color: @w !important;
+			}
+		}
+	}
+
+	.evo_comment_avatar {
+		float: left;
+		margin-right: 15px;
+		margin-top: 5px;
+		margin-bottom: 15px;
+
+		img {
+			margin: 0;
+			border-radius: 2px;
+		}
+
+		@media screen and ( max-width: @screen-xs ){
+			margin-right: 12px;
+
+			img {
+				width: 50px;
+				height: 50px;
+			}
+		}
+
+		@media screen and ( max-width: @screen-xs ) {
+			display: block;
+			float: none;
+			margin: 0 0 15px 0;
+			text-align: center;
+
+			img {
+				float: none;
+				margin: 0;
+			}
+		}
+	}
+
+	.evo_comment_text {
+		display: table;
+		line-height: 1.4;
+
+		h1, h2, h3, h4, h5, h6 {
+			font-weight: 700;
+		}
+
+		a {
+			text-decoration: underline;
+		}
+
+		p {
+			margin-bottom: 12px;
+		}
+
+		ul {
+			ul {
+				padding-bottom: 5px;
+			}
+
+			p {
+				margin-bottom: 5px;
+			}
+		}
+
+		pre {
+			margin-bottom: 12px;
+			padding: 15px;
+		}
+	}
+
+	.evo_comment_footer,
+	.evo_comment_info {
+		margin-top: 15px;
+		font-size: 13px;
+		text-transform: uppercase;
+
+		.permalink_right {
+			font-size: 9px;
+			letter-spacing: 1px;
+			padding: 2px 8px;
+			border: 1px solid @e;
+			margin-top: 1px;
+			margin-right: -4px;
+			// border-radius: 2px;
+
+			.fa {
+				font-size: 11px;
+			}
+
+			&:active, &:focus, &:hover {
+				outline: 0;
+				background-color: @color-link;
+				color: @w;
+				border-color: @color-link;
+			}
+		}
+
+		.comment_reply {
+
+			&:before {
+				content: "/";
+				position: relative;
+				margin-right: 8px;
+				margin-left: 5px;
+			}
+
+			&:hover, &:active, &:focus {
+				text-decoration: underline;
+
+				&:before {
+					text-decoration: none;
+				}
+			}
+		}
 	}
 }
 
@@ -93,6 +285,5 @@ div.bSideItem {
 				border-color: @e;
 			}
 		}
-
 	}
 }

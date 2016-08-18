@@ -72,7 +72,7 @@ skin_include( '_body_header.inc.php' );
 				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
 					request_title( array(
-						'title_before'      => '<h2>',
+						'title_before'      => '<h2 class="evo_title_disp">',
 						'title_after'       => '</h2>',
 						'title_none'        => '',
 						'glue'              => ' - ',

@@ -47,6 +47,28 @@
                 }
             }
 
+            h1, h2, h3, h4, h5, h6 {
+                font-weight: 700;
+                margin-top: 0;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .widget_core_user_links {
+            .ufld_icon_links a {
+                color: @w;
+            }
+        }
+
+        .widget_core_coll_tag_cloud {
+            .tag_cloud {
+                a {
+                    &:hover, &:active, &:focus {
+                        color: @w !important;
+                    }
+                }
+            }
         }
     }
 
@@ -55,11 +77,20 @@
     .footer_bottom {
 
         &.center {
+            padding: 15px 0;
             text-align: center;
+
+            @media screen and ( max-width: @screen-xs ) {
+                padding: 10px 0;
+            }
 
             .social_icon,
             .copyright {
                 float: none;
+            }
+
+            .copyright {
+                line-height: 28px;
             }
         }
 

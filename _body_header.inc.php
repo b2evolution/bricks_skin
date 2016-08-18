@@ -99,7 +99,7 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
     </div><!-- .container-fluid -->
 </header><!-- #nav -->
 
-<?php if ( $disp == 'single' || $disp == 'page' ) { ?>
+<?php if ( $disp == 'single' || $disp == 'page' || $disp == '404' ) { ?>
 <header id="main_header_single">
     <div class="container">
         <div class="row">
@@ -107,14 +107,16 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
                 <div class="single_title_post">
                 <?php
                     // ------------------------- SHOW THE TITLE POST --------------------------
-                    if( ! $preview )  {
+                    if( $preview )  {
+                        echo "<h1>Post Preview</h1>"; // Show title post on the preview
+                    } elseif( $disp == '404' ) {
+                        echo "<h1>404 Page</h1>";
+                    } else {
                         $Item->title( array(
                             'before'    => '<h1>',
                             'after'     => '</h1>',
                             'link_type' => '#'
                         ) );
-                    } else {
-                        echo "<h1>Post Preview</h1>"; // Show title post on the preview
                     }
                     // ----------------------------- END OF TITLE POST -----------------------------
                 ?>
