@@ -621,6 +621,138 @@ class bricks_Skin extends Skin
 			),
 
 
+			/* CONTACTS PAGE SETTINGS
+			 * ========================================================================== */
+			'section_contact_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Contact Settings (disp=msgform)' ),
+			),
+				'contact_map_show' => array(
+					'label'			=> T_( 'Show Maps' ),
+					'note'			=> T_( 'Check to show the maps.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_lat' => array(
+					'label'			=> T_( 'Latitude Coordinates' ),
+					'note'			=> T_( 'Set the latitue coordination for the map. Example <code>48.8583861</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '',
+					'size'			=> 50,
+				),
+				'contact_map_lng' => array(
+					'label'			=> T_( 'Longitude Coordinates' ),
+					'note'			=> T_( 'Set hte logtitude coordination for the map. Example <code>2.2944542</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '',
+					'size'			=> 50,
+				),
+				'contact_map_zoom' => array(
+					'label'			=> T_( 'Zoom Map' ),
+					'note'			=> T_( 'Set value zoom for map. Default value is <code>16</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'1'	=> T_( '1' ),
+						'2'	=> T_( '2' ),
+						'3'	=> T_( '3' ),
+						'4'	=> T_( '4' ),
+						'5'	=> T_( '5' ),
+						'6'	=> T_( '6' ),
+						'7'	=> T_( '7' ),
+						'8'	=> T_( '8' ),
+						'9'	=> T_( '9' ),
+						'10' => T_( '10' ),
+						'11' => T_( '11' ),
+						'12' => T_( '12' ),
+						'13' => T_( '13' ),
+						'14' => T_( '14' ),
+						'15' => T_( '15' ),
+						'16' => T_( '16' ),
+						'17' => T_( '17' ),
+						'18' => T_( '18' ),
+					),
+					'defaultvalue'	=> 16,
+				),
+				'contact_map_drag' => array(
+					'label'			=> T_( 'Draggable Map' ),
+					'note'			=> T_( 'Check to enable draggable on the map. Default value is <code>true</code>' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_scrol' => array(
+					'label'			=> T_( 'Scrollwheel Map' ),
+					'note'			=> T_( 'Check to enable scrollwheel on the map. Default value is <code>false</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'contact_map_doubleclick' => array(
+					'label'			=> T_( 'Disable Double Click Zoom' ),
+					'note'			=> T_( 'Check to disable double click zoom on the map. Default value is <code>true</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_fullscreen' => array(
+					'label'			=> T_( 'Full Screen Control' ),
+					'note'			=> T_( 'Check to enable full screen control on the map. Default value is <code>true</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_disableDefaultUI' => array(
+					'label'			=> T_( 'Disable Default UI' ),
+					'note'			=> T_( 'Check to disable Default UI on the map. Default value is <code>false</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'contact_map_marker_lat' => array(
+					'label'			=> T_( 'Latitude Coordinates Marker' ),
+					'note'			=> T_( 'Set the Latitude Coordinates for marker. Example is <code>48.8583861</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '',
+					'size'			=> 50,
+				),
+				'contact_map_marker_lng' => array(
+					'label'			=> T_( 'Longitude Coordinates Marker' ),
+					'note'			=> T_( 'Set the Longitude Coordinates for marker. Example is <code>2.2944542</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '',
+					'size'			=> 50,
+				),
+				'contact_map_marker_content' => array(
+					'label'			=> T_( 'Content Marker' ),
+					'note'			=> T_( 'Add content for Marker.' ),
+					'type'			=> 'textarea',
+				),
+				'contact_info_show' => array(
+					'label'			=> T_( 'Enable Conctact Info' ),
+					'note'			=> T_( 'Check to show the contact info section. Default value is <code>true</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_info_address' => array(
+					'label'			=> T_( 'Contact Address' ),
+					'note'			=> T_( 'Type your contact address.' ),
+					'type'			=> 'textarea',
+					'defaultvalue'	=> 'Your Address location',
+				),
+				'contact_info_email' => array(
+					'label'			=> T_( 'Contact Email' ),
+					'note'			=> T_( 'Type your contact email.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> 'youremail@example.com',
+					'size'			=> 30,
+				),
+				'contact_info_number' => array(
+					'label'			=> T_( 'Contact Number' ),
+					'note'			=> T_( 'Type your contact number' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> T_( '(+123) 4567 8910' ),
+					'size'			=> 30,
+				),
+			'section_contact_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
+
+
 			/* COLOR IMAGE ZOOM OPTIONS
 			 * ========================================================================== */
 			'section_colorbox_start' => array(
@@ -791,68 +923,114 @@ class bricks_Skin extends Skin
 			");
 		}
 
-		if ( $this->get_setting( 'category_list_filter' ) == 1 ) {
-			require_js( 'assets/scripts/jquery.filterizr.min.js', 'relative' );
-			$layout_cat_list_filter = 'sameWidth';
-			add_js_headline("
-			jQuery( document ).ready( function(event){
-				'use strict';
-				var filterizd_var = function() {
-					var id = $( '#filters-nav li' );
-					var grid = $( '.grid' );
+		if( $disp == 'posts' ) {
+			if ( $this->get_setting( 'category_list_filter' ) == 1 ) {
+				require_js( 'assets/scripts/jquery.filterizr.min.js', 'relative' );
+				$layout_cat_list_filter = 'sameWidth';
+				add_js_headline("
+				jQuery( document ).ready( function(event){
+					'use strict';
+					var filterizd_var = function() {
+						var id = $( '#filters-nav li' );
+						var grid = $( '.grid' );
 
-					$( id ).click( function(event) {
-						$(id).removeClass('active');
-						$(this).addClass('active');
-						event.preventDefault();
+						$( id ).click( function(event) {
+							$(id).removeClass('active');
+							$(this).addClass('active');
+							event.preventDefault();
+						});
+
+						//Default options
+						var options = {
+						   animationDuration: 0.4, //in seconds
+						   filter: 'all', //Initial filter
+						   delay: 50, //Transition delay in ms
+						   delayMode: 'alternate', //'progressive' or 'alternate'
+						   easing: 'ease-out',
+						   filterOutCss: { //Filtering out animation
+						      opacity: 0,
+						      transform: 'scale(0.3)'
+						   },
+						   filterInCss: { //Filtering in animation
+						      opacity: 1,
+						      transform: 'scale(1)'
+						   },
+						   layout: '$layout_cat_list_filter', //See layouts
+						   selector: '.grid',
+						   setupControls: true,
+						}
+
+						if( grid != null ){
+							var filterizd = $( grid ).filterizr(options);
+						}
+					};
+
+					$(window).load( function() {
+						filterizd_var();
+					});
+				});
+				");
+			} else {
+				add_js_headline("
+				jQuery( document ).ready( function(event){
+					'use strict';
+					var posts_masonry = function() {
+						$('.grid').masonry({
+							// options
+							itemSelector: '.filtr-item',
+							// columnWidth: 200
+						});
+					};
+
+					$(window).load( function() {
+						posts_masonry();
+					});
+				});
+				");
+			};
+		};
+
+
+		if( $disp == 'msgform' && $this->get_setting( 'contact_map_show' ) == 1 ) {
+			require_js( 'assets/scripts/map_api.js', 'relative' );
+			require_js( 'assets/scripts/gmaps.min.js', 'relative' );
+
+			$lat = $this->get_setting( 'contact_map_lat' );
+			$lng = $this->get_setting( 'contact_map_lng' );
+			$zoom = $this->get_setting( 'contact_map_zoom' );
+			$drag = $this->get_setting( 'contact_map_drag' );
+			$scrol = $this->get_setting( 'contact_map_scrol' );
+			$doublec = $this->get_setting( 'contact_map_doubleclick' );
+			$fullsc = $this->get_setting( 'contact_map_fullscreen' );
+			$dis_ui = $this->get_setting( 'contact_map_disableDefaultUI' );
+			$mar_lat = $this->get_setting( 'contact_map_marker_lat' );
+			$mar_lng = $this->get_setting( 'contact_map_marker_lng' );
+			$mar_con = $this->get_setting( 'contact_map_marker_content' );
+
+			add_js_headline("
+				var map;
+				$(document).ready(function(){
+					map = new GMaps({
+						div: '#maps',
+						lat: $lat,
+						lng: $lng,
+						zoom: $zoom, // Max zoom 18
+						draggable: $drag,
+						scrollwheel: $scrol,
+						disableDoubleClickZoom: $doublec,
+						fullscreenControl: $fullsc,
+						disableDefaultUI: $dis_ui,
 					});
 
-					//Default options
-					var options = {
-					   animationDuration: 0.4, //in seconds
-					   filter: 'all', //Initial filter
-					   delay: 50, //Transition delay in ms
-					   delayMode: 'alternate', //'progressive' or 'alternate'
-					   easing: 'ease-out',
-					   filterOutCss: { //Filtering out animation
-					      opacity: 0,
-					      transform: 'scale(0.3)'
-					   },
-					   filterInCss: { //Filtering in animation
-					      opacity: 1,
-					      transform: 'scale(1)'
-					   },
-					   layout: '$layout_cat_list_filter', //See layouts
-					   selector: '.grid',
-					   setupControls: true,
-					}
-
-					if( grid != null ){
-						var filterizd = $( grid ).filterizr(options);
-					}
-				};
-
-				$(window).load( function() {
-					filterizd_var();
-				});
-			});
-			");
-		} else {
-			add_js_headline("
-			jQuery( document ).ready( function(event){
-				'use strict';
-				var posts_masonry = function() {
-					$('.grid').masonry({
-						// options
-						itemSelector: '.filtr-item',
-						// columnWidth: 200
+					map.addMarker({
+						lat: $mar_lat,
+						lng: $mar_lng,
+						title: 'Marker Content',
+				        infoWindow: {
+				          content: '$mar_con'
+				        }
 					});
-				};
-
-				$(window).load( function() {
-					posts_masonry();
 				});
-			});
 			");
 		};
 
@@ -1075,14 +1253,15 @@ class bricks_Skin extends Skin
 			$custom_css .= "#footer .footer_widgets .evo_widget a{ color: $color }";
 			$custom_css .= "#footer .footer_bottom .copyright a { color: $color; }";
 			$custom_css .= "#footer .footer_bottom .social_icon .ufld_icon_links a{ color: $color; }";
-			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a{ border-color: $color; }";
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:hover, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:active, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:focus { background-color: $color; border-color: $color; }";
 		}
 		if( $color = $this->get_setting( 'footer_wd_color_lh' ) ) {
 			$custom_css .= "#footer .footer_widgets .evo_widget ul a:hover, #footer .footer_widgets .evo_widget ul a:active, #footer .footer_widgets .evo_widget ul a:focus{ color: $color; }";
-			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:hover, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:active, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:focus { background-color: $color; border-color: $color; }";
+			$custom_css .= "#footer .footer_bottom .copyright a:hover, #footer .footer_bottom .copyright a:active, #footer .footer_bottom .copyright a:focus  { color: $color; }";
 		}
 		if( $color = $this->get_setting( 'footer_border_color' ) ) {
 			$custom_css .= "#footer .footer_widgets{ border-bottom-color: $color; }";
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a{ border-color: $color; }";
 		}
 
 

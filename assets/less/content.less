@@ -12,6 +12,7 @@
 // EVO TITLE DISP
 // ======================================================================== /
 .evo_title_disp {
+	font-family: @font-heading;
 	font-size: 26px;
 	font-weight: 700;
 	letter-spacing: 1px;
@@ -76,9 +77,11 @@ div.bSideItem {
 // EVO FORM BUTTON STYLE
 // ======================================================================== /
 .evo_form {
-	.SaveButton {
+	.SaveButton,
+	.submit {
 		background-color: @color-link;
 		border-color: @color-link;
+		font-family: @font-heading;
 		font-size: 12px;
 		text-transform: uppercase;
 		letter-spacing: 1px;
@@ -92,6 +95,17 @@ div.bSideItem {
 			background-color: @color-link-hover2;
 			border-color: @color-link-hover2;
 			outline: 0;
+		}
+
+		&.btn-info {
+			background-color: @btn_info;
+			border-color: @btn_info;
+			box-shadow: none;
+
+			&:hover, &:active, &:focus {
+				background-color: @btn_info_hover;
+				border-color: @btn_info_hover;
+			}
 		}
 	}
 }
@@ -136,6 +150,11 @@ div.bSideItem {
 				background-color: transparent;
 				// color: @w !important;
 			}
+		}
+
+		.evo_status {
+			font-size: 10px;
+			border-radius: 2px;
 		}
 	}
 

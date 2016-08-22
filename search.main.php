@@ -33,7 +33,7 @@ skin_include( '_html_header.inc.php', array() );
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-skin_include( '_body_header.inc.php' );
+skin_include( '_body_header_page.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
@@ -55,101 +55,23 @@ skin_include( '_body_header.inc.php' );
 				}
 				?>
 
-				<?php
-					// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
-					item_prevnext_links( array(
-						'block_start' => '<nav><ul class="pager">',
-						'prev_start'  => '<li class="previous">',
-						'prev_end'    => '</li>',
-						'next_start'  => '<li class="next">',
-						'next_end'    => '</li>',
-						'block_end'   => '</ul></nav>',
-					) );
-					// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
-				?>
-
-				<?php
-					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-					request_title( array(
-						'title_before'       => '<h2 class="evo_title_disp">',
-						'title_after'        => '</h2>',
-						'title_none'         => '',
-						'glue'               => ' - ',
-						'title_single_disp'  => false,
-						'title_page_disp'    => false,
-						'format'             => 'htmlbody',
-						'display_edit_links' => false,
-						'category_text'      => '',
-						'categories_text'    => '',
-						'catdir_text'        => '',
-						'comments_text'      => T_('Latest Replies'),
-						'front_text'         => '',
-						'posts_text'         => '',
-						'useritems_text'     => T_('User\'s topics'),
-						'usercomments_text'  => T_('User\'s replies'),
-						'register_text'      => '',
-						'login_text'         => '',
-						'lostpassword_text'  => '',
-						'account_activation' => '',
-						'msgform_text'       => T_('Contact <span>Us</span>'),
-						'user_text'          => '',
-						'users_text'         => '',
-					) );
-					// ----------------------------- END OF REQUEST TITLE ----------------------------
-				?>
-
-				<?php
-				// Go Grab the featured post:
-				if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
-				{	// We have a featured/intro post to display:
-					$intro_item_style = '';
-					$LinkOwner = new LinkItem( $Item );
-					$LinkList = $LinkOwner->get_attachment_LinkList( 1, 'cover' );
-					if( ! empty( $LinkList ) &&
-							$Link = & $LinkList->get_next() &&
-							$File = & $Link->get_File() &&
-							$File->exists() &&
-							$File->is_image() )
-					{	// Use cover image of intro-post as background:
-						$intro_item_style = 'background-image: url("'.$File->get_url().'")';
-					}
-					// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
-					skin_include( '_item_block.inc.php', array(
-						'feature_block' => true,
-						'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
-						'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post').( empty( $intro_item_style ) ? '' : ' evo_hasbgimg' ),
-						'item_style'    => $intro_item_style
-					) );
-					// ----------------------------END ITEM BLOCK  ----------------------------
-				}
-				?>
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
 						'author_link_text' 		  => 'auto',
 						// Profile tabs to switch between user edit forms
-						'profile_tabs' => array(
-							'block_start'         => '<nav><ul class="nav nav-tabs profile_tabs">',
-							'item_start'          => '<li>',
-							'item_end'            => '</li>',
-							'item_selected_start' => '<li class="active">',
-							'item_selected_end'   => '</li>',
-							'block_end'           => '</ul></nav>',
-						),
-
 						// Pagination
 						'pagination' => array(
-							'block_start'           => '<div class="center"><ul class="pagination">',
-							'block_end'             => '</ul></div>',
-							'page_current_template' => '<span>$page_num$</span>',
-							'page_item_before'      => '<li>',
-							'page_item_after'       => '</li>',
+							'block_start'              => '<div class="center pag"><ul class="pagination">',
+							'block_end'                => '</ul></div>',
+							'page_current_template'    => '<span>$page_num$</span>',
+							'page_item_before'         => '<li>',
+							'page_item_after'          => '</li>',
 							'page_item_current_before' => '<li class="active">',
 							'page_item_current_after'  => '</li>',
-							'prev_text'             => '<i class="fa fa-angle-double-left"></i>',
-							'next_text'             => '<i class="fa fa-angle-double-right"></i>',
+							'prev_text'                => '<i class="fa fa-angle-left"></i>',
+							'next_text'                => '<i class="fa fa-angle-right"></i>',
 						),
 						// Item content:
 						'url_link_position'     => 'top',

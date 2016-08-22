@@ -39,146 +39,69 @@ skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
+<div id="content">
+	<div class="container">
+		<div class="row">
+			<div id="main_content" class="<?php echo $Skin->get_column_class('layout'); ?>">
 
-<div class="container">
+				<?php
+					// ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
+					messages( array(
+						'block_start' => '<div class="action_messages">',
+						'block_end'   => '</div>',
+					) );
+					// --------------------------------- END OF MESSAGES ---------------------------------
+				?>
 
-<div class="row">
-	<div class="<?php echo $Skin->is_visible_sidebar( true ) ? $Skin->get_column_class() : 'col-md-12'; ?>">
-		<main><!-- This is were a link like "Jump to main content" would land -->
+				<?php
+					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
+					request_title( array(
+						'title_before'       => '<h2 class="evo_title_disp">',
+						'title_after'        => '</h2>',
+						'title_none'         => '',
+						'glue'               => ' - ',
+						'title_single_disp'  => false,
+						'title_page_disp'    => false,
+						'format'             => 'htmlbody',
+						'display_edit_links' => false,
+						'category_text'      => '',
+						'categories_text'    => '',
+						'catdir_text'        => '',
+						'comments_text'      => T_('Latest Replies'),
+						'front_text'         => '',
+						'posts_text'         => '',
+						'useritems_text'     => T_('User\'s topics'),
+						'usercomments_text'  => T_('User\'s replies'),
+						'register_text'      => '',
+						'login_text'         => '',
+						'lostpassword_text'  => '',
+						'account_activation' => '',
+						'msgform_text'       => T_('Messagesss'),
+						'user_text'          => '',
+						'users_text'         => '',
+					) );
+					// ----------------------------- END OF REQUEST TITLE ----------------------------
+				?>
 
-		<!-- ================================= START OF MAIN AREA ================================== -->
+				<?php
+					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
+					skin_include( '$disp$' );
+					// Note: you can customize any of the sub templates included here by
+					// copying the matching php file into your skin directory.
+					// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
+				?>
 
-		<?php
-			// ------------------------- MESSAGES GENERATED FROM ACTIONS -------------------------
-			messages( array(
-					'block_start' => '<div class="action_messages">',
-					'block_end'   => '</div>',
-				) );
-			// --------------------------------- END OF MESSAGES ---------------------------------
-		?>
-
-		<?php
-			// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-			request_title( array(
-					'title_before'      => '<h2 class="page_title">',
-					'title_after'       => '</h2>',
-					'title_none'        => '',
-					'glue'              => ' - ',
-				) );
-			// ----------------------------- END OF REQUEST TITLE ----------------------------
-		?>
-
-		<?php
-			// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
-			skin_include( '$disp$' );
-			// Note: you can customize any of the sub templates included here by
-			// copying the matching php file into your skin directory.
-			// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
-		?>
-
-		</main>
-
-	</div><!-- .col -->
-
-	<?php
-	if( $Skin->is_visible_sidebar( true ) )
-	{ // Display sidebar:
-	?>
-	<aside class="col-md-3<?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? ' pull-left' : '' ); ?>">
-		<?php
-		if( $Skin->is_visible_container( 'sidebar' ) )
-		{ // Display 'Sidebar' widget container
-		?>
-		<!-- =================================== START OF SIDEBAR =================================== -->
-		<div class="evo_container evo_container__sidebar">
-		<?php
-			// ------------------------- "Sidebar" CONTAINER EMBEDDED HERE --------------------------
-			// Display container contents:
-			skin_container( NT_('Sidebar'), array(
-					// The following (optional) params will be used as defaults for widgets included in this container:
-					// This will enclose each widget in a block:
-					'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
-					'block_end' => '</div>',
-					// This will enclose the title of each widget:
-					'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
-					'block_title_end' => '</h4></div>',
-					// This will enclose the body of each widget:
-					'block_body_start' => '<div class="panel-body">',
-					'block_body_end' => '</div>',
-					// If a widget displays a list, this will enclose that list:
-					'list_start' => '<ul>',
-					'list_end' => '</ul>',
-					// This will enclose each item in a list:
-					'item_start' => '<li>',
-					'item_end' => '</li>',
-					// This will enclose sub-lists in a list:
-					'group_start' => '<ul>',
-					'group_end' => '</ul>',
-					// This will enclose (foot)notes:
-					'notes_start' => '<div class="notes">',
-					'notes_end' => '</div>',
-					// Widget 'Search form':
-					'search_class'         => 'compact_search_form',
-					'search_input_before'  => '<div class="input-group">',
-					'search_input_after'   => '',
-					'search_submit_before' => '<span class="input-group-btn">',
-					'search_submit_after'  => '</span></div>',
-				) );
-			// ----------------------------- END OF "Sidebar" CONTAINER -----------------------------
-		?>
-		</div>
-		<?php } ?>
-
-		<?php
-		if( $Skin->is_visible_container( 'sidebar2' ) )
-		{ // Display 'Sidebar 2' widget container
-		?>
-		<div class="evo_container evo_container__sidebar2">
-		<?php
-			// ------------------------- "Sidebar" CONTAINER EMBEDDED HERE --------------------------
-			// Display container contents:
-			skin_container( NT_('Sidebar 2'), array(
-					// The following (optional) params will be used as defaults for widgets included in this container:
-					// This will enclose each widget in a block:
-					'block_start' => '<div class="panel panel-default evo_widget $wi_class$">',
-					'block_end' => '</div>',
-					// This will enclose the title of each widget:
-					'block_title_start' => '<div class="panel-heading"><h4 class="panel-title">',
-					'block_title_end' => '</h4></div>',
-					// This will enclose the body of each widget:
-					'block_body_start' => '<div class="panel-body">',
-					'block_body_end' => '</div>',
-					// If a widget displays a list, this will enclose that list:
-					'list_start' => '<ul>',
-					'list_end' => '</ul>',
-					// This will enclose each item in a list:
-					'item_start' => '<li>',
-					'item_end' => '</li>',
-					// This will enclose sub-lists in a list:
-					'group_start' => '<ul>',
-					'group_end' => '</ul>',
-					// This will enclose (foot)notes:
-					'notes_start' => '<div class="notes">',
-					'notes_end' => '</div>',
-					// Widget 'Search form':
-					'search_class'         => 'compact_search_form',
-					'search_input_before'  => '<div class="input-group">',
-					'search_input_after'   => '',
-					'search_submit_before' => '<span class="input-group-btn">',
-					'search_submit_after'  => '</span></div>',
-				) );
-			// ----------------------------- END OF "Sidebar" CONTAINER -----------------------------
-		?>
-		</div>
-		<?php } ?>
-
-	</aside><!-- .col -->
-	<?php } ?>
-
-</div><!-- .row -->
-
-</div><!-- .container -->
-
+			</div><!-- .col -->
+			<?php
+				// ------------------------- SIDEBAR INCLUDED HERE --------------------------
+				skin_include( '_sidebar.inc.php' );
+				// Note: You can customize the sidebar by copying the
+				// _sidebar.inc.php file into the current skin folder.
+				// ----------------------------- END OF SIDEBAR -----------------------------
+			?>
+		</div><!-- .row -->
+	</div><!-- .container -->
+</div><!-- #main_content -->
 
 <?php
 // ---------------------------- SITE FOOTER INCLUDED HERE ----------------------------

@@ -17,6 +17,10 @@
         position: relative;
     }
 
+    &.nav_page {
+        background-color: @w;
+    }
+
     // Container
     // ======================================================================== /
     .container-fluid {
@@ -636,8 +640,12 @@
     background-image: none;
     background-color: @e;
 
+    @media screen and ( max-width: @screen-l ) {
+        padding: 60px 0 40px;
+    }
+
     @media screen and ( max-width: @screen-sm ){
-        padding: 40px 0;
+        padding: 40px 0 30px;
     }
 
     &:after {
@@ -647,10 +655,11 @@
     .single_title_post {
         h1 {
             margin-top: 16px;
-            font-size: 28px;
+            font-family: @font-heading;
+            font-size: 24px;
             font-weight: 400;
             letter-spacing: 3px;
-            line-height: 32px;
+            line-height: 25px;
             color: @color-link;
             text-transform: uppercase;
 

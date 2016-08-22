@@ -28,8 +28,10 @@
 .evo_widget {
 
 	.evo_widget_title {
-		text-transform: uppercase;
+		font-family: @font-heading;
 		font-size: 16px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
 		font-weight: 700;
 		color: @color-link;
 		margin: 0 0 15px;
@@ -108,7 +110,7 @@
 		.tag_cloud {
 			a {
 				display: inline-block;
-				font-size: 11px !important;
+				font-size: 10px !important;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				padding: 6px 12px;
@@ -306,6 +308,28 @@
 		}
 	}
 
+}
+
+
+// TAGS STYLE
+// ======================================================================== /
+.tag_cloud {
+	a {
+		display: inline-block;
+		font-family: @font-heading;
+		font-size: 10px !important;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		padding: 6px 12px;
+		margin-bottom: 4px;
+		border: 1px solid @e;
+
+		&:hover, &:active, &:focus {
+			background-color: @color-link;
+			color: @w;
+			border-color: @color-link;
+		}
+	}
 }
 
 

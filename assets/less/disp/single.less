@@ -53,6 +53,11 @@
                         color: @color-link;
                     }
                 }
+
+                .evo_status {
+                    font-size: 10px;
+                    border-radius: 2px;
+                }
             }
 
             .evo_post__full {
@@ -408,12 +413,13 @@
 
                     .panel-body {
 
+                        .form_text_input,
                         .form_textarea_input {
                             border-radius: 0;
                             border: 0;
                             border-bottom: 1px solid @color-link-hover;
                             box-shadow: none;
-                            background-color: #f9f9f9;
+                            background-color: @f9;
                             margin-bottom: 15px;
 
                             &:active, &:focus {
@@ -423,7 +429,7 @@
                         }
 
                         .form-group {
-                            margin-bottom: 0;
+                            margin-bottom: 0px;
 
                             .control-label {
                                 text-transform: uppercase;
