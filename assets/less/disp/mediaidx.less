@@ -1,0 +1,87 @@
+// STYLE MEDIAIDX
+// ======================================================================== /
+.disp_mediaidx {
+
+    #content {
+
+    }
+
+    #main_content {
+        .widget_core_coll_media_index {
+
+            .main_content_gallery {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+
+                margin-left: -5px;
+                margin-right: -5px;
+
+                .content_gallery {
+                    margin: 0;
+                    padding: 0;
+
+                    .evo_image_gallery {
+                        position: relative;
+                        display: block;
+                        overflow: hidden;
+                        margin: 5px;
+                    }
+
+                    a {
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            background-color: @c-0;
+                            opacity: 0;
+                            transition: all .27s cubic-bezier(.3,.1,.58,1);
+                        }
+                    }
+
+                    img {
+                        max-width: 100%;
+                        height: auto;
+                        transition: transform 0.32s cubic-bezier(.3,.1,.58,1);
+                    }
+
+                    .note {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        font-size: 16px;
+                        font-weight: 700;
+                        line-height: 24px;
+                        text-transform: uppercase;
+                        padding: 0px 25px;
+                        color: @w;
+                        z-index: 1;
+                        opacity: 0;
+                        transform: translateY( -10px );
+                        transition: all .27s cubic-bezier(.3,.1,.58,1);
+                    }
+
+                    &:hover, &:active, &:focus {
+                        a::after {
+                            opacity: 0.7;
+                        }
+
+                        img {
+                            transform: scale(1.3) translateZ(0);
+                        }
+
+                        .note {
+                            opacity: 1;
+                            transform: translateY(20px);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+}
