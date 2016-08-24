@@ -49,14 +49,6 @@ skin_widget( array(
     'item_start'          => '<li class="content_gallery three_columns"><div class="evo_image_gallery">',
     'item_end'            => '</div></li>',
 
-    'link_default_class'  => 'default',
-	'link_selected_class' => 'selected',
-	'item_text_start'     => '',
-	'item_text_end'       => '',
-	'item_text'           => '%s',
-
-    'link_type'           => 'canonic',		// 'canonic' | 'context' (context will regenrate URL injecting/replacing a single filter)
-
 	'order_by'            => $Blog->get_setting('orderby'),
 	'order_dir'           => $Blog->get_setting('orderdir'),
 	'limit'               => 1000,

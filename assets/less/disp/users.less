@@ -1,0 +1,100 @@
+// USERS STYLE
+// ======================================================================== /
+.disp_user {
+    #main_content {
+
+        // PAGINATION
+        // ======================================================================== /
+        .pager {
+            margin-top: 0;
+            margin-bottom: 30px;
+
+            a {
+                font-family: @font-heading;
+                text-transform: capitalize;
+                border-radius: 0;
+                border-color: @e;
+                color: @color-body;
+
+                &:hover, &:active, &:focus {
+                    background-color: @color-body;
+                    border-color: @color-body;
+                    color: @w;
+                }
+            }
+        }
+
+        // PROFILE CONTENT
+        // ======================================================================== /
+        .profile_content {
+            max-width: 1170px;
+
+            .profile_column_left {
+                max-width: 480px;
+
+                .main_profile_picture {
+                    border-radius: 2px;
+                }
+
+                h1, h2 {
+                    font-family: @font-heading;
+                    font-weight: 700;
+                }
+
+                h1 {
+                    font-size: 28px;
+                }
+
+                h2 {
+                    font-size: 22px;
+                }
+
+                .text-muted {
+                    margin-top: 0px;
+                }
+
+                .profile_buttons {
+                    .btn, .btn button {
+                        font-family: @font-heading;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        border-radius: 0;
+                        box-shadow: none;
+                        outline: 0;
+                    }
+
+                    .btn {
+                        padding: 10px;
+                    }
+                }
+            }
+
+            .profile_column_right {
+                .panel-default {
+                    border-radius: 0;
+                    box-shadow: none;
+                    border-color: @e;
+
+                    .panel-heading {
+                        font-family: @font-heading;
+                        font-size: 14px;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                        border-bottom-color: @e;
+                    }
+                }
+
+                a {
+                    &:hover, &:active, &:focus {
+                        background-color: transparent;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+
+    }
+}

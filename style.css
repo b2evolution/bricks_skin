@@ -932,6 +932,11 @@ div.bSideItem h4 {
 .evo_comment .evo_comment_text a {
   text-decoration: underline;
 }
+.evo_comment .evo_comment_text a:hover,
+.evo_comment .evo_comment_text a:active,
+.evo_comment .evo_comment_text a:focus {
+  background-color: transparent;
+}
 .evo_comment .evo_comment_text p {
   margin-bottom: 12px;
 }
@@ -1885,6 +1890,9 @@ div.extended_search_form .search_options .search_option {
   display: inline-block;
   margin-right: 10px;
 }
+.disp_front #main_content .evo_container__front_page_primary .evo_widget {
+  margin-bottom: 30px;
+}
 .disp_posts .evo_intro_block {
   margin-bottom: 30px;
 }
@@ -2122,7 +2130,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_post_info,
 #main_content .evo_content_single .evo_single_article .evo_post_info,
 #main_content .evo_post_lists .evo_single_article .evo_post_info {
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #a3a6a8;
@@ -3192,32 +3200,6 @@ div.extended_search_form .search_options .search_option {
 .disp_msgform #main_content .evo_form .form-group .help-inline {
   margin-left: 5px;
 }
-.disp_threads #main_content .results,
-.disp_msgform #main_content .results {
-  border-radius: 0;
-  box-shadow: none;
-}
-.disp_threads #main_content .results .panel-heading,
-.disp_msgform #main_content .results .panel-heading {
-  border: 0;
-}
-.disp_threads #main_content .results .panel-heading .panel-title,
-.disp_msgform #main_content .results .panel-heading .panel-title {
-  font-size: 15px;
-  font-weight: 700;
-  color: #4b4e53;
-  text-transform: uppercase;
-}
-.disp_threads #main_content .results .message_text,
-.disp_msgform #main_content .results .message_text {
-  padding: 15px;
-}
-.disp_threads #main_content .results .avatar_rounded,
-.disp_msgform #main_content .results .avatar_rounded {
-  border-color: #eeeeee;
-  border-radius: 2px;
-  font-size: 12px;
-}
 .disp_threads .content_map,
 .disp_msgform .content_map {
   margin: 0;
@@ -3312,6 +3294,390 @@ div.extended_search_form .search_options .search_option {
   text-transform: uppercase;
   word-break: break-all;
 }
+.disp_threads #main_content .results,
+.disp_msgform #main_content .results,
+.disp_contacts #main_content .results,
+.disp_messages #main_content .results,
+.disp_users #main_content .results {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #eeeeee;
+  -webkit-transition: border-color 0.32s ease-in-out;
+  transition: border-color 0.32s ease-in-out;
+}
+.disp_threads #main_content .results .panel-heading,
+.disp_msgform #main_content .results .panel-heading,
+.disp_contacts #main_content .results .panel-heading,
+.disp_messages #main_content .results .panel-heading,
+.disp_users #main_content .results .panel-heading {
+  border-bottom: 1px solid transparent;
+  height: auto;
+  padding: 15px;
+  -webkit-transition: border-color 0.32s ease-in-out;
+  transition: border-color 0.32s ease-in-out;
+}
+.disp_threads #main_content .results .panel-heading .panel-title,
+.disp_msgform #main_content .results .panel-heading .panel-title,
+.disp_contacts #main_content .results .panel-heading .panel-title,
+.disp_messages #main_content .results .panel-heading .panel-title,
+.disp_users #main_content .results .panel-heading .panel-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #4b4e53;
+  text-transform: uppercase;
+}
+.disp_threads #main_content .results .panel-heading .action_icon,
+.disp_msgform #main_content .results .panel-heading .action_icon,
+.disp_contacts #main_content .results .panel-heading .action_icon,
+.disp_messages #main_content .results .panel-heading .action_icon,
+.disp_users #main_content .results .panel-heading .action_icon {
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 10px;
+}
+.disp_threads #main_content .results .panel-heading .action_icon .fa,
+.disp_msgform #main_content .results .panel-heading .action_icon .fa,
+.disp_contacts #main_content .results .panel-heading .action_icon .fa,
+.disp_messages #main_content .results .panel-heading .action_icon .fa,
+.disp_users #main_content .results .panel-heading .action_icon .fa {
+  margin-right: 3px;
+}
+.disp_threads #main_content .results .panel-heading .action_icon.btn-default,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-default,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-default,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-default,
+.disp_users #main_content .results .panel-heading .action_icon.btn-default {
+  border-color: #dddddd;
+}
+.disp_threads #main_content .results .panel-heading .action_icon.btn-default:hover,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-default:hover,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-default:hover,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-default:hover,
+.disp_users #main_content .results .panel-heading .action_icon.btn-default:hover,
+.disp_threads #main_content .results .panel-heading .action_icon.btn-default:active,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-default:active,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-default:active,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-default:active,
+.disp_users #main_content .results .panel-heading .action_icon.btn-default:active,
+.disp_threads #main_content .results .panel-heading .action_icon.btn-default:focus,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-default:focus,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-default:focus,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-default:focus,
+.disp_users #main_content .results .panel-heading .action_icon.btn-default:focus {
+  background-color: #dddddd;
+  border-color: #dddddd;
+  color: #333333;
+}
+.disp_threads #main_content .results .panel-heading .action_icon.btn-primary,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-primary,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-primary,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-primary,
+.disp_users #main_content .results .panel-heading .action_icon.btn-primary {
+  background-color: #4b4e53;
+  border-color: #4b4e53;
+}
+.disp_threads #main_content .results .panel-heading .action_icon.btn-primary:hover,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-primary:hover,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-primary:hover,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-primary:hover,
+.disp_users #main_content .results .panel-heading .action_icon.btn-primary:hover,
+.disp_threads #main_content .results .panel-heading .action_icon.btn-primary:active,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-primary:active,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-primary:active,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-primary:active,
+.disp_users #main_content .results .panel-heading .action_icon.btn-primary:active,
+.disp_threads #main_content .results .panel-heading .action_icon.btn-primary:focus,
+.disp_msgform #main_content .results .panel-heading .action_icon.btn-primary:focus,
+.disp_contacts #main_content .results .panel-heading .action_icon.btn-primary:focus,
+.disp_messages #main_content .results .panel-heading .action_icon.btn-primary:focus,
+.disp_users #main_content .results .panel-heading .action_icon.btn-primary:focus {
+  background-color: #101010;
+  border-color: #101010;
+}
+.disp_threads #main_content .results .filters,
+.disp_msgform #main_content .results .filters,
+.disp_contacts #main_content .results .filters,
+.disp_messages #main_content .results .filters,
+.disp_users #main_content .results .filters {
+  font-size: 13px;
+}
+.disp_threads #main_content .results .filters .filters_title .fa,
+.disp_msgform #main_content .results .filters .filters_title .fa,
+.disp_contacts #main_content .results .filters .filters_title .fa,
+.disp_messages #main_content .results .filters .filters_title .fa,
+.disp_users #main_content .results .filters .filters_title .fa {
+  margin-right: 5px;
+}
+.disp_threads #main_content .results .filters .form-control,
+.disp_msgform #main_content .results .filters .form-control,
+.disp_contacts #main_content .results .filters .form-control,
+.disp_messages #main_content .results .filters .form-control,
+.disp_users #main_content .results .filters .form-control {
+  box-shadow: none;
+  border-radius: 0;
+  border-color: #eeeeee;
+}
+.disp_threads #main_content .results .filters .form-control:focus,
+.disp_msgform #main_content .results .filters .form-control:focus,
+.disp_contacts #main_content .results .filters .form-control:focus,
+.disp_messages #main_content .results .filters .form-control:focus,
+.disp_users #main_content .results .filters .form-control:focus,
+.disp_threads #main_content .results .filters .form-control:active,
+.disp_msgform #main_content .results .filters .form-control:active,
+.disp_contacts #main_content .results .filters .form-control:active,
+.disp_messages #main_content .results .filters .form-control:active,
+.disp_users #main_content .results .filters .form-control:active {
+  border-color: #dddddd;
+}
+.disp_threads #main_content .results .message_text,
+.disp_msgform #main_content .results .message_text,
+.disp_contacts #main_content .results .message_text,
+.disp_messages #main_content .results .message_text,
+.disp_users #main_content .results .message_text {
+  padding: 15px;
+}
+.disp_threads #main_content .results .avatar_rounded,
+.disp_msgform #main_content .results .avatar_rounded,
+.disp_contacts #main_content .results .avatar_rounded,
+.disp_messages #main_content .results .avatar_rounded,
+.disp_users #main_content .results .avatar_rounded {
+  border-color: #eeeeee;
+  border-radius: 2px;
+  font-size: 12px;
+}
+.disp_threads #main_content .results .btn,
+.disp_msgform #main_content .results .btn,
+.disp_contacts #main_content .results .btn,
+.disp_messages #main_content .results .btn,
+.disp_users #main_content .results .btn {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  border-radius: 0;
+  box-shadow: none;
+  outline: 0;
+}
+.disp_threads #main_content .results .btn:hover,
+.disp_msgform #main_content .results .btn:hover,
+.disp_contacts #main_content .results .btn:hover,
+.disp_messages #main_content .results .btn:hover,
+.disp_users #main_content .results .btn:hover,
+.disp_threads #main_content .results .btn:active,
+.disp_msgform #main_content .results .btn:active,
+.disp_contacts #main_content .results .btn:active,
+.disp_messages #main_content .results .btn:active,
+.disp_users #main_content .results .btn:active,
+.disp_threads #main_content .results .btn:focus,
+.disp_msgform #main_content .results .btn:focus,
+.disp_contacts #main_content .results .btn:focus,
+.disp_messages #main_content .results .btn:focus,
+.disp_users #main_content .results .btn:focus {
+  outline: 0;
+}
+.disp_threads #main_content .results:hover,
+.disp_msgform #main_content .results:hover,
+.disp_contacts #main_content .results:hover,
+.disp_messages #main_content .results:hover,
+.disp_users #main_content .results:hover,
+.disp_threads #main_content .results:focus,
+.disp_msgform #main_content .results:focus,
+.disp_contacts #main_content .results:focus,
+.disp_messages #main_content .results:focus,
+.disp_users #main_content .results:focus,
+.disp_threads #main_content .results:active,
+.disp_msgform #main_content .results:active,
+.disp_contacts #main_content .results:active,
+.disp_messages #main_content .results:active,
+.disp_users #main_content .results:active {
+  border-color: #dddddd;
+}
+.disp_threads #main_content .results:hover .panel-heading,
+.disp_msgform #main_content .results:hover .panel-heading,
+.disp_contacts #main_content .results:hover .panel-heading,
+.disp_messages #main_content .results:hover .panel-heading,
+.disp_users #main_content .results:hover .panel-heading,
+.disp_threads #main_content .results:focus .panel-heading,
+.disp_msgform #main_content .results:focus .panel-heading,
+.disp_contacts #main_content .results:focus .panel-heading,
+.disp_messages #main_content .results:focus .panel-heading,
+.disp_users #main_content .results:focus .panel-heading,
+.disp_threads #main_content .results:active .panel-heading,
+.disp_msgform #main_content .results:active .panel-heading,
+.disp_contacts #main_content .results:active .panel-heading,
+.disp_messages #main_content .results:active .panel-heading,
+.disp_users #main_content .results:active .panel-heading {
+  border-bottom: 1px solid #dddddd;
+}
+.disp_threads #main_content .results .table,
+.disp_msgform #main_content .results .table,
+.disp_contacts #main_content .results .table,
+.disp_messages #main_content .results .table,
+.disp_users #main_content .results .table {
+  border-color: #eeeeee;
+}
+.disp_threads #main_content .results .table thead th,
+.disp_msgform #main_content .results .table thead th,
+.disp_contacts #main_content .results .table thead th,
+.disp_messages #main_content .results .table thead th,
+.disp_users #main_content .results .table thead th {
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 4px 8px;
+}
+.disp_threads #main_content .results .table tbody tr td,
+.disp_msgform #main_content .results .table tbody tr td,
+.disp_contacts #main_content .results .table tbody tr td,
+.disp_messages #main_content .results .table tbody tr td,
+.disp_users #main_content .results .table tbody tr td {
+  font-size: 13px;
+  padding: 8px;
+  border-color: #eeeeee;
+}
+.disp_threads #main_content .results .table tbody tr td.message_text,
+.disp_msgform #main_content .results .table tbody tr td.message_text,
+.disp_contacts #main_content .results .table tbody tr td.message_text,
+.disp_messages #main_content .results .table tbody tr td.message_text,
+.disp_users #main_content .results .table tbody tr td.message_text {
+  padding: 15px;
+}
+.disp_threads #main_content .results .table tbody tr td img,
+.disp_msgform #main_content .results .table tbody tr td img,
+.disp_contacts #main_content .results .table tbody tr td img,
+.disp_messages #main_content .results .table tbody tr td img,
+.disp_users #main_content .results .table tbody tr td img {
+  border-radius: 100%;
+  margin-right: 5px;
+}
+.disp_threads #main_content .results .table tbody tr td .fa,
+.disp_msgform #main_content .results .table tbody tr td .fa,
+.disp_contacts #main_content .results .table tbody tr td .fa,
+.disp_messages #main_content .results .table tbody tr td .fa,
+.disp_users #main_content .results .table tbody tr td .fa {
+  margin-right: 5px;
+}
+.disp_threads #main_content .form_send_contacts .btn,
+.disp_msgform #main_content .form_send_contacts .btn,
+.disp_contacts #main_content .form_send_contacts .btn,
+.disp_messages #main_content .form_send_contacts .btn,
+.disp_users #main_content .form_send_contacts .btn {
+  border-radius: 0;
+  border-color: #dddddd;
+  font-size: 11px;
+  outline: 0;
+  box-shadow: none;
+}
+.disp_threads #main_content .form_send_contacts .btn:hover,
+.disp_msgform #main_content .form_send_contacts .btn:hover,
+.disp_contacts #main_content .form_send_contacts .btn:hover,
+.disp_messages #main_content .form_send_contacts .btn:hover,
+.disp_users #main_content .form_send_contacts .btn:hover,
+.disp_threads #main_content .form_send_contacts .btn:active,
+.disp_msgform #main_content .form_send_contacts .btn:active,
+.disp_contacts #main_content .form_send_contacts .btn:active,
+.disp_messages #main_content .form_send_contacts .btn:active,
+.disp_users #main_content .form_send_contacts .btn:active,
+.disp_threads #main_content .form_send_contacts .btn:focus,
+.disp_msgform #main_content .form_send_contacts .btn:focus,
+.disp_contacts #main_content .form_send_contacts .btn:focus,
+.disp_messages #main_content .form_send_contacts .btn:focus,
+.disp_users #main_content .form_send_contacts .btn:focus {
+  background-color: #7e8082;
+  border-color: #7e8082;
+  color: #ffffff;
+}
+.disp_threads #main_content .form_add_contacts .form-control,
+.disp_msgform #main_content .form_add_contacts .form-control,
+.disp_contacts #main_content .form_add_contacts .form-control,
+.disp_messages #main_content .form_add_contacts .form-control,
+.disp_users #main_content .form_add_contacts .form-control {
+  box-shadow: none;
+  border-radius: 2px;
+  outline: 0;
+}
+.disp_threads #main_content .form_add_contacts .SaveButton,
+.disp_msgform #main_content .form_add_contacts .SaveButton,
+.disp_contacts #main_content .form_add_contacts .SaveButton,
+.disp_messages #main_content .form_add_contacts .SaveButton,
+.disp_users #main_content .form_add_contacts .SaveButton {
+  border-radius: 0;
+  outline: 0;
+}
+.evo_private_messages_list .messages_navigation {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 10px;
+}
+.evo_private_messages_list .messages_navigation .floatleft,
+.evo_private_messages_list .messages_navigation .floatright {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.evo_private_messages_list .messages_navigation .floatleft a:hover,
+.evo_private_messages_list .messages_navigation .floatright a:hover,
+.evo_private_messages_list .messages_navigation .floatleft a:active,
+.evo_private_messages_list .messages_navigation .floatright a:active,
+.evo_private_messages_list .messages_navigation .floatleft a:focus,
+.evo_private_messages_list .messages_navigation .floatright a:focus {
+  text-decoration: underline;
+}
+.evo_private_messages_list .messages_navigation a {
+  text-transform: uppercase;
+}
+.evo_private_messages_list > h2 {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.evo_private_messages_list .messages_list_actions {
+  margin-bottom: 20px;
+}
+.evo_private_messages_list .messages_list_actions a {
+  border-radius: 0;
+  border-color: #eeeeee;
+  font-size: 12px;
+}
+.evo_private_messages_list .messages_list_actions a:hover,
+.evo_private_messages_list .messages_list_actions a:active,
+.evo_private_messages_list .messages_list_actions a:focus {
+  background-color: #dddddd;
+  border-color: #dddddd;
+}
+.evo_private_messages_list .panel {
+  border-radius: 0;
+  border-color: #eeeeee;
+}
+.evo_private_messages_list .panel .panel-heading {
+  padding: 12px 15px;
+  font-size: 1;
+  border-bottom-color: #eeeeee;
+}
+.evo_private_messages_list .panel .panel-heading .panel-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.evo_private_messages_list .panel .panel-heading .panel-title .user {
+  font-size: 14px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.evo_private_messages_list .panel .panel-heading .panel-title .user img {
+  border-radius: 100%;
+}
+.evo_private_messages_list .panel .form-control {
+  border-radius: 0;
+  border-color: #eeeeee;
+  box-shadow: none;
+}
+.evo_private_messages_list .panel .form-control:hover,
+.evo_private_messages_list .panel .form-control:active,
+.evo_private_messages_list .panel .form-control:focus {
+  border-color: #dddddd;
+}
 .disp_sitemap #main_content .evo_title_widget {
   font-size: 18px;
   font-weight: 700;
@@ -3376,6 +3742,9 @@ div.extended_search_form .search_options .search_option {
   overflow: hidden;
   margin: 5px;
 }
+.disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery a {
+  z-index: 10;
+}
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery a::after {
   content: '';
   position: absolute;
@@ -3415,7 +3784,7 @@ div.extended_search_form .search_options .search_option {
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover a::after,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active a::after,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:focus a::after {
-  opacity: 0.7;
+  opacity: 0.65;
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover img,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active img,
@@ -3435,7 +3804,7 @@ div.extended_search_form .search_options .search_option {
   margin-bottom: 50px;
 }
 .disp_search #main_content .widget_core_coll_search_form .extended_search_form {
-  max-width: 620px;
+  max-width: 780px;
 }
 .disp_search #main_content .widget_core_coll_search_form .input-group {
   width: 100%;
@@ -3506,9 +3875,9 @@ div.extended_search_form .search_options .search_option {
   margin-left: 70px;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  line-height: 1.3;
+  line-height: 1.2;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
@@ -3602,6 +3971,79 @@ div.extended_search_form .search_options .search_option {
   .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap {
     margin-left: 0;
   }
+}
+.disp_user #main_content .pager {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+.disp_user #main_content .pager a {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  border-radius: 0;
+  border-color: #eeeeee;
+  color: #7e8082;
+}
+.disp_user #main_content .pager a:hover,
+.disp_user #main_content .pager a:active,
+.disp_user #main_content .pager a:focus {
+  background-color: #7e8082;
+  border-color: #7e8082;
+  color: #ffffff;
+}
+.disp_user #main_content .profile_content {
+  max-width: 1170px;
+}
+.disp_user #main_content .profile_content .profile_column_left {
+  max-width: 480px;
+}
+.disp_user #main_content .profile_content .profile_column_left .main_profile_picture {
+  border-radius: 2px;
+}
+.disp_user #main_content .profile_content .profile_column_left h1,
+.disp_user #main_content .profile_content .profile_column_left h2 {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.disp_user #main_content .profile_content .profile_column_left h1 {
+  font-size: 28px;
+}
+.disp_user #main_content .profile_content .profile_column_left h2 {
+  font-size: 22px;
+}
+.disp_user #main_content .profile_content .profile_column_left .text-muted {
+  margin-top: 0px;
+}
+.disp_user #main_content .profile_content .profile_column_left .profile_buttons .btn,
+.disp_user #main_content .profile_content .profile_column_left .profile_buttons .btn button {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  box-shadow: none;
+  outline: 0;
+}
+.disp_user #main_content .profile_content .profile_column_left .profile_buttons .btn {
+  padding: 10px;
+}
+.disp_user #main_content .profile_content .profile_column_right .panel-default {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #eeeeee;
+}
+.disp_user #main_content .profile_content .profile_column_right .panel-default .panel-heading {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom-color: #eeeeee;
+}
+.disp_user #main_content .profile_content .profile_column_right a:hover,
+.disp_user #main_content .profile_content .profile_column_right a:active,
+.disp_user #main_content .profile_content .profile_column_right a:focus {
+  background-color: transparent;
+  text-decoration: underline;
 }
 .disp_404 #main_content .icon_404,
 .disp_none #main_content .icon_404,

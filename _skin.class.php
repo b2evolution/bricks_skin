@@ -991,7 +991,7 @@ class bricks_Skin extends Skin
 		};
 
 
-		if( $disp == 'msgform' && $this->get_setting( 'contact_map_show' ) == 1 ) {
+		if( ($disp == 'msgform' || $disp == 'threads') && $this->get_setting( 'contact_map_show' ) == 1 ) {
 			require_js( 'assets/scripts/map_api.js', 'relative' );
 			require_js( 'assets/scripts/gmaps.min.js', 'relative' );
 

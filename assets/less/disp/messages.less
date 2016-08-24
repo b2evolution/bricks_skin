@@ -70,35 +70,6 @@
             }
         }
 
-
-        // MESSAGE STYLE PREVIEW
-        // ======================================================================== /
-        .results {
-            border-radius: 0;
-            box-shadow: none;
-
-            .panel-heading {
-                border: 0;
-
-                .panel-title {
-                    font-size: 15px;
-                    font-weight: 700;
-                    color: @color-link;
-                    text-transform: uppercase;
-                }
-            }
-
-            .message_text {
-                padding: 15px;
-            }
-
-            .avatar_rounded {
-                border-color: @e;
-                border-radius: 2px;
-                font-size: 12px;
-            }
-        }
-
     }
 
     // CONTENT MAPS
@@ -194,6 +165,294 @@
                 }
             }
 
+        }
+    }
+}
+
+
+// RESULTS STYLE
+// ======================================================================== /
+.disp_threads,
+.disp_msgform,
+.disp_contacts,
+.disp_messages,
+.disp_users {
+
+    #main_content {
+        // MESSAGE STYLE PREVIEW
+        // ======================================================================== /
+        .results {
+            border-radius: 0;
+            box-shadow: none;
+            border-color: @e;
+            transition: border-color 0.32s ease-in-out;
+
+            .panel-heading {
+                border-bottom: 1px solid transparent;
+                height: auto;
+                padding: 15px;
+                transition: border-color 0.32s ease-in-out;
+
+                .panel-title {
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: @color-link;
+                    text-transform: uppercase;
+                }
+
+                .action_icon {
+                    font-size: 10px;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    padding: 6px 10px;
+
+                    .fa {
+                        margin-right: 3px;
+                    }
+
+                    &.btn-default {
+                        border-color: @d;
+
+                        &:hover, &:active, &:focus {
+                            background-color: @d;
+                            border-color: @d;
+                            color: @b;
+                        }
+                    }
+
+                    &.btn-primary {
+                        background-color: @color-link;
+                        border-color: @color-link;
+
+                        &:hover, &:active, &:focus {
+                            background-color: @color-link-hover2;
+                            border-color: @color-link-hover2;
+                        }
+                    }
+                }
+            }
+
+            // FILTERS
+            // ======================================================================== /
+            .filters {
+                font-size: 13px;
+
+                .filters_title {
+                    .fa {
+                        margin-right: 5px;
+                    }
+                }
+
+                .form-control {
+                    box-shadow: none;
+                    border-radius: 0;
+                    border-color: @e;
+
+                    &:focus, &:active {
+                        border-color: @d;
+                    }
+                }
+            }
+
+            .message_text {
+                padding: 15px;
+            }
+
+            .avatar_rounded {
+                border-color: @e;
+                border-radius: 2px;
+                font-size: 12px;
+            }
+
+            .btn {
+                font-family: @font-heading;
+                border-radius: 0;
+                box-shadow: none;
+                outline: 0;
+
+                &:hover, &:active, &:focus {
+                    outline: 0;
+                }
+            }
+
+
+            // HOVER PANEL MESSAGE
+            // ======================================================================== /
+            &:hover, &:focus, &:active {
+                border-color: @d;
+
+                .panel-heading {
+                    border-bottom: 1px solid @d;
+                }
+            }
+
+            .table {
+                border-color: @e;
+
+                thead {
+                    th {
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        padding: 4px 8px;
+                    }
+                }
+
+                tbody {
+                    tr {
+
+                        &:nth-child(odd) {
+                            // background-color: @e;
+                        }
+
+                        td {
+                            font-size: 13px;
+                            padding: 8px;
+                            border-color: @e;
+
+                            &.message_text {
+                                padding: 15px;
+                            }
+
+                            img {
+                                border-radius: 100%;
+                                margin-right: 5px;
+                            }
+
+                            .fa {
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .form_send_contacts {
+            .btn {
+                border-radius: 0;
+                border-color: @d;
+                font-size: 11px;
+                outline: 0;
+                box-shadow: none;
+
+                &:hover, &:active, &:focus {
+                    background-color: @color-body;
+                    border-color: @color-body;
+                    color: @w;
+                }
+            }
+        }
+
+        .form_add_contacts {
+            .form-control {
+                box-shadow: none;
+                border-radius: 2px;
+                outline: 0;
+            }
+
+            .SaveButton {
+                border-radius: 0;
+                outline: 0;
+            }
+        }
+
+    }
+
+}
+
+
+// EVO PRIVATE MESSAGE LIST
+// ======================================================================== /
+.evo_private_messages_list {
+
+    .messages_navigation {
+        margin-bottom: 20px;
+        border-bottom: 1px solid @e;
+        padding-bottom: 10px;
+
+        .floatleft,
+        .floatright {
+            font-size: 12px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            a {
+                &:hover, &:active, &:focus {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        a {
+            text-transform: uppercase;
+        }
+    }
+
+    & > h2 {
+        font-family: @font-heading;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+    }
+
+
+    // MESSAGES LIST ACTIONS
+    // ======================================================================== /
+    .messages_list_actions {
+        margin-bottom: 20px;
+
+        a {
+            border-radius: 0;
+            border-color: @e;
+            font-size: 12px;
+
+            &:hover, &:active, &:focus {
+                background-color: @d;
+                border-color: @d;
+                // color: @w;
+            }
+        }
+    }
+
+
+    .panel {
+        border-radius: 0;
+        border-color: @e;
+
+        .panel-heading {
+            padding: 12px 15px;
+            font-size: 1;
+            border-bottom-color: @e;
+
+            .panel-title {
+                font-size: 12px;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                .user {
+                    font-size: 14px;
+                    letter-spacing: 0;
+                    text-transform: none;
+
+                    img {
+                        border-radius: 100%;
+                    }
+                }
+            }
+        }
+
+        .form-control {
+            border-radius: 0;
+            border-color: @e;
+            box-shadow: none;
+
+            &:hover, &:active, &:focus {
+                border-color: @d;
+            }
         }
     }
 }
