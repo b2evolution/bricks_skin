@@ -26,6 +26,7 @@
 // Positions on the action buttons near page titles
 .evo_post_title {
 	display: table;
+	word-break: break-word;
 
 	h2 {
 		display: table-cell;
@@ -90,6 +91,10 @@ div.bSideItem {
 		border-radius: 0;
 		outline: 0;
 		transition: all 0.2s ease-in-out;
+
+		@media screen and ( max-width: @screen-xs ) {
+			font-size: 11px;
+		}
 
 		&:hover, &:active, &:focus {
 			background-color: @color-link-hover2;
@@ -194,6 +199,7 @@ div.bSideItem {
 	.evo_comment_text {
 		display: table;
 		line-height: 1.4;
+		word-break: break-word;
 
 		h1, h2, h3, h4, h5, h6 {
 			font-weight: 700;

@@ -26,6 +26,7 @@
 // WIDGET STYLE
 // ======================================================================== /
 .evo_widget {
+	// margin-bottom: 30px;
 
 	.evo_widget_title {
 		font-family: @font-heading;
@@ -36,6 +37,14 @@
 		color: @color-link;
 		margin: 0 0 15px;
 		line-height: 25px;
+	}
+
+	ul {
+
+		li {
+			word-break: break-word;
+		}
+
 	}
 
 	.evo_widget_body {
@@ -58,6 +67,41 @@
 				&:last-child {
 					padding-bottom: 0;
 				}
+			}
+		}
+
+		.btn {
+			border-radius: 0;
+			outline: 0;
+			box-shadow: none;
+			text-transform: uppercase;
+			font-size: 11px;
+			letter-spacing: 1px;
+			padding: 8px 12px;
+
+			&.btn-default {
+				border-color: @d;
+
+				&:hover, &:active, &:focus {
+					background-color: @color-link;
+					border-color: @color-link;
+					color: @w;
+					box-shadow: none;
+				}
+			}
+		}
+
+		.form-control {
+			border-radius: 0;
+			box-shadow: none;
+			border-color: @d;
+
+			&:focus, &:active {
+				border-color: @color-body;
+			}
+
+			&:focus:invalid {
+				border-color: @color-invalid;
 			}
 		}
 
@@ -132,7 +176,7 @@
 		.evo_widget_body {
 			ul {
 				a {
-					font-size: 13px;
+					font-size: 12px;
 					font-weight: 400;
 					text-transform: uppercase;
 					letter-spacing: 1px;
@@ -147,6 +191,12 @@
 		.evo_widget_body {
 			.user {
 				font-weight: 600;
+			}
+
+			a {
+				&:hover, &:active, &:focus {
+					background-color: transparent;
+				}
 			}
 		}
 	}
@@ -173,6 +223,10 @@
 	// SEARCH FORM
 	// ======================================================================== /
 	&.widget_core_coll_search_form {
+		.input-group {
+			width: 85%;
+		}
+
 		.search {
 			.search_field {
 				border: 0;
@@ -305,6 +359,76 @@
 		tfoot, thead {
 			tr {
 				background-color: transparent !important;
+			}
+		}
+	}
+
+	// WIDGET CORE PROFILE MENU
+	// ======================================================================== /
+	&.widget_core_profile_menu_link {
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				img {
+					border-radius: 100%;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	// WIDGET BREADCRUMB
+	// ======================================================================== /
+	&.widget_core_breadcrumb_path {
+		font-size: 12px;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+	}
+
+	// WIDGET USER LOGIN
+	// ======================================================================== /
+	&.widget_core_user_login {
+		img {
+			border-radius: 100%;
+		}
+	}
+
+	&.widget_core_user_login,
+	&.widget_core_user_register {
+		.panel {
+			.field_login_btn,
+			.field_register_btn {
+				padding-top: 5px;
+			}
+		}
+	}
+
+	// WIDGET ORG MEMBER
+	// ======================================================================== /
+	&.widget_core_org_members {
+		.evo_user_name {
+			font-weight: 600;
+		}
+
+		.user_link {
+			color: @color-link;
+
+			img {
+				margin-bottom: 15px;
+			}
+		}
+	}
+
+	// WIDGET ONLINE USERS
+	// ======================================================================== /
+	&.widget_core_online_users {
+		.evo_widget_body {
+			img {
+				border-radius: 100%;
+				margin-right: 5px;
 			}
 		}
 	}

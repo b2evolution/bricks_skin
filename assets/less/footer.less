@@ -56,7 +56,9 @@
 
         }
 
-        .widget_core_user_links {
+        .widget_core_user_links,
+        .widget_core_social_links,
+        .widget_core_org_members {
             .ufld_icon_links a {
                 color: @w;
             }
@@ -88,6 +90,10 @@
             .social_icon,
             .copyright {
                 float: none;
+
+                @media screen and ( @screen-x ) {
+                    padding: 0 15px;
+                }
             }
 
             .copyright {
@@ -182,6 +188,13 @@
             .copyright {
                 font-size: 11px;
                 line-height: 1.6;
+            }
+        }
+
+        @media screen and ( max-width: @screen-x ) {
+            .social_icon,
+            .copyright {
+                padding: 0 15px;
             }
         }
     }

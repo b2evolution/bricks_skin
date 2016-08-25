@@ -16,6 +16,11 @@
             padding: 40px 30px 30px;
         }
 
+        @media screen and ( max-width: @screen-xs ) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
         .evo_title_disp {
             font-weight: 300;
 
@@ -161,7 +166,7 @@
                     font-size: 13px;
                     letter-spacing: 0.5px;
                     text-transform: uppercase;
-                    word-break: break-all;
+                    word-break: break-word;
                 }
             }
 
@@ -316,6 +321,11 @@
                             img {
                                 border-radius: 100%;
                                 margin-right: 5px;
+
+                                @media screen and ( max-width: @screen-sm ) {
+                                    max-width: 50px;
+                                    max-height: 50px;
+                                }
                             }
 
                             .fa {
@@ -398,26 +408,8 @@
         margin-bottom: 20px;
     }
 
-
-    // MESSAGES LIST ACTIONS
+    // PANEL
     // ======================================================================== /
-    .messages_list_actions {
-        margin-bottom: 20px;
-
-        a {
-            border-radius: 0;
-            border-color: @e;
-            font-size: 12px;
-
-            &:hover, &:active, &:focus {
-                background-color: @d;
-                border-color: @d;
-                // color: @w;
-            }
-        }
-    }
-
-
     .panel {
         border-radius: 0;
         border-color: @e;
@@ -455,4 +447,38 @@
             }
         }
     }
+
+    // FORM PRIVATE MESSAGES
+    // ======================================================================== /
+    .evo_form__private_messages {
+        .SaveButton {
+            @media screen and ( max-width: @screen-x ) {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    // MESSAGES LIST ACTIONS
+    // ======================================================================== /
+    .messages_list_actions {
+        margin-bottom: 20px;
+
+        a {
+            border-radius: 0;
+            border-color: @e;
+            font-size: 12px;
+            word-break: break-word;
+
+            @media screen and ( max-width: @screen-sm ) {
+                margin-top: 5px;
+            }
+
+            &:hover, &:active, &:focus {
+                background-color: @d;
+                border-color: @d;
+                // color: @w;
+            }
+        }
+    }
+
 }

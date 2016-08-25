@@ -112,6 +112,14 @@
             .navbar-brand {
                 height: 62px;
                 padding: 20px 0px;
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and ( max-width: @screen-sm ) {
+            .navbar-toggle {
+                position: absolute;
+                right: 50px;
             }
         }
 
@@ -349,8 +357,8 @@
         }
 
         @media screen and ( max-width: @screen-l ) {
-            top: 10px;
-            right: 55px;
+            top: 12px;
+            right: 10px;
 
             .search_tringger {
                 &:before {
@@ -524,6 +532,10 @@
     }
 
     .site_brand {
+        .evo_widget {
+            margin-bottom: 0;
+        }
+
         h1 {
             margin-top: 0;
         }
@@ -591,6 +603,7 @@
                 line-height: 16px;
                 text-transform: uppercase;
                 opacity: 0.82;
+                word-break: break-word;
             }
 
             & > li+li:before {
@@ -662,6 +675,7 @@
             line-height: 25px;
             color: @color-link;
             text-transform: uppercase;
+            word-break: break-word;
 
             @media screen and ( max-width: @screen-sm ) {
                 letter-spacing: 1px;
