@@ -7,7 +7,7 @@ html a {
 }
 body {
   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 1.6;
   color: #7e8082;
@@ -174,7 +174,7 @@ textarea.message_text {
 }
 #nav .navbar-header .navbar-brand h3 {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: 2px;
   margin: 0;
@@ -272,7 +272,7 @@ textarea.message_text {
 #nav .nav_tabs ul a {
   position: relative;
   display: block;
-  font-size: 12px;
+  font-size: 1.2rem;
   z-index: 1;
   text-shadow: none;
   line-height: 20px;
@@ -327,7 +327,7 @@ textarea.message_text {
   }
   #nav .nav_tabs ul a {
     position: relative;
-    font-size: 13px;
+    font-size: 1.3rem;
     padding: 13px 5px !important;
     margin-bottom: 0 !important;
     color: #d3d3d3 !important;
@@ -346,7 +346,7 @@ textarea.message_text {
     content: "\e753";
     position: absolute;
     right: 0;
-    font-size: 20px;
+    font-size: 2rem;
     color: #d3d3d3;
     display: inline-block;
     font-family: 'elegant-icons' !important;
@@ -360,7 +360,7 @@ textarea.message_text {
 }
 @media screen and (max-width: 480px) {
   #nav .nav_tabs ul a {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 }
 #nav .search_icon {
@@ -481,7 +481,7 @@ textarea.message_text {
   height: 92px;
   border: none;
   border-radius: 0;
-  font-size: 28px;
+  font-size: 2.8rem;
   font-weight: 300;
   padding-left: 20px;
   padding-right: 88px;
@@ -499,18 +499,19 @@ textarea.message_text {
 }
 @media screen and (max-width: 768px) {
   #nav #cd_search .SearchField {
-    font-size: 26px;
+    font-size: 2.6rem;
   }
 }
 @media screen and (max-width: 480px) {
   #nav #cd_search .SearchField {
-    font-size: 20px;
+    font-size: 2rem;
   }
 }
 #nav #cd_search.visible {
   height: 100%;
   opacity: 1;
   z-index: 3;
+  background-color: #ffffff;
 }
 #nav.fixed {
   position: fixed;
@@ -546,7 +547,7 @@ textarea.message_text {
   }
   #nav.fixed #cd_search .SearchField {
     height: 66px;
-    font-size: 22px;
+    font-size: 2.2rem;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -616,7 +617,7 @@ textarea.message_text {
 #main_header .site_brand .widget_core_coll_title h1,
 #main_header_single .site_brand .widget_core_coll_title h1 {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: normal;
   letter-spacing: 5px;
   line-height: 25px;
@@ -625,7 +626,7 @@ textarea.message_text {
 @media screen and (max-width: 480px) {
   #main_header .site_brand .widget_core_coll_title h1,
   #main_header_single .site_brand .widget_core_coll_title h1 {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 #main_header .site_brand .widget_core_coll_title a,
@@ -636,7 +637,7 @@ textarea.message_text {
 #main_header_single .site_brand .widget_core_coll_tagline {
   color: #ffffff;
   opacity: 0.7;
-  font-size: 12px;
+  font-size: 1.2rem;
   line-height: 15px;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -644,7 +645,7 @@ textarea.message_text {
 @media screen and (max-width: 480px) {
   #main_header .site_brand .widget_core_coll_tagline,
   #main_header_single .site_brand .widget_core_coll_tagline {
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 }
 #main_header .site_brand .widget_core_coll_avatar,
@@ -677,7 +678,7 @@ textarea.message_text {
 }
 #main_header .bc_content .breadcrumb li,
 #main_header_single .bc_content .breadcrumb li {
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 2px;
   line-height: 16px;
@@ -738,7 +739,7 @@ textarea.message_text {
 #main_header_single .single_title_post h1 {
   margin-top: 16px;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 2.4rem;
   font-weight: 400;
   letter-spacing: 3px;
   line-height: 25px;
@@ -773,7 +774,7 @@ textarea.message_text {
 }
 .evo_title_disp {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 26px;
+  font-size: 2.6rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -824,7 +825,7 @@ div.bSideItem h4 {
   background-color: #4b4e53;
   border-color: #4b4e53;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 10px 20px;
@@ -837,7 +838,7 @@ div.bSideItem h4 {
 @media screen and (max-width: 480px) {
   .evo_form .SaveButton,
   .evo_form .submit {
-    font-size: 11px;
+    font-size: 1.1rem;
   }
 }
 .evo_form .SaveButton:hover,
@@ -887,7 +888,7 @@ div.bSideItem h4 {
 }
 .evo_comment .evo_comment_title,
 .evo_comment .panel-title {
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -904,7 +905,7 @@ div.bSideItem h4 {
 }
 .evo_comment .evo_comment_title .evo_status,
 .evo_comment .panel-title .evo_status {
-  font-size: 10px;
+  font-size: 1rem;
   border-radius: 2px;
 }
 .evo_comment .evo_comment_avatar {
@@ -975,12 +976,12 @@ div.bSideItem h4 {
 .evo_comment .evo_comment_footer,
 .evo_comment .evo_comment_info {
   margin-top: 15px;
-  font-size: 13px;
+  font-size: 1.3rem;
   text-transform: uppercase;
 }
 .evo_comment .evo_comment_footer .permalink_right,
 .evo_comment .evo_comment_info .permalink_right {
-  font-size: 9px;
+  font-size: 0.9rem;
   letter-spacing: 1px;
   padding: 2px 8px;
   border: 1px solid #eeeeee;
@@ -989,7 +990,7 @@ div.bSideItem h4 {
 }
 .evo_comment .evo_comment_footer .permalink_right .fa,
 .evo_comment .evo_comment_info .permalink_right .fa {
-  font-size: 11px;
+  font-size: 1.1rem;
 }
 .evo_comment .evo_comment_footer .permalink_right:active,
 .evo_comment .evo_comment_info .permalink_right:active,
@@ -1045,7 +1046,7 @@ div.bSideItem h4 {
 }
 .pagination li a .ei,
 .pagination li span .ei {
-  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 32px;
 }
 .pagination li a:hover,
@@ -1686,7 +1687,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
 }
 .evo_widget .evo_widget_title {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 700;
@@ -1714,7 +1715,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   outline: 0;
   box-shadow: none;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   padding: 8px 12px;
 }
@@ -1751,7 +1752,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   letter-spacing: 0.2px;
 }
 .evo_widget.widget_core_coll_category_list .evo_widget_body ul a {
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -1763,7 +1764,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
 }
 .evo_widget.widget_core_coll_tag_cloud .tag_cloud a {
   display: inline-block;
-  font-size: 10px !important;
+  font-size: 1rem !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 6px 12px;
@@ -1778,10 +1779,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   border-color: #4b4e53;
 }
 .evo_widget.widget_core_coll_common_links .evo_widget_body ul a {
-  font-size: 12px;
   font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 .evo_widget.widget_core_coll_comment_list .evo_widget_body .user {
   font-weight: 600;
@@ -1808,6 +1806,9 @@ div.widget_core_user_avatars.evo_layout_rwd img {
 .evo_widget.widget_core_coll_search_form .input-group {
   width: 85%;
 }
+.evo_widget.widget_core_coll_search_form .form-control {
+  background-color: transparent;
+}
 .evo_widget.widget_core_coll_search_form .search .search_field {
   border: 0;
   border-bottom: 1px solid #a3a6a8;
@@ -1830,7 +1831,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   content: "\e6ee";
   display: inline-block;
   font-family: 'elegant-icons' !important;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-style: normal;
   font-weight: normal;
   line-height: 35px;
@@ -1865,7 +1866,7 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   font-size: 90%;
 }
 .evo_widget.widget_plugin_evo_Calr caption {
-  font-size: 17px;
+  font-size: 1.7rem;
   font-weight: 700;
   text-transform: uppercase;
   padding: 8px 5px;
@@ -1923,12 +1924,16 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   margin-right: 5px;
 }
 .evo_widget.widget_core_breadcrumb_path {
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .evo_widget.widget_core_user_login img {
   border-radius: 100%;
+}
+.evo_widget.widget_core_user_login .panel,
+.evo_widget.widget_core_user_register .panel {
+  background-color: transparent;
 }
 .evo_widget.widget_core_user_login .panel .field_login_btn,
 .evo_widget.widget_core_user_register .panel .field_login_btn,
@@ -1949,10 +1954,13 @@ div.widget_core_user_avatars.evo_layout_rwd img {
   border-radius: 100%;
   margin-right: 5px;
 }
+.evo_widget.widget_core_coll_current_filters {
+  word-break: break-word;
+}
 .tag_cloud a {
   display: inline-block;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 10px !important;
+  font-size: 1.1rem !important;
   text-transform: uppercase;
   letter-spacing: 1px;
   padding: 6px 12px;
@@ -2040,7 +2048,7 @@ div.extended_search_form .search_options .search_option {
 .disp_posts .filters .nav-gallery li {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 11px;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   margin: 0 3px 5px;
   padding: 5px 13px;
@@ -2090,7 +2098,7 @@ div.extended_search_form .search_options .search_option {
   opacity: 1;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_title h2 {
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.3;
   text-transform: uppercase;
@@ -2098,7 +2106,7 @@ div.extended_search_form .search_options .search_option {
   padding-bottom: 2px;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_info {
-  font-size: 13px;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-bottom: 14px;
@@ -2108,7 +2116,7 @@ div.extended_search_form .search_options .search_option {
   font-weight: 400;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_info .evo_status {
-  font-size: 10px;
+  font-size: 1rem;
   border-radius: 2px;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt,
@@ -2134,7 +2142,7 @@ div.extended_search_form .search_options .search_option {
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link a,
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link a,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link a {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -2142,7 +2150,7 @@ div.extended_search_form .search_options .search_option {
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post_more_link a .ei,
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post__excerpt_more_link a .ei,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text .evo_post__excerpt_more_link a .ei {
-  font-size: 20px;
+  font-size: 2rem;
   position: relative;
   top: 4px;
   left: 0;
@@ -2173,13 +2181,13 @@ div.extended_search_form .search_options .search_option {
   bottom: -40px;
 }
 .disp_posts #grid_posts .evo_post_article .evo_readmore_link a {
-  font-size: 13px;
+  font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
 .disp_posts #grid_posts .evo_post_article .evo_readmore_link a .ei {
-  font-size: 20px;
+  font-size: 2rem;
   position: relative;
   top: 3.5px;
   left: 0;
@@ -2197,7 +2205,7 @@ div.extended_search_form .search_options .search_option {
   position: relative;
   float: right;
   top: -20px;
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 .disp_posts #grid_posts .evo_post_article .post_comments_link a {
   color: #7e8082;
@@ -2225,7 +2233,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_post_title h1,
 #main_content .evo_content_single .evo_single_article .evo_post_title h1,
 #main_content .evo_post_lists .evo_single_article .evo_post_title h1 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #4b4e53;
   margin-top: 0;
@@ -2236,7 +2244,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_post_info,
 #main_content .evo_content_single .evo_single_article .evo_post_info,
 #main_content .evo_post_lists .evo_single_article .evo_post_info {
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: #a3a6a8;
@@ -2266,7 +2274,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_post_info .evo_status,
 #main_content .evo_content_single .evo_single_article .evo_post_info .evo_status,
 #main_content .evo_post_lists .evo_single_article .evo_post_info .evo_status {
-  font-size: 10px;
+  font-size: 1rem;
   border-radius: 2px;
 }
 #main_content .evo_content_single .evo_post_article .evo_post__full,
@@ -2328,7 +2336,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_post__full_text p,
 #main_content .evo_content_single .evo_single_article .evo_post__full_text p,
 #main_content .evo_post_lists .evo_single_article .evo_post__full_text p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 #main_content .evo_content_single .evo_post_article .evo_post__full_text a,
 #main_content .evo_post_lists .evo_post_article .evo_post__full_text a,
@@ -2436,7 +2444,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
 #main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
 #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3 {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #4b4e53;
@@ -2462,7 +2470,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a,
 #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a {
   display: inline-block;
-  font-size: 11px;
+  font-size: 1.1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   border: 1px solid #eeeeee;
@@ -2604,7 +2612,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_content_single .evo_single_article .single_pager ul a,
 #main_content .evo_post_lists .evo_single_article .single_pager ul a {
   display: inline-block;
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   vertical-align: middle;
@@ -2613,7 +2621,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .single_pager ul a .ei,
 #main_content .evo_content_single .evo_single_article .single_pager ul a .ei,
 #main_content .evo_post_lists .evo_single_article .single_pager ul a .ei {
-  font-size: 24px;
+  font-size: 2.4rem;
   vertical-align: middle;
   margin-bottom: 3px;
   opacity: 0.6;
@@ -2622,7 +2630,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
 #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   color: #4b4e53;
   text-transform: uppercase;
@@ -2638,7 +2646,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
 #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a {
-  font-size: 10px;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
   line-height: 1.5;
@@ -2692,7 +2700,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title {
   margin-top: 0;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
@@ -2777,7 +2785,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
 #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   opacity: 0.8;
   text-transform: uppercase;
@@ -2857,7 +2865,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
   padding: 10px 20px;
-  font-size: 13px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   border-radius: 0;
@@ -2872,7 +2880,7 @@ div.extended_search_form .search_options .search_option {
   #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
   #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
   #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
-    font-size: 12px;
+    font-size: 1.1rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -2941,7 +2949,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification,
 #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification {
-  font-size: 12px;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification p,
@@ -2954,7 +2962,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
 #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn {
-  font-size: 11px;
+  font-size: 1.1rem;
   border-radius: 0;
   border-color: #eeeeee;
   letter-spacing: 0.2px;
@@ -3004,7 +3012,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading {
   padding: 20px 30px 15px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 700;
   text-transform: uppercase;
   background-color: transparent;
@@ -3050,7 +3058,7 @@ div.extended_search_form .search_options .search_option {
 #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
 #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
 #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title {
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
@@ -3166,7 +3174,7 @@ div.extended_search_form .search_options .search_option {
 .disp_pwdchange #main_content .evo_form .panel .panel-heading,
 .disp_userprefs #main_content .evo_form .panel .panel-heading,
 .disp_subs #main_content .evo_form .panel .panel-heading {
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 600;
   border-bottom-color: #eeeeee;
   text-transform: uppercase;
@@ -3180,7 +3188,7 @@ div.extended_search_form .search_options .search_option {
 .disp_subs #main_content .evo_form .ActionButton {
   border-radius: 0;
   background-color: #4b4e53;
-  font-size: 13px;
+  font-size: 1.3rem;
   letter-spacing: 0px;
   padding: 8px 20px;
   outline: 0;
@@ -3234,7 +3242,7 @@ div.extended_search_form .search_options .search_option {
   }
 }
 .disp_comments #main_content .evo_comment .panel-heading .panel-title {
-  font-size: 12px;
+  font-size: 1.2rem;
   word-break: break-word;
 }
 @media screen and (min-width: 992px) {
@@ -3246,7 +3254,7 @@ div.extended_search_form .search_options .search_option {
   }
 }
 .disp_comments #main_content .evo_comment .panel-heading .evo_status {
-  font-size: 10px;
+  font-size: 1rem;
   margin-left: 5px;
   border-radius: 2px;
 }
@@ -3288,7 +3296,7 @@ div.extended_search_form .search_options .search_option {
 .disp_threads #main_content .evo_form .control-label,
 .disp_msgform #main_content .evo_form .control-label {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -3397,7 +3405,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_threads .contact_info .main_contact_info_icon .ei,
 .disp_msgform .contact_info .main_contact_info_icon .ei {
-  font-size: 36px;
+  font-size: 3.6rem;
   opacity: 0.6;
 }
 .disp_threads .contact_info .main_contact_info_text,
@@ -3406,7 +3414,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_threads .contact_info .main_contact_info_text h3,
 .disp_msgform .contact_info .main_contact_info_text h3 {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #4b4e53;
@@ -3416,7 +3424,7 @@ div.extended_search_form .search_options .search_option {
 .disp_threads .contact_info .main_contact_info_text p,
 .disp_msgform .contact_info .main_contact_info_text p {
   margin: 0 0 10px;
-  font-size: 13px;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   word-break: break-word;
@@ -3448,7 +3456,7 @@ div.extended_search_form .search_options .search_option {
 .disp_contacts #main_content .results .panel-heading .panel-title,
 .disp_messages #main_content .results .panel-heading .panel-title,
 .disp_users #main_content .results .panel-heading .panel-title {
-  font-size: 15px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #4b4e53;
   text-transform: uppercase;
@@ -3458,7 +3466,7 @@ div.extended_search_form .search_options .search_option {
 .disp_contacts #main_content .results .panel-heading .action_icon,
 .disp_messages #main_content .results .panel-heading .action_icon,
 .disp_users #main_content .results .panel-heading .action_icon {
-  font-size: 10px;
+  font-size: 1rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 6px 10px;
@@ -3527,7 +3535,7 @@ div.extended_search_form .search_options .search_option {
 .disp_contacts #main_content .results .filters,
 .disp_messages #main_content .results .filters,
 .disp_users #main_content .results .filters {
-  font-size: 13px;
+  font-size: 1.3rem;
 }
 .disp_threads #main_content .results .filters .filters_title .fa,
 .disp_msgform #main_content .results .filters .filters_title .fa,
@@ -3571,7 +3579,7 @@ div.extended_search_form .search_options .search_option {
 .disp_users #main_content .results .avatar_rounded {
   border-color: #eeeeee;
   border-radius: 2px;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .disp_threads #main_content .results .btn,
 .disp_msgform #main_content .results .btn,
@@ -3646,7 +3654,7 @@ div.extended_search_form .search_options .search_option {
 .disp_contacts #main_content .results .table thead th,
 .disp_messages #main_content .results .table thead th,
 .disp_users #main_content .results .table thead th {
-  font-size: 12px;
+  font-size: 1.2rem;
   text-transform: uppercase;
   padding: 4px 8px;
 }
@@ -3655,7 +3663,7 @@ div.extended_search_form .search_options .search_option {
 .disp_contacts #main_content .results .table tbody tr td,
 .disp_messages #main_content .results .table tbody tr td,
 .disp_users #main_content .results .table tbody tr td {
-  font-size: 13px;
+  font-size: 1.3rem;
   padding: 8px;
   border-color: #eeeeee;
 }
@@ -3698,7 +3706,7 @@ div.extended_search_form .search_options .search_option {
 .disp_users #main_content .form_send_contacts .btn {
   border-radius: 0;
   border-color: #dddddd;
-  font-size: 11px;
+  font-size: 1.1rem;
   outline: 0;
   box-shadow: none;
 }
@@ -3745,7 +3753,7 @@ div.extended_search_form .search_options .search_option {
 }
 .evo_private_messages_list .messages_navigation .floatleft,
 .evo_private_messages_list .messages_navigation .floatright {
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -3762,7 +3770,7 @@ div.extended_search_form .search_options .search_option {
 }
 .evo_private_messages_list > h2 {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -3774,17 +3782,16 @@ div.extended_search_form .search_options .search_option {
 }
 .evo_private_messages_list .panel .panel-heading {
   padding: 12px 15px;
-  font-size: 1;
   border-bottom-color: #eeeeee;
 }
 .evo_private_messages_list .panel .panel-heading .panel-title {
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 .evo_private_messages_list .panel .panel-heading .panel-title .user {
-  font-size: 14px;
+  font-size: 1.4rem;
   letter-spacing: 0;
   text-transform: none;
 }
@@ -3812,7 +3819,7 @@ div.extended_search_form .search_options .search_option {
 .evo_private_messages_list .messages_list_actions a {
   border-radius: 0;
   border-color: #eeeeee;
-  font-size: 12px;
+  font-size: 1.2rem;
   word-break: break-word;
 }
 @media screen and (max-width: 768px) {
@@ -3827,7 +3834,7 @@ div.extended_search_form .search_options .search_option {
   border-color: #dddddd;
 }
 .disp_sitemap #main_content .evo_title_widget {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
   margin-top: 0;
@@ -3857,7 +3864,7 @@ div.extended_search_form .search_options .search_option {
   text-decoration: underline;
 }
 .disp_sitemap #main_content .evo_widget.widget_core_coll_category_list a {
-  font-size: 12px;
+  font-size: 1.2rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -3915,7 +3922,7 @@ div.extended_search_form .search_options .search_option {
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 16px;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 24px;
   text-transform: uppercase;
@@ -3932,7 +3939,7 @@ div.extended_search_form .search_options .search_option {
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover a::after,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active a::after,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:focus a::after {
-  opacity: 0.65;
+  opacity: 0.7;
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover img,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active img,
@@ -3943,6 +3950,7 @@ div.extended_search_form .search_options .search_option {
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover .note,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active .note,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:focus .note {
+  display: none;
   opacity: 1;
   -webkit-transform: translateY(20px);
   -ms-transform: translateY(20px);
@@ -3960,7 +3968,7 @@ div.extended_search_form .search_options .search_option {
 .disp_search #main_content .widget_core_coll_search_form .search_field {
   padding: 18px;
   height: auto;
-  font-size: 15px;
+  font-size: 1.5rem;
   border: 1px solid #dddddd;
 }
 .disp_search #main_content .widget_core_coll_search_form .search_field:focus,
@@ -3974,7 +3982,7 @@ div.extended_search_form .search_options .search_option {
   height: 55px;
   width: 55px;
   line-height: 55px;
-  font-size: 20px;
+  font-size: 2rem;
   border-bottom: 0;
   color: #7e8082;
 }
@@ -3998,7 +4006,7 @@ div.extended_search_form .search_options .search_option {
   text-align: center;
   line-height: 45px;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 700;
   z-index: 0;
   -webkit-transition: all 0.32s ease-in-out;
@@ -4023,7 +4031,7 @@ div.extended_search_form .search_options .search_option {
   margin-left: 70px;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title {
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
@@ -4032,7 +4040,7 @@ div.extended_search_form .search_options .search_option {
 }
 @media screen and (max-width: 768px) {
   .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title {
-    font-size: 18px;
+    font-size: 1.8rem;
   }
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title a {
@@ -4046,7 +4054,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title span {
   margin-left: 8px;
-  font-size: 8px;
+  font-size: 0.8rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border: 1px solid #eeeeee;
@@ -4059,7 +4067,7 @@ div.extended_search_form .search_options .search_option {
   margin-bottom: 15px;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_info {
-  font-size: 11px;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
 }
@@ -4154,10 +4162,10 @@ div.extended_search_form .search_options .search_option {
   font-weight: 700;
 }
 .disp_user #main_content .profile_content .profile_column_left h1 {
-  font-size: 28px;
+  font-size: 2.8rem;
 }
 .disp_user #main_content .profile_content .profile_column_left h2 {
-  font-size: 22px;
+  font-size: 2.2rem;
 }
 .disp_user #main_content .profile_content .profile_column_left .text-muted {
   margin-top: 0px;
@@ -4165,7 +4173,7 @@ div.extended_search_form .search_options .search_option {
 .disp_user #main_content .profile_content .profile_column_left .profile_buttons .btn,
 .disp_user #main_content .profile_content .profile_column_left .profile_buttons .btn button {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 11px;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   border-radius: 0;
@@ -4182,7 +4190,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_user #main_content .profile_content .profile_column_right .panel-default .panel-heading {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -4193,6 +4201,182 @@ div.extended_search_form .search_options .search_option {
 .disp_user #main_content .profile_content .profile_column_right a:focus {
   background-color: transparent;
   text-decoration: underline;
+}
+.disp_login #main_content .evo_panel__login,
+.disp_register #main_content .evo_panel__login,
+.disp_lostpassword #main_content .evo_panel__login,
+.disp_login #main_content .evo_panel__register,
+.disp_register #main_content .evo_panel__register,
+.disp_lostpassword #main_content .evo_panel__register,
+.disp_login #main_content .evo_panel__lostpass,
+.disp_register #main_content .evo_panel__lostpass,
+.disp_lostpassword #main_content .evo_panel__lostpass {
+  max-width: 550px;
+  padding: 15px;
+}
+.disp_login #main_content .evo_panel__login .panel,
+.disp_register #main_content .evo_panel__login .panel,
+.disp_lostpassword #main_content .evo_panel__login .panel,
+.disp_login #main_content .evo_panel__register .panel,
+.disp_register #main_content .evo_panel__register .panel,
+.disp_lostpassword #main_content .evo_panel__register .panel,
+.disp_login #main_content .evo_panel__lostpass .panel,
+.disp_register #main_content .evo_panel__lostpass .panel,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel {
+  border-radius: 0;
+  border-color: #eeeeee;
+  margin-top: 0;
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+.disp_login #main_content .evo_panel__login .panel .panel-heading,
+.disp_register #main_content .evo_panel__login .panel .panel-heading,
+.disp_lostpassword #main_content .evo_panel__login .panel .panel-heading,
+.disp_login #main_content .evo_panel__register .panel .panel-heading,
+.disp_register #main_content .evo_panel__register .panel .panel-heading,
+.disp_lostpassword #main_content .evo_panel__register .panel .panel-heading,
+.disp_login #main_content .evo_panel__lostpass .panel .panel-heading,
+.disp_register #main_content .evo_panel__lostpass .panel .panel-heading,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-heading {
+  padding: 20px 25px;
+  border-bottom-color: #eeeeee;
+  -webkit-transition: all 0.32s ease-in-out;
+  transition: all 0.32s ease-in-out;
+}
+.disp_login #main_content .evo_panel__login .panel .panel-heading .panel-title,
+.disp_register #main_content .evo_panel__login .panel .panel-heading .panel-title,
+.disp_lostpassword #main_content .evo_panel__login .panel .panel-heading .panel-title,
+.disp_login #main_content .evo_panel__register .panel .panel-heading .panel-title,
+.disp_register #main_content .evo_panel__register .panel .panel-heading .panel-title,
+.disp_lostpassword #main_content .evo_panel__register .panel .panel-heading .panel-title,
+.disp_login #main_content .evo_panel__lostpass .panel .panel-heading .panel-title,
+.disp_register #main_content .evo_panel__lostpass .panel .panel-heading .panel-title,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-heading .panel-title {
+  font-family: 'Lato', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.disp_login #main_content .evo_panel__login .panel .panel-body,
+.disp_register #main_content .evo_panel__login .panel .panel-body,
+.disp_lostpassword #main_content .evo_panel__login .panel .panel-body,
+.disp_login #main_content .evo_panel__register .panel .panel-body,
+.disp_register #main_content .evo_panel__register .panel .panel-body,
+.disp_lostpassword #main_content .evo_panel__register .panel .panel-body,
+.disp_login #main_content .evo_panel__lostpass .panel .panel-body,
+.disp_register #main_content .evo_panel__lostpass .panel .panel-body,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body {
+  padding: 25px 25px 10px;
+}
+.disp_login #main_content .evo_panel__login .panel .panel-body .form-control,
+.disp_register #main_content .evo_panel__login .panel .panel-body .form-control,
+.disp_lostpassword #main_content .evo_panel__login .panel .panel-body .form-control,
+.disp_login #main_content .evo_panel__register .panel .panel-body .form-control,
+.disp_register #main_content .evo_panel__register .panel .panel-body .form-control,
+.disp_lostpassword #main_content .evo_panel__register .panel .panel-body .form-control,
+.disp_login #main_content .evo_panel__lostpass .panel .panel-body .form-control,
+.disp_register #main_content .evo_panel__lostpass .panel .panel-body .form-control,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body .form-control {
+  height: auto;
+  padding: 12px 15px;
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #dddddd;
+}
+.disp_login #main_content .evo_panel__login .panel .panel-body .form-control:focus,
+.disp_register #main_content .evo_panel__login .panel .panel-body .form-control:focus,
+.disp_lostpassword #main_content .evo_panel__login .panel .panel-body .form-control:focus,
+.disp_login #main_content .evo_panel__register .panel .panel-body .form-control:focus,
+.disp_register #main_content .evo_panel__register .panel .panel-body .form-control:focus,
+.disp_lostpassword #main_content .evo_panel__register .panel .panel-body .form-control:focus,
+.disp_login #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus,
+.disp_register #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus {
+  border-color: #7e8082;
+}
+.disp_login #main_content .evo_panel__login .panel .form-group .btn,
+.disp_register #main_content .evo_panel__login .panel .form-group .btn,
+.disp_lostpassword #main_content .evo_panel__login .panel .form-group .btn,
+.disp_login #main_content .evo_panel__register .panel .form-group .btn,
+.disp_register #main_content .evo_panel__register .panel .form-group .btn,
+.disp_lostpassword #main_content .evo_panel__register .panel .form-group .btn,
+.disp_login #main_content .evo_panel__lostpass .panel .form-group .btn,
+.disp_register #main_content .evo_panel__lostpass .panel .form-group .btn,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .form-group .btn {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 0;
+  outline: 0;
+}
+.disp_login #main_content .evo_panel__login .panel .evo_form__register .form-control,
+.disp_register #main_content .evo_panel__login .panel .evo_form__register .form-control,
+.disp_lostpassword #main_content .evo_panel__login .panel .evo_form__register .form-control,
+.disp_login #main_content .evo_panel__register .panel .evo_form__register .form-control,
+.disp_register #main_content .evo_panel__register .panel .evo_form__register .form-control,
+.disp_lostpassword #main_content .evo_panel__register .panel .evo_form__register .form-control,
+.disp_login #main_content .evo_panel__lostpass .panel .evo_form__register .form-control,
+.disp_register #main_content .evo_panel__lostpass .panel .evo_form__register .form-control,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .evo_form__register .form-control {
+  padding: 8px;
+}
+.disp_login #main_content .evo_panel__login .panel:hover,
+.disp_register #main_content .evo_panel__login .panel:hover,
+.disp_lostpassword #main_content .evo_panel__login .panel:hover,
+.disp_login #main_content .evo_panel__register .panel:hover,
+.disp_register #main_content .evo_panel__register .panel:hover,
+.disp_lostpassword #main_content .evo_panel__register .panel:hover,
+.disp_login #main_content .evo_panel__lostpass .panel:hover,
+.disp_register #main_content .evo_panel__lostpass .panel:hover,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:hover,
+.disp_login #main_content .evo_panel__login .panel:active,
+.disp_register #main_content .evo_panel__login .panel:active,
+.disp_lostpassword #main_content .evo_panel__login .panel:active,
+.disp_login #main_content .evo_panel__register .panel:active,
+.disp_register #main_content .evo_panel__register .panel:active,
+.disp_lostpassword #main_content .evo_panel__register .panel:active,
+.disp_login #main_content .evo_panel__lostpass .panel:active,
+.disp_register #main_content .evo_panel__lostpass .panel:active,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:active,
+.disp_login #main_content .evo_panel__login .panel:focus,
+.disp_register #main_content .evo_panel__login .panel:focus,
+.disp_lostpassword #main_content .evo_panel__login .panel:focus,
+.disp_login #main_content .evo_panel__register .panel:focus,
+.disp_register #main_content .evo_panel__register .panel:focus,
+.disp_lostpassword #main_content .evo_panel__register .panel:focus,
+.disp_login #main_content .evo_panel__lostpass .panel:focus,
+.disp_register #main_content .evo_panel__lostpass .panel:focus,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:focus {
+  border-color: #dddddd;
+}
+.disp_login #main_content .evo_panel__login .panel:hover .panel-heading,
+.disp_register #main_content .evo_panel__login .panel:hover .panel-heading,
+.disp_lostpassword #main_content .evo_panel__login .panel:hover .panel-heading,
+.disp_login #main_content .evo_panel__register .panel:hover .panel-heading,
+.disp_register #main_content .evo_panel__register .panel:hover .panel-heading,
+.disp_lostpassword #main_content .evo_panel__register .panel:hover .panel-heading,
+.disp_login #main_content .evo_panel__lostpass .panel:hover .panel-heading,
+.disp_register #main_content .evo_panel__lostpass .panel:hover .panel-heading,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:hover .panel-heading,
+.disp_login #main_content .evo_panel__login .panel:active .panel-heading,
+.disp_register #main_content .evo_panel__login .panel:active .panel-heading,
+.disp_lostpassword #main_content .evo_panel__login .panel:active .panel-heading,
+.disp_login #main_content .evo_panel__register .panel:active .panel-heading,
+.disp_register #main_content .evo_panel__register .panel:active .panel-heading,
+.disp_lostpassword #main_content .evo_panel__register .panel:active .panel-heading,
+.disp_login #main_content .evo_panel__lostpass .panel:active .panel-heading,
+.disp_register #main_content .evo_panel__lostpass .panel:active .panel-heading,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:active .panel-heading,
+.disp_login #main_content .evo_panel__login .panel:focus .panel-heading,
+.disp_register #main_content .evo_panel__login .panel:focus .panel-heading,
+.disp_lostpassword #main_content .evo_panel__login .panel:focus .panel-heading,
+.disp_login #main_content .evo_panel__register .panel:focus .panel-heading,
+.disp_register #main_content .evo_panel__register .panel:focus .panel-heading,
+.disp_lostpassword #main_content .evo_panel__register .panel:focus .panel-heading,
+.disp_login #main_content .evo_panel__lostpass .panel:focus .panel-heading,
+.disp_register #main_content .evo_panel__lostpass .panel:focus .panel-heading,
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:focus .panel-heading {
+  border-bottom-color: #dddddd;
 }
 .disp_404 #main_content .icon_404,
 .disp_none #main_content .icon_404,
@@ -4205,7 +4389,7 @@ div.extended_search_form .search_options .search_option {
 .disp_404 #main_content .icon_404 .ei,
 .disp_none #main_content .icon_404 .ei,
 .item_none #main_content .icon_404 .ei {
-  font-size: 120px;
+  font-size: 12rem;
 }
 .disp_404 #main_content .icon_404 .circle,
 .disp_none #main_content .icon_404 .circle,
@@ -4259,7 +4443,7 @@ div.extended_search_form .search_options .search_option {
 .disp_404 #main_content .error_404 .evo_title_widget,
 .disp_none #main_content .error_404 .evo_title_widget,
 .item_none #main_content .error_404 .evo_title_widget {
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 600;
   text-transform: uppercase;
   margin-top: 0;
@@ -4267,13 +4451,13 @@ div.extended_search_form .search_options .search_option {
 .disp_404 #main_content .error_404.widget_core_page_404_not_found,
 .disp_none #main_content .error_404.widget_core_page_404_not_found,
 .item_none #main_content .error_404.widget_core_page_404_not_found {
-  font-size: 15px;
+  font-size: 1.5rem;
   letter-spacing: 0;
 }
 .disp_404 #main_content .error_404.widget_core_page_404_not_found .evo_title_widget,
 .disp_none #main_content .error_404.widget_core_page_404_not_found .evo_title_widget,
 .item_none #main_content .error_404.widget_core_page_404_not_found .evo_title_widget {
-  font-size: 45px;
+  font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -4302,7 +4486,7 @@ div.extended_search_form .search_options .search_option {
   padding: 8px 0;
 }
 .disp_catdir #main_content .widget_core_coll_category_list ul a {
-  font-size: 13px;
+  font-size: 1.3rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
@@ -4322,7 +4506,7 @@ div.extended_search_form .search_options .search_option {
   width: 100%;
 }
 .widget_core_user_login .submit {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .widget_core_user_login .field_login_btn .panel {
   margin: 0;
@@ -4358,7 +4542,7 @@ div.extended_search_form .search_options .search_option {
   width: 100%;
 }
 .widget_core_user_register .submit {
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 .widget_core_user_register .field_register_btn .panel {
   margin: 0;
@@ -4502,7 +4686,7 @@ div.extended_search_form .search_options .search_option {
   margin-top: 0;
   margin-bottom: 25px;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   letter-spacing: 1px;
   letter-spacing: normal;
@@ -4636,11 +4820,11 @@ div.extended_search_form .search_options .search_option {
   color: #cb2027;
 }
 #footer .footer_bottom .social_icon .ufld_icon_links a .fa {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 #footer .footer_bottom .copyright {
   float: left;
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: 400;
   letter-spacing: 0.2px;
   line-height: 45px;
@@ -4657,7 +4841,7 @@ div.extended_search_form .search_options .search_option {
     text-align: center;
   }
   #footer .footer_bottom .copyright {
-    font-size: 11px;
+    font-size: 1.1rem;
     line-height: 1.6;
   }
 }
@@ -4679,7 +4863,7 @@ div.extended_search_form .search_options .search_option {
 }
 .cd_top .ei,
 .cd_top .fa {
-  font-size: 34px;
+  font-size: 3.4rem;
   speak: none;
 }
 .cd_top.cd-is-visible {

@@ -1,0 +1,76 @@
+// LOGIN - REGISTER - LOSSPASWORD STYLE
+// ======================================================================== /
+.disp_login,
+.disp_register,
+.disp_lostpassword {
+    #main_content {
+
+        .evo_panel__login,
+        .evo_panel__register,
+        .evo_panel__lostpass {
+            max-width: 550px;
+            padding: 15px;
+
+            .panel {
+                border-radius: 0;
+                border-color: @e;
+                margin-top: 0;
+                transition: all 0.32s ease-in-out;
+
+                .panel-heading {
+                    padding: 20px 25px;
+                    border-bottom-color: @e;
+                    transition: all 0.32s ease-in-out;
+
+                    .panel-title {
+                        font-family: @font-heading;
+                        font-weight: 700;
+                        letter-spacing: 1px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .panel-body {
+                    padding: 25px 25px 10px;
+
+                    .form-control {
+                        height: auto;
+                        padding: 12px 15px;
+                        border-radius: 0;
+                        box-shadow: none;
+                        border-color: @d;
+
+                        &:focus {
+                            border-color: @color-body;
+                        }
+                    }
+                }
+
+                .form-group {
+                    .btn {
+                        font-size: 1.3rem;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        border-radius: 0;
+                        outline: 0;
+                    }
+                }
+
+                .evo_form__register {
+                    .form-control {
+                        padding: 8px;
+                    }
+                }
+
+                &:hover, &:active, &:focus {
+                    border-color: @d;
+
+                    .panel-heading {
+                        border-bottom-color: @d;
+                    }
+                }
+            }
+        }
+
+    }
+}

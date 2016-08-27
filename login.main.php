@@ -33,7 +33,7 @@ skin_include( '_html_header.inc.php', array() );
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-skin_include( '_body_header_page.inc.php' );
+skin_include( '_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
@@ -55,36 +55,36 @@ skin_include( '_body_header_page.inc.php' );
 				}
 				?>
 
+
 				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-					// request_title( array(
-					// 	'title_before'       => '<h2 class="evo_title_disp">',
-					// 	'title_after'        => '</h2>',
-					// 	'title_none'         => '',
-					// 	'glue'               => ' - ',
-					// 	'title_single_disp'  => false,
-					// 	'title_page_disp'    => false,
-					// 	'format'             => 'htmlbody',
-					// 	'display_edit_links' => false,
-					// 	'category_text'      => '',
-					// 	'categories_text'    => '',
-					// 	'catdir_text'        => '',
-					// 	'comments_text'      => T_('Latest Replies'),
-					// 	'front_text'         => '',
-					// 	'posts_text'         => '',
-					// 	'useritems_text'     => T_('User\'s topics'),
-					// 	'usercomments_text'  => T_('User\'s replies'),
-					// 	'register_text'      => '',
-					// 	'login_text'         => '',
-					// 	'lostpassword_text'  => '',
-					// 	'account_activation' => '',
-					// 	'msgform_text'       => T_('Contact <span>Us</span>'),
-					// 	'user_text'          => '',
-					// 	'users_text'         => '',
-					// ) );
+					request_title( array(
+						'title_before'       => '<h2 class="evo_title_disp">',
+						'title_after'        => '</h2>',
+						'title_none'         => '',
+						'glue'               => ' - ',
+						'title_single_disp'  => false,
+						'title_page_disp'    => false,
+						'format'             => 'htmlbody',
+						'display_edit_links' => false,
+						'category_text'      => '',
+						'categories_text'    => '',
+						'catdir_text'        => '',
+						'comments_text'      => T_('Latest Replies'),
+						'front_text'         => '',
+						'posts_text'         => '',
+						'useritems_text'     => T_('User\'s topics'),
+						'usercomments_text'  => T_('User\'s replies'),
+						'register_text'      => '',
+						'login_text'         => '',
+						'lostpassword_text'  => '',
+						'account_activation' => '',
+						'msgform_text'       => T_('Contact <span>Us</span>'),
+						'user_text'          => '',
+						'users_text'         => '',
+					) );
 					// ----------------------------- END OF REQUEST TITLE ----------------------------
 				?>
-
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------

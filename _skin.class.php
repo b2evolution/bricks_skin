@@ -534,6 +534,17 @@ class bricks_Skin extends Skin
 			),
 
 
+			/* SINGLE SETTINGS
+			 * ========================================================================== */
+			'section_single_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Single Settings (disp=single)' ),
+			),
+			'section_single_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
+
+
 			/* FOOTER OPTIONS
 			 * ========================================================================== */
 			'section_footer_start' => array(
@@ -847,11 +858,9 @@ class bricks_Skin extends Skin
 					'type' => 'checklist',
 					'options' => array(
 						array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
-						array( 'page_top', sprintf( T_('"%s" container'), NT_('Page Top') ),  1 ),
-						array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      0 ),
+						array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      1 ),
 						array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),   0 ),
-						array( 'sidebar2', sprintf( T_('"%s" container'), NT_('Sidebar 2') ), 0 ),
-						array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    1 ) ),
+						array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    0 ) ),
 					),
 			'section_access_end' => array(
 				'layout' => 'end_fieldset',
@@ -1102,51 +1111,54 @@ class bricks_Skin extends Skin
 					break;
 
 				case 'standard':// When standard layout
-					$custom_css .= '.container { font-size: 16px !important'." }\n";
-					$custom_css .= '.container input.search_field { height: 100%'." }\n";
-					$custom_css .= '.container h1 { font-size: 38px'." }\n";
-					$custom_css .= '.container h2 { font-size: 32px'." }\n";
-					$custom_css .= '.container h3 { font-size: 26px'." }\n";
-					$custom_css .= '.container h4 { font-size: 18px'." }\n";
-					$custom_css .= '.container h5 { font-size: 16px'." }\n";
-					$custom_css .= '.container h6 { font-size: 14px'." }\n";
-					$custom_css .= '.container .small { font-size: 85% !important'." }\n";
+					$custom_css .= 'html { font-size: 11.4px }';
+					// $custom_css .= 'body { font-size: 16px !important'." }\n";
+					$custom_css .= 'body input.search_field { height: 100%'." }\n";
+					$custom_css .= 'body h1 { font-size: 38px'." }\n";
+					$custom_css .= 'body h2 { font-size: 32px'." }\n";
+					$custom_css .= 'body h3 { font-size: 26px'." }\n";
+					$custom_css .= 'body h4 { font-size: 18px'." }\n";
+					$custom_css .= 'body h5 { font-size: 16px'." }\n";
+					$custom_css .= 'body h6 { font-size: 14px'." }\n";
+					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
 					break;
 
 				case 'medium': // When default font size, no CSS entry
-					$custom_css .= '.container { font-size: 18px !important'." }\n";
-					$custom_css .= '.container input.search_field { height: 100%'." }\n";
-					$custom_css .= '.container h1 { font-size: 40px'." }\n";
-					$custom_css .= '.container h2 { font-size: 34px'." }\n";
-					$custom_css .= '.container h3 { font-size: 28px'." }\n";
-					$custom_css .= '.container h4 { font-size: 20px'." }\n";
-					$custom_css .= '.container h5 { font-size: 18px'." }\n";
-					$custom_css .= '.container h6 { font-size: 16px'." }\n";
-					$custom_css .= '.container .small { font-size: 85% !important'." }\n";
+					$custom_css .= 'html { font-size: 12.858px; }';
+					$custom_css .= 'body { line-height: 26px !important; }';
+					// $custom_css .= 'body { font-size: 18px !important'." }\n";
+					$custom_css .= 'body input.search_field { height: 100%'." }\n";
+					$custom_css .= 'body h1 { font-size: 40px'." }\n";
+					$custom_css .= 'body h2 { font-size: 34px'." }\n";
+					$custom_css .= 'body h3 { font-size: 28px'." }\n";
+					$custom_css .= 'body h4 { font-size: 20px'." }\n";
+					$custom_css .= 'body h5 { font-size: 18px'." }\n";
+					$custom_css .= 'body h6 { font-size: 16px'." }\n";
+					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
 					break;
 
 				case 'large': // When default font size, no CSS entry
-					$custom_css .= '.container { font-size: 20px !important'." }\n";
-					$custom_css .= '.container input.search_field { height: 100%'." }\n";
-					$custom_css .= '.container h1 { font-size: 42px'." }\n";
-					$custom_css .= '.container h2 { font-size: 36px'." }\n";
-					$custom_css .= '.container h3 { font-size: 30px'." }\n";
-					$custom_css .= '.container h4 { font-size: 22px'." }\n";
-					$custom_css .= '.container h5 { font-size: 20px'." }\n";
-					$custom_css .= '.container h6 { font-size: 18px'." }\n";
-					$custom_css .= '.container .small { font-size: 85% !important'." }\n";
+					$custom_css .= 'body { font-size: 20px !important'." }\n";
+					$custom_css .= 'body input.search_field { height: 100%'." }\n";
+					$custom_css .= 'body h1 { font-size: 42px'." }\n";
+					$custom_css .= 'body h2 { font-size: 36px'." }\n";
+					$custom_css .= 'body h3 { font-size: 30px'." }\n";
+					$custom_css .= 'body h4 { font-size: 22px'." }\n";
+					$custom_css .= 'body h5 { font-size: 20px'." }\n";
+					$custom_css .= 'body h6 { font-size: 18px'." }\n";
+					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
 					break;
 
 				case 'very_large': // When default font size, no CSS entry
-					$custom_css .= '.container { font-size: 22px !important'." }\n";
-					$custom_css .= '.container input.search_field { height: 100%'." }\n";
-					$custom_css .= '.container h1 { font-size: 44px'." }\n";
-					$custom_css .= '.container h2 { font-size: 38px'." }\n";
-					$custom_css .= '.container h3 { font-size: 32px'." }\n";
-					$custom_css .= '.container h4 { font-size: 24px'." }\n";
-					$custom_css .= '.container h5 { font-size: 22px'." }\n";
-					$custom_css .= '.container h6 { font-size: 20px'." }\n";
-					$custom_css .= '.container .small { font-size: 85% !important'." }\n";
+					$custom_css .= 'body { font-size: 22px !important'." }\n";
+					$custom_css .= 'body input.search_field { height: 100%'." }\n";
+					$custom_css .= 'body h1 { font-size: 44px'." }\n";
+					$custom_css .= 'body h2 { font-size: 38px'." }\n";
+					$custom_css .= 'body h3 { font-size: 32px'." }\n";
+					$custom_css .= 'body h4 { font-size: 24px'." }\n";
+					$custom_css .= 'body h5 { font-size: 22px'." }\n";
+					$custom_css .= 'body h6 { font-size: 20px'." }\n";
+					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
 					break;
 			}
 		}

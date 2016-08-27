@@ -26,11 +26,12 @@
 // WIDGET STYLE
 // ======================================================================== /
 .evo_widget {
+	// word-break: break-word;
 	// margin-bottom: 30px;
 
 	.evo_widget_title {
 		font-family: @font-heading;
-		font-size: 16px;
+		font-size: 1.6rem;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 		font-weight: 700;
@@ -75,7 +76,7 @@
 			outline: 0;
 			box-shadow: none;
 			text-transform: uppercase;
-			font-size: 11px;
+			font-size: 1.1rem;
 			letter-spacing: 1px;
 			padding: 8px 12px;
 
@@ -123,7 +124,7 @@
 				}
 
 				a {
-					font-size: 12px;
+					font-size: 1.2rem;
 					letter-spacing: 1px;
 					text-transform: uppercase;
 				}
@@ -154,7 +155,7 @@
 		.tag_cloud {
 			a {
 				display: inline-block;
-				font-size: 10px !important;
+				font-size: 1rem !important;
 				text-transform: uppercase;
 				letter-spacing: 1px;
 				padding: 6px 12px;
@@ -176,10 +177,10 @@
 		.evo_widget_body {
 			ul {
 				a {
-					font-size: 12px;
+					// font-size: 1.2rem;
 					font-weight: 400;
-					text-transform: uppercase;
-					letter-spacing: 1px;
+					// text-transform: uppercase;
+					// letter-spacing: 1px;
 				}
 			}
 		}
@@ -227,6 +228,10 @@
 			width: 85%;
 		}
 
+		.form-control {
+			background-color: transparent;
+		}
+
 		.search {
 			.search_field {
 				border: 0;
@@ -251,7 +256,7 @@
 						content: "\e6ee";
 						display: inline-block;
 						font-family: 'elegant-icons' !important;
-						font-size: 16px;
+						font-size: 1.6rem;
 						font-style: normal;
 						font-weight: normal;
 						line-height: 35px;
@@ -301,7 +306,7 @@
 		}
 
 		caption {
-			font-size: 17px;
+			font-size: 1.7rem;
 			font-weight: 700;
 			text-transform: uppercase;
 			padding: 8px 5px;
@@ -383,7 +388,7 @@
 	// WIDGET BREADCRUMB
 	// ======================================================================== /
 	&.widget_core_breadcrumb_path {
-		font-size: 12px;
+		font-size: 1.2rem;
 		letter-spacing: 1px;
 		text-transform: uppercase;
 	}
@@ -399,6 +404,8 @@
 	&.widget_core_user_login,
 	&.widget_core_user_register {
 		.panel {
+			background-color: transparent;
+
 			.field_login_btn,
 			.field_register_btn {
 				padding-top: 5px;
@@ -433,6 +440,12 @@
 		}
 	}
 
+	// WIDGET CURRENT FILTERS
+	// ======================================================================== /
+	&.widget_core_coll_current_filters {
+		word-break: break-word;
+	}
+
 }
 
 
@@ -442,7 +455,7 @@
 	a {
 		display: inline-block;
 		font-family: @font-heading;
-		font-size: 10px !important;
+		font-size: 1.1rem !important;
 		text-transform: uppercase;
 		letter-spacing: 1px;
 		padding: 6px 12px;
