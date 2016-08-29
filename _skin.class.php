@@ -316,7 +316,7 @@ class bricks_Skin extends Skin
 				),
 				'nav_bg_transparent' => array(
 					'label'			=> T_( 'Background Transparent' ),
-					'note'			=> T_( 'Check to make main menu with transparent background.' ),
+					'note'			=> T_( 'Check to make main menu with transparent background. It will work with <strong>Main Header Style</strong>.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 0,
 				),
@@ -479,6 +479,38 @@ class bricks_Skin extends Skin
 				'layout'	=> 'end_fieldset',
 			),
 
+			/* HEADER PAGE
+			 * ========================================================================== */
+			'section_header_page_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Header Page Settings (custom disp)' ),
+			),
+				'header_page_bg' => array(
+					'label'			=> T_( 'Header Page Background' ),
+					'note'			=> T_( 'Choose your favorite background color for header page. Default value is <code>#eeeeee</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee',
+				),
+				'header_page_pt' => array(
+					'label'			=> T_( 'Padding Top Content' ),
+					'note'			=> T_( 'px. Set the padding top for content in header page. Default value is <code>160px</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '160',
+					'size'			=> 4,
+				),
+				'header_page_content_mode' => array(
+					'label'			=> T_( 'Header Content Mode' ),
+					'note'			=> T_( 'Select your favorite content mode for conten in header. Default value is <code>Float Mode</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'col-md-6 float'	=> T_( 'Float Mode' ),
+						'col-md-12 center'	=> T_( 'Center Mode' ),
+					),
+					'defaultvalue'	=> 'col-md-6 float'
+				),
+			'section_header_page_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
 
 			/* POSTS SETTINGS
 			 * ========================================================================== */
@@ -486,6 +518,16 @@ class bricks_Skin extends Skin
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Posts Settings (Posts disps)' ),
 			),
+				'posts_header' => array(
+					'label'			=> T_( 'Posts Header Style' ),
+					'note'			=> T_( 'Choose header style for disp posts. Default value is <code>Header Main</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'header_main' => T_( 'Main Header' ),
+						'header_page' => T_( 'Header Page' ),
+					),
+					'defaultvalue'	=> 'header_main',
+				),
 				'category_list_filter' => array(
 					'label'			=> T_( 'Category List Posts Filters' ),
 					'note'			=> T_( 'Check to enable Category list Filters Posts. Default value is <code>Uncheck</code>.' ),
@@ -538,9 +580,201 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_single_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Single Settings (disp=single)' ),
+				'label'		=> T_( 'Single Settings (disp=single||disp=page)' ),
 			),
+				'single_header'	=> array(
+					'label'			=> T_( 'Single Header Style' ),
+					'note'			=> T_( 'Choose header style for single page. Default value is <code>Header Page</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'header_main'	=> T_( 'Main Header' ),
+						'header_page'	=> T_( 'Header Page' ),
+					),
+					'defaultvalue'	=> 'header_page',
+				),
+				'single_comments_bg' => array(
+					'label'			=> T_( 'Background Comments' ),
+					'note'			=> T_( 'Choose your favorite background color for comments form section. Default value is <code>#eeeeee</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee',
+				),
 			'section_single_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
+
+
+			/* SINGLE PAGE SETTINGS
+			 * ========================================================================== */
+			'section_search_start' => array(
+				'layout'		=> 'begin_fieldset',
+				'label'			=> T_( 'Search Settings (disp=search)' ),
+			),
+				'search_header'	=> array(
+					'label'			=> T_( 'Search Header' ),
+					'note'			=> T_( 'Chose header style for Search Disp. Default value is <code>Header Page</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'header_main' => T_( 'Main Header' ),
+						'header_page' => T_( 'Header page' ),
+					),
+					'defaultvalue'	=>'header_page',
+				),
+				'search_box' => array(
+					'label'			=> T_( 'Show Search Form' ),
+					'note'			=> T_( 'Check to show search form.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'search_pagi_align' => array(
+					'label'			=> T_( 'Search Pagination Align' ),
+					'note'			=> T_( 'Choose the pagination align for disp=search.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'left'	=> T_( 'Left' ),
+						'center' => T_( 'Center' ),
+						'right'	=> T_( 'Right' ),
+					),
+					'defaultvalue' => 'center',
+				),
+			'section_search_end' => array(
+				'layout'		=> 'end_fieldset',
+			),
+
+
+			/* CONTACTS PAGE SETTINGS
+			 * ========================================================================== */
+			'section_contact_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Contact Settings (disp=msgform)' ),
+			),
+				'contact_map_show' => array(
+					'label'			=> T_( 'Show Maps' ),
+					'note'			=> T_( 'Check to show the maps.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_lat' => array(
+					'label'			=> T_( 'Latitude Coordinates' ),
+					'note'			=> T_( 'Set the latitue coordination for the map. Example <code>48.8583861</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '48.8583861',
+					'size'			=> 50,
+				),
+				'contact_map_lng' => array(
+					'label'			=> T_( 'Longitude Coordinates' ),
+					'note'			=> T_( 'Set hte logtitude coordination for the map. Example <code>2.2944542</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '2.2944542',
+					'size'			=> 50,
+				),
+				'contact_map_zoom' => array(
+					'label'			=> T_( 'Zoom Map' ),
+					'note'			=> T_( 'Set value zoom for map. Default value is <code>16</code>.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'1'	=> T_( '1' ),
+						'2'	=> T_( '2' ),
+						'3'	=> T_( '3' ),
+						'4'	=> T_( '4' ),
+						'5'	=> T_( '5' ),
+						'6'	=> T_( '6' ),
+						'7'	=> T_( '7' ),
+						'8'	=> T_( '8' ),
+						'9'	=> T_( '9' ),
+						'10' => T_( '10' ),
+						'11' => T_( '11' ),
+						'12' => T_( '12' ),
+						'13' => T_( '13' ),
+						'14' => T_( '14' ),
+						'15' => T_( '15' ),
+						'16' => T_( '16' ),
+						'17' => T_( '17' ),
+						'18' => T_( '18' ),
+					),
+					'defaultvalue'	=> 16,
+				),
+				'contact_map_drag' => array(
+					'label'			=> T_( 'Draggable Map' ),
+					'note'			=> T_( 'Check to enable draggable on the map. Default value is <code>true</code>' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_scrol' => array(
+					'label'			=> T_( 'Scrollwheel Map' ),
+					'note'			=> T_( 'Check to enable scrollwheel on the map. Default value is <code>false</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'contact_map_doubleclick' => array(
+					'label'			=> T_( 'Disable Double Click Zoom' ),
+					'note'			=> T_( 'Check to disable double click zoom on the map. Default value is <code>true</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_fullscreen' => array(
+					'label'			=> T_( 'Full Screen Control' ),
+					'note'			=> T_( 'Check to enable full screen control on the map. Default value is <code>true</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_map_disableDefaultUI' => array(
+					'label'			=> T_( 'Disable Default UI' ),
+					'note'			=> T_( 'Check to disable Default UI on the map. Default value is <code>false</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'contact_map_marker_show' => array(
+					'label'			=> T_( 'Show Map Marker' ),
+					'note'			=> T_( 'Check to show map marker.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'contact_map_marker_lat' => array(
+					'label'			=> T_( 'Latitude Coordinates Marker' ),
+					'note'			=> T_( 'Set the Latitude Coordinates for marker. Example is <code>48.8583861</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '',
+					'size'			=> 50,
+				),
+				'contact_map_marker_lng' => array(
+					'label'			=> T_( 'Longitude Coordinates Marker' ),
+					'note'			=> T_( 'Set the Longitude Coordinates for marker. Example is <code>2.2944542</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '',
+					'size'			=> 50,
+				),
+				'contact_map_marker_content' => array(
+					'label'			=> T_( 'Content Marker' ),
+					'note'			=> T_( 'Add content for Marker.' ),
+					'type'			=> 'textarea',
+				),
+				'contact_info_show' => array(
+					'label'			=> T_( 'Enable Conctact Info' ),
+					'note'			=> T_( 'Check to show the contact info section. Default value is <code>true</code>.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'contact_info_address' => array(
+					'label'			=> T_( 'Contact Address' ),
+					'note'			=> T_( 'Type your contact address.' ),
+					'type'			=> 'textarea',
+					'defaultvalue'	=> 'Your Address location',
+				),
+				'contact_info_email' => array(
+					'label'			=> T_( 'Contact Email' ),
+					'note'			=> T_( 'Type your contact email.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> 'youremail@example.com',
+					'size'			=> 30,
+				),
+				'contact_info_number' => array(
+					'label'			=> T_( 'Contact Number' ),
+					'note'			=> T_( 'Type your contact number' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> T_( '(+123) 4567 8910' ),
+					'size'			=> 30,
+				),
+			'section_contact_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
 
@@ -629,138 +863,6 @@ class bricks_Skin extends Skin
 				),
 			'section_footer_end' => array(
 				'layout'	=> 'end_fieldset'
-			),
-
-
-			/* CONTACTS PAGE SETTINGS
-			 * ========================================================================== */
-			'section_contact_start' => array(
-				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Contact Settings (disp=msgform)' ),
-			),
-				'contact_map_show' => array(
-					'label'			=> T_( 'Show Maps' ),
-					'note'			=> T_( 'Check to show the maps.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1,
-				),
-				'contact_map_lat' => array(
-					'label'			=> T_( 'Latitude Coordinates' ),
-					'note'			=> T_( 'Set the latitue coordination for the map. Example <code>48.8583861</code>.' ),
-					'type'			=> 'text',
-					'defaultvalue'	=> '',
-					'size'			=> 50,
-				),
-				'contact_map_lng' => array(
-					'label'			=> T_( 'Longitude Coordinates' ),
-					'note'			=> T_( 'Set hte logtitude coordination for the map. Example <code>2.2944542</code>.' ),
-					'type'			=> 'text',
-					'defaultvalue'	=> '',
-					'size'			=> 50,
-				),
-				'contact_map_zoom' => array(
-					'label'			=> T_( 'Zoom Map' ),
-					'note'			=> T_( 'Set value zoom for map. Default value is <code>16</code>.' ),
-					'type'			=> 'select',
-					'options'		=> array(
-						'1'	=> T_( '1' ),
-						'2'	=> T_( '2' ),
-						'3'	=> T_( '3' ),
-						'4'	=> T_( '4' ),
-						'5'	=> T_( '5' ),
-						'6'	=> T_( '6' ),
-						'7'	=> T_( '7' ),
-						'8'	=> T_( '8' ),
-						'9'	=> T_( '9' ),
-						'10' => T_( '10' ),
-						'11' => T_( '11' ),
-						'12' => T_( '12' ),
-						'13' => T_( '13' ),
-						'14' => T_( '14' ),
-						'15' => T_( '15' ),
-						'16' => T_( '16' ),
-						'17' => T_( '17' ),
-						'18' => T_( '18' ),
-					),
-					'defaultvalue'	=> 16,
-				),
-				'contact_map_drag' => array(
-					'label'			=> T_( 'Draggable Map' ),
-					'note'			=> T_( 'Check to enable draggable on the map. Default value is <code>true</code>' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1,
-				),
-				'contact_map_scrol' => array(
-					'label'			=> T_( 'Scrollwheel Map' ),
-					'note'			=> T_( 'Check to enable scrollwheel on the map. Default value is <code>false</code>.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 0,
-				),
-				'contact_map_doubleclick' => array(
-					'label'			=> T_( 'Disable Double Click Zoom' ),
-					'note'			=> T_( 'Check to disable double click zoom on the map. Default value is <code>true</code>.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1,
-				),
-				'contact_map_fullscreen' => array(
-					'label'			=> T_( 'Full Screen Control' ),
-					'note'			=> T_( 'Check to enable full screen control on the map. Default value is <code>true</code>.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1,
-				),
-				'contact_map_disableDefaultUI' => array(
-					'label'			=> T_( 'Disable Default UI' ),
-					'note'			=> T_( 'Check to disable Default UI on the map. Default value is <code>false</code>.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 0,
-				),
-				'contact_map_marker_lat' => array(
-					'label'			=> T_( 'Latitude Coordinates Marker' ),
-					'note'			=> T_( 'Set the Latitude Coordinates for marker. Example is <code>48.8583861</code>.' ),
-					'type'			=> 'text',
-					'defaultvalue'	=> '',
-					'size'			=> 50,
-				),
-				'contact_map_marker_lng' => array(
-					'label'			=> T_( 'Longitude Coordinates Marker' ),
-					'note'			=> T_( 'Set the Longitude Coordinates for marker. Example is <code>2.2944542</code>.' ),
-					'type'			=> 'text',
-					'defaultvalue'	=> '',
-					'size'			=> 50,
-				),
-				'contact_map_marker_content' => array(
-					'label'			=> T_( 'Content Marker' ),
-					'note'			=> T_( 'Add content for Marker.' ),
-					'type'			=> 'textarea',
-				),
-				'contact_info_show' => array(
-					'label'			=> T_( 'Enable Conctact Info' ),
-					'note'			=> T_( 'Check to show the contact info section. Default value is <code>true</code>.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1,
-				),
-				'contact_info_address' => array(
-					'label'			=> T_( 'Contact Address' ),
-					'note'			=> T_( 'Type your contact address.' ),
-					'type'			=> 'textarea',
-					'defaultvalue'	=> 'Your Address location',
-				),
-				'contact_info_email' => array(
-					'label'			=> T_( 'Contact Email' ),
-					'note'			=> T_( 'Type your contact email.' ),
-					'type'			=> 'text',
-					'defaultvalue'	=> 'youremail@example.com',
-					'size'			=> 30,
-				),
-				'contact_info_number' => array(
-					'label'			=> T_( 'Contact Number' ),
-					'note'			=> T_( 'Type your contact number' ),
-					'type'			=> 'text',
-					'defaultvalue'	=> T_( '(+123) 4567 8910' ),
-					'size'			=> 30,
-				),
-			'section_contact_end' => array(
-				'layout'	=> 'end_fieldset',
 			),
 
 
@@ -1000,21 +1102,39 @@ class bricks_Skin extends Skin
 		};
 
 
+		/**
+		 * ============================================================================
+		 * MAPS ON CONTACTS
+		 * ============================================================================
+		 */
 		if( ($disp == 'msgform' || $disp == 'threads') && $this->get_setting( 'contact_map_show' ) == 1 ) {
-			require_js( 'assets/scripts/map_api.js', 'relative' );
+			// require_js( 'assets/scripts/map_api.js', 'relative' );
+			require_js( 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCgKRuQhHjO2Xuz1JBLBuf9rhzKEIWQYPM' );
 			require_js( 'assets/scripts/gmaps.min.js', 'relative' );
 
-			$lat = $this->get_setting( 'contact_map_lat' );
-			$lng = $this->get_setting( 'contact_map_lng' );
-			$zoom = $this->get_setting( 'contact_map_zoom' );
-			$drag = $this->get_setting( 'contact_map_drag' );
-			$scrol = $this->get_setting( 'contact_map_scrol' );
+			$lat 	 = $this->get_setting( 'contact_map_lat' );
+			$lng 	 = $this->get_setting( 'contact_map_lng' );
+			$zoom 	 = $this->get_setting( 'contact_map_zoom' );
+			$drag 	 = $this->get_setting( 'contact_map_drag' );
+			$scrol 	 = $this->get_setting( 'contact_map_scrol' );
+			$fullsc  = $this->get_setting( 'contact_map_fullscreen' );
+			$dis_ui  = $this->get_setting( 'contact_map_disableDefaultUI' );
 			$doublec = $this->get_setting( 'contact_map_doubleclick' );
-			$fullsc = $this->get_setting( 'contact_map_fullscreen' );
-			$dis_ui = $this->get_setting( 'contact_map_disableDefaultUI' );
 			$mar_lat = $this->get_setting( 'contact_map_marker_lat' );
 			$mar_lng = $this->get_setting( 'contact_map_marker_lng' );
 			$mar_con = $this->get_setting( 'contact_map_marker_content' );
+
+			$map_marker = '';
+			if ( $this->get_setting( 'contact_map_marker_show' ) == 1 ){
+				$map_marker = "map.addMarker({
+						lat: $mar_lat,
+						lng: $mar_lng,
+						title: 'Marker Content',
+				        infoWindow: {
+				          content: '$mar_con'
+				        }
+					});";
+			};
 
 			add_js_headline("
 				var map;
@@ -1031,19 +1151,15 @@ class bricks_Skin extends Skin
 						disableDefaultUI: $dis_ui,
 					});
 
-					map.addMarker({
-						lat: $mar_lat,
-						lng: $mar_lng,
-						title: 'Marker Content',
-				        infoWindow: {
-				          content: '$mar_con'
-				        }
-					});
+					$map_marker
+
 				});
 			");
 		};
 
-		// Required Scripts
+
+		/* Required Scripts
+		 * ========================================================================== */
 		require_js( 'assets/scripts/scripts.js', 'relative' );
 
 		// Skin specific initializations:
@@ -1167,24 +1283,23 @@ class bricks_Skin extends Skin
 		/* NAVIGATION SETTINGS
 		 * ========================================================================== */
 		if( $bg = $this->get_setting( 'nav_background' ) ) {
-			$custom_css .= '#nav, #nav.fixed { background-color: '.$bg.' }';
+			$custom_css .= '#nav, #nav.nav_bgt.fixed { background-color: '.$bg.' }';
 		}
-		if( $disp != 'page' && $disp != 'single' && $disp != '404' ) {
-			if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
-				$custom_css .= '#nav { background-color: transparent }';
-			}
-			if( $this->get_setting( 'nav_bg_transparent' ) == 1 ) {
-				$color_nav_bgt = $this->get_setting( 'nav_cl_transparent' );
-				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' } }';
-				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' } }';
-				$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' } }';
-				$custom_css .= '@media screen and ( min-width: 1024px ){#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; } }';
+		if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
+			$custom_css .= '#nav.nav_bgt { background-color: transparent }';
+		}
+		if( $this->get_setting( 'nav_bg_transparent' ) == 1 ) {
+			$color_nav_bgt = $this->get_setting( 'nav_cl_transparent' );
+			$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' } }';
+			$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' } }';
+			$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' } }';
+			$custom_css .= '@media screen and ( min-width: 1024px ){#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; } }';
 
-				$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
-				$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
-				$custom_css .= '#nav.nav_bgt .nav_tabs ul li.active > a { color: '.$color_hov_nav_bgt.'; border-color: '.$color_hov_nav_bgt.' }';
-			}
+			$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
+			$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
+			$custom_css .= '#nav.nav_bgt .nav_tabs ul li.active > a { color: '.$color_hov_nav_bgt.'; border-color: '.$color_hov_nav_bgt.' }';
 		}
+
 
 		// SETTING DEFAULT
 		if( $color  = $this->get_setting( 'nav_color_link' ) ) {

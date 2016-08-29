@@ -23,6 +23,13 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 
 global $cat, $disp;
 
+$header = '';
+if ( $Skin->get_setting( 'posts_header' ) == 'header_main' ) {
+	$header = '_body_header.inc.php';
+} else {
+	$header = '_body_header_page.inc.php';
+}
+
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
 skin_init( $disp );
@@ -34,7 +41,7 @@ skin_include( '_html_header.inc.php', array() );
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-skin_include( '_body_header.inc.php' );
+skin_include( $header );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 

@@ -22,12 +22,11 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 }
 
 $header = '';
-if ( $disp == '404' ) {
+if ( $Skin->get_setting( 'single_header' ) == 'header_page' ) {
 	$header = '_body_header_page.inc.php';
 } else {
 	$header = '_body_header.inc.php';
 }
-
 
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
@@ -41,7 +40,7 @@ skin_include( '_html_header.inc.php', array() );
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-skin_include( $header );
+skin_include( '_body_header_page.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 
@@ -49,7 +48,7 @@ skin_include( $header );
 	<div class="container">
 		<div class="row">
 
-			<div id="main_content" class="<?php echo $Skin->get_column_class('layout'); ?>">
+			<div id="main_content" class="<?php echo $Skin->get_column_class(); ?>">
 				<!-- ================================= START OF MAIN AREA ================================== -->
 				<?php
 				if( ! in_array( $disp, array( 'login', 'lostpassword', 'register', 'activateinfo', 'access_requires_login' ) ) )
@@ -64,79 +63,35 @@ skin_include( $header );
 				?>
 
 				<?php
-					// ------------------- PREV/NEXT POST LINKS (SINGLE POST MODE) -------------------
-					item_prevnext_links( array(
-						'block_start' => '<nav><ul class="pager">',
-						'prev_start'  => '<li class="previous">',
-						'prev_end'    => '</li>',
-						'next_start'  => '<li class="next">',
-						'next_end'    => '</li>',
-						'block_end'   => '</ul></nav>',
-					) );
-					// ------------------------- END OF PREV/NEXT POST LINKS -------------------------
-				?>
-
-				<?php
 					// ------------------------ TITLE FOR THE CURRENT REQUEST ------------------------
-					request_title( array(
-						'title_before'       => '<h2 class="evo_title_disp">',
-						'title_after'        => '</h2>',
-						'title_none'         => '',
-						'glue'               => ' - ',
-						'title_single_disp'  => false,
-						'title_page_disp'    => false,
-						'format'             => 'htmlbody',
-						'display_edit_links' => false,
-						'category_text'      => '',
-						'categories_text'    => '',
-						'catdir_text'        => '',
-						'comments_text'      => T_('Latest Replies'),
-						'front_text'         => '',
-						'posts_text'         => '',
-						'useritems_text'     => T_('User\'s topics'),
-						'usercomments_text'  => T_('User\'s replies'),
-						'register_text'      => '',
-						'login_text'         => '',
-						'lostpassword_text'  => '',
-						'account_activation' => '',
-						'msgform_text'       => T_('Contact <span>Us</span>'),
-						'user_text'          => '',
-						'users_text'         => '',
-					) );
-					// ----------------------------- END OF REQUEST TITLE ----------------------------
-				?>
-
-				<?php
-				// Go Grab the featured post:
-				if( ! in_array( $disp, array( 'single', 'page' ) ) && $Item = & get_featured_Item() )
-				{	// We have a featured/intro post to display:
-					$intro_item_style = '';
-					$LinkOwner = new LinkItem( $Item );
-					$LinkList = $LinkOwner->get_attachment_LinkList( 1, 'cover' );
-					if( ! empty( $LinkList ) &&
-							$Link = & $LinkList->get_next() &&
-							$File = & $Link->get_File() &&
-							$File->exists() &&
-							$File->is_image() )
-					{	// Use cover image of intro-post as background:
-						$intro_item_style = 'background-image: url("'.$File->get_url().'")';
+					if( ! $preview ) {
+						request_title( array(
+							'title_before'      => '<h2>',
+							'title_after'       => '</h2>',
+							'title_none'        => '',
+							'glue'              => ' - ',
+							'title_single_disp' => false,
+							'title_page_disp'   => false,
+							'format'            => 'htmlbody',
+							'register_text'     => '',
+							'login_text'        => '',
+							'lostpassword_text' => '',
+							'account_activation' => '',
+							'msgform_text'      => '',
+							'user_text'         => '',
+							'users_text'        => '',
+							'display_edit_links'=> false,
+						) );
 					}
-					// ---------------------- ITEM BLOCK INCLUDED HERE ------------------------
-					skin_include( '_item_block.inc.php', array(
-						'feature_block' => true,
-						'content_mode'  => 'full', // We want regular "full" content, even in category browsing: i-e no excerpt or thumbnail
-						'intro_mode'    => 'normal',	// Intro posts will be displayed in normal mode
-						'item_class'    => ( $Item->is_intro() ? 'well evo_intro_post' : 'well evo_featured_post').( empty( $intro_item_style ) ? '' : ' evo_hasbgimg' ),
-						'item_style'    => $intro_item_style
-					) );
-					// ----------------------------END ITEM BLOCK  ----------------------------
-				}
+					// ----------------------------- END OF REQUEST TITLE ----------------------------
 				?>
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
-						'author_link_text' 		  => 'auto',
+						// 'item_class'	   => 'evo_single_article',
+
+						'author_link_text' => 'auto',
 						// Profile tabs to switch between user edit forms
 						'profile_tabs' => array(
 							'block_start'         => '<nav><ul class="nav nav-tabs profile_tabs">',
@@ -146,10 +101,9 @@ skin_include( $header );
 							'item_selected_end'   => '</li>',
 							'block_end'           => '</ul></nav>',
 						),
-
 						// Pagination
 						'pagination' => array(
-							'block_start'           => '<div class="center"><ul class="pagination">',
+							'block_start'           => '<div class="center nav"><ul class="pagination">',
 							'block_end'             => '</ul></div>',
 							'page_current_template' => '<span>$page_num$</span>',
 							'page_item_before'      => '<li>',
@@ -161,7 +115,6 @@ skin_include( $header );
 						),
 						// Item content:
 						'url_link_position'     => 'top',
-
 						// Form params for the forms below: login, register, lostpassword, activateinfo and msgform
 						'skin_form_before'      => '<div class="panel panel-default skin-form">'
 													.'<div class="panel-heading">'
@@ -169,7 +122,6 @@ skin_include( $header );
 													.'</div>'
 													.'<div class="panel-body">',
 						'skin_form_after'       => '</div></div>',
-
 						// Login
 						'display_form_messages' => true,
 						'form_title_login'      => T_('Log in to your account').'$form_links$',
@@ -182,7 +134,6 @@ skin_include( $header );
 						'display_reg_link'      => true,
 						'abort_link_position'   => 'form_title',
 						'abort_link_text'       => '<button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>',
-
 						// Register
 						'register_page_before'      => '<div class="evo_panel__register">',
 						'register_page_after'       => '</div>',
@@ -192,29 +143,26 @@ skin_include( $header );
 						'register_field_width'      => 252,
 						'register_disabled_page_before' => '<div class="evo_panel__register register-disabled">',
 						'register_disabled_page_after'  => '</div>',
-
 						// Activate form
 						'activate_form_title'  	=> T_('Account activation'),
 						'activate_page_before' 	=> '<div class="evo_panel__activation">',
 						'activate_page_after'  	=> '</div>',
-
 						// Search
 						'search_input_before'  	=> '<div class="input-group">',
 						'search_input_after'   	=> '',
 						'search_submit_before' 	=> '<span class="input-group-btn">',
 						'search_submit_after'  	=> '</span></div>',
-
 						// Front page
 						'featured_intro_before' => '<div class="jumbotron">',
 						'featured_intro_after'  => '</div>',
-
 						// Form "Sending a message"
-						'msgform_form_title' 	=> T_('Contact <span>Us</span>'),
+						'msgform_form_title' 	=> T_('Sending a message'),
 					) );
 					// Note: you can customize any of the sub templates included here by
 					// copying the matching php file into your skin directory.
 					// ------------------------- END OF MAIN CONTENT TEMPLATE ---------------------------
 				?>
+
 			</div><!-- #main_content -->
 
 			<?php

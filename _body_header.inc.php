@@ -99,72 +99,34 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
     </div><!-- .container-fluid -->
 </header><!-- #nav -->
 
-<?php if ( $disp == 'single' || $disp == 'page' || $disp == '404' ) { ?>
-<header id="main_header_single">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
-                <div class="single_title_post">
-                <?php
-                    // ------------------------- SHOW THE TITLE POST --------------------------
-                    if( $preview )  {
-                        echo "<h1>Post Preview</h1>"; // Show title post on the preview
-                    } elseif( $disp == '404' ) {
-                        echo "<h1>404 Page</h1>";
-                    } else {
-                        $Item->title( array(
-                            'before'    => '<h1>',
-                            'after'     => '</h1>',
-                            'link_type' => '#'
-                        ) );
-                    }
-                    // ----------------------------- END OF TITLE POST -----------------------------
-                ?>
-                </div>
-            </div><!-- .col -->
 
-            <?php if( $Skin->get_setting('header_breadcrumb') == 1 ) : ?>
-            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
-                <div class="bc_content">
-                <?php
-                    // ------------------------- "Breadcrumbs" CONTAINER EMBEDDED HERE --------------------------
-                    // Breadcrumbs
-                    skin_widget( array(
-                		// CODE for the widget:
-                		'widget'           => 'breadcrumb_path',
-                		// Optional display params
-                		'block_start'      => '<ul class="breadcrumb">',
-                		'block_end'        => '</ul><div class="clear"></div>',
-                		'separator'        => '',
-                		'item_mask'        => '<li><a href="$url$">$title$</a></li>',
-                		'item_active_mask' => '<li class="active">$title$</li>',
-                	) );
-                    // ----------------------------- END OF "Page Top" CONTAINER -----------------------------
-                ?>
-                </div>
-            </div><!-- .col -->
-            <?php endif; ?>
-
-        </div><!-- .row -->
-    </div><!-- .container -->
-</header><!-- #main_header -->
-<?php } else { ?>
 <header id="main_header">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
                 <div class="site_brand">
                 <?php
-                    // ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
-                    // Display container and contents:
-                    skin_container( NT_('Header'), array(
-                        // The following params will be used as defaults for widgets included in this container:
-                        'block_start'       => '<div class="evo_widget $wi_class$">',
-                        'block_end'         => '</div>',
-                        'block_title_start' => '<h1>',
-                        'block_title_end'   => '</h1>',
-                    ) );
-                    // ----------------------------- END OF "Header" CONTAINER -----------------------------
+
+                    // if ( $preview )  {
+                    //     echo "<h1>Post Preview</h1>"; // Show title post on the preview
+                    // } else if ( $disp == 'single' || $disp == 'page' ) {
+                    //     $Item->title( array(
+                    //         'before'    => '<h1>',
+                    //         'after'     => '</h1>',
+                    //         'link_type' => '#'
+                    //     ) );
+                    // } else {
+                        // ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
+                        // Display container and contents:
+                        skin_container( NT_('Header'), array(
+                            // The following params will be used as defaults for widgets included in this container:
+                            'block_start'       => '<div class="evo_widget $wi_class$">',
+                            'block_end'         => '</div>',
+                            'block_title_start' => '<h1>',
+                            'block_title_end'   => '</h1>',
+                        ) );
+                        // ----------------------------- END OF "Header" CONTAINER -----------------------------
+                    // }
                 ?>
                 </div>
             </div><!-- .col -->
@@ -194,4 +156,3 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
         </div><!-- .row -->
     </div><!-- .container -->
 </header><!-- #main_header -->
-<?php } ?>

@@ -21,6 +21,13 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 	die( 'This skin is designed for b2evolution 6.4 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
 }
 
+$header = '';
+if ( $Skin->get_setting( 'search_header' ) == 'header_page' ) {
+	$header = '_body_header_page.inc.php';
+} else {
+	$header = '_body_header.inc.php';
+}
+
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
 skin_init( $disp );
@@ -33,7 +40,7 @@ skin_include( '_html_header.inc.php', array() );
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
-skin_include( '_body_header_page.inc.php' );
+skin_include( $header );
 // ------------------------------- END OF SITE HEADER --------------------------------
 ?>
 

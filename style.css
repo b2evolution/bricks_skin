@@ -223,7 +223,7 @@ textarea.message_text {
   #nav .navbar-header .navbar-toggle {
     display: block;
     background-color: transparent;
-    margin-right: 0;
+    margin-right: 35px;
     margin-top: 16px;
     margin-bottom: 12px;
   }
@@ -240,6 +240,7 @@ textarea.message_text {
   #nav .navbar-header .navbar-toggle {
     position: absolute;
     right: 50px;
+    margin-right: 0;
   }
 }
 #nav .nav_tabs {
@@ -742,7 +743,7 @@ textarea.message_text {
   font-size: 2.4rem;
   font-weight: 400;
   letter-spacing: 3px;
-  line-height: 25px;
+  line-height: 28px;
   color: #4b4e53;
   text-transform: uppercase;
   word-break: break-word;
@@ -3268,7 +3269,6 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_threads #main_content,
 .disp_msgform #main_content {
-  background-color: #ffffff;
   padding: 80px 60px 60px;
 }
 @media screen and (max-width: 992px) {

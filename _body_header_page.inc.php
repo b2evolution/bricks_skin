@@ -18,7 +18,7 @@ global $baseurl, $skin_url, $disp, $preview;
 siteskin_include( '_site_body_header.inc.php' );
 // ------------------------------- END OF SITE HEADER --------------------------------
 
-$header_md = $Skin->change_class( 'header_content_mode' );
+$header_md = $Skin->change_class( 'header_page_content_mode' );
 $trans = '';
 if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
     $trans = 'class="nav_bgt"';
@@ -105,35 +105,48 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
             <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
                 <div class="single_title_post">
                 <?php
-                    // ------------------------- SHOW THE TITLE POST --------------------------
-                    request_title( array(
-						'title_before'       => '<h1>',
-						'title_after'        => '</h1>',
-						'title_none'         => '',
-						'glue'               => ' - ',
-						'title_single_disp'  => false,
-						'title_page_disp'    => false,
-						'format'             => 'htmlbody',
-						'display_edit_links' => false,
-						'category_text'      => '',
-						'categories_text'    => '',
-						'catdir_text'        => '',
-						'comments_text'      => T_('Latest Replies'),
-						'front_text'         => '',
-						'posts_text'         => '',
-						'useritems_text'     => T_('User\'s topics'),
-						'usercomments_text'  => T_('User\'s replies'),
-						'register_text'      => '',
-						'login_text'         => '',
-						'lostpassword_text'  => '',
-						'account_activation' => '',
-						'msgform_text'       => T_('Contact'),
-                        'thread_text'        => T_('Contact'),
-						'user_text'          => '',
-						'users_text'         => '',
-						'search_text'		 => T_( 'Search Results' ),
-					) );
-                    // ----------------------------- END OF TITLE POST -----------------------------
+
+                    if ( $preview )  {
+                        echo "<h1>Post Preview</h1>"; // Show title post on the preview
+                    } else if ( $disp == 'single' || $disp == 'page' ) {
+                        $Item->title( array(
+                            'before'    => '<h1>',
+                            'after'     => '</h1>',
+                            'link_type' => '#'
+                        ) );
+                    } else if( $disp == '404' ) {
+                        echo "<h1>404 Page</h1>";
+                    } else if ( $disp == 'posts' ) {
+                        echo "<h1>Posts Page</h1>";
+                    } else {
+                        request_title( array(
+                        	'title_before'       => '<h1>',
+                        	'title_after'        => '</h1>',
+                        	'title_none'         => '',
+                        	'glue'               => ' - ',
+                        	'title_single_disp'  => false,
+                        	'title_page_disp'    => false,
+                        	'format'             => 'htmlbody',
+                        	'display_edit_links' => false,
+                        	'category_text'      => '',
+                        	'categories_text'    => '',
+                        	'catdir_text'        => '',
+                        	'comments_text'      => T_('Latest Replies'),
+                        	'front_text'         => '',
+                        	'posts_text'         => '',
+                        	'useritems_text'     => T_('User\'s topics'),
+                        	'usercomments_text'  => T_('User\'s replies'),
+                        	'register_text'      => '',
+                        	'login_text'         => '',
+                        	'lostpassword_text'  => '',
+                        	'account_activation' => '',
+                        	'msgform_text'       => T_('Contact'),
+                            'thread_text'        => T_('Contact'),
+                        	'user_text'          => '',
+                        	'users_text'         => '',
+                        	'search_text'		 => T_( 'Search Results' ),
+                        ) );
+                    }
                 ?>
                 </div>
             </div><!-- .col -->
