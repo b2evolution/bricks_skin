@@ -27,23 +27,25 @@ $params = array_merge( array(
 	'search_date_format'       => 'F j, Y',
 ), $params );
 
-// ------------------------ START OF SEARCH FORM WIDGET ------------------------
-skin_widget( array(
-	// CODE for the widget:
-	'widget' => 'coll_search_form',
-	// Optional display params
-	'block_start'          => '<div class="evo_widget $wi_class$">',
-	'block_end'            => '</div>',
-	'block_display_title'  => false,
-	'disp_search_options'  => 0,
-	'search_class'         => $params['search_class'],
-	'search_input_before'  => $params['search_input_before'],
-	'search_input_after'   => $params['search_input_after'],
-	'search_submit_before' => $params['search_submit_before'],
-	'search_submit_after'  => $params['search_submit_after'],
-	'use_search_disp'      => 1,
-) );
-// ------------------------- END OF SEARCH FORM WIDGET -------------------------
+if ( $Skin->get_setting( 'search_box' ) == 1 ) {
+	// ------------------------ START OF SEARCH FORM WIDGET ------------------------
+	skin_widget( array(
+		// CODE for the widget:
+		'widget' => 'coll_search_form',
+		// Optional display params
+		'block_start'          => '<div class="evo_widget $wi_class$">',
+		'block_end'            => '</div>',
+		'block_display_title'  => false,
+		'disp_search_options'  => 0,
+		'search_class'         => $params['search_class'],
+		'search_input_before'  => $params['search_input_before'],
+		'search_input_after'   => $params['search_input_after'],
+		'search_submit_before' => $params['search_submit_before'],
+		'search_submit_after'  => $params['search_submit_after'],
+		'use_search_disp'      => 1,
+	) );
+	// ------------------------- END OF SEARCH FORM WIDGET -------------------------
+}
 
 // Perform search (after having displayed the first part of the page) & display results:
 search_result_block( array(

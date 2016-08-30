@@ -99,7 +99,7 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
     </div><!-- .container-fluid -->
 </header><!-- #nav -->
 
-<header id="main_header_single">
+<header id="main_header_page">
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">

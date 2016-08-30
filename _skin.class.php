@@ -290,12 +290,6 @@ class bricks_Skin extends Skin
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Navigation Settings (All disps)' ),
 			),
-				'nav_sticky' => array(
-					'label'			=> T_( 'Sticky Menu' ),
-					'note'			=> T_( 'Checklist to enabling sticky navigation when scrooling.' ),
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 1,
-				),
 				'nav_background' => array(
 					'label'			=> T_( 'Background Color' ),
 					'note'			=> T_( 'Choose your favorite background color for Main Menu. Default background color is <code>#ffffff</code>' ),
@@ -304,6 +298,24 @@ class bricks_Skin extends Skin
 				),
 				'nav_color_link'	=> array(
 					'label'			=> T_( 'Color Link Menu' ),
+					'note'			=> T_( 'Choose your favorite color link for navigation. Default color is <code>#4b4e53</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#4b4e53'
+				),
+				'nav_sticky' => array(
+					'label'			=> T_( 'Sticky Menu' ),
+					'note'			=> T_( 'Checklist to enabling sticky navigation when scrooling.' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
+				),
+				'nav_background_sticky' => array(
+					'label'			=> T_( 'Background Color Sticky' ),
+					'note'			=> T_( 'Choose your favorite background color for Main Menu. Default background color is <code>#ffffff</code>' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#ffffff',
+				),
+				'nav_color_link_sticky'	=> array(
+					'label'			=> T_( 'Color Link Menu Sticky' ),
 					'note'			=> T_( 'Choose your favorite color link for navigation. Default color is <code>#4b4e53</code>.' ),
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
@@ -491,11 +503,24 @@ class bricks_Skin extends Skin
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee',
 				),
+				'header_page_color_content' => array(
+					'label'			=> T_( 'Header Content Color' ),
+					'note'			=> T_( 'Choose your favorite color for content header page. Default value is <code>#4b4e53</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#4b4e53'
+				),
 				'header_page_pt' => array(
-					'label'			=> T_( 'Padding Top Content' ),
+					'label'			=> T_( 'Padding Top' ),
 					'note'			=> T_( 'px. Set the padding top for content in header page. Default value is <code>160px</code>.' ),
 					'type'			=> 'text',
 					'defaultvalue'	=> '160',
+					'size'			=> 4,
+				),
+				'header_page_pb' => array(
+					'label'			=> T_( 'Padding Bottom' ),
+					'note'			=> T_( 'px. Set the padding bottom for content in header page. Default value is <code>60px</code>.' ),
+					'type'			=> 'text',
+					'defaultvalue'	=> '60',
 					'size'			=> 4,
 				),
 				'header_page_content_mode' => array(
@@ -1280,10 +1305,13 @@ class bricks_Skin extends Skin
 		}
 
 
-		/* NAVIGATION SETTINGS
+		/* NAVIGATION OPTIONS
 		 * ========================================================================== */
 		if( $bg = $this->get_setting( 'nav_background' ) ) {
-			$custom_css .= '#nav, #nav.nav_bgt.fixed { background-color: '.$bg.' }';
+			$custom_css .= '#nav.nav_page, #nav.nav_bgt { background-color: '.$bg.' }';
+		}
+		if( $color = $this->get_setting( 'nav_background_sticky' ) ) {
+			$custom_css .= "#nav.fixed, #nav.nav_bgt.fixed{ background-color: $color }";
 		}
 		if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
 			$custom_css .= '#nav.nav_bgt { background-color: transparent }';
@@ -1307,7 +1335,8 @@ class bricks_Skin extends Skin
 			$custom_css .= '#nav .search_icon .search_tringger:before { border-color: '.$color.' }';
 			$custom_css .= '#nav .search_icon .search_tringger:after { background-color: '.$color.' }';
 			$custom_css .= '#nav .navbar-header .navbar-toggle .icon-bar { background-color: '.$color.'; }';
-
+		}
+		if( $color = $this->get_setting( 'nav_color_link_sticky' ) ) {
 			$custom_css .= '#nav.fixed .nav_tabs ul a, #nav.fixed .navbar-header .navbar-brand h3 a { color: '.$color.' }';
 			$custom_css .= '#nav.fixed .search_icon .search_tringger:before { border-color: '.$color.' }';
 			$custom_css .= '#nav.fixed .search_icon .search_tringger:after { background-color: '.$color.' }';
@@ -1356,12 +1385,38 @@ class bricks_Skin extends Skin
 			$custom_css .= '#main_header:after { background-color: '.$header_color_overlay.'; opacity: '.$header_cov_opacity.' }';
 		}
 
+
+		/* HEADER PAGE SETTINGS
+		 * ========================================================================== */
+		if( $color = $this->get_setting( 'header_page_bg' ) ) {
+			$custom_css .= "#main_header_page { background-color: $color }";
+		}
+		if( $color = $this->get_setting( 'header_page_color_content' ) ) {
+			$custom_css .= "#main_header_page .single_title_post h1, #main_header_page .bc_content .breadcrumb > .active, #main_header_page .bc_content .breadcrumb a{ color: $color; }";
+		}
+		if( $padding = $this->get_setting( 'header_page_pt' ) ) {
+			$custom_css .= '#main_header_page{ padding-top: '.$padding.'px; }';
+		}
+		if( $padding = $this->get_setting( 'header_page_pb' ) ) {
+			$custom_css .= '#main_header_page { padding-bottom: '.$padding.'px; }';
+		}
+
+
 		/* POSTS SETTINGS
 		 * ========================================================================== */
 		if ( $padding = $this->get_setting( 'posts_padding_column' ) ) {
 			$custom_css .= '.disp_posts #grid_posts .evo_post_article { padding: 0 '.$padding.'px; }';
 			$custom_css .= '.disp_posts #grid_posts { margin-left: -'.$padding.'px; margin-right: -'.$padding.'px; }';
 		}
+
+
+		/* SINGLE SETTINGS
+		 * ========================================================================== */
+		if( $color = $this->get_setting( 'single_comments_bg' ) ) {
+			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form{ background-color: $color; border-color: $color; }";
+			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel{ background-color: $color }";
+		}
+
 
 		/* FOOTER SETTINGS
 		 * ========================================================================== */

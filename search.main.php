@@ -63,13 +63,16 @@ skin_include( $header );
 				?>
 
 				<?php
+
+					$align = $Skin->change_class( 'search_pagi_align' );
+
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
 					skin_include( '$disp$', array(
 						'author_link_text' 		  => 'auto',
 						// Profile tabs to switch between user edit forms
 						// Pagination
 						'pagination' => array(
-							'block_start'              => '<div class="center pagin_search"><ul class="pagination">',
+							'block_start'              => '<div class="'.$align.' pagin_search"><ul class="pagination">',
 							'block_end'                => '</ul></div>',
 							'page_current_template'    => '<span>$page_num$</span>',
 							'page_item_before'         => '<li>',
