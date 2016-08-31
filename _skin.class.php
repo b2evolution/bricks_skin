@@ -553,6 +553,20 @@ class bricks_Skin extends Skin
 					),
 					'defaultvalue'	=> 'header_main',
 				),
+				'posts_layout' => array(
+					'label' => T_('Posts Layout'),
+					'note' => '',
+					'defaultvalue' => 'single_column',
+					'options' => array(
+						'single_column'              => T_('Single Column Large'),
+						'single_column_normal'       => T_('Single Column'),
+						'single_column_narrow'       => T_('Single Column Narrow'),
+						'single_column_extra_narrow' => T_('Single Column Extra Narrow'),
+						'left_sidebar'               => T_('Left Sidebar'),
+						'right_sidebar'              => T_('Right Sidebar'),
+					),
+					'type' => 'select',
+				),
 				'category_list_filter' => array(
 					'label'			=> T_( 'Category List Posts Filters' ),
 					'note'			=> T_( 'Check to enable Category list Filters Posts. Default value is <code>Uncheck</code>.' ),
@@ -1482,43 +1496,18 @@ class bricks_Skin extends Skin
 		return ( ! empty( $access ) && ! empty( $access[ $container_key ] ) );
 	}
 
-
-	/**
-	 * Check if we can display a sidebar for the current layout
-	 *
-	 * @param boolean TRUE to check if at least one sidebar container is visible
-	 * @return boolean TRUE to display a sidebar
-	 */
-	function is_visible_sidebar( $check_containers = false )
-	{
-		$layout = $this->get_setting( 'layout' );
-
-		if( $layout != 'left_sidebar' && $layout != 'right_sidebar' )
-		{ // Sidebar is not displayed for selected skin layout
-			return false;
-		}
-
-		if( $check_containers )
-		{ // Check if at least one sidebar container is visible
-			return ( $this->is_visible_container( 'sidebar' ) ||  $this->is_visible_container( 'sidebar2' ) );
-		}
-		else
-		{ // We should not check the visibility of the sidebar containers for this case
-			return true;
-		}
-	}
-
-
 	/**
 	 * Get value for attbiute "class" of column block
 	 * depending on skin setting "Layout"
 	 *
 	 * @return string
 	 */
-	function get_column_class()
+	function get_column_class( $id = 'layout' )
 	{
 
-		switch( $this->get_setting( 'layout' ) )
+		$id_skin = $this->get_setting( $id );
+
+		switch( $id_skin )
 		{
 			case 'single_column':
 				// Single Column Large
@@ -1546,6 +1535,40 @@ class bricks_Skin extends Skin
 				return 'col-sm-8 col-md-8';
 		}
 	}
+
+	/**
+	 * Check if we can display a sidebar for the current layout
+	 *
+	 * @param boolean TRUE to check if at least one sidebar container is visible
+	 * @return boolean TRUE to display a sidebar
+	 */
+	function is_visible_sidebar( $check_containers = false )
+	{
+		global $disp;
+
+		$layout = '';
+		if( $disp == 'posts' ) {
+			$layout = $this->get_setting('posts_layout');
+		} else {
+			$layout = $this->get_setting('layout');
+		}
+
+
+		if( $layout != 'left_sidebar' && $layout != 'right_sidebar' )
+		{ // Sidebar is not displayed for selected skin layout
+			return false;
+		}
+
+		if( $check_containers )
+		{ // Check if at least one sidebar container is visible
+			return ( $this->is_visible_container( 'sidebar' ) ||  $this->is_visible_container( 'sidebar2' ) );
+		}
+		else
+		{ // We should not check the visibility of the sidebar containers for this case
+			return true;
+		}
+	}
+
 
 }
 

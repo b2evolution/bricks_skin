@@ -90,7 +90,11 @@ if ( $content_mode == 'excerpt' ) {
 	$img_position .= 'cover';
 }
 
-echo '<div class="'.$content_class.$layout.'" '.$data_cat.'>'; // Beginning of post display
+if ( $Item->is_featured() ) {
+	echo '<div class="featured_posts '.$content_class.$layout.'" '.$data_cat.'>';
+} else {
+	echo '<div class="'.$content_class.$layout.'" '.$data_cat.'>'; // Beginning of post display
+}
 
 if( $disp == 'single' || $Item->is_intro() || $disp == 'page' )
 {	// Display images that are linked to this post:
@@ -116,9 +120,7 @@ if( $disp == 'single' || $Item->is_intro() || $disp == 'page' )
 }
 
 ?>
-
 <article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
-
 	<?php
 		$Item->locale_temp_switch();
 

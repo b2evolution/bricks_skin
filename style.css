@@ -100,6 +100,11 @@ a:focus {
     float: none;
   }
 }
+@media screen and (max-width: 768px) {
+  .pull-right {
+    float: none !important;
+  }
+}
 pre {
   border-color: #e4e4e4;
   border-radius: 3px;
@@ -2067,6 +2072,21 @@ div.extended_search_form .search_options .search_option {
 .disp_posts .filters .nav-gallery li:focus {
   cursor: pointer;
 }
+.disp_posts .featured_posts {
+  max-width: 100%;
+  width: 100%;
+  float: none;
+}
+.disp_posts .featured_posts .evo_featured_post {
+  border-radius: 0;
+  padding: 25px;
+  margin-bottom: 40px;
+  box-shadow: none;
+  border-color: #eeeeee;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_image .evo_image_block {
+  margin-top: 0;
+}
 .disp_posts #grid_posts {
   display: block;
   position: relative;
@@ -2075,6 +2095,59 @@ div.extended_search_form .search_options .search_option {
   margin-left: -15px;
   -webkit-transition: height 0.32s ease;
   transition: height 0.32s ease;
+}
+.disp_posts #grid_posts .featured_posts.one_column {
+  max-width: 100%;
+  width: 100%;
+  float: none;
+}
+.disp_posts #grid_posts .featured_posts.two_columns {
+  max-width: 50%;
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 480px) {
+  .disp_posts #grid_posts .featured_posts.two_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
+.disp_posts #grid_posts .featured_posts.three_columns {
+  max-width: 33.33333333%;
+  width: 33.33333333%;
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .disp_posts #grid_posts .featured_posts.three_columns {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .disp_posts #grid_posts .featured_posts.three_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
+.disp_posts #grid_posts .featured_posts.four_columns {
+  max-width: 25%;
+  width: 25%;
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .disp_posts #grid_posts .featured_posts.four_columns {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .disp_posts #grid_posts .featured_posts.four_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
 }
 .disp_posts #grid_posts .evo_post_article {
   position: relative;
@@ -2210,6 +2283,11 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_posts #grid_posts .evo_post_article .post_comments_link a {
   color: #7e8082;
+}
+@media screen and (max-width: 768px) {
+  .disp_posts .evo_post_pagination {
+    margin-bottom: 40px;
+  }
 }
 @media screen and (max-width: 480px) {
   #main_content.pull-right {

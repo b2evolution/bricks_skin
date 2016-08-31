@@ -11,13 +11,21 @@
  * @subpackage evopress
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
+
+$layout = '';
+if( $disp == 'posts' ) {
+    $layout = 'posts_layout';
+} else {
+    $layout = 'layout';
+}
+
 ?>
 
 <?php
 if( $Skin->is_visible_sidebar() )
 { // Display sidebar:
 ?>
-<aside id="main_sidebar" class="col-sm-4 col-md-3 <?php echo ( $Skin->get_setting( 'layout' ) == 'left_sidebar' ? 'pull-left' : 'col-md-offset-1' ); ?>">
+<aside id="main_sidebar" class="col-sm-4 col-md-3 <?php echo ( $Skin->get_setting( $layout ) == 'left_sidebar' ? 'pull-left' : 'col-md-offset-1' ); ?>">
     <!-- =================================== START OF SIDEBAR =================================== -->
     <div class="evo_container evo_container__sidebar">
     <?php

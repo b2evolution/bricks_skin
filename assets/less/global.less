@@ -94,7 +94,6 @@ a {
         width: @1-column;
         float: none;
     }
-
 }
 
 .four_columns {
@@ -111,6 +110,12 @@ a {
         max-width: @1-column;
         width: @1-column;
         float: none;
+    }
+}
+
+.pull-right {
+    @media screen and ( max-width: @screen-sm ) {
+        float: none !important;
     }
 }
 
