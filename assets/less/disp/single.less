@@ -1,472 +1,315 @@
 // SINGLE STYLE
 // ======================================================================== /
-#main_content {
+.disp_single,
+.disp_page {
 
-    @media screen and ( max-width: @screen-xs ) {
-        &.pull-right {
-            float: none !important;
-        }
-    }
+    #main_content {
 
-    .evo_content_single,
-    .evo_post_lists {
-
-        .evo_cover_image {
-            margin-bottom: 40px;
-
-            @media screen and ( max-width: @screen-xs ) {
-                margin-bottom: 20px;
-            }
-
-            .evo_image_block {
-                margin: 0;
+        @media screen and ( max-width: @screen-xs ) {
+            &.pull-right {
+                float: none !important;
             }
         }
 
-        // EVO SINGLE ARTICLE
-        // ======================================================================== /
-        .evo_post_article,
-        .evo_single_article {
+        .evo_content_single,
+        .evo_post_lists {
 
-            .evo_post_title {
-                h1 {
-                    font-size: 1.8rem;
-                    font-weight: 700;
-                    color: @color-link;
-                    margin-top: 0;
-                    margin-bottom: 0;
-                    text-transform: uppercase;
-                }
-            }
-
-            .evo_post_info {
-                font-size: 1.2rem;
-                letter-spacing: 0.5px;
-                text-transform: uppercase;
-                color: @color-info;
-                margin-bottom: 20px;
-
-                a {
-                    color: @color-info;
-
-                    &:hover, &:active, &:focus {
-                        color: @color-link;
-                    }
-                }
-
-                .evo_status {
-                    font-size: 1rem;
-                    border-radius: 2px;
-                }
-            }
-
-            .evo_post__full {
-                border-bottom: 1px solid @e;
-                padding-bottom: 20px;
+            .evo_cover_image {
                 margin-bottom: 40px;
 
+                @media screen and ( max-width: @screen-xs ) {
+                    margin-bottom: 20px;
+                }
+
                 .evo_image_block {
-                    margin-bottom: 20px;
-
-                    img {
-                        border-radius: 0;
-                    }
+                    margin: 0;
                 }
             }
 
-            // EVO POST FULL
+            // EVO SINGLE ARTICLE
             // ======================================================================== /
-            .evo_post__full_text {
-                word-break: break-word;
-                line-height: 24px;
+            .evo_post_article,
+            .evo_single_article {
 
-                h1, h2, h3, h4, h5, h6 {
-                    color: @color-link;
-                    opacity: 0.9;
-                    font-weight: 700;
-                }
-
-                p {
-                    margin-bottom: 15px;
-                }
-
-                a {
-                    text-decoration: underline;
-                    text-decoration-style: dotted;
-                }
-
-                ul {
-
-                    ul {
-                        padding-top: 5px;
-                    }
-
-                    li {
-                        padding-bottom: 5px;
-                    }
-
-                    p {
+                .evo_post_title {
+                    h1 {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        color: @color-link;
+                        margin-top: 0;
                         margin-bottom: 0;
-                    }
-                }
-
-                pre {
-                    border-color: @c-e4;
-                    border-radius: 2px;
-                    padding: 18px;
-                    margin-bottom: 20px;
-                    white-space: pre-wrap;
-                    word-break: break-word;
-                }
-
-                blockquote {
-                    font-style: italic;
-                    letter-spacing: 0.5px;
-                    line-height: 1.4;
-                    margin-bottom: 20px;
-
-                    p{
-                        margin-bottom: 0;
-                    }
-                }
-
-                table {
-                    th, td {
-                        padding: 5px 10px;
-                        border: 1px solid @e;
-                    }
-                }
-
-            }
-
-            // WIDGET ITEM ATTACHMENTS
-            // ======================================================================== /
-            .widget_core_item_small_print,
-            .item_attachments,
-            .widget_core_item_tags,
-            .widget_core_item_vote,
-            .widget_core_item_about_author {
-                margin-bottom: 25px;
-
-                h3 {
-                    font-size: 1.8rem;
-                    font-weight: 700;
-                    text-transform: uppercase;
-                    color: @color-link;
-                    margin-top: 0;
-                }
-            }
-
-            .item_attachments {
-                a {
-                    &:hover, &:active, &:focus {
-                        text-decoration: underline;
-                        background-color: transparent;
-                    }
-                }
-            }
-
-            .widget_core_item_tags {
-                .item_tags {
-                    a {
-                        display: inline-block;
-                        font-size: 1.1rem;
-                        letter-spacing: 1px;
                         text-transform: uppercase;
-                        border: 1px solid @e;
-                        padding: 6px 12px;
-                        margin: 2px;
-
-                        &:hover, &:active, &:focus {
-                            background-color: @color-link;
-                            color: @w;
-                            border-color: @color-link;
-                        }
-                    }
-                }
-            }
-
-            .widget_core_item_small_print {
-                line-height: 1.8;
-
-                @media screen and ( max-width: @screen-sm ) {
-                    line-height: 1.3;
-                }
-
-                .user {
-                    img {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 100%;
-                        margin-top: 0px;
                     }
                 }
 
-                a {
-                    &:active, &:focus, &:hover {
-                        text-decoration: underline;
-                    }
-                }
+                .evo_post_info {
+                    font-size: 1.2rem;
+                    letter-spacing: 0.5px;
+                    text-transform: uppercase;
+                    // color: @color-info;
+                    opacity: 0.75;
+                    margin-bottom: 20px;
 
-                .fa-edit {
-                    margin-left: 5px;
-                }
-            }
-
-            .widget_core_item_about_author {
-                background-color: @e;
-                padding: 20px;
-
-                h3 {
-                    margin-top: 0;
-                }
-
-                .evo_avatar {
-                    margin-top: 5px;
-                    margin-bottom: 0;
-                    margin-right: 15px;
-
-                    img {
+                    .evo_status {
+                        font-size: 1rem;
                         border-radius: 2px;
                     }
                 }
 
-                .evo_author_display_field {
-                    line-height: 1.4;
+                .evo_post__full {
+                    border-bottom: 1px solid @e;
+                    padding-bottom: 20px;
+                    margin-bottom: 40px;
+
+                    .evo_image_block {
+                        margin-bottom: 20px;
+
+                        img {
+                            border-radius: 0;
+                        }
+                    }
                 }
-            }
 
-            // SINGLE PAGINATION
-            // ======================================================================== /
-            .single_pager {
-                margin: 30px 0;
-                padding: 15px 0 12px;
-                border-top: 1px solid @e;
-                border-bottom: 1px solid @e;
+                // EVO POST FULL
+                // ======================================================================== /
+                .evo_post__full_text {
+                    word-break: break-word;
+                    line-height: 24px;
 
-                ul {
-                        list-style-type: none;
-                        margin: 0;
-                        bottom: 0;
-                        text-align: center;
+                    h1, h2, h3, h4, h5, h6 {
+                        color: @color-link;
+                        opacity: 0.9;
+                        font-weight: 700;
+                    }
 
-                    li{
-                        display: inline;
-                        margin: 0;
-                        padding: 0;
+                    p {
+                        margin-bottom: 15px;
+                    }
 
-                        &.previous{
-                            a {
-                                float: left;
-                            }
+                    a {
+                        text-decoration: underline;
+                        text-decoration-style: dotted;
+                    }
+
+                    ul {
+
+                        ul {
+                            padding-top: 5px;
                         }
 
-                        &.next {
-                            a {
-                                float: right;
+                        li {
+                            padding-bottom: 5px;
+                        }
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    pre {
+                        border-color: @c-e4;
+                        border-radius: 2px;
+                        padding: 18px;
+                        margin-bottom: 20px;
+                        white-space: pre-wrap;
+                        word-break: break-word;
+                    }
+
+                    blockquote {
+                        font-style: italic;
+                        letter-spacing: 0.5px;
+                        line-height: 1.4;
+                        margin-bottom: 20px;
+
+                        p{
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    table {
+                        th, td {
+                            padding: 5px 10px;
+                            border: 1px solid @e;
+                        }
+                    }
+
+                }
+
+                // WIDGET ITEM ATTACHMENTS
+                // ======================================================================== /
+                .widget_core_item_small_print,
+                .item_attachments,
+                .widget_core_item_tags,
+                .widget_core_item_vote,
+                .widget_core_item_about_author {
+                    margin-bottom: 25px;
+
+                    h3 {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        color: @color-link;
+                        margin-top: 0;
+                    }
+                }
+
+                .item_attachments {
+                    a {
+                        &:hover, &:active, &:focus {
+                            text-decoration: underline;
+                            background-color: transparent;
+                        }
+                    }
+                }
+
+                .widget_core_item_tags {
+                    .item_tags {
+                        a {
+                            display: inline-block;
+                            font-size: 1.1rem;
+                            letter-spacing: 1px;
+                            text-transform: uppercase;
+                            border: 1px solid @e;
+                            padding: 6px 12px;
+                            margin: 2px;
+
+                            &:hover, &:active, &:focus {
+                                background-color: @color-link;
+                                color: @w;
+                                border-color: @color-link;
                             }
+                        }
+                    }
+                }
+
+                .widget_core_item_small_print {
+                    line-height: 1.8;
+
+                    @media screen and ( max-width: @screen-sm ) {
+                        line-height: 1.3;
+                    }
+
+                    .user {
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 100%;
+                            margin-top: 0px;
                         }
                     }
 
                     a {
-                        display: inline-block;
-                        font-size: 1.2rem;
-                        letter-spacing: 1px;
-                        text-transform: uppercase;
-                        vertical-align: middle;
-
-                        .ei {
-                            font-size: 2.4rem;
-                            vertical-align: middle;
-                            margin-bottom: 3px;
-                            opacity: 0.6;
-                        }
-                    }
-                }
-            }
-
-
-            // EVO SINGLE COMMENT
-            // ======================================================================== /
-            .evo_single_comments {
-
-                // FEEDBACKS
-                // ======================================================================== /
-                #feedbacks {
-                    .evo_comment__list_title {
-                        font-size: 2rem;
-                        font-weight: 700;
-                        color: @color-link;
-                        text-transform: uppercase;
-                        margin: 2px 0 0;
-                    }
-                    .evo_comment__meta_info {
-                        padding: 0 0 20px;
-
-                        a {
-                            font-size: 1rem;
-                            font-weight: 400;
-                            letter-spacing: 1px;
-                            line-height: 1.5;
-                            text-transform: uppercase;
-                            border-radius: 0;
-                            border-color: @color-link;
-                            background-color: @color-link;
-                            color: @w;
-                            padding: 5px 10px;
-
-                            &:hover, &:active, &:focus {
-                                background-color: @color-link-hover2;
-                                border-color: @color-link-hover2;
-                            }
-                        }
-                    }
-                    .ratings_table {
-                        margin-bottom: 15px;
-                    }
-
-                }
-
-                // EVO COMMENT PREVIEW
-                // ======================================================================== /
-                #comment_preview {
-                    padding: 30px;
-                    border-radius: 0;
-                    border: 3px solid #f2dede;
-
-                    @media screen and ( max-width: @screen-xs ) {
-                        padding: 15px;
-                    }
-
-                    .evo_comment_title {
-                        margin-top: 0;
-                        text-transform: uppercase;
-                        font-size: 1.5rem;
-                        font-weight: 700;
-
-                        a {
-                            &:hover, &:active, &:focus {
-                                background-color: transparent;
-                                text-decoration: underline;
-                            }
+                        &:active, &:focus, &:hover {
+                            text-decoration: underline;
                         }
                     }
 
-                    .evo_comment_avatar {
-                        float: left;
-                        margin: 0 15px 15px 0;
-
-                        @media screen and ( max-width: @screen-xs ) {
-                            display: block;
-                            float: none;
-                            margin: 0 0 15px 0;
-                        }
-                    }
-
-                    .evo_comment_text {
-                        display: table;
-                    }
-
-                    .evo_comment_footer {
-                        text-transform: uppercase;
+                    .fa-edit {
+                        margin-left: 5px;
                     }
                 }
 
-                // SINGLE COMMENT FORM
-                // ======================================================================== /
-                .single_comment_form {
-                    border-radius: 0;
+                .widget_core_item_about_author {
                     background-color: @e;
-                    border-color: @e;
-                    outline: 0;
-                    box-shadow: none;
-                    margin: 0 0 25px;
+                    padding: 20px;
 
-                    .panel {
-                        background-color: transparent;
+                    h3 {
+                        margin-top: 0;
                     }
 
-                    .panel-heading {
-                        padding: 30px;
-                        background-color: transparent;
-                        border-bottom: 0;
-                        border-color: @e;
+                    .evo_avatar {
+                        margin-top: 5px;
+                        margin-bottom: 0;
+                        margin-right: 15px;
 
-                        @media screen and ( max-width: @screen-xs ) {
-                            padding: 20px;
+                        img {
+                            border-radius: 2px;
+                        }
+                    }
+
+                    .evo_author_display_field {
+                        line-height: 1.4;
+                    }
+                }
+
+                // SINGLE PAGINATION
+                // ======================================================================== /
+                .single_pager {
+                    margin: 30px 0;
+                    padding: 15px 0 12px;
+                    border-top: 1px solid @e;
+                    border-bottom: 1px solid @e;
+
+                    ul {
+                            list-style-type: none;
+                            margin: 0;
+                            bottom: 0;
+                            text-align: center;
+
+                        li{
+                            display: inline;
+                            margin: 0;
+                            padding: 0;
+
+                            &.previous{
+                                a {
+                                    float: left;
+                                }
+                            }
+
+                            &.next {
+                                a {
+                                    float: right;
+                                }
+                            }
                         }
 
-                        .panel-title {
-                            font-size: 1.8rem;
-                            font-weight: 700;
-                            opacity: 0.8;
+                        a {
+                            display: inline-block;
+                            font-size: 1.2rem;
+                            letter-spacing: 1px;
                             text-transform: uppercase;
+                            vertical-align: middle;
+
+                            .ei {
+                                font-size: 2.4rem;
+                                vertical-align: middle;
+                                margin-bottom: 3px;
+                                opacity: 0.6;
+                            }
                         }
                     }
+                }
 
-                    & > .panel-body {
-                        padding:  10px 30px 40px;
 
-                        @media screen and ( max-width: @screen-xs ) {
-                            padding: 10px 20px 20px;
+                // EVO SINGLE COMMENT
+                // ======================================================================== /
+                .evo_single_comments {
+
+                    // FEEDBACKS
+                    // ======================================================================== /
+                    #feedbacks {
+                        .evo_comment__list_title {
+                            font-size: 2rem;
+                            font-weight: 700;
+                            color: @color-link;
+                            text-transform: uppercase;
+                            margin: 2px 0 0;
                         }
-                    }
+                        .evo_comment__meta_info {
+                            padding: 0 0 20px;
 
-                    .panel-body {
-
-                        .form_text_input,
-                        .form_textarea_input {
-                            border-radius: 0;
-                            border: 0;
-                            border-bottom: 1px solid @color-link-hover;
-                            box-shadow: none;
-                            background-color: @f9;
-                            margin-bottom: 15px;
-
-                            &:active, &:focus {
-                                outline: 0;
-                                border-bottom-color: @color-link;
-                            }
-                        }
-
-                        .form-group {
-                            margin-bottom: 0px;
-
-                            .control-label {
-                                text-transform: uppercase;
-                            }
-
-                            #uploadfile_A1 {
-                                margin-bottom: 20px;
-                            }
-
-                            .preview,
-                            .submit {
-                                padding: 10px 20px;
-                                font-size: 1.2rem;
+                            a {
+                                font-size: 1rem;
+                                font-weight: 400;
                                 letter-spacing: 1px;
+                                line-height: 1.5;
                                 text-transform: uppercase;
                                 border-radius: 0;
-                                margin-top: 30px;
-
-                                @media screen and ( max-width: @screen-sm ) {
-                                    font-size: 1.1rem;
-                                }
-
-                                @media screen and ( max-width: @screen-s ) {
-                                    margin-top: 5px;
-                                }
-
-                                &:active, &:focus, &:hover {
-                                    outline: 0;
-                                    box-shadow: none;
-                                }
-                            }
-
-                            .submit {
-                                background-color: @color-link;
                                 border-color: @color-link;
+                                background-color: @color-link;
                                 color: @w;
+                                padding: 5px 10px;
 
                                 &:hover, &:active, &:focus {
                                     background-color: @color-link-hover2;
@@ -474,130 +317,285 @@
                                 }
                             }
                         }
-                    }
-                }
+                        .ratings_table {
+                            margin-bottom: 15px;
+                        }
 
-                // POST COMMENT NOTIFICATION
-                // ======================================================================== /
-                .evo_post_comment_notification {
-                    font-size: 1.2rem;
-                    margin-bottom: 20px;
-
-                    p {
-                        margin-bottom: 0;
                     }
 
-                    a.btn {
-                        font-size: 1.1rem;
+                    // EVO COMMENT PREVIEW
+                    // ======================================================================== /
+                    #comment_preview {
+                        padding: 30px;
                         border-radius: 0;
-                        border-color: @e;
-                        letter-spacing: 0.2px;
-                        margin-bottom: 0;
-                        word-break: break-word;
-                        white-space: pre-wrap;
+                        border: 3px solid #f2dede;
 
-                        &:hover, &:active, &:focus {
-                            background-color: @color-link;
-                            border-color: @color-link;
-                            color: @w;
+                        @media screen and ( max-width: @screen-xs ) {
+                            padding: 15px;
+                        }
+
+                        .evo_comment_title {
+                            margin-top: 0;
+                            text-transform: uppercase;
+                            font-size: 1.5rem;
+                            font-weight: 700;
+
+                            a {
+                                &:hover, &:active, &:focus {
+                                    background-color: transparent;
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
+
+                        .evo_comment_avatar {
+                            float: left;
+                            margin: 0 15px 15px 0;
+
+                            @media screen and ( max-width: @screen-xs ) {
+                                display: block;
+                                float: none;
+                                margin: 0 0 15px 0;
+                            }
+                        }
+
+                        .evo_comment_text {
+                            display: table;
+                        }
+
+                        .evo_comment_footer {
+                            text-transform: uppercase;
                         }
                     }
-                }
 
-                .evo_post_feedback_feed_msg {
-                    margin-bottom: 20px;
-
-                    p {
-                        margin-bottom: 0;
-                    }
-                }
-
-                // EVO COMMENT META
-                // ======================================================================== /
-                .evo_comment_meta {
-
-                    .panel {
-                        background-color: @f5;
+                    // SINGLE COMMENT FORM
+                    // ======================================================================== /
+                    .single_comment_form {
                         border-radius: 0;
+                        background-color: @e;
+                        border-color: @e;
+                        outline: 0;
                         box-shadow: none;
-                        border: 0;
+                        margin: 0 0 25px;
+
+                        .panel {
+                            background-color: transparent;
+                        }
 
                         .panel-heading {
-                            padding: 20px 30px 15px;
-                            font-size: 1.6rem;
-                            font-weight: 700;
-                            text-transform: uppercase;
+                            padding: 30px;
                             background-color: transparent;
+                            border-bottom: 0;
+                            border-color: @e;
 
-                            @media screen and ( max-width: @screen-sm ) {
-                                padding: 15px;
+                            @media screen and ( max-width: @screen-xs ) {
+                                padding: 20px;
+                            }
+
+                            .panel-title {
+                                font-size: 1.8rem;
+                                font-weight: 700;
+                                opacity: 0.8;
+                                text-transform: uppercase;
+                            }
+                        }
+
+                        & > .panel-body {
+                            padding:  10px 30px 40px;
+
+                            @media screen and ( max-width: @screen-xs ) {
+                                padding: 10px 20px 20px;
                             }
                         }
 
                         .panel-body {
-                            padding: 15px 30px 30px;
 
-                            @media screen and ( max-width: @screen-sm ){
-                                padding: 15px;
+                            .form_text_input,
+                            .form_textarea_input {
+                                border-radius: 0;
+                                border: 0;
+                                border-bottom: 1px solid @color-link-hover;
+                                box-shadow: none;
+                                background-color: @f9;
+                                margin-bottom: 15px;
+
+                                &:active, &:focus {
+                                    outline: 0;
+                                    border-bottom-color: @color-link;
+                                }
+                            }
+
+                            .form-group {
+                                margin-bottom: 0px;
+
+                                .control-label {
+                                    text-transform: uppercase;
+                                }
+
+                                #uploadfile_A1 {
+                                    margin-bottom: 20px;
+                                }
+
+                                .preview,
+                                .submit {
+                                    padding: 10px 20px;
+                                    font-size: 1.2rem;
+                                    letter-spacing: 1px;
+                                    text-transform: uppercase;
+                                    border-radius: 0;
+                                    margin-top: 30px;
+
+                                    @media screen and ( max-width: @screen-sm ) {
+                                        font-size: 1.1rem;
+                                    }
+
+                                    @media screen and ( max-width: @screen-s ) {
+                                        margin-top: 5px;
+                                    }
+
+                                    &:active, &:focus, &:hover {
+                                        outline: 0;
+                                        box-shadow: none;
+                                    }
+                                }
+
+                                .submit {
+                                    background-color: @color-link;
+                                    border-color: @color-link;
+                                    color: @w;
+
+                                    &:hover, &:active, &:focus {
+                                        background-color: @color-link-hover2;
+                                        border-color: @color-link-hover2;
+                                    }
+                                }
                             }
                         }
+                    }
 
-                        .evo_comment__meta {
-                            padding-bottom: 0 !important;
-                            margin-bottom: 0 !important;
+                    // POST COMMENT NOTIFICATION
+                    // ======================================================================== /
+                    .evo_post_comment_notification {
+                        font-size: 1.2rem;
+                        margin-bottom: 20px;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+
+                        a.btn {
+                            font-size: 1.1rem;
+                            border-radius: 0;
+                            border-color: @e;
+                            letter-spacing: 0.2px;
+                            margin-bottom: 0;
+                            word-break: break-word;
+                            white-space: pre-wrap;
+
+                            &:hover, &:active, &:focus {
+                                background-color: @color-link;
+                                border-color: @color-link;
+                                color: @w;
+                            }
+                        }
+                    }
+
+                    .evo_post_feedback_feed_msg {
+                        margin-bottom: 20px;
+
+                        p {
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    // EVO COMMENT META
+                    // ======================================================================== /
+                    .evo_comment_meta {
+
+                        .panel {
+                            background-color: @f5;
+                            border-radius: 0;
+                            box-shadow: none;
+                            border: 0;
 
                             .panel-heading {
-                                padding: 20px 0 0;
-                                margin-bottom: 5px;
-                                border-bottom: 1px solid @d;
+                                padding: 20px 30px 15px;
+                                font-size: 1.6rem;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                background-color: transparent;
 
-                                .evo_comment_title {
-                                    font-size: 1.5rem;
-                                    font-weight: 700;
+                                @media screen and ( max-width: @screen-sm ) {
+                                    padding: 15px;
                                 }
                             }
 
                             .panel-body {
-                                .evo_comment_text {
-                                    pre {
-                                        background-color: @w;
+                                padding: 15px 30px 30px;
+
+                                @media screen and ( max-width: @screen-sm ){
+                                    padding: 15px;
+                                }
+                            }
+
+                            .evo_comment__meta {
+                                padding-bottom: 0 !important;
+                                margin-bottom: 0 !important;
+
+                                .panel-heading {
+                                    padding: 20px 0 0;
+                                    margin-bottom: 5px;
+                                    border-bottom: 1px solid @d;
+
+                                    .evo_comment_title {
+                                        font-size: 1.5rem;
+                                        font-weight: 700;
                                     }
                                 }
 
+                                .panel-body {
+                                    .evo_comment_text {
+                                        pre {
+                                            background-color: @w;
+                                        }
+                                    }
+
+                                }
                             }
                         }
                     }
-                }
 
-                // ALERT
-                // ======================================================================== /
-                .alert {
-                    border-radius: 0;
+                    // ALERT
+                    // ======================================================================== /
+                    .alert {
+                        border-radius: 0;
+                    }
+
                 }
 
             }
 
         }
 
-    }
 
+        // CUSTOM EVO POST LIST
+        // ======================================================================== /
+        .evo_post_lists {
+            .evo_post_article {
 
-    // CUSTOM EVO POST LIST
-    // ======================================================================== /
-    .evo_post_lists {
-        .evo_post_article {
+                .evo_post__full {
+                    margin-bottom: 10px;
+                    padding-bottom: 10px;
+                }
 
-            .evo_post__full {
-                margin-bottom: 10px;
-                padding-bottom: 10px;
-            }
-
-            .evo_post__full_text {
-                border: 0;
-                margin-bottom: 0;
-                padding-bottom: 0;
+                .evo_post__full_text {
+                    border: 0;
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
             }
         }
+
     }
 
 }

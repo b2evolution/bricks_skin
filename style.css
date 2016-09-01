@@ -1748,6 +1748,31 @@ div.widget_core_user_avatars.evo_layout_rwd img {
 .evo_widget .evo_widget_body .form-control:focus:invalid {
   border-color: #e9322d;
 }
+.evo_widget.widget_core_coll_featured_intro .jumbotron {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.evo_widget.widget_core_coll_featured_intro .jumbotron p {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+.evo_widget.widget_core_coll_featured_intro .evo_post_title {
+  text-transform: uppercase;
+}
+.evo_widget.widget_core_coll_featured_intro .evo_post_title h2 {
+  padding-top: 0;
+  font-weight: 700;
+}
+.evo_widget.widget_core_coll_featured_intro .evo_post_title .btn-group {
+  padding-top: 0;
+}
+.evo_widget.widget_core_coll_featured_intro .evo_post_title .btn-group a {
+  font-size: 1rem;
+  padding: 4px 10px;
+}
+.evo_widget.widget_core_coll_featured_intro .evo_post_title .btn-group .fa-edit {
+  font-size: 1rem;
+}
 .evo_widget.widget_core_coll_category_list .evo_widget_body ul {
   list-style-type: none;
   padding: 0;
@@ -2013,6 +2038,1371 @@ div.extended_search_form .search_options .search_option {
 .disp_front #main_content .evo_container__front_page_primary .evo_widget {
   margin-bottom: 30px;
 }
+@media screen and (max-width: 480px) {
+  .disp_single #main_content.pull-right,
+  .disp_page #main_content.pull-right {
+    float: none !important;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_cover_image,
+.disp_page #main_content .evo_content_single .evo_cover_image,
+.disp_single #main_content .evo_post_lists .evo_cover_image,
+.disp_page #main_content .evo_post_lists .evo_cover_image {
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .disp_single #main_content .evo_content_single .evo_cover_image,
+  .disp_page #main_content .evo_content_single .evo_cover_image,
+  .disp_single #main_content .evo_post_lists .evo_cover_image,
+  .disp_page #main_content .evo_post_lists .evo_cover_image {
+    margin-bottom: 20px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_cover_image .evo_image_block,
+.disp_page #main_content .evo_content_single .evo_cover_image .evo_image_block,
+.disp_single #main_content .evo_post_lists .evo_cover_image .evo_image_block,
+.disp_page #main_content .evo_post_lists .evo_cover_image .evo_image_block {
+  margin: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post_title h1,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post_title h1,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post_title h1,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post_title h1,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post_title h1,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post_title h1,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post_title h1,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post_title h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #4b4e53;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post_info,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post_info,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post_info,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post_info,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post_info,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post_info,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post_info,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post_info {
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-bottom: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post_info .evo_status,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post_info .evo_status,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post_info .evo_status,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post_info .evo_status,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post_info .evo_status,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post_info .evo_status,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post_info .evo_status,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post_info .evo_status {
+  font-size: 1rem;
+  border-radius: 2px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full {
+  border-bottom: 1px solid #eeeeee;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full .evo_image_block,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full .evo_image_block,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_image_block,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_image_block,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full .evo_image_block,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full .evo_image_block,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block {
+  margin-bottom: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full .evo_image_block img,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full .evo_image_block img,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_image_block img,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_image_block img,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full .evo_image_block img,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full .evo_image_block img,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block img,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block img {
+  border-radius: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text {
+  word-break: break-word;
+  line-height: 24px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text h1,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text h1,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text h1,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text h1,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text h1,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text h1,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text h1,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text h1,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text h2,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text h2,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text h2,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text h2,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text h2,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text h2,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text h2,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text h2,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text h3,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text h3,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text h3,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text h3,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text h4,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text h4,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text h4,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text h4,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text h4,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text h4,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text h4,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text h4,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text h5,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text h5,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text h5,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text h5,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text h5,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text h5,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text h5,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text h5,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text h6,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text h6,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text h6,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text h6,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text h6,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text h6,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text h6,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text h6 {
+  color: #4b4e53;
+  opacity: 0.9;
+  font-weight: 700;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text p,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text p,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text p,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text p,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text p,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text p,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text p,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text p {
+  margin-bottom: 15px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text a,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text a,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text a,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text a,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text a,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text a,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text a,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text a {
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+  -moz-text-decoration-style: dotted;
+  text-decoration-style: dotted;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text ul ul,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text ul ul,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text ul ul,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text ul ul,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text ul ul,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text ul ul,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text ul ul,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text ul ul {
+  padding-top: 5px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text ul li,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text ul li,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text ul li,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text ul li,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text ul li,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text ul li,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text ul li,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text ul li {
+  padding-bottom: 5px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text ul p,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text ul p,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text ul p,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text ul p,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text ul p,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text ul p,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text ul p,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text ul p {
+  margin-bottom: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text pre,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text pre,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text pre,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text pre,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text pre,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text pre,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text pre,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text pre {
+  border-color: #e4e4e4;
+  border-radius: 2px;
+  padding: 18px;
+  margin-bottom: 20px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text blockquote,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text blockquote,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text blockquote,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text blockquote,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote {
+  font-style: italic;
+  letter-spacing: 0.5px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote p,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote p,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text blockquote p,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text blockquote p,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text blockquote p,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text blockquote p,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote p,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote p {
+  margin-bottom: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table td,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table td,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table td,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table td,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td {
+  padding: 5px 10px;
+  border: 1px solid #eeeeee;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print,
+.disp_single #main_content .evo_content_single .evo_post_article .item_attachments,
+.disp_page #main_content .evo_content_single .evo_post_article .item_attachments,
+.disp_single #main_content .evo_post_lists .evo_post_article .item_attachments,
+.disp_page #main_content .evo_post_lists .evo_post_article .item_attachments,
+.disp_single #main_content .evo_content_single .evo_single_article .item_attachments,
+.disp_page #main_content .evo_content_single .evo_single_article .item_attachments,
+.disp_single #main_content .evo_post_lists .evo_single_article .item_attachments,
+.disp_page #main_content .evo_post_lists .evo_single_article .item_attachments,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_vote,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_vote,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_vote,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_vote,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_vote,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_vote,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_vote,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_vote,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author {
+  margin-bottom: 25px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print h3,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print h3,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print h3,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print h3,
+.disp_single #main_content .evo_content_single .evo_post_article .item_attachments h3,
+.disp_page #main_content .evo_content_single .evo_post_article .item_attachments h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .item_attachments h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .item_attachments h3,
+.disp_single #main_content .evo_content_single .evo_single_article .item_attachments h3,
+.disp_page #main_content .evo_content_single .evo_single_article .item_attachments h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .item_attachments h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .item_attachments h3,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags h3,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags h3,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags h3,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags h3,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_vote h3,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_vote h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_vote h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_vote h3,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_vote h3,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_vote h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_vote h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_vote h3,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #4b4e53;
+  margin-top: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .item_attachments a:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .item_attachments a:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .item_attachments a:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .item_attachments a:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .item_attachments a:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .item_attachments a:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .item_attachments a:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .item_attachments a:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .item_attachments a:active,
+.disp_page #main_content .evo_content_single .evo_post_article .item_attachments a:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .item_attachments a:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .item_attachments a:active,
+.disp_single #main_content .evo_content_single .evo_single_article .item_attachments a:active,
+.disp_page #main_content .evo_content_single .evo_single_article .item_attachments a:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .item_attachments a:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .item_attachments a:active,
+.disp_single #main_content .evo_content_single .evo_post_article .item_attachments a:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .item_attachments a:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .item_attachments a:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .item_attachments a:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .item_attachments a:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .item_attachments a:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .item_attachments a:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .item_attachments a:focus {
+  text-decoration: underline;
+  background-color: transparent;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a {
+  display: inline-block;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid #eeeeee;
+  padding: 6px 12px;
+  margin: 2px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:active,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:active,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:active,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:active,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:focus {
+  background-color: #4b4e53;
+  color: #ffffff;
+  border-color: #4b4e53;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print {
+  line-height: 1.8;
+}
+@media screen and (max-width: 768px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
+  .disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
+  .disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
+  .disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
+  .disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
+  .disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
+  .disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print,
+  .disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print {
+    line-height: 1.3;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print .user img,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print .user img,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print .user img,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print .user img,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print .user img,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print .user img,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print .user img,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print .user img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin-top: 0px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:active,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:active,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:active,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:active,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:focus,
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:hover {
+  text-decoration: underline;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print .fa-edit,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print .fa-edit,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print .fa-edit,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print .fa-edit,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_small_print .fa-edit,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_small_print .fa-edit,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print .fa-edit,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print .fa-edit {
+  margin-left: 5px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author {
+  background-color: #eeeeee;
+  padding: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author h3,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3 {
+  margin-top: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_avatar,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_avatar,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_avatar,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_avatar,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar {
+  margin-top: 5px;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_avatar img,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_avatar img,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_avatar img,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_avatar img,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar img,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar img,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar img,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar img {
+  border-radius: 2px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_author_display_field,
+.disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_author_display_field,
+.disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_author_display_field,
+.disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_author_display_field,
+.disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_author_display_field,
+.disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_author_display_field,
+.disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_author_display_field,
+.disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_author_display_field {
+  line-height: 1.4;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager {
+  margin: 30px 0;
+  padding: 15px 0 12px;
+  border-top: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager ul,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager ul,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager ul,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager ul,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager ul,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager ul,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager ul,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager ul {
+  list-style-type: none;
+  margin: 0;
+  bottom: 0;
+  text-align: center;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager ul li,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager ul li,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager ul li,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager ul li,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager ul li,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager ul li,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager ul li,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager ul li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager ul li.previous a,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager ul li.previous a,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager ul li.previous a,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager ul li.previous a,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager ul li.previous a,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager ul li.previous a,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager ul li.previous a,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager ul li.previous a {
+  float: left;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager ul li.next a,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager ul li.next a,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager ul li.next a,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager ul li.next a,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager ul li.next a,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager ul li.next a,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager ul li.next a,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager ul li.next a {
+  float: right;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager ul a,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager ul a,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager ul a,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager ul a,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager ul a,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager ul a,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager ul a,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager ul a {
+  display: inline-block;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .single_pager ul a .ei,
+.disp_page #main_content .evo_content_single .evo_post_article .single_pager ul a .ei,
+.disp_single #main_content .evo_post_lists .evo_post_article .single_pager ul a .ei,
+.disp_page #main_content .evo_post_lists .evo_post_article .single_pager ul a .ei,
+.disp_single #main_content .evo_content_single .evo_single_article .single_pager ul a .ei,
+.disp_page #main_content .evo_content_single .evo_single_article .single_pager ul a .ei,
+.disp_single #main_content .evo_post_lists .evo_single_article .single_pager ul a .ei,
+.disp_page #main_content .evo_post_lists .evo_single_article .single_pager ul a .ei {
+  font-size: 2.4rem;
+  vertical-align: middle;
+  margin-bottom: 3px;
+  opacity: 0.6;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4b4e53;
+  text-transform: uppercase;
+  margin: 2px 0 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info {
+  padding: 0 0 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 0;
+  border-color: #4b4e53;
+  background-color: #4b4e53;
+  color: #ffffff;
+  padding: 5px 10px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus {
+  background-color: #101010;
+  border-color: #101010;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .ratings_table,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .ratings_table,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .ratings_table,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .ratings_table,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .ratings_table,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .ratings_table,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .ratings_table,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .ratings_table {
+  margin-bottom: 15px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview {
+  padding: 30px;
+  border-radius: 0;
+  border: 3px solid #f2dede;
+}
+@media screen and (max-width: 480px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview {
+    padding: 15px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:focus {
+  background-color: transparent;
+  text-decoration: underline;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar {
+  float: left;
+  margin: 0 15px 15px 0;
+}
+@media screen and (max-width: 480px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar {
+    display: block;
+    float: none;
+    margin: 0 0 15px 0;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_text,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_text {
+  display: table;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_footer,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_footer {
+  text-transform: uppercase;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form {
+  border-radius: 0;
+  background-color: #eeeeee;
+  border-color: #eeeeee;
+  outline: 0;
+  box-shadow: none;
+  margin: 0 0 25px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel {
+  background-color: transparent;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading {
+  padding: 30px;
+  background-color: transparent;
+  border-bottom: 0;
+  border-color: #eeeeee;
+}
+@media screen and (max-width: 480px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading {
+    padding: 20px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  opacity: 0.8;
+  text-transform: uppercase;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form > .panel-body {
+  padding: 10px 30px 40px;
+}
+@media screen and (max-width: 480px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form > .panel-body {
+    padding: 10px 20px 20px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #97999c;
+  box-shadow: none;
+  background-color: #f9f9f9;
+  margin-bottom: 15px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus {
+  outline: 0;
+  border-bottom-color: #4b4e53;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group {
+  margin-bottom: 0px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label {
+  text-transform: uppercase;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1 {
+  margin-bottom: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 0;
+  margin-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
+    margin-top: 5px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover {
+  outline: 0;
+  box-shadow: none;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
+  background-color: #4b4e53;
+  border-color: #4b4e53;
+  color: #ffffff;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus {
+  background-color: #101010;
+  border-color: #101010;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification p,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification p,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification p,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification p,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification p,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification p,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification p,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification p {
+  margin-bottom: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn {
+  font-size: 1.1rem;
+  border-radius: 0;
+  border-color: #eeeeee;
+  letter-spacing: 0.2px;
+  margin-bottom: 0;
+  word-break: break-word;
+  white-space: pre-wrap;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:active,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:focus {
+  background-color: #4b4e53;
+  border-color: #4b4e53;
+  color: #ffffff;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg {
+  margin-bottom: 20px;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg p,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg p {
+  margin-bottom: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel {
+  background-color: #f5f5f5;
+  border-radius: 0;
+  box-shadow: none;
+  border: 0;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading {
+  padding: 20px 30px 15px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading {
+    padding: 15px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body {
+  padding: 15px 30px 30px;
+}
+@media screen and (max-width: 768px) {
+  .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
+  .disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body {
+    padding: 15px;
+  }
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading {
+  padding: 20px 0 0;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #dddddd;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre {
+  background-color: #ffffff;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments .alert,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments .alert,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_single_comments .alert,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_single_comments .alert,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_single_comments .alert,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_single_comments .alert,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_single_comments .alert,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_single_comments .alert {
+  border-radius: 0;
+}
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text {
+  border: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
 .disp_posts .evo_intro_block {
   margin-bottom: 30px;
 }
@@ -2079,13 +3469,62 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_posts .featured_posts .evo_featured_post {
   border-radius: 0;
-  padding: 25px;
+  padding: 30px;
   margin-bottom: 40px;
   box-shadow: none;
   border-color: #eeeeee;
+  color: #7e8082;
+}
+.disp_posts .featured_posts .evo_featured_post a {
+  color: #4b4e53;
 }
 .disp_posts .featured_posts .evo_featured_post .evo_post_image .evo_image_block {
+  margin-top: -31px;
+  margin-left: -31px;
+  margin-right: -31px;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_title h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
   margin-top: 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_title h2 a {
+  color: #4b4e53;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_info {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post__excerpt {
+  margin-bottom: 15px;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post__excerpt .evo_post__excerpt_more_link {
+  display: none;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_footer_info {
+  margin-bottom: 30px;
+  clear: both;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_footer_info .evo_readmore_link {
+  float: left;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: -3px;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_footer_info .evo_readmore_link .ei {
+  font-size: 2rem;
+  position: relative;
+  top: 4px;
+  left: 0;
+}
+.disp_posts .featured_posts .evo_featured_post .evo_post_footer_info .post_comments_link {
+  float: right;
 }
 .disp_posts #grid_posts {
   display: block;
@@ -2095,59 +3534,6 @@ div.extended_search_form .search_options .search_option {
   margin-left: -15px;
   -webkit-transition: height 0.32s ease;
   transition: height 0.32s ease;
-}
-.disp_posts #grid_posts .featured_posts.one_column {
-  max-width: 100%;
-  width: 100%;
-  float: none;
-}
-.disp_posts #grid_posts .featured_posts.two_columns {
-  max-width: 50%;
-  width: 50%;
-  float: left;
-}
-@media screen and (max-width: 480px) {
-  .disp_posts #grid_posts .featured_posts.two_columns {
-    max-width: 100%;
-    width: 100%;
-    float: none;
-  }
-}
-.disp_posts #grid_posts .featured_posts.three_columns {
-  max-width: 33.33333333%;
-  width: 33.33333333%;
-  float: left;
-}
-@media screen and (max-width: 768px) {
-  .disp_posts #grid_posts .featured_posts.three_columns {
-    max-width: 50%;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .disp_posts #grid_posts .featured_posts.three_columns {
-    max-width: 100%;
-    width: 100%;
-    float: none;
-  }
-}
-.disp_posts #grid_posts .featured_posts.four_columns {
-  max-width: 25%;
-  width: 25%;
-  float: left;
-}
-@media screen and (max-width: 768px) {
-  .disp_posts #grid_posts .featured_posts.four_columns {
-    max-width: 50%;
-    width: 50%;
-  }
-}
-@media screen and (max-width: 480px) {
-  .disp_posts #grid_posts .featured_posts.four_columns {
-    max-width: 100%;
-    width: 100%;
-    float: none;
-  }
 }
 .disp_posts #grid_posts .evo_post_article {
   position: relative;
@@ -2162,14 +3548,13 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_image img {
   border-radius: 2px;
-  opacity: 0.75;
   -webkit-transition: opacity 0.32s ease-in-out;
   transition: opacity 0.32s ease-in-out;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_image:hover img,
 .disp_posts #grid_posts .evo_post_article .evo_post_image:active img,
 .disp_posts #grid_posts .evo_post_article .evo_post_image:focus img {
-  opacity: 1;
+  opacity: 0.75;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_title h2 {
   font-size: 1.6rem;
@@ -2183,7 +3568,7 @@ div.extended_search_form .search_options .search_option {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   opacity: 0.8;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_info .identity_link_username {
@@ -2284,882 +3669,111 @@ div.extended_search_form .search_options .search_option {
 .disp_posts #grid_posts .evo_post_article .post_comments_link a {
   color: #7e8082;
 }
+.disp_posts #grid_posts .featured_posts.one_column {
+  max-width: 100%;
+  width: 100%;
+  float: none;
+}
+.disp_posts #grid_posts .featured_posts.two_columns {
+  max-width: 50%;
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 480px) {
+  .disp_posts #grid_posts .featured_posts.two_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
+.disp_posts #grid_posts .featured_posts.three_columns {
+  max-width: 33.33333333%;
+  width: 33.33333333%;
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .disp_posts #grid_posts .featured_posts.three_columns {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .disp_posts #grid_posts .featured_posts.three_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
+.disp_posts #grid_posts .featured_posts.four_columns {
+  max-width: 25%;
+  width: 25%;
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  .disp_posts #grid_posts .featured_posts.four_columns {
+    max-width: 50%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .disp_posts #grid_posts .featured_posts.four_columns {
+    max-width: 100%;
+    width: 100%;
+    float: none;
+  }
+}
+.disp_posts #grid_posts .featured_posts .evo_post_image .evo_image_block {
+  padding-top: 0;
+}
+.disp_posts #grid_posts .featured_posts .evo_post_image,
+.disp_posts #grid_posts .featured_posts .evo_post_title,
+.disp_posts #grid_posts .featured_posts .evo_post_info,
+.disp_posts #grid_posts .featured_posts .evo_post__excerpt,
+.disp_posts #grid_posts .featured_posts .evo_post_footer_info,
+.disp_posts #grid_posts .featured_posts .evo_post__full {
+  background-color: #f5f5f5;
+  margin-bottom: 0 !important;
+}
+.disp_posts #grid_posts .featured_posts .evo_post_title,
+.disp_posts #grid_posts .featured_posts .evo_post_info,
+.disp_posts #grid_posts .featured_posts .evo_post__excerpt,
+.disp_posts #grid_posts .featured_posts .evo_post_footer_info,
+.disp_posts #grid_posts .featured_posts .evo_post__full {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+.disp_posts #grid_posts .featured_posts .evo_post_title {
+  padding-top: 20px;
+  display: block;
+}
+.disp_posts #grid_posts .featured_posts .evo_post__excerpt {
+  padding-top: 10px;
+  padding-bottom: 10px !important;
+  border-bottom: 0 !important;
+}
+.disp_posts #grid_posts .featured_posts .evo_post__excerpt .evo_post__excerpt_text {
+  border-bottom: 1px solid #eeeeee;
+  margin-bottom: 0 !important;
+  padding-bottom: 20px;
+}
+.disp_posts #grid_posts .featured_posts .evo_image_block {
+  margin-top: 0;
+  padding-top: 15px;
+}
+.disp_posts #grid_posts .featured_posts .evo_post__full {
+  padding-bottom: 10px;
+}
+.disp_posts #grid_posts .featured_posts .evo_post__full_text {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
+.disp_posts #grid_posts .featured_posts .evo_post_footer_info {
+  padding-bottom: 20px;
+}
 @media screen and (max-width: 768px) {
   .disp_posts .evo_post_pagination {
     margin-bottom: 40px;
   }
-}
-@media screen and (max-width: 480px) {
-  #main_content.pull-right {
-    float: none !important;
-  }
-}
-#main_content .evo_content_single .evo_cover_image,
-#main_content .evo_post_lists .evo_cover_image {
-  margin-bottom: 40px;
-}
-@media screen and (max-width: 480px) {
-  #main_content .evo_content_single .evo_cover_image,
-  #main_content .evo_post_lists .evo_cover_image {
-    margin-bottom: 20px;
-  }
-}
-#main_content .evo_content_single .evo_cover_image .evo_image_block,
-#main_content .evo_post_lists .evo_cover_image .evo_image_block {
-  margin: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_post_title h1,
-#main_content .evo_post_lists .evo_post_article .evo_post_title h1,
-#main_content .evo_content_single .evo_single_article .evo_post_title h1,
-#main_content .evo_post_lists .evo_single_article .evo_post_title h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #4b4e53;
-  margin-top: 0;
-  margin-bottom: 0;
-  text-transform: uppercase;
-}
-#main_content .evo_content_single .evo_post_article .evo_post_info,
-#main_content .evo_post_lists .evo_post_article .evo_post_info,
-#main_content .evo_content_single .evo_single_article .evo_post_info,
-#main_content .evo_post_lists .evo_single_article .evo_post_info {
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #a3a6a8;
-  margin-bottom: 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post_info a,
-#main_content .evo_post_lists .evo_post_article .evo_post_info a,
-#main_content .evo_content_single .evo_single_article .evo_post_info a,
-#main_content .evo_post_lists .evo_single_article .evo_post_info a {
-  color: #a3a6a8;
-}
-#main_content .evo_content_single .evo_post_article .evo_post_info a:hover,
-#main_content .evo_post_lists .evo_post_article .evo_post_info a:hover,
-#main_content .evo_content_single .evo_single_article .evo_post_info a:hover,
-#main_content .evo_post_lists .evo_single_article .evo_post_info a:hover,
-#main_content .evo_content_single .evo_post_article .evo_post_info a:active,
-#main_content .evo_post_lists .evo_post_article .evo_post_info a:active,
-#main_content .evo_content_single .evo_single_article .evo_post_info a:active,
-#main_content .evo_post_lists .evo_single_article .evo_post_info a:active,
-#main_content .evo_content_single .evo_post_article .evo_post_info a:focus,
-#main_content .evo_post_lists .evo_post_article .evo_post_info a:focus,
-#main_content .evo_content_single .evo_single_article .evo_post_info a:focus,
-#main_content .evo_post_lists .evo_single_article .evo_post_info a:focus {
-  color: #4b4e53;
-}
-#main_content .evo_content_single .evo_post_article .evo_post_info .evo_status,
-#main_content .evo_post_lists .evo_post_article .evo_post_info .evo_status,
-#main_content .evo_content_single .evo_single_article .evo_post_info .evo_status,
-#main_content .evo_post_lists .evo_single_article .evo_post_info .evo_status {
-  font-size: 1rem;
-  border-radius: 2px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full,
-#main_content .evo_post_lists .evo_post_article .evo_post__full,
-#main_content .evo_content_single .evo_single_article .evo_post__full,
-#main_content .evo_post_lists .evo_single_article .evo_post__full {
-  border-bottom: 1px solid #eeeeee;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full .evo_image_block,
-#main_content .evo_post_lists .evo_post_article .evo_post__full .evo_image_block,
-#main_content .evo_content_single .evo_single_article .evo_post__full .evo_image_block,
-#main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block {
-  margin-bottom: 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full .evo_image_block img,
-#main_content .evo_post_lists .evo_post_article .evo_post__full .evo_image_block img,
-#main_content .evo_content_single .evo_single_article .evo_post__full .evo_image_block img,
-#main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block img {
-  border-radius: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text {
-  word-break: break-word;
-  line-height: 24px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text h1,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text h1,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text h1,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text h1,
-#main_content .evo_content_single .evo_post_article .evo_post__full_text h2,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text h2,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text h2,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text h2,
-#main_content .evo_content_single .evo_post_article .evo_post__full_text h3,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text h3,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text h3,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text h3,
-#main_content .evo_content_single .evo_post_article .evo_post__full_text h4,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text h4,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text h4,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text h4,
-#main_content .evo_content_single .evo_post_article .evo_post__full_text h5,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text h5,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text h5,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text h5,
-#main_content .evo_content_single .evo_post_article .evo_post__full_text h6,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text h6,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text h6,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text h6 {
-  color: #4b4e53;
-  opacity: 0.9;
-  font-weight: 700;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text p,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text p,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text p,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text p {
-  margin-bottom: 15px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text a,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text a,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text a,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text a {
-  text-decoration: underline;
-  -webkit-text-decoration-style: dotted;
-  -moz-text-decoration-style: dotted;
-  text-decoration-style: dotted;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text ul ul,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text ul ul,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text ul ul,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text ul ul {
-  padding-top: 5px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text ul li,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text ul li,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text ul li,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text ul li {
-  padding-bottom: 5px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text ul p,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text ul p,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text ul p,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text ul p {
-  margin-bottom: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text pre,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text pre,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text pre,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text pre {
-  border-color: #e4e4e4;
-  border-radius: 2px;
-  padding: 18px;
-  margin-bottom: 20px;
-  white-space: pre-wrap;
-  word-break: break-word;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text blockquote,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text blockquote,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote {
-  font-style: italic;
-  letter-spacing: 0.5px;
-  line-height: 1.4;
-  margin-bottom: 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote p,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text blockquote p,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text blockquote p,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote p {
-  margin-bottom: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text table th,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
-#main_content .evo_content_single .evo_post_article .evo_post__full_text table td,
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text table td,
-#main_content .evo_content_single .evo_single_article .evo_post__full_text table td,
-#main_content .evo_post_lists .evo_single_article .evo_post__full_text table td {
-  padding: 5px 10px;
-  border: 1px solid #eeeeee;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print,
-#main_content .evo_content_single .evo_post_article .item_attachments,
-#main_content .evo_post_lists .evo_post_article .item_attachments,
-#main_content .evo_content_single .evo_single_article .item_attachments,
-#main_content .evo_post_lists .evo_single_article .item_attachments,
-#main_content .evo_content_single .evo_post_article .widget_core_item_tags,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_tags,
-#main_content .evo_content_single .evo_single_article .widget_core_item_tags,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_tags,
-#main_content .evo_content_single .evo_post_article .widget_core_item_vote,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_vote,
-#main_content .evo_content_single .evo_single_article .widget_core_item_vote,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_vote,
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author {
-  margin-bottom: 25px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print h3,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print h3,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print h3,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print h3,
-#main_content .evo_content_single .evo_post_article .item_attachments h3,
-#main_content .evo_post_lists .evo_post_article .item_attachments h3,
-#main_content .evo_content_single .evo_single_article .item_attachments h3,
-#main_content .evo_post_lists .evo_single_article .item_attachments h3,
-#main_content .evo_content_single .evo_post_article .widget_core_item_tags h3,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_tags h3,
-#main_content .evo_content_single .evo_single_article .widget_core_item_tags h3,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_tags h3,
-#main_content .evo_content_single .evo_post_article .widget_core_item_vote h3,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_vote h3,
-#main_content .evo_content_single .evo_single_article .widget_core_item_vote h3,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_vote h3,
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author h3,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #4b4e53;
-  margin-top: 0;
-}
-#main_content .evo_content_single .evo_post_article .item_attachments a:hover,
-#main_content .evo_post_lists .evo_post_article .item_attachments a:hover,
-#main_content .evo_content_single .evo_single_article .item_attachments a:hover,
-#main_content .evo_post_lists .evo_single_article .item_attachments a:hover,
-#main_content .evo_content_single .evo_post_article .item_attachments a:active,
-#main_content .evo_post_lists .evo_post_article .item_attachments a:active,
-#main_content .evo_content_single .evo_single_article .item_attachments a:active,
-#main_content .evo_post_lists .evo_single_article .item_attachments a:active,
-#main_content .evo_content_single .evo_post_article .item_attachments a:focus,
-#main_content .evo_post_lists .evo_post_article .item_attachments a:focus,
-#main_content .evo_content_single .evo_single_article .item_attachments a:focus,
-#main_content .evo_post_lists .evo_single_article .item_attachments a:focus {
-  text-decoration: underline;
-  background-color: transparent;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a,
-#main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a {
-  display: inline-block;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: 1px solid #eeeeee;
-  padding: 6px 12px;
-  margin: 2px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:hover,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:hover,
-#main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:hover,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:hover,
-#main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:active,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:active,
-#main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:active,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:active,
-#main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a:focus,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a:focus,
-#main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a:focus,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a:focus {
-  background-color: #4b4e53;
-  color: #ffffff;
-  border-color: #4b4e53;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print {
-  line-height: 1.8;
-}
-@media screen and (max-width: 768px) {
-  #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
-  #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
-  #main_content .evo_content_single .evo_single_article .widget_core_item_small_print,
-  #main_content .evo_post_lists .evo_single_article .widget_core_item_small_print {
-    line-height: 1.3;
-  }
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print .user img,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print .user img,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print .user img,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print .user img {
-  width: 30px;
-  height: 30px;
-  border-radius: 100%;
-  margin-top: 0px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:active,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:active,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:active,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:active,
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:focus,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:focus,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:focus,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:focus,
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print a:hover,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print a:hover,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print a:hover,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print a:hover {
-  text-decoration: underline;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_small_print .fa-edit,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_small_print .fa-edit,
-#main_content .evo_content_single .evo_single_article .widget_core_item_small_print .fa-edit,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_small_print .fa-edit {
-  margin-left: 5px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author {
-  background-color: #eeeeee;
-  padding: 20px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author h3,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author h3,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author h3,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author h3 {
-  margin-top: 0;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_avatar,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_avatar,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar {
-  margin-top: 5px;
-  margin-bottom: 0;
-  margin-right: 15px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_avatar img,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_avatar img,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar img,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar img {
-  border-radius: 2px;
-}
-#main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_author_display_field,
-#main_content .evo_post_lists .evo_post_article .widget_core_item_about_author .evo_author_display_field,
-#main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_author_display_field,
-#main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_author_display_field {
-  line-height: 1.4;
-}
-#main_content .evo_content_single .evo_post_article .single_pager,
-#main_content .evo_post_lists .evo_post_article .single_pager,
-#main_content .evo_content_single .evo_single_article .single_pager,
-#main_content .evo_post_lists .evo_single_article .single_pager {
-  margin: 30px 0;
-  padding: 15px 0 12px;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-}
-#main_content .evo_content_single .evo_post_article .single_pager ul,
-#main_content .evo_post_lists .evo_post_article .single_pager ul,
-#main_content .evo_content_single .evo_single_article .single_pager ul,
-#main_content .evo_post_lists .evo_single_article .single_pager ul {
-  list-style-type: none;
-  margin: 0;
-  bottom: 0;
-  text-align: center;
-}
-#main_content .evo_content_single .evo_post_article .single_pager ul li,
-#main_content .evo_post_lists .evo_post_article .single_pager ul li,
-#main_content .evo_content_single .evo_single_article .single_pager ul li,
-#main_content .evo_post_lists .evo_single_article .single_pager ul li {
-  display: inline;
-  margin: 0;
-  padding: 0;
-}
-#main_content .evo_content_single .evo_post_article .single_pager ul li.previous a,
-#main_content .evo_post_lists .evo_post_article .single_pager ul li.previous a,
-#main_content .evo_content_single .evo_single_article .single_pager ul li.previous a,
-#main_content .evo_post_lists .evo_single_article .single_pager ul li.previous a {
-  float: left;
-}
-#main_content .evo_content_single .evo_post_article .single_pager ul li.next a,
-#main_content .evo_post_lists .evo_post_article .single_pager ul li.next a,
-#main_content .evo_content_single .evo_single_article .single_pager ul li.next a,
-#main_content .evo_post_lists .evo_single_article .single_pager ul li.next a {
-  float: right;
-}
-#main_content .evo_content_single .evo_post_article .single_pager ul a,
-#main_content .evo_post_lists .evo_post_article .single_pager ul a,
-#main_content .evo_content_single .evo_single_article .single_pager ul a,
-#main_content .evo_post_lists .evo_single_article .single_pager ul a {
-  display: inline-block;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
-#main_content .evo_content_single .evo_post_article .single_pager ul a .ei,
-#main_content .evo_post_lists .evo_post_article .single_pager ul a .ei,
-#main_content .evo_content_single .evo_single_article .single_pager ul a .ei,
-#main_content .evo_post_lists .evo_single_article .single_pager ul a .ei {
-  font-size: 2.4rem;
-  vertical-align: middle;
-  margin-bottom: 3px;
-  opacity: 0.6;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__list_title,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__list_title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #4b4e53;
-  text-transform: uppercase;
-  margin: 2px 0 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info {
-  padding: 0 0 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a {
-  font-size: 1rem;
-  font-weight: 400;
-  letter-spacing: 1px;
-  line-height: 1.5;
-  text-transform: uppercase;
-  border-radius: 0;
-  border-color: #4b4e53;
-  background-color: #4b4e53;
-  color: #ffffff;
-  padding: 5px 10px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:hover,
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .evo_comment__meta_info a:focus {
-  background-color: #101010;
-  border-color: #101010;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .ratings_table,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #feedbacks .ratings_table,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #feedbacks .ratings_table,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #feedbacks .ratings_table {
-  margin-bottom: 15px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview {
-  padding: 30px;
-  border-radius: 0;
-  border: 3px solid #f2dede;
-}
-@media screen and (max-width: 480px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview {
-    padding: 15px;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title {
-  margin-top: 0;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:hover,
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_title a:focus {
-  background-color: transparent;
-  text-decoration: underline;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar {
-  float: left;
-  margin: 0 15px 15px 0;
-}
-@media screen and (max-width: 480px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_avatar,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_avatar {
-    display: block;
-    float: none;
-    margin: 0 0 15px 0;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_text,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_text,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_text,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_text {
-  display: table;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments #comment_preview .evo_comment_footer,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments #comment_preview .evo_comment_footer,
-#main_content .evo_content_single .evo_single_article .evo_single_comments #comment_preview .evo_comment_footer,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments #comment_preview .evo_comment_footer {
-  text-transform: uppercase;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form {
-  border-radius: 0;
-  background-color: #eeeeee;
-  border-color: #eeeeee;
-  outline: 0;
-  box-shadow: none;
-  margin: 0 0 25px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel {
-  background-color: transparent;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading {
-  padding: 30px;
-  background-color: transparent;
-  border-bottom: 0;
-  border-color: #eeeeee;
-}
-@media screen and (max-width: 480px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading {
-    padding: 20px;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-heading .panel-title {
-  font-size: 1.8rem;
-  font-weight: 700;
-  opacity: 0.8;
-  text-transform: uppercase;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form > .panel-body {
-  padding: 10px 30px 40px;
-}
-@media screen and (max-width: 480px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form > .panel-body,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form > .panel-body,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form > .panel-body {
-    padding: 10px 20px 20px;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input {
-  border-radius: 0;
-  border: 0;
-  border-bottom: 1px solid #97999c;
-  box-shadow: none;
-  background-color: #f9f9f9;
-  margin-bottom: 15px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_text_input:focus,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form_textarea_input:focus {
-  outline: 0;
-  border-bottom-color: #4b4e53;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group {
-  margin-bottom: 0px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .control-label {
-  text-transform: uppercase;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group #uploadfile_A1 {
-  margin-bottom: 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
-  padding: 10px 20px;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border-radius: 0;
-  margin-top: 30px;
-}
-@media screen and (max-width: 768px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
-    font-size: 1.1rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview,
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
-    margin-top: 5px;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:focus,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .preview:hover,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover {
-  outline: 0;
-  box-shadow: none;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit {
-  background-color: #4b4e53;
-  border-color: #4b4e53;
-  color: #ffffff;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:hover,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form .panel-body .form-group .submit:focus {
-  background-color: #101010;
-  border-color: #101010;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification p,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification p,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification p,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification p {
-  margin-bottom: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn {
-  font-size: 1.1rem;
-  border-radius: 0;
-  border-color: #eeeeee;
-  letter-spacing: 0.2px;
-  margin-bottom: 0;
-  word-break: break-word;
-  white-space: pre-wrap;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:hover,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:active,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:active,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:active,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:active,
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:focus,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_comment_notification a.btn:focus {
-  background-color: #4b4e53;
-  border-color: #4b4e53;
-  color: #ffffff;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg {
-  margin-bottom: 20px;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg p,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_post_feedback_feed_msg p,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg p,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_post_feedback_feed_msg p {
-  margin-bottom: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel {
-  background-color: #f5f5f5;
-  border-radius: 0;
-  box-shadow: none;
-  border: 0;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading {
-  padding: 20px 30px 15px;
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  background-color: transparent;
-}
-@media screen and (max-width: 768px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-heading {
-    padding: 15px;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body {
-  padding: 15px 30px 30px;
-}
-@media screen and (max-width: 768px) {
-  #main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
-  #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .panel-body,
-  #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body,
-  #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .panel-body {
-    padding: 15px;
-  }
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta {
-  padding-bottom: 0 !important;
-  margin-bottom: 0 !important;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading {
-  padding: 20px 0 0;
-  margin-bottom: 5px;
-  border-bottom: 1px solid #dddddd;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-heading .evo_comment_title {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel .evo_comment__meta .panel-body .evo_comment_text pre {
-  background-color: #ffffff;
-}
-#main_content .evo_content_single .evo_post_article .evo_single_comments .alert,
-#main_content .evo_post_lists .evo_post_article .evo_single_comments .alert,
-#main_content .evo_content_single .evo_single_article .evo_single_comments .alert,
-#main_content .evo_post_lists .evo_single_article .evo_single_comments .alert {
-  border-radius: 0;
-}
-#main_content .evo_post_lists .evo_post_article .evo_post__full {
-  margin-bottom: 10px;
-  padding-bottom: 10px;
-}
-#main_content .evo_post_lists .evo_post_article .evo_post__full_text {
-  border: 0;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 .disp_profile #main_content .profile_tabs,
 .disp_avatar #main_content .profile_tabs,
@@ -4124,7 +4738,6 @@ div.extended_search_form .search_options .search_option {
   }
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title a {
-  color: #4b4e53;
   text-decoration: none;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .search_title a:hover,

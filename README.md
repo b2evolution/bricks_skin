@@ -2,7 +2,7 @@
 Bricks is blog skin for b2evolution CMS.
 
 ====
-### Haswell features:
+### Brick features:
 
 - Fully Responsive Design
 - Easy to customize: backgrounds, color schemes, content
@@ -14,7 +14,7 @@ Bricks is blog skin for b2evolution CMS.
 - Powered with Bootstrap
 - Responsive Filterable Posts
 - Cross Browser compatible
-- Google Maps easy to setup via back office
+- Google Maps easy for Contacts disp
 - jQuery powered
 - Back to top button
 - HTML code with comments

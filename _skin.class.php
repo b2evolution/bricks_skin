@@ -225,7 +225,7 @@ class bricks_Skin extends Skin
 			),
 
 
-			/* CUSTOM OPTIONS
+			/* CUSTOM COLOR OPTIONS
 			 * ========================================================================== */
 			'section_color_start' => array(
 				'layout' => 'begin_fieldset',
@@ -255,6 +255,12 @@ class bricks_Skin extends Skin
 					'defaultvalue' => '#101010',
 					'type' => 'color',
 				),
+				'color_heading' => array(
+					'label' => T_('Color Heading'),
+					'note' => T_('E-g: #4b4e53 for green'),
+					'defaultvalue' => '#4b4e53',
+					'type' => 'color',
+				),
 				'bgimg_text_color' => array(
 					'label' => T_('Text color on background image'),
 					'note' => T_('E-g: #00ff00 for green'),
@@ -273,11 +279,11 @@ class bricks_Skin extends Skin
 					'defaultvalue' => '#6cb2ef',
 					'type' => 'color',
 				),
-				'current_tab_text_color' => array(
-					'label' => T_('Current tab text color'),
-					'note' => T_('E-g: #00ff00 for green'),
-					'defaultvalue' => '#333333',
-					'type' => 'color',
+				'panel_color' => array(
+					'label'			=> T_( 'Color Content Panel' ),
+					'note'			=> T_( 'Choose your favorite color content for Panel. Default value is <code>#7e8082</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue' 	=> '#7e8082'
 				),
 			'section_color_end' => array(
 				'layout' => 'end_fieldset',
@@ -593,6 +599,30 @@ class bricks_Skin extends Skin
 					'size'			=> 3,
 					'allow_empty'	=> false,
 				),
+				'posts_border_color' => array(
+					'label'			=> T_( 'Posts Border Color' ),
+					'note'			=> T_( 'Choose your favorite border color for posts. Default value is <code>#eeeeee</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee'
+				),
+				'posts_featured_bg' => array(
+					'label'			=> T_( 'Background Featured Post' ),
+					'note'			=> T_( 'Choose your favorite background color for featured post. Default value is <code>#f5f5f5</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#f5f5f5'
+				),
+				'posts_featured_color' => array(
+					'label'			=> T_( 'Color Content Featured Post' ),
+					'note'			=> T_( 'Choose your favorite color for content featured post. Default value is <code>#7e8082</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue' 	=> '#7e8082'
+				),
+				'posts_featured_border' => array(
+					'label'			=> T_( 'Featured Posts Border Color' ),
+					'note'			=> T_( 'Choose your favorite border-color for content featured post. Default value is <code>#eeeeee</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee'
+				),
 				'posts_top_pagination' => array(
 					'label'			=> T_( 'Top Pagination' ),
 					'note'			=> T_( 'Check to enable posts pagination on the top of content. Default value is <code>Uncheck</code>.' ),
@@ -631,11 +661,23 @@ class bricks_Skin extends Skin
 					),
 					'defaultvalue'	=> 'header_page',
 				),
+				'single_border_color' => array(
+					'label'			=> T_( 'Border Color' ),
+					'note'			=> T_( 'Choose your favorite border-color for single disp. Default value is <code>#eeeeee</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee'
+				),
 				'single_comments_bg' => array(
 					'label'			=> T_( 'Background Comments' ),
 					'note'			=> T_( 'Choose your favorite background color for comments form section. Default value is <code>#eeeeee</code>.' ),
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee',
+				),
+				'single_comment_color' => array(
+					'label'			=> T_( 'Color Content Comments' ),
+					'note'			=> T_( 'Choose your favorite color for content comments single. Default value is <code>#7e8082</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#7e8082'
 				),
 			'section_single_end' => array(
 				'layout'	=> 'end_fieldset',
@@ -812,6 +854,18 @@ class bricks_Skin extends Skin
 					'type'			=> 'text',
 					'defaultvalue'	=> T_( '(+123) 4567 8910' ),
 					'size'			=> 30,
+				),
+				'contact_info_bg' => array(
+					'label'			=> T_( 'Background Contact Info' ),
+					'note'			=> T_( 'Choose your favorite background color for Contact Info. Default value is <code>#f5f5f5</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#f5f5f5',
+				),
+				'contact_info_color' => array(
+					'label'			=> T_( 'Color Content Contact Info' ),
+					'note'			=> T_( 'Choose your favorite color content for contact info. Default value is <code>#7e8082</code>.' ),
+					'type'			=> 'color',
+					'defaultvalue'	=> '#7e8082'
 				),
 			'section_contact_end' => array(
 				'layout'	=> 'end_fieldset',
@@ -1207,7 +1261,7 @@ class bricks_Skin extends Skin
 		// Add custom CSS:
 		$custom_css = '';
 
-		/* CUSTOM SETTINGS
+		/* CUSTOM COLOR OPTIONS
 		 * ========================================================================== */
 		if( $color = $this->get_setting( 'page_bg_color' ) )
 		{ // Custom page background color:
@@ -1215,7 +1269,7 @@ class bricks_Skin extends Skin
 		}
 		if( $color = $this->get_setting( 'page_text_color' ) )
 		{ // Custom page text color:
-			$custom_css .= 'body { color: '.$color." }\n";
+			$custom_css .= 'body, .text-muted, .dimmed, .note, .notes { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'page_link_color' ) )
 		{ // Custom page link color:
@@ -1243,9 +1297,12 @@ class bricks_Skin extends Skin
 		{	// Custom link hover color on background image:
 			$custom_css .= '.evo_hasbgimg a:hover { color: '.$color." }\n";
 		}
-		if( $color = $this->get_setting( 'current_tab_text_color' ) )
+		if( $color = $this->get_setting( 'color_heading' ) )
 		{ // Custom current tab text color:
-			$custom_css .= 'ul.nav.nav-tabs li a.selected { color: '.$color." }\n";
+			$custom_css .= 'h1, h2, h3, h4, h5, h6 { color: '.$color." !important }\n";
+		}
+		if( $color = $this->get_setting( 'panel_color' ) ) {
+			$custom_css .= "body .panel, body .panel .evo_comment_info { color: $color; }";
 		}
 
 		// Limit images by max height:
@@ -1406,7 +1463,7 @@ class bricks_Skin extends Skin
 			$custom_css .= "#main_header_page { background-color: $color }";
 		}
 		if( $color = $this->get_setting( 'header_page_color_content' ) ) {
-			$custom_css .= "#main_header_page .single_title_post h1, #main_header_page .bc_content .breadcrumb > .active, #main_header_page .bc_content .breadcrumb a{ color: $color; }";
+			$custom_css .= "#main_header_page .single_title_post h1, #main_header_page .bc_content .breadcrumb > .active, #main_header_page .bc_content .breadcrumb a{ color: $color !important; }";
 		}
 		if( $padding = $this->get_setting( 'header_page_pt' ) ) {
 			$custom_css .= '#main_header_page{ padding-top: '.$padding.'px; }';
@@ -1422,6 +1479,19 @@ class bricks_Skin extends Skin
 			$custom_css .= '.disp_posts #grid_posts .evo_post_article { padding: 0 '.$padding.'px; }';
 			$custom_css .= '.disp_posts #grid_posts { margin-left: -'.$padding.'px; margin-right: -'.$padding.'px; }';
 		}
+		if ( $color = $this->get_setting( 'posts_featured_bg' ) ) {
+			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_image, .disp_posts #grid_posts .featured_posts .evo_post_title, .disp_posts #grid_posts .featured_posts .evo_post_info, .disp_posts #grid_posts .featured_posts .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_footer_info { background-color: $color }";
+			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post_info { opacity: 1; }";
+		}
+		if( $color = $this->get_setting( 'posts_featured_color' ) ) {
+			$custom_css .= ".disp_posts #grid_posts .evo_post_article { color: $color; }";
+		}
+		if( $color = $this->get_setting( 'posts_border_color' ) ) {
+			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post__excerpt, .disp_posts #grid_posts .evo_post_article .evo_post__full_text { border-color: $color; }";
+		}
+		if( $color = $this->get_setting( 'posts_featured_border' ) ) {
+			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_article .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_article .evo_post__full_text { border-color: $color; }";
+		}
 
 
 		/* SINGLE SETTINGS
@@ -1429,6 +1499,30 @@ class bricks_Skin extends Skin
 		if( $color = $this->get_setting( 'single_comments_bg' ) ) {
 			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form{ background-color: $color; border-color: $color; }";
 			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel{ background-color: $color }";
+		}
+		if( $color = $this->get_setting( 'single_comment_color' ) ) {
+			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form { color: $color }";
+			$custom_css .= ".evo_single_comments .evo_comment_meta, .evo_single_comments .evo_comment_meta .evo_comment_footer { color: $color }";
+		}
+		if( $color = $this->get_setting( 'single_border_color' ) ) {
+			$custom_css .= ".disp_single #main_content .evo_content_single .evo_post_article .evo_post__full, .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full, .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full, .disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full, .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full, .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full, .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full, .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full { border-color: $color; }";
+			$custom_css .= ".disp_single #main_content .evo_content_single .evo_post_article .single_pager, .disp_page #main_content .evo_content_single .evo_post_article .single_pager, .disp_single #main_content .evo_post_lists .evo_post_article .single_pager, .disp_page #main_content .evo_post_lists .evo_post_article .single_pager, .disp_single #main_content .evo_content_single .evo_single_article .single_pager, .disp_page #main_content .evo_content_single .evo_single_article .single_pager, .disp_single #main_content .evo_post_lists .evo_single_article .single_pager, .disp_page #main_content .evo_post_lists .evo_single_article .single_pager { border-color: $color; }";
+			$custom_css .= ".evo_comment { border-color: $color; }";
+			$custom_css .= ".evo_comment .evo_comment_footer .permalink_right, .evo_comment .evo_comment_info .permalink_right { border-color: $color; }";
+			$custom_css .= ".disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table th, .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table th, .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th, .disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th, .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table th, .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table th, .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th, .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th, .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table td, .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table td, .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td, .disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td, .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table td, .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table td, .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td, .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td { border-color: $color; }";
+			$custom_css .= ".disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a, .disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a, .disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a, .disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a { border-color: $color; }";
+		}
+
+
+		/* CONTACTS PAGE SETTINGS
+		 * ========================================================================== */
+		if( $color = $this->get_setting( 'contact_info_bg' ) ) {
+			$custom_css .= ".disp_threads .contact_info, .disp_msgform .contact_info { background-color: $color; }";
+		}
+		if( $color = $this->get_setting( 'contact_info_color' ) ) {
+			$custom_css .= ".disp_threads .contact_info .main_contact_info_icon .ei, .disp_msgform .contact_info .main_contact_info_icon .ei, .disp_threads .contact_info .main_contact_info_text, .disp_msgform .contact_info .main_contact_info_text { color: $color; }";
+			$custom_css .= ".disp_threads .contact_info .main_contact_info:after, .disp_msgform .contact_info .main_contact_info:after{ background-color: $color }";
+			$custom_css .= '.disp_threads .contact_info .main_contact_info_text h3, .disp_msgform .contact_info .main_contact_info_text h3 { color: '.$color.' !important; }';
 		}
 
 
@@ -1438,7 +1532,7 @@ class bricks_Skin extends Skin
 			$custom_css .= '#footer { background-color: '.$bg.' }';
 		}
 		if( $color = $this->get_setting( 'footer_wd_title_color' ) ) {
-			$custom_css .= ".footer_widgets .evo_widget .evo_widget_title{ color: $color; }";
+			$custom_css .= ".footer_widgets .evo_widget .evo_widget_title{ color: $color !important; }";
 		}
 		if( $color = $this->get_setting( 'footer_wd_content_color' ) ) {
 			$custom_css .= ".footer_widgets .evo_widget .evo_widget_body{ color: $color; }";
@@ -1449,7 +1543,7 @@ class bricks_Skin extends Skin
 			$custom_css .= "#footer .footer_widgets .evo_widget a{ color: $color }";
 			$custom_css .= "#footer .footer_bottom .copyright a { color: $color; }";
 			$custom_css .= "#footer .footer_bottom .social_icon .ufld_icon_links a{ color: $color; }";
-			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:hover, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:active, .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:focus { background-color: $color; border-color: $color; }";
+			$custom_css .= ".footer_widgets .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:hover, .footer_widgets .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:active, .footer_widgets .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a:focus { background-color: $color; border-color: $color; }";
 		}
 		if( $color = $this->get_setting( 'footer_wd_color_lh' ) ) {
 			$custom_css .= "#footer .footer_widgets .evo_widget ul a:hover, #footer .footer_widgets .evo_widget ul a:active, #footer .footer_widgets .evo_widget ul a:focus{ color: $color; }";
