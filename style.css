@@ -125,16 +125,17 @@ label.control-label[for=post_title] {
 textarea.message_text {
   width: 95%;
 }
-.sitewide_header {
-  box-shadow: none !important;
-  border-bottom: 0 !important;
-}
 .divider {
   margin-left: 5px;
   margin-right: 5px;
 }
 .alert {
   border-radius: 0;
+}
+.sitewide_header {
+  margin-bottom: 0 !important;
+  box-shadow: none !important;
+  border-bottom: 0 !important;
 }
 .loggedin #nav.fixed {
   top: 26px;
@@ -2547,6 +2548,7 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author,
 .disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author,
 .disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author {
+  color: #7e8082;
   background-color: #eeeeee;
   padding: 20px;
 }
@@ -2568,6 +2570,7 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar,
 .disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar,
 .disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar {
+  float: left;
   margin-top: 5px;
   margin-bottom: 0;
   margin-right: 15px;
@@ -4701,6 +4704,7 @@ div.extended_search_form .search_options .search_option {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
+  color: #7e8082;
   z-index: 0;
   -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
