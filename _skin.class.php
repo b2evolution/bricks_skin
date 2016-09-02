@@ -1466,7 +1466,7 @@ class bricks_Skin extends Skin
 			$custom_css .= "#main_header_page .single_title_post h1, #main_header_page .bc_content .breadcrumb > .active, #main_header_page .bc_content .breadcrumb a{ color: $color !important; }";
 		}
 		if( $padding = $this->get_setting( 'header_page_pt' ) ) {
-			$custom_css .= '#main_header_page{ padding-top: '.$padding.'px; }';
+			$custom_css .= '@media screen and ( max-width: 768px ){ #main_header_page{ padding-top: '.$padding.'px; } }';
 		}
 		if( $padding = $this->get_setting( 'header_page_pb' ) ) {
 			$custom_css .= '#main_header_page { padding-bottom: '.$padding.'px; }';

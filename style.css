@@ -4857,6 +4857,8 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_user #main_content .profile_content .profile_column_left .main_profile_picture {
   border-radius: 2px;
+  width: auto;
+  height: auto;
 }
 .disp_user #main_content .profile_content .profile_column_left h1,
 .disp_user #main_content .profile_content .profile_column_left h2 {
