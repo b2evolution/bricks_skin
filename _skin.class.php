@@ -1087,8 +1087,8 @@ class bricks_Skin extends Skin
 					'note'  => '',
 					'type'  => 'checklist',
 					'options' => array(
-						array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
 						array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      1 ),
+						array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
 						array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),   0 ),
 						array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    0 )
 					),
@@ -1626,23 +1626,16 @@ class bricks_Skin extends Skin
 	/**
 	 * Check if we can display a widget container
 	 *
-	 * @param string Widget container key: 'header', 'page_top', 'menu', 'sidebar', 'sidebar2', 'footer'
+	 * @param string Widget container key: 'header', 'menu', 'sidebar', 'footer'
+	 * @param string Skin setting name
 	 * @return boolean TRUE to display
 	 */
-	function is_visible_container( $container_key )
+	function is_visible_container( $container_key, $setting_name = 'access_login_containers' )
 	{
-		global $Blog;
-
-		if( $Blog->has_access() )
-		{	// If current user has an access to this collection then don't restrict containers:
-			return true;
-		}
-
-		// Get what containers are available for this skin when access is denied or requires login:
-		$access = $this->get_setting( 'access_login_containers' );
-
+		$access = $this->get_setting( $setting_name );
 		return ( ! empty( $access ) && ! empty( $access[ $container_key ] ) );
 	}
+
 
 	/**
 	 * Get value for attbiute "class" of column block

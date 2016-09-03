@@ -18,6 +18,15 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 	die( 'This skin is designed for b2evolution 6.4 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
 }
 
+$columns = $Skin->get_setting( 'footer_widgets_columns' );
+$footer_mode = $Skin->change_class( 'footer_bottom_mode' );
+$header_md = $Skin->change_class( 'header_content_mode' );
+
+$trans = '';
+if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
+    $trans = 'class="nav_bgt"';
+}
+
 // This is the main template; it may be used to display very different things.
 // Do inits depending on current $disp:
 skin_init( $disp );
@@ -35,12 +44,7 @@ siteskin_include( '_site_body_header.inc.php' );
 ?>
 
 <?php
-if( $Skin->is_visible_container( 'menu' ) ) { // Display 'Menu' widget container
-$header_md = $Skin->change_class( 'header_content_mode' );
-$trans = '';
-if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
-    $trans = 'class="nav_bgt"';
-}
+if( $Skin->is_visible_container( 'menu' ) ) : // Display 'Menu' widget container
 ?>
 <header id="nav" <?php echo $trans; ?> >
     <div class="container-fluid">
@@ -115,7 +119,7 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
 
     </div><!-- .container-fluid -->
 </header><!-- #nav -->
-<?php } ?>
+<?php endif; ?>
 
 <?php
 if( $Skin->is_visible_container( 'header' ) ) { // Display 'Header' widget container
@@ -166,8 +170,6 @@ if( $Skin->is_visible_container( 'header' ) ) { // Display 'Header' widget conta
     </div><!-- .container -->
 </header><!-- #main_header -->
 <?php } ?>
-
-<h1>Helo </h1>
 
 <div id="content">
 	<div class="container">
@@ -300,17 +302,10 @@ if( $Skin->is_visible_container( 'header' ) ) { // Display 'Header' widget conta
 	</div><!-- .container -->
 </div><!-- #main_content -->
 
-
-<?php
-$columns = $Skin->get_setting( 'footer_widgets_columns' );
-$footer_mode = $Skin->change_class( 'footer_bottom_mode' );
-
-if( $Skin->is_visible_container( 'footer' ) ) { // Display 'Footer' widget container
-?>
 <footer id="footer">
     <div class="container">
     	<!-- =================================== START OF FOOTER =================================== -->
-        <?php if( $Skin->get_setting( 'footer_widget' ) == 1 ) : ?>
+        <?php if( $Skin->is_visible_container( 'footer' ) && $Skin->get_setting( 'footer_widget' ) == 1 ) : ?>
     	<div class="footer_widgets row">
     		<?php
     			// Display container and contents:
@@ -415,10 +410,7 @@ if( $Skin->is_visible_container( 'footer' ) ) { // Display 'Footer' widget conta
 
 <?php if ( $Skin->get_setting( 'back_to_top' ) == 1 ) { ?>
 <a href="#0" class="cd_top"><i class="ei ei-arrow_up"></i></a>
-<?php }
-	}
-?>
-
+<?php } ?>
 
 
 <?php
