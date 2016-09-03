@@ -256,7 +256,7 @@ class bricks_Skin extends Skin
 					'type' => 'color',
 				),
 				'color_heading' => array(
-					'label' => T_('Color Heading'),
+					'label' => T_('Color Content Heading'),
 					'note' => T_('Default value is').' <code>#4b4e53</code>.',
 					'defaultvalue' => '#4b4e53',
 					'type' => 'color',
@@ -872,6 +872,41 @@ class bricks_Skin extends Skin
 			),
 
 
+			/* SPESIAL WIDGET SETTINGS
+			 * ========================================================================== */
+			'section_special_widget_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Spesial Widget Settings (All Disp)' )
+			),
+				'sw_tag_color' => array(
+					'label'			=> T_( 'Color Tag Cloud Widget' ),
+					'note'			=> T_( 'Choose your favorite color for tag cloud on sidebar. Default value is' ).' <code>#7e8082</code>.',
+					'type'			=> 'color',
+					'defaultvalue'	=> '#7e8082',
+				),
+				'sw_tag_border' => array(
+					'label'			=> T_( 'Border Color Tag Cloud Widget' ),
+					'note'			=> T_( 'Change border color for tag cloud widget on sidebar. Default value is' ).' <code>#eeeeee</code>.',
+					'type'			=> 'color',
+					'defaultvalue'	=> '#eeeeee',
+				),
+				'sw_tag_color_hover' => array(
+					'label'			=> T_( 'Color Tag Cloud Widget Hover' ),
+					'note'			=> T_( 'Change border color for tag cloud widget on sidebar. Default value is' ).' <code>#ffffff</code>.',
+					'type'			=> 'color',
+					'defaultvalue'	=> '#ffffff',
+				),
+				'sw_tag_bg_hover' => array(
+					'label'			=> T_( 'Background Tag Cloud Widget Hover' ),
+					'note'			=> T_( 'Change background color for tag cloud widget when hover. Default value is' ).' <code>#4b4e53</code>.',
+					'type'			=> 'color',
+					'defaultvalue'	=> '#4b4e53'
+				),
+			'section_special_widget_end' => array(
+				'layout'	=> 'end_fieldset'
+			),
+
+
 			/* FOOTER OPTIONS
 			 * ========================================================================== */
 			'section_footer_start' => array(
@@ -1049,14 +1084,15 @@ class bricks_Skin extends Skin
 			),
 				'access_login_containers' => array(
 					'label' => T_('Display on login screen'),
-					'note' => '',
-					'type' => 'checklist',
+					'note'  => '',
+					'type'  => 'checklist',
 					'options' => array(
 						array( 'header',   sprintf( T_('"%s" container'), NT_('Header') ),    1 ),
 						array( 'menu',     sprintf( T_('"%s" container'), NT_('Menu') ),      1 ),
 						array( 'sidebar',  sprintf( T_('"%s" container'), NT_('Sidebar') ),   0 ),
-						array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    0 ) ),
+						array( 'footer',   sprintf( T_('"%s" container'), NT_('Footer') ),    0 )
 					),
+				),
 			'section_access_end' => array(
 				'layout' => 'end_fieldset',
 			),
@@ -1280,6 +1316,7 @@ class bricks_Skin extends Skin
 			{ // If gender option is not enabled, choose custom link color. Otherwise, chose gender link colors:
 				$custom_css .= 'h4.panel-title a { color: '.$color." }\n";
 			}
+			$custom_css .= ".disp_posts .filters .nav-gallery li.active { background-color: $color; border-color: $color; }";
 		}
 		if( $color = $this->get_setting( 'page_hover_link_color' ) )
 		{ // Custom page link color on hover:
@@ -1466,10 +1503,10 @@ class bricks_Skin extends Skin
 			$custom_css .= "#main_header_page .single_title_post h1, #main_header_page .bc_content .breadcrumb > .active, #main_header_page .bc_content .breadcrumb a{ color: $color !important; }";
 		}
 		if( $padding = $this->get_setting( 'header_page_pt' ) ) {
-			$custom_css .= '@media screen and ( max-width: 768px ){ #main_header_page{ padding-top: '.$padding.'px; } }';
+			$custom_css .= '@media screen and ( min-width: 768px ){ #main_header_page{ padding-top: '.$padding.'px; } }';
 		}
 		if( $padding = $this->get_setting( 'header_page_pb' ) ) {
-			$custom_css .= '#main_header_page { padding-bottom: '.$padding.'px; }';
+			$custom_css .= '@media screen and ( min-width: 768px ){#main_header_page { padding-bottom: '.$padding.'px; } }';
 		}
 
 
@@ -1488,6 +1525,7 @@ class bricks_Skin extends Skin
 		}
 		if( $color = $this->get_setting( 'posts_border_color' ) ) {
 			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post__excerpt, .disp_posts #grid_posts .evo_post_article .evo_post__full_text { border-color: $color; }";
+			$custom_css .= ".disp_posts .filters .nav-gallery li { border-color: $color; }";
 		}
 		if( $color = $this->get_setting( 'posts_featured_border' ) ) {
 			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_article .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_article .evo_post__full_text { border-color: $color; }";
@@ -1526,6 +1564,22 @@ class bricks_Skin extends Skin
 		}
 
 
+		/* SPESIAL WIDGET SETTINGS
+		 * ========================================================================== */
+		if( $color = $this->get_setting( 'sw_tag_color' ) ) {
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .tag_cloud a { color: $color; }";
+		}
+		if( $color = $this->get_setting( 'sw_tag_border' ) ) {
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .tag_cloud a { border-color: $color; }";
+		}
+		if( $color = $this->get_setting( 'sw_tag_color_hover' ) ) {
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus { color: $color; }";
+		}
+		if ( $color = $this->get_setting( 'sw_tag_bg_hover' ) ) {
+			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .tag_cloud a:hover, .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:active, .evo_widget.widget_core_coll_tag_cloud .tag_cloud a:focus { background-color: $color; border-color: $color; }";
+		}
+
+
 		/* FOOTER SETTINGS
 		 * ========================================================================== */
 		if( $bg = $this->get_setting( 'footer_background' ) ) {
@@ -1551,7 +1605,7 @@ class bricks_Skin extends Skin
 		}
 		if( $color = $this->get_setting( 'footer_border_color' ) ) {
 			$custom_css .= "#footer .footer_widgets{ border-bottom-color: $color; }";
-			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a{ border-color: $color; }";
+			$custom_css .= ".footer_widgets .evo_widget.widget_core_coll_tag_cloud .evo_widget_body .tag_cloud a{ border-color: $color; }";
 		}
 
 

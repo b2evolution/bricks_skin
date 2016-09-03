@@ -2310,6 +2310,16 @@ div.extended_search_form .search_options .search_option {
   padding: 5px 10px;
   border: 1px solid #eeeeee;
 }
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th {
+  color: #7e8082;
+}
 .disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
 .disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
 .disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_small_print,
@@ -3447,7 +3457,7 @@ div.extended_search_form .search_options .search_option {
 .disp_posts .filters .nav-gallery li {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin: 0 3px 5px;
   padding: 5px 13px;
@@ -4909,24 +4919,30 @@ div.extended_search_form .search_options .search_option {
 .disp_login #main_content .evo_panel__login,
 .disp_register #main_content .evo_panel__login,
 .disp_lostpassword #main_content .evo_panel__login,
+.disp_access_requires_login #main_content .evo_panel__login,
 .disp_login #main_content .evo_panel__register,
 .disp_register #main_content .evo_panel__register,
 .disp_lostpassword #main_content .evo_panel__register,
+.disp_access_requires_login #main_content .evo_panel__register,
 .disp_login #main_content .evo_panel__lostpass,
 .disp_register #main_content .evo_panel__lostpass,
-.disp_lostpassword #main_content .evo_panel__lostpass {
+.disp_lostpassword #main_content .evo_panel__lostpass,
+.disp_access_requires_login #main_content .evo_panel__lostpass {
   max-width: 550px;
   padding: 15px;
 }
 .disp_login #main_content .evo_panel__login .panel,
 .disp_register #main_content .evo_panel__login .panel,
 .disp_lostpassword #main_content .evo_panel__login .panel,
+.disp_access_requires_login #main_content .evo_panel__login .panel,
 .disp_login #main_content .evo_panel__register .panel,
 .disp_register #main_content .evo_panel__register .panel,
 .disp_lostpassword #main_content .evo_panel__register .panel,
+.disp_access_requires_login #main_content .evo_panel__register .panel,
 .disp_login #main_content .evo_panel__lostpass .panel,
 .disp_register #main_content .evo_panel__lostpass .panel,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel {
   border-radius: 0;
   border-color: #eeeeee;
   margin-top: 0;
@@ -4936,12 +4952,15 @@ div.extended_search_form .search_options .search_option {
 .disp_login #main_content .evo_panel__login .panel .panel-heading,
 .disp_register #main_content .evo_panel__login .panel .panel-heading,
 .disp_lostpassword #main_content .evo_panel__login .panel .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__login .panel .panel-heading,
 .disp_login #main_content .evo_panel__register .panel .panel-heading,
 .disp_register #main_content .evo_panel__register .panel .panel-heading,
 .disp_lostpassword #main_content .evo_panel__register .panel .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__register .panel .panel-heading,
 .disp_login #main_content .evo_panel__lostpass .panel .panel-heading,
 .disp_register #main_content .evo_panel__lostpass .panel .panel-heading,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-heading {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .panel-heading {
   padding: 20px 25px;
   border-bottom-color: #eeeeee;
   -webkit-transition: all 0.32s ease-in-out;
@@ -4950,12 +4969,15 @@ div.extended_search_form .search_options .search_option {
 .disp_login #main_content .evo_panel__login .panel .panel-heading .panel-title,
 .disp_register #main_content .evo_panel__login .panel .panel-heading .panel-title,
 .disp_lostpassword #main_content .evo_panel__login .panel .panel-heading .panel-title,
+.disp_access_requires_login #main_content .evo_panel__login .panel .panel-heading .panel-title,
 .disp_login #main_content .evo_panel__register .panel .panel-heading .panel-title,
 .disp_register #main_content .evo_panel__register .panel .panel-heading .panel-title,
 .disp_lostpassword #main_content .evo_panel__register .panel .panel-heading .panel-title,
+.disp_access_requires_login #main_content .evo_panel__register .panel .panel-heading .panel-title,
 .disp_login #main_content .evo_panel__lostpass .panel .panel-heading .panel-title,
 .disp_register #main_content .evo_panel__lostpass .panel .panel-heading .panel-title,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-heading .panel-title {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-heading .panel-title,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .panel-heading .panel-title {
   font-family: 'Lato', Arial, Helvetica, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -4964,23 +4986,29 @@ div.extended_search_form .search_options .search_option {
 .disp_login #main_content .evo_panel__login .panel .panel-body,
 .disp_register #main_content .evo_panel__login .panel .panel-body,
 .disp_lostpassword #main_content .evo_panel__login .panel .panel-body,
+.disp_access_requires_login #main_content .evo_panel__login .panel .panel-body,
 .disp_login #main_content .evo_panel__register .panel .panel-body,
 .disp_register #main_content .evo_panel__register .panel .panel-body,
 .disp_lostpassword #main_content .evo_panel__register .panel .panel-body,
+.disp_access_requires_login #main_content .evo_panel__register .panel .panel-body,
 .disp_login #main_content .evo_panel__lostpass .panel .panel-body,
 .disp_register #main_content .evo_panel__lostpass .panel .panel-body,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .panel-body {
   padding: 25px 25px 10px;
 }
 .disp_login #main_content .evo_panel__login .panel .panel-body .form-control,
 .disp_register #main_content .evo_panel__login .panel .panel-body .form-control,
 .disp_lostpassword #main_content .evo_panel__login .panel .panel-body .form-control,
+.disp_access_requires_login #main_content .evo_panel__login .panel .panel-body .form-control,
 .disp_login #main_content .evo_panel__register .panel .panel-body .form-control,
 .disp_register #main_content .evo_panel__register .panel .panel-body .form-control,
 .disp_lostpassword #main_content .evo_panel__register .panel .panel-body .form-control,
+.disp_access_requires_login #main_content .evo_panel__register .panel .panel-body .form-control,
 .disp_login #main_content .evo_panel__lostpass .panel .panel-body .form-control,
 .disp_register #main_content .evo_panel__lostpass .panel .panel-body .form-control,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body .form-control {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body .form-control,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .panel-body .form-control {
   height: auto;
   padding: 12px 15px;
   border-radius: 0;
@@ -4990,23 +5018,29 @@ div.extended_search_form .search_options .search_option {
 .disp_login #main_content .evo_panel__login .panel .panel-body .form-control:focus,
 .disp_register #main_content .evo_panel__login .panel .panel-body .form-control:focus,
 .disp_lostpassword #main_content .evo_panel__login .panel .panel-body .form-control:focus,
+.disp_access_requires_login #main_content .evo_panel__login .panel .panel-body .form-control:focus,
 .disp_login #main_content .evo_panel__register .panel .panel-body .form-control:focus,
 .disp_register #main_content .evo_panel__register .panel .panel-body .form-control:focus,
 .disp_lostpassword #main_content .evo_panel__register .panel .panel-body .form-control:focus,
+.disp_access_requires_login #main_content .evo_panel__register .panel .panel-body .form-control:focus,
 .disp_login #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus,
 .disp_register #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .panel-body .form-control:focus {
   border-color: #7e8082;
 }
 .disp_login #main_content .evo_panel__login .panel .form-group .btn,
 .disp_register #main_content .evo_panel__login .panel .form-group .btn,
 .disp_lostpassword #main_content .evo_panel__login .panel .form-group .btn,
+.disp_access_requires_login #main_content .evo_panel__login .panel .form-group .btn,
 .disp_login #main_content .evo_panel__register .panel .form-group .btn,
 .disp_register #main_content .evo_panel__register .panel .form-group .btn,
 .disp_lostpassword #main_content .evo_panel__register .panel .form-group .btn,
+.disp_access_requires_login #main_content .evo_panel__register .panel .form-group .btn,
 .disp_login #main_content .evo_panel__lostpass .panel .form-group .btn,
 .disp_register #main_content .evo_panel__lostpass .panel .form-group .btn,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .form-group .btn {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .form-group .btn,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .form-group .btn {
   font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -5016,70 +5050,91 @@ div.extended_search_form .search_options .search_option {
 .disp_login #main_content .evo_panel__login .panel .evo_form__register .form-control,
 .disp_register #main_content .evo_panel__login .panel .evo_form__register .form-control,
 .disp_lostpassword #main_content .evo_panel__login .panel .evo_form__register .form-control,
+.disp_access_requires_login #main_content .evo_panel__login .panel .evo_form__register .form-control,
 .disp_login #main_content .evo_panel__register .panel .evo_form__register .form-control,
 .disp_register #main_content .evo_panel__register .panel .evo_form__register .form-control,
 .disp_lostpassword #main_content .evo_panel__register .panel .evo_form__register .form-control,
+.disp_access_requires_login #main_content .evo_panel__register .panel .evo_form__register .form-control,
 .disp_login #main_content .evo_panel__lostpass .panel .evo_form__register .form-control,
 .disp_register #main_content .evo_panel__lostpass .panel .evo_form__register .form-control,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel .evo_form__register .form-control {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel .evo_form__register .form-control,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel .evo_form__register .form-control {
   padding: 8px;
 }
 .disp_login #main_content .evo_panel__login .panel:hover,
 .disp_register #main_content .evo_panel__login .panel:hover,
 .disp_lostpassword #main_content .evo_panel__login .panel:hover,
+.disp_access_requires_login #main_content .evo_panel__login .panel:hover,
 .disp_login #main_content .evo_panel__register .panel:hover,
 .disp_register #main_content .evo_panel__register .panel:hover,
 .disp_lostpassword #main_content .evo_panel__register .panel:hover,
+.disp_access_requires_login #main_content .evo_panel__register .panel:hover,
 .disp_login #main_content .evo_panel__lostpass .panel:hover,
 .disp_register #main_content .evo_panel__lostpass .panel:hover,
 .disp_lostpassword #main_content .evo_panel__lostpass .panel:hover,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel:hover,
 .disp_login #main_content .evo_panel__login .panel:active,
 .disp_register #main_content .evo_panel__login .panel:active,
 .disp_lostpassword #main_content .evo_panel__login .panel:active,
+.disp_access_requires_login #main_content .evo_panel__login .panel:active,
 .disp_login #main_content .evo_panel__register .panel:active,
 .disp_register #main_content .evo_panel__register .panel:active,
 .disp_lostpassword #main_content .evo_panel__register .panel:active,
+.disp_access_requires_login #main_content .evo_panel__register .panel:active,
 .disp_login #main_content .evo_panel__lostpass .panel:active,
 .disp_register #main_content .evo_panel__lostpass .panel:active,
 .disp_lostpassword #main_content .evo_panel__lostpass .panel:active,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel:active,
 .disp_login #main_content .evo_panel__login .panel:focus,
 .disp_register #main_content .evo_panel__login .panel:focus,
 .disp_lostpassword #main_content .evo_panel__login .panel:focus,
+.disp_access_requires_login #main_content .evo_panel__login .panel:focus,
 .disp_login #main_content .evo_panel__register .panel:focus,
 .disp_register #main_content .evo_panel__register .panel:focus,
 .disp_lostpassword #main_content .evo_panel__register .panel:focus,
+.disp_access_requires_login #main_content .evo_panel__register .panel:focus,
 .disp_login #main_content .evo_panel__lostpass .panel:focus,
 .disp_register #main_content .evo_panel__lostpass .panel:focus,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel:focus {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:focus,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel:focus {
   border-color: #dddddd;
 }
 .disp_login #main_content .evo_panel__login .panel:hover .panel-heading,
 .disp_register #main_content .evo_panel__login .panel:hover .panel-heading,
 .disp_lostpassword #main_content .evo_panel__login .panel:hover .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__login .panel:hover .panel-heading,
 .disp_login #main_content .evo_panel__register .panel:hover .panel-heading,
 .disp_register #main_content .evo_panel__register .panel:hover .panel-heading,
 .disp_lostpassword #main_content .evo_panel__register .panel:hover .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__register .panel:hover .panel-heading,
 .disp_login #main_content .evo_panel__lostpass .panel:hover .panel-heading,
 .disp_register #main_content .evo_panel__lostpass .panel:hover .panel-heading,
 .disp_lostpassword #main_content .evo_panel__lostpass .panel:hover .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel:hover .panel-heading,
 .disp_login #main_content .evo_panel__login .panel:active .panel-heading,
 .disp_register #main_content .evo_panel__login .panel:active .panel-heading,
 .disp_lostpassword #main_content .evo_panel__login .panel:active .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__login .panel:active .panel-heading,
 .disp_login #main_content .evo_panel__register .panel:active .panel-heading,
 .disp_register #main_content .evo_panel__register .panel:active .panel-heading,
 .disp_lostpassword #main_content .evo_panel__register .panel:active .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__register .panel:active .panel-heading,
 .disp_login #main_content .evo_panel__lostpass .panel:active .panel-heading,
 .disp_register #main_content .evo_panel__lostpass .panel:active .panel-heading,
 .disp_lostpassword #main_content .evo_panel__lostpass .panel:active .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel:active .panel-heading,
 .disp_login #main_content .evo_panel__login .panel:focus .panel-heading,
 .disp_register #main_content .evo_panel__login .panel:focus .panel-heading,
 .disp_lostpassword #main_content .evo_panel__login .panel:focus .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__login .panel:focus .panel-heading,
 .disp_login #main_content .evo_panel__register .panel:focus .panel-heading,
 .disp_register #main_content .evo_panel__register .panel:focus .panel-heading,
 .disp_lostpassword #main_content .evo_panel__register .panel:focus .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__register .panel:focus .panel-heading,
 .disp_login #main_content .evo_panel__lostpass .panel:focus .panel-heading,
 .disp_register #main_content .evo_panel__lostpass .panel:focus .panel-heading,
-.disp_lostpassword #main_content .evo_panel__lostpass .panel:focus .panel-heading {
+.disp_lostpassword #main_content .evo_panel__lostpass .panel:focus .panel-heading,
+.disp_access_requires_login #main_content .evo_panel__lostpass .panel:focus .panel-heading {
   border-bottom-color: #dddddd;
 }
 .disp_404 #main_content .icon_404,
