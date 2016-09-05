@@ -15,21 +15,16 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $thumbnail_sizes, $Item;
+global $thumbnail_sizes, $Item, $Skin;
 
-// $link = $Item->get_permanent_url();
+$column = $Skin->change_class( 'gallery_column' );
+$thumb_size = $Skin->get_setting( 'gallery_thumb' );
 
 // Merge the params from current skin
 $params = array_merge( array(
-	'mediaidx_thumb_size' => 'crop-480x320'
+	'mediaidx_thumb_size' => $thumb_size
 ), $params );
 
-// $photocell_styles = '';
-// if( isset( $thumbnail_sizes[ $params['mediaidx_thumb_size'] ] ) )
-// {
-// 	$photocell_styles = ' style="width:'.$thumbnail_sizes[ $params['mediaidx_thumb_size'] ][1].'px;'
-// 		.'height:'.$thumbnail_sizes[ $params['mediaidx_thumb_size'] ][2].'px"';
-// }
 
 // --------------------------------- START OF MEDIA INDEX --------------------------------
 skin_widget( array(
@@ -46,7 +41,7 @@ skin_widget( array(
 
     'list_start'          => '<ul class="main_content_gallery">',
     'list_end'            => '</ul>',
-    'item_start'          => '<li class="content_gallery three_columns"><div class="evo_image_gallery">',
+    'item_start'          => '<li class="content_gallery '.$column.'"><div class="evo_image_gallery">',
     'item_end'            => '</div></li>',
 
 	'order_by'            => $Blog->get_setting('orderby'),

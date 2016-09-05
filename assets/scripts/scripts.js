@@ -19,6 +19,15 @@
     // };
 
 
+    // GALLERY MASONRY
+    // =========================================================================
+    var gallery_style = function() {
+        $( '.main_content_gallery' ).masonry({
+            itemSelector: '.content_gallery',
+        });
+    };
+
+
     // SEARCH NAV
     // =========================================================================
     var search_nav = function() {
@@ -122,7 +131,7 @@
         back_top();
         // filterizd();
 
-        // post_masonry();
+        gallery_style();
     });
 
     $(document).ready(function() {

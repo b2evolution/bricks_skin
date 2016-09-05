@@ -722,6 +722,53 @@ class bricks_Skin extends Skin
 			),
 
 
+			/* MEDIAIDX SETTINGS
+			 * ========================================================================== */
+			'section_gallery_start' => array(
+				'layout'	=> 'begin_fieldset',
+				'label'		=> T_( 'Gallery Setting (disp=mediaidx)' )
+			),
+				'gallery_header' => array(
+					'label'			=> T_( 'Mediaidx Header' ),
+					'note'			=> T_( 'Choose header style for mediaidx page.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'header_main'	=> T_( 'Main Header' ),
+						'header_page'	=> T_( 'Header Page' ),
+					),
+					'defaultvalue'	=> 'header_page'
+				),
+				'gallery_thumb'	=> array(
+					'label'			=> T_( 'Gallery Image Thumb' ),
+					'note'			=> T_( 'Choose image thumb for gallery.' ),
+					'type'			=> 'select',
+					'options'		=> get_available_thumb_sizes(),
+					'defaultvalue'	=> 'crop-480x320'
+				),
+				'gallery_column' => array(
+					'label'			=> T_( 'Column Gallery' ),
+					'note'			=> T_( 'Set column of Gallery Image.' ),
+					'type'			=> 'select',
+					'options'		=> array(
+						'one_column'	=> T_( 'One Column' ),
+						'two_columns'	=> T_( 'Two Columns' ),
+						'three_columns'	=> T_( 'Three Columns' ),
+						'four_columns'	=> T_( 'Four Columns' ),
+					),
+					'defaultvalue'	=> 'three_columns'
+				),
+				'gallery_gutter' => array(
+					'label'			=> T_( 'Gallery Gutter' ),
+					'note'			=> T_( 'px. Set space content image for the gallery. Default value is' ).' <code>10px</code>.',
+					'type'			=> 'text',
+					'defaultvalue'	=> '10',
+					'size'			=> 3,
+				),
+			'section_gallery_end' => array(
+				'layout'	=> 'end_fieldset',
+			),
+
+
 			/* CONTACTS PAGE SETTINGS
 			 * ========================================================================== */
 			'section_contact_start' => array(
@@ -1549,6 +1596,14 @@ class bricks_Skin extends Skin
 			$custom_css .= ".evo_comment .evo_comment_footer .permalink_right, .evo_comment .evo_comment_info .permalink_right { border-color: $color; }";
 			$custom_css .= ".disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table th, .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table th, .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th, .disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th, .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table th, .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table th, .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th, .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th, .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table td, .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table td, .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td, .disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td, .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table td, .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table td, .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td, .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td { border-color: $color; }";
 			$custom_css .= ".disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_tags .item_tags a, .disp_single #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_post_lists .evo_post_article .widget_core_item_tags .item_tags a, .disp_single #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_tags .item_tags a, .disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a, .disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_tags .item_tags a { border-color: $color; }";
+		}
+
+
+		/* MEDIAIDX SETTINGS
+		 * ========================================================================== */
+		if ( $padding = $this->get_setting( 'gallery_gutter' ) ) {
+			$custom_css .= '.disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery .evo_image_gallery { margin: '.$padding.'px; }';
+			$custom_css .= '.disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery { margin-left: -'.$padding.'px; margin-right: -'.$padding.'px }';
 		}
 
 

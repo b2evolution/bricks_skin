@@ -4589,8 +4589,6 @@ div.extended_search_form .search_options .search_option {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-left: -5px;
-  margin-right: -5px;
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery {
   margin: 0;
@@ -4600,7 +4598,6 @@ div.extended_search_form .search_options .search_option {
   position: relative;
   display: block;
   overflow: hidden;
-  margin: 5px;
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery a {
   z-index: 10;
