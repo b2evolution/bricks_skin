@@ -3,7 +3,7 @@ Bricks is blog skin for b2evolution CMS. It is fully responsive skin page for an
 
 ### Posts Page
 
-![disp=posts](skinshot_posts.png)
+![disp=posts](skinshot_posts.jpg)
 
 ====
 ### Brick features:
