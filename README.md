@@ -1,5 +1,9 @@
 # Brick Skin
-Bricks is blog skin for b2evolution CMS.
+Bricks is blog skin for b2evolution CMS. It is fully responsive skin page for any device. You can customize all features in the back office. Keep enjoy to using Brick Skin.
+
+### Posts Page
+
+![disp=posts](skinshot_posts.png)
 
 ====
 ### Brick features:
@@ -18,9 +22,8 @@ Bricks is blog skin for b2evolution CMS.
 - jQuery powered
 - Back to top button
 - HTML code with comments
-- Free Updates and new features.
 - Long-term Support
-...and much more!
+- ...and much more!
 
 ====
 
