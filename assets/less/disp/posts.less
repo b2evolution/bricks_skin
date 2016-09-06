@@ -170,7 +170,7 @@
 		overflow: hidden;
 		margin-right: -15px;
 		margin-left: -15px;
-
+		min-height: 50px;
 		transition: height 0.32s ease;
 
 		.evo_post_lists {
@@ -184,6 +184,10 @@
 			position: relative;
 			padding: 0 15px;
 			margin-bottom: 80px;
+
+			@media screen and ( max-width: @screen-sm ) {
+				margin-bottom: 40px;
+			}
 
 			// EVO POST IMAGE
 			// ======================================================================== /

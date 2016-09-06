@@ -34,6 +34,7 @@
 
                 .main_profile_picture {
                     border-radius: 2px;
+                    max-width: 100%;
                     width: auto;
                     height: auto;
                 }
@@ -73,6 +74,10 @@
             }
 
             .profile_column_right {
+                @media screen and ( min-width: @screen-sm ) {
+                    margin-left: 330px;
+                }
+
                 .panel-default {
                     border-radius: 0;
                     box-shadow: none;
@@ -95,7 +100,10 @@
                     }
                 }
             }
+        }
 
+        .form-control-static {
+            word-wrap: break-word;
         }
 
     }

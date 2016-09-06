@@ -20,7 +20,7 @@ $params = array_merge( array(
 	'featured_intro_after'          => '',
 	'front_block_start'             => '<div class="evo_widget $wi_class$">',
 	'front_block_end'               => '</div>',
-	'front_block_first_title_start' => '<h3>',
+	'front_block_first_title_start' => '<h3 class="evo_widget_title">',
 	'front_block_first_title_end'   => '</h3>',
 	'front_block_title_start'       => '<h3 class="evo_widget_title">',
 	'front_block_title_end'         => '</h3>',
