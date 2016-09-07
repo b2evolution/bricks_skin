@@ -68,12 +68,18 @@
                             border-radius: 0;
                         }
                     }
+
+                    .evo_post_gallery {
+                        img {
+                            border-radius: 2px;
+                        }
+                    }
                 }
 
                 // EVO POST FULL
                 // ======================================================================== /
                 .evo_post__full_text {
-                    word-break: break-word;
+                    word-wrap: break-word;
                     line-height: 24px;
 
                     h1, h2, h3, h4, h5, h6 {
@@ -112,7 +118,7 @@
                         padding: 18px;
                         margin-bottom: 20px;
                         white-space: pre-wrap;
-                        word-break: break-word;
+                        word-wrap: break-word;
                     }
 
                     blockquote {
@@ -495,7 +501,7 @@
                             border-color: @e;
                             letter-spacing: 0.2px;
                             margin-bottom: 0;
-                            word-break: break-word;
+                            word-wrap: break-word;
                             white-space: pre-wrap;
 
                             &:hover, &:active, &:focus {

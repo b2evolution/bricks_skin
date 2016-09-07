@@ -925,6 +925,18 @@ class bricks_Skin extends Skin
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Spesial Widget Settings (All Disp)' )
 			),
+				'sw_rm_button' => array(
+					'label'			=> T_( 'List-type Widgets "Read More" button' ),
+					'note'			=> T_( 'Check to display the "Read more" button after content on all list-type widgets (Excerpt and Teaser)' ),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
+				'sw_bg_wl'	=> array(
+					'label'			=> T_( 'Background RWD Widget List' ),
+					'note'			=> T_( 'Change background content for RWD widget list. Default value is' ).' <code>#fafafa</code>.',
+					'type'			=> 'color',
+					'defaultvalue'	=> '#fafafa'
+				),
 				'sw_tag_color' => array(
 					'label'			=> T_( 'Color Tag Cloud Widget' ),
 					'note'			=> T_( 'Choose your favorite color for tag cloud on sidebar. Default value is' ).' <code>#7e8082</code>.',
@@ -1621,6 +1633,28 @@ class bricks_Skin extends Skin
 
 		/* SPESIAL WIDGET SETTINGS
 		 * ========================================================================== */
+		 if( $this->get_setting('sw_rm_button') == 0 ) {
+ 			$custom_css .= '
+ 			.widget_core_coll_post_list .item_content a,
+ 			.widget_core_coll_featured_posts .item_content a,
+ 			.widget_core_coll_related_post_list, .item_content a,
+ 			.widget_core_coll_page_list .item_content a,
+ 			.widget_core_coll_item_list .item_content a,
+ 			.widget_core_coll_flagged_list .item_content a,
+ 			.widget_core_coll_post_list .item_excerpt a,
+ 			.widget_core_coll_featured_posts .item_excerpt a,
+ 			.widget_core_coll_related_post_list, .item_excerpt a,
+ 			.widget_core_coll_page_list .item_excerpt a,
+ 			.widget_core_coll_item_list .item_excerpt a,
+ 			.widget_core_coll_flagged_list .item_excerpt a
+ 			{ display: none !important }
+ 			';
+ 		}
+
+		if( $color = $this->get_setting( 'sw_bg_wl' ) ) {
+			$custom_css .= "div.evo_widget.widget_core_coll_featured_posts.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content, div.evo_widget.widget_core_coll_item_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content, div.evo_widget.widget_core_coll_post_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content, div.evo_widget.widget_core_coll_page_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content, div.evo_widget.widget_core_coll_flagged_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content, div.evo_widget.widget_core_coll_related_post_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content { background-color: $color; }";
+		}
+
 		if( $color = $this->get_setting( 'sw_tag_color' ) ) {
 			$custom_css .= ".evo_widget.widget_core_coll_tag_cloud .tag_cloud a { color: $color; }";
 		}
