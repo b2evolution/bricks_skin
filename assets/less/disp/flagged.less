@@ -1,0 +1,143 @@
+// FLAG DISP STYLE
+// ======================================================================== /
+.disp_flagged {
+    #main_content {
+
+        .evo_single_article {
+
+            .evo_post_title {
+                h2 {
+                    font-size: 1.8rem;
+                    font-weight: 700;
+                    color: @color-link;
+                    margin-top: 0;
+                    margin-bottom: 0;
+                    padding: 0;
+                    text-transform: uppercase;
+                }
+            }
+
+            .evo_post_info {
+                font-size: 1.2rem;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                // color: @color-info;
+                opacity: 0.75;
+                margin-bottom: 20px;
+
+                .evo_status {
+                    font-size: 1rem;
+                    border-radius: 2px;
+                }
+            }
+
+            .evo_post__full {
+                border-bottom: 1px solid @e;
+                padding-bottom: 20px;
+                margin-bottom: 40px;
+
+                .evo_image_block {
+                    margin-bottom: 20px;
+
+                    img {
+                        border-radius: 0;
+                    }
+                }
+
+                .evo_post_gallery {
+                    img {
+                        border-radius: 2px;
+                    }
+                }
+            }
+
+            // EVO POST FULL
+            // ======================================================================== /
+            .evo_post__full_text {
+                word-wrap: break-word;
+                line-height: 24px;
+
+                h1, h2, h3, h4, h5, h6 {
+                    color: @color-link;
+                    opacity: 0.9;
+                    font-weight: 700;
+                }
+
+                p {
+                    margin-bottom: 15px;
+                }
+
+                a {
+                    text-decoration: underline;
+                    text-decoration-style: dotted;
+                }
+
+                ul {
+
+                    ul {
+                        padding-top: 5px;
+                    }
+
+                    li {
+                        padding-bottom: 5px;
+                    }
+
+                    p {
+                        margin-bottom: 0;
+                    }
+                }
+
+                pre {
+                    border-color: @c-e4;
+                    border-radius: 2px;
+                    padding: 18px;
+                    margin-bottom: 20px;
+                    white-space: pre-wrap;
+                    word-wrap: break-word;
+                }
+
+                blockquote {
+                    font-style: italic;
+                    letter-spacing: 0.5px;
+                    line-height: 1.4;
+                    margin-bottom: 20px;
+
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+
+                table {
+                    th, td {
+                        padding: 5px 10px;
+                        border: 1px solid @e;
+                    }
+
+                    th {
+                        color: @color-body;
+                    }
+                }
+
+                .evo_post_more_link {
+                    a {
+                        display: inline-block;
+                        padding: 8px 20px;
+                        border: 1px solid @e;
+                        font-size: 1.2rem;
+                        letter-spacing: 1px;
+                        text-decoration: none;
+                        text-transform: uppercase;
+
+                        &:hover, &:active, &:focus {
+                            background-color: @color-link;
+                            border-color: @color-link;
+                            color: @w;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+}

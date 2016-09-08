@@ -72,10 +72,35 @@
 
                 .widget_flow_blocks > div {
                     word-wrap: break-word;
+                    word-break: break-all;
+                    word-break: break-word;
                 }
 
                 .item_title {
                     word-wrap: break-word;
+                }
+
+                &.evo_1pic.evo_1pic__special {
+                    .evo_widget_list {
+                        display: inline-block;
+                    }
+
+                    &.evo_noexcerpt.evo_noteaser {
+                        .item_title {
+                            a {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+
+                &.widget_core_coll_item_list {
+                    &.evo_1pic__special.evo_noexcerpt.evo_noteaser {
+                        .item_title {
+                            word-break: break-all;
+                            word-break: break-word;
+                        }
+                    }
                 }
 
             }
