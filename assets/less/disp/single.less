@@ -70,6 +70,8 @@
                     }
 
                     .evo_post_gallery {
+                        margin-top: -6px;
+
                         img {
                             border-radius: 2px;
                         }
@@ -119,6 +121,7 @@
                         margin-bottom: 20px;
                         white-space: pre-wrap;
                         word-wrap: break-word;
+                        word-break: break-word;
                     }
 
                     blockquote {
@@ -132,14 +135,31 @@
                         }
                     }
 
-                    table {
+                    .videoblock {
+                        iframe {
+                            max-width: 100%;
+                            max-height: 100%;
+                            width: 720px;
+                            height: 420px;
+                        }
+                    }
+
+                    table,
+                    .item_custom_fields {
                         th, td {
                             padding: 5px 10px;
                             border: 1px solid @e;
                         }
 
                         th {
+                            background-color: transparent;
                             color: @color-body;
+                        }
+
+                        tr {
+                            &:nth-child(even) {
+                                background-color: @f9;
+                            }
                         }
                     }
 

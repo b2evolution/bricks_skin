@@ -982,6 +982,9 @@ div.bSideItem h4 {
 }
 .evo_comment .evo_comment_text p {
   margin-bottom: 12px;
+  word-break: break-all;
+  word-break: break-word;
+  word-wrap: break-word;
 }
 .evo_comment .evo_comment_text ul ul {
   padding-bottom: 5px;
@@ -2117,6 +2120,9 @@ div.evo_widget.widget_core_online_users .evo_widget_body img {
 div.evo_widget.widget_core_coll_current_filters {
   word-wrap: break-word;
 }
+div.evo_widget.widget_core_coll_media_index .evo_widget_list .note {
+  margin-left: 15px;
+}
 div.evo_widget.widget_core_coll_featured_posts .item_title a,
 div.evo_widget.widget_core_coll_item_list .item_title a,
 div.evo_widget.widget_core_coll_post_list .item_title a,
@@ -2585,6 +2591,16 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_image_block img {
   border-radius: 0;
 }
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full .evo_post_gallery,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full .evo_post_gallery,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_post_gallery,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_post_gallery,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full .evo_post_gallery,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full .evo_post_gallery,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_post_gallery,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_post_gallery {
+  margin-top: -6px;
+}
 .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full .evo_post_gallery img,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full .evo_post_gallery img,
 .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full .evo_post_gallery img,
@@ -2725,6 +2741,7 @@ div.extended_search_form .search_options .search_option {
   margin-bottom: 20px;
   white-space: pre-wrap;
   word-wrap: break-word;
+  word-break: break-word;
 }
 .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text blockquote,
@@ -2749,6 +2766,19 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text blockquote p {
   margin-bottom: 0;
 }
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text .videoblock iframe,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text .videoblock iframe,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text .videoblock iframe,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text .videoblock iframe,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text .videoblock iframe,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text .videoblock iframe,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text .videoblock iframe,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text .videoblock iframe {
+  max-width: 100%;
+  max-height: 100%;
+  width: 720px;
+  height: 420px;
+}
 .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table th,
 .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table th,
@@ -2757,6 +2787,14 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
 .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
 .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields th,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields th,
 .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table td,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table td,
 .disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table td,
@@ -2764,7 +2802,15 @@ div.extended_search_form .search_options .search_option {
 .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table td,
 .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table td,
 .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td,
-.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td {
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table td,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields td,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields td,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields td,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields td,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields td,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields td,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields td,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields td {
   padding: 5px 10px;
   border: 1px solid #eeeeee;
 }
@@ -2775,8 +2821,35 @@ div.extended_search_form .search_options .search_option {
 .disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
 .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table th,
 .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
-.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th {
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table th,
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields th,
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields th,
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields th,
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields th {
+  background-color: transparent;
   color: #7e8082;
+}
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text table tr:nth-child(even),
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text table tr:nth-child(even),
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text table tr:nth-child(even),
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text table tr:nth-child(even),
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text table tr:nth-child(even),
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text table tr:nth-child(even),
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text table tr:nth-child(even),
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text table tr:nth-child(even),
+.disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_single #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_page #main_content .evo_post_lists .evo_post_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_single #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_page #main_content .evo_content_single .evo_single_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields tr:nth-child(even),
+.disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text .item_custom_fields tr:nth-child(even) {
+  background-color: #f9f9f9;
 }
 .disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
 .disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_small_print,
@@ -4878,6 +4951,13 @@ div.extended_search_form .search_options .search_option {
 .disp_users #main_content .results .table tbody tr td .fa {
   margin-right: 5px;
 }
+.disp_threads #main_content .results .table tbody .user img,
+.disp_msgform #main_content .results .table tbody .user img,
+.disp_contacts #main_content .results .table tbody .user img,
+.disp_messages #main_content .results .table tbody .user img,
+.disp_users #main_content .results .table tbody .user img {
+  max-width: none;
+}
 .disp_threads #main_content .form_send_contacts .btn,
 .disp_msgform #main_content .form_send_contacts .btn,
 .disp_contacts #main_content .form_send_contacts .btn,
@@ -5083,7 +5163,7 @@ div.extended_search_form .search_options .search_option {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #000000;
   opacity: 0;
   -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
@@ -5096,7 +5176,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery .note {
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
   font-size: 1.5rem;
   font-weight: 700;
@@ -5112,6 +5192,13 @@ div.extended_search_form .search_options .search_option {
   -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
+@media screen and (max-width: 768px) {
+  .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery .note {
+    font-size: 1.4rem;
+    line-height: 18px;
+    padding: 0 15px;
+  }
+}
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover a::after,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active a::after,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:focus a::after {
@@ -5126,11 +5213,11 @@ div.extended_search_form .search_options .search_option {
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:hover .note,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:active .note,
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery:focus .note {
-  display: none;
+  display: block;
   opacity: 1;
-  -webkit-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  transform: translateY(20px);
+  -webkit-transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 .disp_flagged #main_content .evo_single_article .evo_post_title h2 {
   font-size: 1.8rem;
