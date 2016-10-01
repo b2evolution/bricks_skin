@@ -178,7 +178,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_layout_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('General Settings (All disps)')
+				'label'  => T_('General Settings').' (All disps)',
 			),
 				'layout' => array(
 					'label' => T_('Layout'),
@@ -195,16 +195,16 @@ class bricks_Skin extends Skin
 					'type' => 'select',
 				),
 				'max_image_height' => array(
-					'label' => T_('Max image height'),
-					'note' => 'px',
-					'defaultvalue' => '',
-					'type' => 'integer',
+					'label' 		=> T_('Max image height'),
+					'note' 			=> 'px',
+					'defaultvalue' 	=> '',
+					'type' 			=> 'integer',
 					'allow_empty' => true,
 				),
 				'font_size' => array(
-					'label' => T_('Font size'),
-					'note' => '',
-					'defaultvalue' => 'default',
+					'label' 		=> T_('Font size'),
+					'note' 			=> '',
+					'defaultvalue'  => 'default',
 					'options' => array(
 						'default'        => T_('Default (14px)'),
 						'standard'       => T_('Standard (16px)'),
@@ -229,59 +229,59 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_color_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Custom Settings (All disps)')
+				'label'  => T_('Custom Settings').' (All disps)',
 			),
 				'page_bg_color' => array(
-					'label' => T_('Background color'),
-					'note' => T_('Default value is').' <code>#ffffff</code>.',
-					'defaultvalue' => '#ffffff',
-					'type' => 'color',
+					'label' 		=> T_('Background color'),
+					'note' 			=> T_('Default value is').' <code>#ffffff</code>.',
+					'defaultvalue'  => '#ffffff',
+					'type' 			=> 'color',
 				),
 				'page_text_color' => array(
-					'label' => T_('Text color'),
-					'note' => T_('Default value is').' <code>#7e8082</code>.',
-					'defaultvalue' => '#7e8082',
-					'type' => 'color',
+					'label' 		=> T_('Text color'),
+					'note' 			=> T_('Default value is').' <code>#7e8082</code>.',
+					'defaultvalue' 	=> '#7e8082',
+					'type' 			=> 'color',
 				),
 				'page_link_color' => array(
-					'label' => T_('Link color'),
-					'note' => T_('Default value is').' <code>#4b4e53</code>.',
-					'defaultvalue' => '#4b4e53',
-					'type' => 'color',
+					'label' 		=> T_('Link color'),
+					'note' 			=> T_('Default value is').' <code>#4b4e53</code>.',
+					'defaultvalue' 	=> '#4b4e53',
+					'type' 			=> 'color',
 				),
 				'page_hover_link_color' => array(
-					'label' => T_('Hover link color'),
-					'note' => T_('Default value is').' <code>#101010</code>.',
-					'defaultvalue' => '#101010',
-					'type' => 'color',
+					'label' 		=> T_('Hover link color'),
+					'note' 			=> T_('Default value is').' <code>#101010</code>.',
+					'defaultvalue' 	=> '#101010',
+					'type' 			=> 'color',
 				),
 				'color_heading' => array(
-					'label' => T_('Color Content Heading'),
-					'note' => T_('Default value is').' <code>#4b4e53</code>.',
-					'defaultvalue' => '#4b4e53',
-					'type' => 'color',
+					'label' 		=> T_('Color Content Heading'),
+					'note' 			=> T_('Default value is').' <code>#4b4e53</code>.',
+					'defaultvalue' 	=> '#4b4e53',
+					'type' 			=> 'color',
 				),
 				'bgimg_text_color' => array(
-					'label' => T_('Text color on background image'),
-					'note' => T_('Default value is').' <code>#ffffff</code>.',
-					'defaultvalue' => '#ffffff',
-					'type' => 'color',
+					'label' 		=> T_('Text color on background image'),
+					'note' 			=> T_('Default value is').' <code>#ffffff</code>.',
+					'defaultvalue' 	=> '#ffffff',
+					'type' 			=> 'color',
 				),
 				'bgimg_link_color' => array(
-					'label' => T_('Link color on background image'),
-					'note' => T_('Default value is').' <code>#6cb2ef</code>.',
-					'defaultvalue' => '#6cb2ef',
-					'type' => 'color',
+					'label' 		=> T_('Link color on background image'),
+					'note' 			=> T_('Default value is').' <code>#6cb2ef</code>.',
+					'defaultvalue' 	=> '#6cb2ef',
+					'type' 			=> 'color',
 				),
 				'bgimg_hover_link_color' => array(
-					'label' => T_('Hover link color on background image'),
-					'note' => T_('Default value is').' <code>#6cb2ef</code>.',
-					'defaultvalue' => '#6cb2ef',
-					'type' => 'color',
+					'label' 		=> T_('Hover link color on background image'),
+					'note' 			=> T_('Default value is').' <code>#6cb2ef</code>.',
+					'defaultvalue'  => '#6cb2ef',
+					'type' 			=> 'color',
 				),
 				'panel_color' => array(
 					'label'			=> T_( 'Color Content Panel' ),
-					'note'			=> T_( 'Choose your favorite color content for Panel. Default value is' ).'  <code>#7e8082</code>.',
+					'note'			=> T_( 'Default value is' ).'  <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue' 	=> '#7e8082'
 				),
@@ -294,17 +294,17 @@ class bricks_Skin extends Skin
 			* ========================================================================== */
 			'section_nav_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Navigation Settings (All disps)' ),
+				'label'		=> T_( 'Navigation Settings' ).' (All disps)',
 			),
 				'nav_background' => array(
 					'label'			=> T_( 'Background Color' ),
-					'note'			=> T_( 'Choose your favorite background color for Main Menu. Default background color is' ).'  <code>#ffffff</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#ffffff</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#ffffff',
 				),
 				'nav_color_link'	=> array(
 					'label'			=> T_( 'Color Link Menu' ),
-					'note'			=> T_( 'Choose your favorite color link for navigation. Default color is' ).' <code>#4b4e53</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#4b4e53</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
 				),
@@ -316,19 +316,19 @@ class bricks_Skin extends Skin
 				),
 				'nav_background_sticky' => array(
 					'label'			=> T_( 'Background Color Sticky' ),
-					'note'			=> T_( 'Choose your favorite background color for Main Menu. Default background color is' ).'  <code>#ffffff</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#ffffff</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#ffffff',
 				),
 				'nav_color_link_sticky'	=> array(
 					'label'			=> T_( 'Color Link Menu Sticky' ),
-					'note'			=> T_( 'Choose your favorite color link for navigation. Default color is' ).' <code>#4b4e53</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#4b4e53</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
 				),
 				'nav_color_link_hover' => array(
 					'label'			=> T_( 'Color Link Hover Menu' ),
-					'note'			=> T_( 'Choose your favorite color link when the menu is hovering. Default color is' ).' <code>#111111</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#111111</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#111111'
 				),
@@ -340,13 +340,13 @@ class bricks_Skin extends Skin
 				),
 				'nav_cl_transparent' => array(
 					'label'			=> T_( 'Color Link Nav Background Transparent' ),
-					'note'			=> T_( 'Choose your favorite color link when the navigation background transparent. Default color is' ).' <code>#ffffff</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#ffffff</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#ffffff',
 				),
 				'nav_clh_transparent' => array(
 					'label'			=> T_( 'Color Link Hover Nav Background Transparent' ),
-					'note'			=> T_( 'Choose your favorite color link hover when the navigation background transparent. Default color is' ).' <code>#ff3b3b</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#ff3b3b</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#ff3b3b',
 				),
@@ -365,11 +365,11 @@ class bricks_Skin extends Skin
 			* ========================================================================== */
 			'section_header_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Main Header Settings (All disps)' ),
+				'label'		=> T_( 'Main Header Settings' ).' (All disps)',
 			),
 				'header_padding_top' => array(
 					'label'			=> T_( 'Padding Top Header Content' ),
-					'note'			=> T_( 'px. Add or encrease padding top content header. Default value is' ).' <code>320px</code>.',
+					'note'			=> T_( 'px. Default value is' ).' <code>320px</code>.',
 					'type'			=> 'integer',
 					'allow_empty'	=> false,
 					'defaultvalue'	=> '320',
@@ -377,7 +377,7 @@ class bricks_Skin extends Skin
 				),
 				'header_content_mode' => array(
 					'label'			=> T_( 'Header Content Mode' ),
-					'note'			=> T_( 'Select your favorite content mode for conten in header. Default value is').' <code>Float Mode</code>.',
+					'note'			=> T_( 'Default value is').' <code>Float Mode</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'col-md-6 float'	=> T_( 'Float Mode' ),
@@ -460,36 +460,36 @@ class bricks_Skin extends Skin
 				),
 				'header_color_overlay' => array(
 					'label'			=> T_( 'Change Color Overlay' ),
-					'note'			=> T_( 'Choose your favorite color for content overlay in header. Default color is ' ).'<code>#000000</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>#000000</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#000000'
 				),
 				'header_co_opacity' => array(
 					'label'			=> T_( 'Opacity Color Overlay' ),
-					'note'			=> T_( 'Choose value for opacity color overlay. Default value is ' ).'<code>0.5</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>0.5</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
-						'0'		=> T_( '0' ),
-						'0.05'	=> T_( '0.5' ),
-						'0.1'	=> T_( '0.1' ),
-						'0.15'	=> T_( '0.15' ),
-						'0.2'	=> T_( '0.2' ),
-						'0.25'	=> T_( '0.25' ),
-						'0.3'	=> T_( '0.3' ),
-						'0.35'	=> T_( '0.35' ),
-						'0.4'	=> T_( '0.4' ),
-						'0.45'	=> T_( '0.45' ),
-						'0.5'	=> T_( '0.5' ),
-						'0.55'	=> T_( '0.55' ),
-						'0.6'	=> T_( '0.6' ),
-						'0.65'	=> T_( '0.65' ),
-						'0.7'	=> T_( '0.7' ),
-						'0.75'	=> T_( '0.75' ),
-						'0.8'	=> T_( '0.8' ),
-						'0.85'	=> T_( '0.85' ),
-						'0.9'	=> T_( '0.9' ),
-						'0.95'	=> T_( '0.95' ),
-						'1'		=> T_( '0.1' ),
+						'0'		=> '0',
+						'0.05'	=> '0.5',
+						'0.1'	=> '0.1',
+						'0.15'	=> '0.15',
+						'0.2'	=> '0.2',
+						'0.25'	=> '0.25',
+						'0.3'	=> '0.3',
+						'0.35'	=> '0.35',
+						'0.4'	=> '0.4',
+						'0.45'	=> '0.45',
+						'0.5'	=> '0.5',
+						'0.55'	=> '0.55',
+						'0.6'	=> '0.6',
+						'0.65'	=> '0.65',
+						'0.7'	=> '0.7',
+						'0.75'	=> '0.75',
+						'0.8'	=> '0.8',
+						'0.85'	=> '0.85',
+						'0.9'	=> '0.9',
+						'0.95'	=> '0.95',
+						'1'		=> '0.1',
 					),
 					'defaultvalue'	=> '0.5'
 				),
@@ -501,37 +501,37 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_header_page_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Header Page Settings (custom disp)' ),
+				'label'		=> T_( 'Header Page Settings' ).' (custom disp)',
 			),
 				'header_page_bg' => array(
 					'label'			=> T_( 'Header Page Background' ),
-					'note'			=> T_( 'Choose your favorite background color for header page. Default value is ' ).'<code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee',
 				),
 				'header_page_color_content' => array(
 					'label'			=> T_( 'Header Content Color' ),
-					'note'			=> T_( 'Choose your favorite color for content header page. Default value is ' ).'<code>#4b4e53</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>#4b4e53</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
 				),
 				'header_page_pt' => array(
 					'label'			=> T_( 'Padding Top' ),
-					'note'			=> T_( 'px. Set the padding top for content in header page. Default value is ' ).'<code>160px</code>.',
+					'note'			=> T_( 'px. Default value is ' ).'<code>160px</code>.',
 					'type'			=> 'text',
 					'defaultvalue'	=> '160',
 					'size'			=> 4,
 				),
 				'header_page_pb' => array(
 					'label'			=> T_( 'Padding Bottom' ),
-					'note'			=> T_( 'px. Set the padding bottom for content in header page. Default value is ' ).'<code>60px</code>.',
+					'note'			=> T_( 'px. Default value is ' ).'<code>60px</code>.',
 					'type'			=> 'text',
 					'defaultvalue'	=> '60',
 					'size'			=> 4,
 				),
 				'header_page_content_mode' => array(
 					'label'			=> T_( 'Header Content Mode' ),
-					'note'			=> T_( 'Select your favorite content mode for conten in header. Default value is ' ).'<code>Float Mode</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>Float Mode</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'col-md-6 float'	=> T_( 'Float Mode' ),
@@ -547,11 +547,11 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_posts_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Posts Settings (Posts disps)' ),
+				'label'		=> T_( 'Posts Settings' ).' (Posts disps)',
 			),
 				'posts_header' => array(
 					'label'			=> T_( 'Posts Header Style' ),
-					'note'			=> T_( 'Choose header style for disp posts. Default value is ' ).'<code>Header Main</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>Header Main</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'header_main' => T_( 'Main Header' ),
@@ -581,19 +581,19 @@ class bricks_Skin extends Skin
 				),
 				'posts_column' => array(
 					'label'			=> T_( 'Posts Column' ),
-					'note'			=> T_( 'Select column for posts layout. Default value is ' ).'<code>3 Columns</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>3 Columns</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
-						'one_column'	=> T_( '1 Column' ),
-						'two_columns'	=> T_( '2 Columns' ),
-						'three_columns'	=> T_( '3 Columns' ),
-						'four_columns'	=> T_( '4 Columns' ),
+						'one_column'	=> '1 Column',
+						'two_columns'	=> '2 Columns',
+						'three_columns'	=> '3 Columns',
+						'four_columns'	=> '4 Columns',
 					),
 					'defaultvalue'	=> 'three_columns'
 				),
 				'posts_padding_column' => array(
 					'label'			=> T_( 'Padding Post Column' ),
-					'note'			=> T_( 'px. Set the padding for column post. Default value is ' ).'<code>15px</code>.',
+					'note'			=> T_( 'px. Default value is' ).' <code>15px</code>.',
 					'type'			=> 'integer',
 					'defaultvalue'	=> '15',
 					'size'			=> 3,
@@ -601,25 +601,25 @@ class bricks_Skin extends Skin
 				),
 				'posts_border_color' => array(
 					'label'			=> T_( 'Posts Border Color' ),
-					'note'			=> T_( 'Choose your favorite border color for posts. Default value is ' ).'<code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee'
 				),
 				'posts_featured_bg' => array(
 					'label'			=> T_( 'Background Featured Post' ),
-					'note'			=> T_( 'Choose your favorite background color for featured post. Default value is ' ).'<code>#f5f5f5</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#f5f5f5</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#f5f5f5'
 				),
 				'posts_featured_color' => array(
 					'label'			=> T_( 'Color Content Featured Post' ),
-					'note'			=> T_( 'Choose your favorite color for content featured post. Default value is ' ).'<code>#7e8082</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue' 	=> '#7e8082'
 				),
 				'posts_featured_border' => array(
 					'label'			=> T_( 'Featured Posts Border Color' ),
-					'note'			=> T_( 'Choose your favorite border-color for content featured post. Default value is ' ).'<code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee'
 				),
@@ -631,7 +631,7 @@ class bricks_Skin extends Skin
 				),
 				'posts_pagination_align' => array(
 					'label'			=> T_( 'Pagination Align' ),
-					'note'			=> T_( 'Select align for pagination on disp posts. Default value is ' ).'<code>Left</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>Left</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'left'		=> T_( 'Left' ),
@@ -649,11 +649,11 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_single_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Single Settings (disp=single||disp=page)' ),
+				'label'		=> T_( 'Single Settings' ).' (disp=single||disp=page)',
 			),
 				'single_header'	=> array(
 					'label'			=> T_( 'Single Header Style' ),
-					'note'			=> T_( 'Choose header style for single page. Default value is ' ).'<code>Header Page</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>Header Page</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'header_main'	=> T_( 'Main Header' ),
@@ -663,19 +663,19 @@ class bricks_Skin extends Skin
 				),
 				'single_border_color' => array(
 					'label'			=> T_( 'Border Color' ),
-					'note'			=> T_( 'Choose your favorite border-color for single disp. Default value is ' ).'<code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee'
 				),
 				'single_comments_bg' => array(
 					'label'			=> T_( 'Background Comments' ),
-					'note'			=> T_( 'Choose your favorite background color for comments form section. Default value is ' ).'<code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee',
 				),
 				'single_comment_color' => array(
 					'label'			=> T_( 'Color Content Comments' ),
-					'note'			=> T_( 'Choose your favorite color for content comments single. Default value is ' ).'<code>#7e8082</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#7e8082'
 				),
@@ -688,11 +688,11 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_search_start' => array(
 				'layout'		=> 'begin_fieldset',
-				'label'			=> T_( 'Search Settings (disp=search)' ),
+				'label'			=> T_( 'Search Settings' ).' (disp=search)',
 			),
 				'search_header'	=> array(
 					'label'			=> T_( 'Search Header' ),
-					'note'			=> T_( 'Chose header style for Search Disp. Default value is ' ).'<code>Header Page</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>Header Page</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'header_main' => T_( 'Main Header' ),
@@ -711,9 +711,9 @@ class bricks_Skin extends Skin
 					'note'			=> T_( 'Choose the pagination align for disp=search.' ),
 					'type'			=> 'select',
 					'options'		=> array(
-						'left'	=> T_( 'Left' ),
-						'center' => T_( 'Center' ),
-						'right'	=> T_( 'Right' ),
+						'left'		=> T_( 'Left' ),
+						'center' 	=> T_( 'Center' ),
+						'right'		=> T_( 'Right' ),
 					),
 					'defaultvalue' => 'center',
 				),
@@ -726,7 +726,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_gallery_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Gallery Setting (disp=mediaidx)' )
+				'label'		=> T_( 'Gallery Setting' ).' (disp=mediaidx)',
 			),
 				'gallery_header' => array(
 					'label'			=> T_( 'Mediaidx Header' ),
@@ -750,19 +750,25 @@ class bricks_Skin extends Skin
 					'note'			=> T_( 'Set column of Gallery Image.' ),
 					'type'			=> 'select',
 					'options'		=> array(
-						'one_column'	=> T_( 'One Column' ),
-						'two_columns'	=> T_( 'Two Columns' ),
-						'three_columns'	=> T_( 'Three Columns' ),
-						'four_columns'	=> T_( 'Four Columns' ),
+						'one_column'	=> T_( '1 Column' ),
+						'two_columns'	=> T_( '2 Columns' ),
+						'three_columns'	=> T_( '3 Columns' ),
+						'four_columns'	=> T_( '4 Columns' ),
 					),
 					'defaultvalue'	=> 'three_columns'
 				),
 				'gallery_gutter' => array(
 					'label'			=> T_( 'Gallery Gutter' ),
-					'note'			=> T_( 'px. Set space content image for the gallery. Default value is' ).' <code>10px</code>.',
+					'note'			=> T_( 'px. Default value is' ).' <code>10px</code>.',
 					'type'			=> 'text',
 					'defaultvalue'	=> '10',
 					'size'			=> 3,
+				),
+				'gallery_title'	=> array(
+					'label'			=> T_( 'Show Title Post' ),
+					'note'			=> T_(''),
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 1,
 				),
 			'section_gallery_end' => array(
 				'layout'	=> 'end_fieldset',
@@ -773,7 +779,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_contact_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Contact Settings (disp=msgform)' ),
+				'label'		=> T_( 'Contact Settings' ).' (disp=msgform)',
 			),
 				'contact_map_show' => array(
 					'label'			=> T_( 'Show Maps' ),
@@ -797,27 +803,27 @@ class bricks_Skin extends Skin
 				),
 				'contact_map_zoom' => array(
 					'label'			=> T_( 'Zoom Map' ),
-					'note'			=> T_( 'Set value zoom for map. Default value is ' ).'<code>16</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>16</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
-						'1'	=> T_( '1' ),
-						'2'	=> T_( '2' ),
-						'3'	=> T_( '3' ),
-						'4'	=> T_( '4' ),
-						'5'	=> T_( '5' ),
-						'6'	=> T_( '6' ),
-						'7'	=> T_( '7' ),
-						'8'	=> T_( '8' ),
-						'9'	=> T_( '9' ),
-						'10' => T_( '10' ),
-						'11' => T_( '11' ),
-						'12' => T_( '12' ),
-						'13' => T_( '13' ),
-						'14' => T_( '14' ),
-						'15' => T_( '15' ),
-						'16' => T_( '16' ),
-						'17' => T_( '17' ),
-						'18' => T_( '18' ),
+						'1'	=> '1',
+						'2'	=> '2',
+						'3'	=> '3',
+						'4'	=> '4',
+						'5'	=> '5',
+						'6'	=> '6',
+						'7'	=> '7',
+						'8'	=> '8',
+						'9'	=> '9',
+						'10' => '10',
+						'11' => '11',
+						'12' => '12',
+						'13' => '13',
+						'14' => '14',
+						'15' => '15',
+						'16' => '16',
+						'17' => '17',
+						'18' => '18',
 					),
 					'defaultvalue'	=> 16,
 				),
@@ -904,13 +910,13 @@ class bricks_Skin extends Skin
 				),
 				'contact_info_bg' => array(
 					'label'			=> T_( 'Background Contact Info' ),
-					'note'			=> T_( 'Choose your favorite background color for Contact Info. Default value is ' ).'<code>#f5f5f5</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#f5f5f5</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#f5f5f5',
 				),
 				'contact_info_color' => array(
 					'label'			=> T_( 'Color Content Contact Info' ),
-					'note'			=> T_( 'Choose your favorite color content for contact info. Default value is ' ).'<code>#7e8082</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#7e8082'
 				),
@@ -923,7 +929,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_special_widget_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Spesial Widget Settings (All Disp)' )
+				'label'		=> T_( 'Spesial Widget Settings' ).' (All Disp)',
 			),
 				'sw_rm_button' => array(
 					'label'			=> T_( 'List-type Widgets "Read More" button' ),
@@ -933,31 +939,31 @@ class bricks_Skin extends Skin
 				),
 				'sw_bg_wl'	=> array(
 					'label'			=> T_( 'Background RWD Widget List' ),
-					'note'			=> T_( 'Change background content for RWD widget list. Default value is' ).' <code>#fafafa</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#fafafa</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#fafafa'
 				),
 				'sw_tag_color' => array(
 					'label'			=> T_( 'Color Tag Cloud Widget' ),
-					'note'			=> T_( 'Choose your favorite color for tag cloud on sidebar. Default value is' ).' <code>#7e8082</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#7e8082',
 				),
 				'sw_tag_border' => array(
 					'label'			=> T_( 'Border Color Tag Cloud Widget' ),
-					'note'			=> T_( 'Change border color for tag cloud widget on sidebar. Default value is' ).' <code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee',
 				),
 				'sw_tag_color_hover' => array(
 					'label'			=> T_( 'Color Tag Cloud Widget Hover' ),
-					'note'			=> T_( 'Change border color for tag cloud widget on sidebar. Default value is' ).' <code>#ffffff</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#ffffff</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#ffffff',
 				),
 				'sw_tag_bg_hover' => array(
 					'label'			=> T_( 'Background Tag Cloud Widget Hover' ),
-					'note'			=> T_( 'Change background color for tag cloud widget when hover. Default value is' ).' <code>#4b4e53</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>#4b4e53</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
 				),
@@ -970,11 +976,11 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_footer_start' => array(
 				'layout'	=> 'begin_fieldset',
-				'label'		=> T_( 'Footer Settings (All disps)' ),
+				'label'		=> T_( 'Footer Settings' ).' (All disps)',
 			),
 				'footer_background'	=> array(
 					'label'			=> T_( 'Background Color' ),
-					'note'			=> T_( 'Choose your favorite background color for footer container. Default background color is ' ).'<code>#ffffff</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>#ffffff</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#ffffff'
 				),
@@ -986,7 +992,7 @@ class bricks_Skin extends Skin
 				),
 				'footer_widgets_columns' => array(
 					'label'			=> T_( 'Widget Footer Column' ),
-					'note'			=> T_( 'Select column for widget footer area. Default value is ' ).'<code>3 Columns</code>.',
+					'note'			=> T_( 'Default value is' ).' <code>3 Columns</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'col-md-12' => T_( '1 Column' ),
@@ -998,31 +1004,31 @@ class bricks_Skin extends Skin
 				),
 				'footer_wd_title_color' => array(
 					'label'			=> T_( 'Widget Color Title' ),
-					'note'			=> T_( 'Choose your favorite color for widget title. Default color is ' ).'<code>#4b4e53</code>.',
+					'note'			=> T_( 'Default color is' ).' <code>#4b4e53</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#4b4e53'
 				),
 				'footer_wd_content_color' => array(
 					'label'			=> T_( 'Widget Color Content' ),
-					'note'			=> T_( 'Choose your favorite color for widget title. Default color is ' ).'<code>#7e8082</code>.',
+					'note'			=> T_( 'Default color is' ).' <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#7e8082',
 				),
 				'footer_wd_color_link' => array(
 					'label'			=> T_( 'Widget Color Link' ),
-					'note'			=> T_( 'Choose your favorite color for link in widget. Default color is ' ).'<code>#7e8082</code>.',
+					'note'			=> T_( 'Default color is' ).' <code>#7e8082</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#7e8082',
 				),
 				'footer_wd_color_lh' => array(
 					'label'			=> T_( 'Widget Color Link Hover' ),
-					'note'			=> T_( 'Choose your favorite hover color link for widget. Default color is ' ).'<code>#101010</code>.',
+					'note'			=> T_( 'Default color is ' ).' <code>#101010</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#101010'
 				),
 				'footer_bottom_mode' => array(
 					'label'			=> T_( 'Footer Bottom Mode' ),
-					'note'			=> T_( 'Change footer bottom content with mode view. Default value is ' ).'<code>Float Mode</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>Float Mode</code>.',
 					'type'			=> 'select',
 					'options'		=> array(
 						'float'		=> T_( 'Float Mode' ),
@@ -1032,7 +1038,7 @@ class bricks_Skin extends Skin
 				),
 				'footer_border_color' => array(
 					'label'			=> T_( 'Border Color' ),
-					'note'			=> T_( 'Change the border color for footer widget bottom. Default value is ' ).'<code>#eeeeee</code>.',
+					'note'			=> T_( 'Default value is ' ).'<code>#eeeeee</code>.',
 					'type'			=> 'color',
 					'defaultvalue'	=> '#eeeeee',
 				),
@@ -1057,7 +1063,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_colorbox_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Colorbox Image Zoom (All disps)')
+				'label'  => T_('Colorbox Image Zoom').' (All disps)',
 			),
 				'colorbox' => array(
 					'label' => T_('Colorbox Image Zoom'),
@@ -1195,7 +1201,6 @@ class bricks_Skin extends Skin
 		) );
 
 		// INCLUDE THE SCRIPTS
-		// require_js( $this->get_url().'assets/scripts/shuffle.min.js' );
 		require_js( 'assets/scripts/masonry.pkgd.min.js', 'relative' );
 
 		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
@@ -1576,7 +1581,7 @@ class bricks_Skin extends Skin
 			$custom_css .= '.disp_posts #grid_posts { margin-left: -'.$padding.'px; margin-right: -'.$padding.'px; }';
 		}
 		if ( $color = $this->get_setting( 'posts_featured_bg' ) ) {
-			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_image, .disp_posts #grid_posts .featured_posts .evo_post_title, .disp_posts #grid_posts .featured_posts .evo_post_info, .disp_posts #grid_posts .featured_posts .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_footer_info { background-color: $color }";
+			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_image, .disp_posts #grid_posts .featured_posts .evo_post_title, .disp_posts #grid_posts .featured_posts .evo_post_info, .disp_posts #grid_posts .featured_posts .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_footer_info, .disp_posts #grid_posts .featured_posts .evo_post__full { background-color: $color }";
 			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post_info { opacity: 1; }";
 		}
 		if( $color = $this->get_setting( 'posts_featured_color' ) ) {

@@ -19,6 +19,10 @@ global $thumbnail_sizes, $Item, $Skin;
 
 $column = $Skin->change_class( 'gallery_column' );
 $thumb_size = $Skin->get_setting( 'gallery_thumb' );
+$title = '';
+if ( $Skin->get_setting( 'gallery_title' ) == 1 ) {
+	$title = true;
+}
 
 // Merge the params from current skin
 $params = array_merge( array(
@@ -35,7 +39,7 @@ skin_widget( array(
 	'block_end'           => '</div>',
 	'block_display_title' => false,
 
-    'disp_image_title'    => true,
+    'disp_image_title'    => $title,
 	'thumb_size'          => $params['mediaidx_thumb_size'],
 	'thumb_layout'        => 'list',
 
