@@ -22,7 +22,7 @@ $pag_align = $Skin->change_class( 'posts_pagination_align' );
 
 
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
-if ( $Skin->get_setting( 'posts_top_pagination' ) == 1 ) :
+if ( $Skin->get_setting( 'posts_top_pagination' ) == 1 && $Blog->get_setting( 'posts_per_page' ) >= 5 ) :
 	mainlist_page_links( array(
 		'block_start'           => '<div class="evo_post_pagination '.$pag_align.' top_pagin"><ul class="pagination">',
 		'block_end'             => '</ul></div>',
@@ -53,6 +53,8 @@ while( mainlist_get_item() )
 } // ---------------------------------- END OF POSTS ------------------------------------
 echo '</div>';
 // -------------------- PREV/NEXT PAGE LINKS (POST LIST MODE) --------------------
+
+if ( $Blog->get_setting( 'posts_per_page' ) >= 3 ) {
 mainlist_page_links( array(
 	'block_start'           => '<div class="evo_post_pagination '.$pag_align.'"><ul class="pagination">',
 	'block_end'             => '</ul></div>',
@@ -64,5 +66,6 @@ mainlist_page_links( array(
 	'prev_text'             => '<i class="ei ei-arrow_carrot-left"></i>',
 	'next_text'             => '<i class="ei ei-arrow_carrot-right"></i>',
 ) );
+}
 // ------------------------- END OF PREV/NEXT PAGE LINKS -------------------------
 ?>
