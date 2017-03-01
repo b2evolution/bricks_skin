@@ -77,6 +77,47 @@
 		}
 	}
 
+	.cat_list {
+		display: block;
+		width: 100%;
+		margin: 0 auto 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		text-align: center;
+
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+
+			li {
+				display: inline-block;
+				text-transform: uppercase;
+				font-size: 1rem;
+				letter-spacing: 1px;
+				margin: 0 3px 5px;
+				padding: 5px 13px;
+				border: 1px solid @e;
+				transition: all 0.2s ease-in-out;
+
+				a {
+					color: @color-body;
+				}
+			}
+
+			.evo_cat_all,
+			.selected {
+				color: @w;
+				background-color: @color-link;
+				border-color: @color-link;
+
+				a {
+					color: @w;
+				}
+			}
+		}
+	}
+
 
 	// FEATURED POST
 	// ======================================================================== /
@@ -479,4 +520,23 @@
 		}
 	}
 
+}
+
+
+// CATEGORY LIST
+// ======================================================================== /
+.detail_posts-topcat {
+
+	.evo_title_disp {
+		text-align: center;
+	}
+
+	.cat_list ul .evo_cat_all {
+	    background-color: transparent;
+	    border-color: @e;
+
+		a {
+			color: @color-body;
+		}
+	}
 }

@@ -85,6 +85,7 @@ skin_include( $header );
 						'glue'               => ' - ',
 						'title_single_disp'  => false,
 						'title_page_disp'    => false,
+						'title_cat_disp' 	 => false,
 						'format'             => 'htmlbody',
 						'display_edit_links' => false,
 						'category_text'      => '',

@@ -21,7 +21,7 @@ if( evo_version_compare( $app_version, '6.4' ) < 0 )
 	die( 'This skin is designed for b2evolution 6.4 and above. Please <a href="http://b2evolution.net/downloads/index.html">upgrade your b2evolution</a>.' );
 }
 
-global $cat, $disp;
+global $cat, $disp, $Item;
 
 $header = '';
 if ( $Skin->get_setting( 'posts_header' ) == 'header_main' ) {
@@ -125,7 +125,7 @@ skin_include( $header );
 				}
 				?>
 
-				<?php if( $Skin->get_setting( 'category_list_filter' ) == 1 ) : ?>
+				<!-- <?php if( $Skin->get_setting( 'category_list_filter' ) == 1 ) : ?>
 				<div class="filters">
 					<ul id="filters-nav" class="nav nav-gallery">
 					<?php
@@ -154,7 +154,20 @@ skin_include( $header );
 					?>
 					</ul>
 				</div>
-				<?php endif; ?>
+				<?php endif; ?> -->
+
+
+				<?php
+
+	                skin_widget( array(
+	                    // CODE for the widget:
+	                    'widget'               => 'coll_category_list',
+	                    // Optional display params
+						'block_start'         => '<div class="evo_widget $wi_class$ cat_list">',
+						'block_end'           => '</div>',
+						'block_display_title' => false,
+	                ) );
+				 ?>
 
 				<?php
 					// -------------- MAIN CONTENT TEMPLATE INCLUDED HERE (Based on $disp) --------------
