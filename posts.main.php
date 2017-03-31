@@ -125,40 +125,7 @@ skin_include( $header );
 				}
 				?>
 
-				<!-- <?php if( $Skin->get_setting( 'category_list_filter' ) == 1 ) : ?>
-				<div class="filters">
-					<ul id="filters-nav" class="nav nav-gallery">
-					<?php
-						// Get only root categories of this blog
-						$ChapterCache = & get_ChapterCache();
-						$Chapters = $ChapterCache->get_chapters( $Blog->ID, $cat, true );
-
-						echo '<li class="filtr-button filtr active" data-filter="all">All</li>';
-						if( count( $Chapters ) > 0 ) {
-							foreach( $Chapters as $root_Chapter )
-							{ // Loop through categories:Chapter...
-								$count_post = get_postcount_in_category( $root_Chapter->ID );
-								if ( $count_post > 0 ) {
-									echo '<li class="filtr-button filtr" data-filter="' . $root_Chapter->get('ID') . '">' . $root_Chapter->get('name') . '</li>';
-								}
-								$chapters_children = $root_Chapter->get_children( true );
-								foreach( $chapters_children as $Chapter ) {
-									$count_post_parent = get_postcount_in_category( $Chapter->ID );
-
-									if( $count_post_parent > 0 ) {
-										echo '<li class="filtr-button filtr" data-filter="' . $Chapter->get('ID') . '">' . $Chapter->get('name') . '</li>';
-									}
-								}
-							}
-						}
-					?>
-					</ul>
-				</div>
-				<?php endif; ?> -->
-
-
 				<?php
-
 	                skin_widget( array(
 	                    // CODE for the widget:
 	                    'widget'               => 'coll_category_list',
@@ -166,6 +133,7 @@ skin_include( $header );
 						'block_start'         => '<div class="evo_widget $wi_class$ cat_list">',
 						'block_end'           => '</div>',
 						'block_display_title' => false,
+						'level' => 1,
 	                ) );
 				 ?>
 
