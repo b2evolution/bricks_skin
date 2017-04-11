@@ -441,17 +441,17 @@ class bricks_Skin extends Skin
 					),
 					'defaultvalue'	=> 'initial',
 				),
-				'header_bg_size' => array(
-					'label'			=> T_( 'Background Size' ),
-					'note'			=> T_( 'Set the background size.' ),
-					'type'			=> 'select',
-					'options'		=> array(
-						'initial' => T_( 'Initial' ),
-						'contain' => T_( 'Contain' ),
-						'cover'	  => T_( 'Cover' ),
-					),
-					'defaultvalue'	=> 'cover',
-				),
+				// 'header_bg_size' => array(
+				// 	'label'			=> T_( 'Background Size' ),
+				// 	'note'			=> T_( 'Set the background size.' ),
+				// 	'type'			=> 'select',
+				// 	'options'		=> array(
+				// 		'initial' => T_( 'Initial' ),
+				// 		'contain' => T_( 'Contain' ),
+				// 		'cover'	  => T_( 'Cover' ),
+				// 	),
+				// 	'defaultvalue'	=> 'cover',
+				// ),
 				'header_overlay' => array(
 					'label'			=> T_( 'Color Overlay' ),
 					'note'			=> T_( 'Checkbox to enable color overlay for header.' ),
@@ -1228,70 +1228,22 @@ class bricks_Skin extends Skin
 		}
 
 		if( $disp == 'posts' ) {
-			if ( $this->get_setting( 'category_list_filter' ) == 1 ) {
-				require_js( 'assets/scripts/jquery.filterizr.min.js', 'relative' );
-				$layout_cat_list_filter = 'sameWidth';
-				add_js_headline("
-				jQuery( document ).ready( function(event){
-					'use strict';
-					var filterizd_var = function() {
-						var id = $( '#filters-nav li' );
-						var grid = $( '.grid' );
-
-						$( id ).click( function(event) {
-							$(id).removeClass('active');
-							$(this).addClass('active');
-							event.preventDefault();
-						});
-
-						//Default options
-						var options = {
-						   animationDuration: 0.4, //in seconds
-						   filter: 'all', //Initial filter
-						   delay: 50, //Transition delay in ms
-						   delayMode: 'alternate', //'progressive' or 'alternate'
-						   easing: 'ease-out',
-						   filterOutCss: { //Filtering out animation
-						      opacity: 0,
-						      transform: 'scale(0.3)'
-						   },
-						   filterInCss: { //Filtering in animation
-						      opacity: 1,
-						      transform: 'scale(1)'
-						   },
-						   layout: '$layout_cat_list_filter', //See layouts
-						   selector: '.grid',
-						   setupControls: true,
-						}
-
-						if( grid != null ){
-							var filterizd = $( grid ).filterizr(options);
-						}
-					};
-
-					$(window).load( function() {
-						filterizd_var();
+			add_js_headline("
+			jQuery( document ).ready( function(event){
+				'use strict';
+				var posts_masonry = function() {
+					$('.grid').masonry({
+						// options
+						itemSelector: '.filtr-item',
+						// columnWidth: 200
 					});
-				});
-				");
-			} else {
-				add_js_headline("
-				jQuery( document ).ready( function(event){
-					'use strict';
-					var posts_masonry = function() {
-						$('.grid').masonry({
-							// options
-							itemSelector: '.filtr-item',
-							// columnWidth: 200
-						});
-					};
+				};
 
-					$(window).load( function() {
-						posts_masonry();
-					});
+				$(window).load( function() {
+					posts_masonry();
 				});
-				");
-			};
+			});
+			");
 		};
 
 
@@ -1546,9 +1498,9 @@ class bricks_Skin extends Skin
 		if( $bg_header_attach = $this->get_setting( 'header_bg_attachment' ) ) {
 			$custom_css .= '#main_header { background-attachment: '.$bg_header_attach.' }';
 		}
-		if( $bg_header_size  = $this->get_setting( 'header_bg_size' ) ) {
-			$custom_css .= '#main_header { background-size: '.$bg_header_size.' }';
-		}
+		// if( $bg_header_size  = $this->get_setting( 'header_bg_size' ) ) {
+		// 	$custom_css .= '#main_header { background-size: '.$bg_header_size.' }';
+		// }
 		if( $this->get_setting( 'header_overlay' ) == 0 ) {
 			$custom_css .= '#main_header:after{ display: none; }';
 		} else {

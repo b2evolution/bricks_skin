@@ -134,6 +134,7 @@ skin_include( $header );
 							'block_start'         => '<div class="evo_widget $wi_class$ cat_list">',
 							'block_end'           => '</div>',
 							'block_display_title' => false,
+							'level' 			  => 1,
 		                ) );
 					endif;
 				 ?>
