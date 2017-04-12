@@ -229,7 +229,7 @@ class bricks_Skin extends Skin
 			 * ========================================================================== */
 			'section_color_start' => array(
 				'layout' => 'begin_fieldset',
-				'label'  => T_('Custom Settings').' (All disps)',
+				'label'  => T_('Custom Settings'),
 			),
 				'page_bg_color' => array(
 					'label' 		=> T_('Background color'),
@@ -574,8 +574,8 @@ class bricks_Skin extends Skin
 					'type' => 'select',
 				),
 				'category_list_filter' => array(
-					'label'			=> T_( 'Category List Posts Filters' ),
-					'note'			=> T_( 'Check to enable Category list Filters Posts.' ),
+					'label'			=> T_( 'Category List Post' ),
+					'note'			=> T_( 'Check to show categories <list></list> Posts.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 0,
 				),
