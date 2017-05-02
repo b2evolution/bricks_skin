@@ -391,29 +391,11 @@ class bricks_Skin extends Skin
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 1,
 				),
-				'header_bgi_source' => array(
-					'label'			=> T_( 'Background Image Source' ),
-					'note'			=> T_( 'Set the background image  source for header.' ),
-					'type'			=> 'select',
-					'options'		=> array(
-						'image_asset' => T_( 'Image Asset' ),
-						'custom_bg_image' => T_( 'Custom Banckground Image' ),
-					),
-					'defaultvalue'	=> 'image_asset',
-				),
 				'header_bg_image' => array(
-					'label'			=> T_( 'Background Images' ),
-					'note'			=> T_( 'Choose your favorite image for set the header background image.' ),
-					'type'			=> 'radio',
-					'options'		=> $arr_bodybg,
-					'defaultvalue'	=> reset( $arr_bodybg[0] ),
-				),
-				'header_custom_bgi'	=> array(
-					'label'			=> T_( 'Custom Background Image' ),
-					'note'			=> T_( '( Please create a folder named ').'<code><b>'.str_replace("/","",$custom_headerbg_cat).'</b></code>'.T_(' in your collection media folder and put the images into it. Now ').'<a href="admin.php?ctrl=files" target="_blank"><i>'.T_('Create folder or Upload images').'</i></a> ).',
-					'type'			=> 'radio',
-					'options'		=> $arr_custom_headerbg,
-					'defaultvalue'	=> reset( $arr_custom_headerbg[0] ),
+					'label' => T_('Background image'),
+					'type' => 'fileselect',
+					'initialize_with' => 'skins/bricks_skin/assets/images/header/header-6.jpg',
+					'thumbnail_size' => 'fit-320x320'
 				),
 				'header_bg_pos_x' => array(
 					'label'			=> T_( 'Bakcground Position X' ),
@@ -1481,12 +1463,24 @@ class bricks_Skin extends Skin
 			$custom_css .= '@media screen and ( min-width: 1024px ) { #main_header { padding-top: '.$padding.'px } }';
 		}
 
-		if( $this->get_setting( 'header_bgi_source' ) == 'image_asset' ) {
-			$header_bgi_asset = $this->get_setting( 'header_bg_image' );
-			$custom_css .= '#main_header { background-image: url( \''.$header_bgi_asset.'\' ) }';
-		} else {
-			$header_bgi_custom = $this->get_setting( 'header_custom_bgi' );
-			$custom_css .= '#main_header { background-image: url( \''.$header_bgi_custom.'\' ) }';
+		if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
+		{
+			$FileCache = & get_FileCache();
+
+			if( $this->get_setting( 'header_bg_image' ) ) {
+				$bg_image_File = & $FileCache->get_by_ID( $this->get_setting( 'header_bg_image' ), false, false );
+			}
+
+
+			if( !empty( $bg_image_File ) && $bg_image_File->exists() )
+			{ // Custom body background image:
+				$custom_css .= '#main_header { background-image: url('.$bg_image_File->get_url().") }\n";
+			}
+			else
+			{
+				$color = $this->get_setting( 'front_bg_color' );
+				$custom_css .= '.evo_pictured_layout { background: '.$color." }\n";
+			}
 		}
 
 		$bg_header_x = $this->get_setting( 'header_bg_pos_x');
