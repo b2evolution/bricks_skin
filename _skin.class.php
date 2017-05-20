@@ -314,7 +314,7 @@ class bricks_Skin extends Skin
 					'type'			=> 'color',
 					'defaultvalue'	=> '#111111'
 				),
-				
+
 			'section_stickynav_start' => array(
 				'layout'	=> 'begin_fieldset',
 				'label'		=> T_( 'Sticky Navigation Settings' ),
@@ -324,12 +324,6 @@ class bricks_Skin extends Skin
 					'note'			=> T_( 'Check to enable sticky (fixed) navigation when scrolling.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 1,
-				),
-				'nav_bg_transparent' => array(
-					'label'			=> T_( 'Background Transparent' ),
-					'note'			=> T_( 'Check to enable transparent menu background. It will work with ').'<strong>'.T_('Main Header Style').'</strong>.',
-					'type'			=> 'checkbox',
-					'defaultvalue'	=> 0,
 				),
 				'nav_background_sticky' => array(
 					'label'			=> T_( 'Sticky Menu Background Color' ),
@@ -346,7 +340,13 @@ class bricks_Skin extends Skin
 			'section_stickynav_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
-			
+
+				'nav_bg_transparent' => array(
+					'label'			=> T_( 'Background Transparent' ),
+					'note'			=> T_( 'Check to enable transparent menu background. It will work with ').'<strong>'.T_('Main Header Style').'</strong>.',
+					'type'			=> 'checkbox',
+					'defaultvalue'	=> 0,
+				),
 				'nav_cl_transparent' => array(
 					'label'			=> T_( 'Color Link Nav Background Transparent' ),
 					'note'			=> T_( 'Default value is' ).' <code>#ffffff</code>.',
@@ -508,9 +508,9 @@ class bricks_Skin extends Skin
 				),
 				'header_page_pt' => array(
 					'label'			=> T_( 'Padding Top' ),
-					'note'			=> T_( 'px. Default value is ' ).'<code>160px</code>.',
+					'note'			=> T_( 'px. Default value is ' ).'<code>80px</code>.',
 					'type'			=> 'text',
-					'defaultvalue'	=> '160',
+					'defaultvalue'	=> '80',
 					'size'			=> 4,
 				),
 				'header_page_pb' => array(
@@ -1423,7 +1423,7 @@ class bricks_Skin extends Skin
 		/* NAVIGATION OPTIONS
 		 * ========================================================================== */
 		if( $bg = $this->get_setting( 'nav_background' ) ) {
-			$custom_css .= '#nav.nav_page, #nav.nav_bgt { background-color: '.$bg.' }';
+			$custom_css .= '#nav, #nav.nav_page, #nav.nav_bgt { background-color: '.$bg.' }';
 		}
 		if( $color = $this->get_setting( 'nav_background_sticky' ) ) {
 			$custom_css .= "#nav.fixed, #nav.nav_bgt.fixed{ background-color: $color }";

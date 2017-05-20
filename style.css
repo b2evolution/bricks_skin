@@ -38,6 +38,9 @@ a:focus {
   color: #97999c;
   text-decoration: none;
 }
+p {
+  word-wrap: break-word;
+}
 .fixed {
   position: fixed;
 }
@@ -137,10 +140,8 @@ textarea.message_text {
   top: 26px;
 }
 #nav {
-  position: absolute;
-  margin-top: -1px;
+  position: relative;
   width: 100%;
-  z-index: 29;
   background-color: #ffffff;
   -webkit-transition: background 0.3s ease, height 0.6s ease;
   transition: background 0.3s ease, height 0.6s ease;
@@ -149,6 +150,11 @@ textarea.message_text {
   #nav {
     position: relative;
   }
+}
+#nav.nav_bgt {
+  position: absolute;
+  margin-top: -1px;
+  z-index: 29;
 }
 #nav.nav_page {
   background-color: #ffffff;
@@ -524,6 +530,7 @@ textarea.message_text {
   margin-top: 0;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
+  z-index: 9988;
   -webkit-transition: background 0.3s ease, height 0.4s ease;
   transition: background 0.3s ease, height 0.4s ease;
 }
@@ -842,7 +849,8 @@ div.bSideItem h4 {
   margin-top: 0;
 }
 .evo_form .SaveButton,
-.evo_form .submit {
+.evo_form .submit,
+.evo_form .preview {
   background-color: #4b4e53;
   border-color: #4b4e53;
   font-family: 'Lato', Arial, Helvetica, sans-serif;
@@ -858,32 +866,40 @@ div.bSideItem h4 {
 }
 @media screen and (max-width: 480px) {
   .evo_form .SaveButton,
-  .evo_form .submit {
+  .evo_form .submit,
+  .evo_form .preview {
     font-size: 1.1rem;
   }
 }
 .evo_form .SaveButton:hover,
 .evo_form .submit:hover,
+.evo_form .preview:hover,
 .evo_form .SaveButton:active,
 .evo_form .submit:active,
+.evo_form .preview:active,
 .evo_form .SaveButton:focus,
-.evo_form .submit:focus {
+.evo_form .submit:focus,
+.evo_form .preview:focus {
   background-color: #101010;
   border-color: #101010;
   outline: 0;
 }
 .evo_form .SaveButton.btn-info,
-.evo_form .submit.btn-info {
+.evo_form .submit.btn-info,
+.evo_form .preview.btn-info {
   background-color: #5bc0de;
   border-color: #5bc0de;
   box-shadow: none;
 }
 .evo_form .SaveButton.btn-info:hover,
 .evo_form .submit.btn-info:hover,
+.evo_form .preview.btn-info:hover,
 .evo_form .SaveButton.btn-info:active,
 .evo_form .submit.btn-info:active,
+.evo_form .preview.btn-info:active,
 .evo_form .SaveButton.btn-info:focus,
-.evo_form .submit.btn-info:focus {
+.evo_form .submit.btn-info:focus,
+.evo_form .preview.btn-info:focus {
   background-color: #31b0d5;
   border-color: #31b0d5;
 }
@@ -3099,7 +3115,7 @@ div.extended_search_form .search_options .search_option {
   font-weight: 700;
   color: #4b4e53;
   text-transform: uppercase;
-  margin: 2px 0 0;
+  margin: 2px 0 15px;
 }
 .disp_single #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_single_comments #feedbacks .evo_comment__meta_info,
@@ -4599,7 +4615,6 @@ div.extended_search_form .search_options .search_option {
 .disp_contacts #main_content .results,
 .disp_messages #main_content .results,
 .disp_users #main_content .results {
-  border-radius: 0;
   box-shadow: none;
   border-color: #eeeeee;
   -webkit-transition: border-color 0.32s ease-in-out;
