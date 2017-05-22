@@ -812,6 +812,7 @@ textarea.message_text {
 .evo_post_title {
   display: table;
   word-wrap: break-word;
+  word-break: break-word;
 }
 .evo_post_title h2 {
   display: table-cell;
@@ -3937,14 +3938,15 @@ div.extended_search_form .search_options .search_option {
   box-shadow: none;
   border-color: #eeeeee;
   color: #7e8082;
+  border: 0;
 }
 .disp_posts .featured_posts .evo_featured_post a {
   color: #4b4e53;
 }
 .disp_posts .featured_posts .evo_featured_post .evo_post_image .evo_image_block {
-  margin-top: -31px;
-  margin-left: -31px;
-  margin-right: -31px;
+  margin-top: -30px;
+  margin-left: -30px;
+  margin-right: -30px;
 }
 .disp_posts .featured_posts .evo_featured_post .evo_post_title h2 {
   font-size: 2.2rem;
@@ -5520,6 +5522,49 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_user #main_content .form-control-static {
   word-wrap: break-word;
+}
+.disp_usercomments .results,
+.disp_useritems .results {
+  border-color: #eeeeee;
+}
+.disp_usercomments .results .fieldset_title,
+.disp_useritems .results .fieldset_title {
+  padding: 15px;
+  height: auto;
+  border-bottom-color: #eeeeee;
+}
+.disp_usercomments .results .pagination,
+.disp_useritems .results .pagination {
+  margin-top: 12px;
+}
+.disp_usercomments .results .pagination .active a,
+.disp_useritems .results .pagination .active a {
+  border-color: #4b4e53;
+}
+.disp_usercomments .results .pagination a,
+.disp_useritems .results .pagination a {
+  border-color: #eeeeee;
+  padding: 0px 18px;
+  height: auto;
+  width: auto;
+}
+.disp_usercomments .results .table_scroll table,
+.disp_useritems .results .table_scroll table {
+  border-color: #eeeeee;
+}
+.disp_usercomments .results .table_scroll thead th,
+.disp_useritems .results .table_scroll thead th {
+  padding: 10px;
+}
+.disp_usercomments .results .table_scroll td,
+.disp_useritems .results .table_scroll td {
+  padding: 10px;
+  border-color: #eeeeee;
+}
+.disp_usercomments .results .page_size_selector,
+.disp_useritems .results .page_size_selector {
+  margin-top: 15px;
+  margin-bottom: 20px;
 }
 .disp_login #main_content .evo_panel__login,
 .disp_register #main_content .evo_panel__login,

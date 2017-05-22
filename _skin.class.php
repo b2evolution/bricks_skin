@@ -1537,10 +1537,12 @@ class bricks_Skin extends Skin
 		}
 		if ( $color = $this->get_setting( 'posts_featured_bg' ) ) {
 			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_image, .disp_posts #grid_posts .featured_posts .evo_post_title, .disp_posts #grid_posts .featured_posts .evo_post_info, .disp_posts #grid_posts .featured_posts .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_footer_info, .disp_posts #grid_posts .featured_posts .evo_post__full { background-color: $color }";
+			$custom_css .= ".disp_posts #grid_posts .evo_post_image, .disp_posts #grid_posts .evo_post_title, .disp_posts #grid_posts .evo_post_info, .disp_posts #grid_posts .evo_post__excerpt, .disp_posts #grid_posts .evo_post_footer_info, .disp_posts #grid_posts .evo_post__full { background-color: $color; padding: 15px; }";
+			$custom_css .= ".disp_posts .featured_posts .evo_featured_post { background-color: $color; }";
 			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post_info { opacity: 1; }";
 		}
 		if( $color = $this->get_setting( 'posts_featured_color' ) ) {
-			$custom_css .= ".disp_posts #grid_posts .evo_post_article { color: $color; }";
+			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_article { color: $color; }";
 		}
 		if( $color = $this->get_setting( 'posts_border_color' ) ) {
 			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post__excerpt, .disp_posts #grid_posts .evo_post_article .evo_post__full_text { border-color: $color; }";
@@ -1554,7 +1556,7 @@ class bricks_Skin extends Skin
 		/* SINGLE SETTINGS
 		 * ========================================================================== */
 		if( $color = $this->get_setting( 'single_comments_bg' ) ) {
-			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form{ background-color: $color; border-color: $color; }";
+			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_post_article .evo_single_comments .single_comment_form, #main_content .evo_content_single .evo_single_article .evo_single_comments .single_comment_form, #main_content .evo_post_lists .evo_single_article .evo_single_comments .single_comment_form{ background-color: $color !important; border-color: $color !important; }";
 			$custom_css .= "#main_content .evo_content_single .evo_post_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_post_lists .evo_post_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_content_single .evo_single_article .evo_single_comments .evo_comment_meta .panel, #main_content .evo_post_lists .evo_single_article .evo_single_comments .evo_comment_meta .panel{ background-color: $color }";
 		}
 		if( $color = $this->get_setting( 'single_comment_color' ) ) {

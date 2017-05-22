@@ -108,3 +108,61 @@
 
     }
 }
+
+
+// ======================================================================== /
+// DISP USERCOMMENTS & DISP USERITEMS
+// ======================================================================== /
+.disp_usercomments,
+.disp_useritems {
+    .results {
+        border-color: @e;
+
+        .fieldset_title {
+            padding: 15px;
+            height: auto;
+            border-bottom-color: @e;
+        }
+
+        .pagination {
+            margin-top: 12px;
+
+            .active a {
+                border-color: @color-link;
+            }
+
+            a {
+                border-color: @e;
+                // background-color: @e;
+                // font-size: 13px;
+                padding: 0px 18px;
+                height: auto;
+                width: auto;
+            }
+        }
+
+        .table_scroll {
+            table {
+                border-color: @e;
+            }
+
+            thead {
+                th {
+                    padding: 10px;
+                }
+            }
+
+            td {
+                // font-size: 1.3rem;
+                padding: 10px;
+                border-color: #eeeeee;
+            }
+        }
+
+        .page_size_selector {
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+    }
+}
