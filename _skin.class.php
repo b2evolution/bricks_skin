@@ -1537,7 +1537,7 @@ class bricks_Skin extends Skin
 		}
 		if ( $color = $this->get_setting( 'posts_featured_bg' ) ) {
 			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_image, .disp_posts #grid_posts .featured_posts .evo_post_title, .disp_posts #grid_posts .featured_posts .evo_post_info, .disp_posts #grid_posts .featured_posts .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_footer_info, .disp_posts #grid_posts .featured_posts .evo_post__full { background-color: $color }";
-			$custom_css .= ".disp_posts #grid_posts .evo_post_image, .disp_posts #grid_posts .evo_post_title, .disp_posts #grid_posts .evo_post_info, .disp_posts #grid_posts .evo_post__excerpt, .disp_posts #grid_posts .evo_post_footer_info, .disp_posts #grid_posts .evo_post__full { background-color: $color; padding: 15px; }";
+			$custom_css .= ".disp_posts #grid_posts .featured_posts .evo_post_image, .disp_posts #grid_posts .featured_posts .evo_post_title, .disp_posts #grid_posts .featured_posts .evo_post_info, .disp_posts #grid_posts .featured_posts .evo_post__excerpt, .disp_posts #grid_posts .featured_posts .evo_post_footer_info, .disp_posts #grid_posts .featured_posts .evo_post__full { background-color: $color; padding: 15px; }";
 			$custom_css .= ".disp_posts .featured_posts .evo_featured_post { background-color: $color; }";
 			$custom_css .= ".disp_posts #grid_posts .evo_post_article .evo_post_info { opacity: 1; }";
 		}
