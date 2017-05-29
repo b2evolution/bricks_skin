@@ -11,7 +11,7 @@
  */
 if( !defined('EVO_MAIN_INIT') ) die( 'Please, do not access this page directly.' );
 
-global $baseurl, $skin_url, $disp, $preview;
+global $baseurl, $skin_url, $disp, $preview, $Item;
 
 // ---------------------------- SITE HEADER INCLUDED HERE ----------------------------
 // If site headers are enabled, they will be included here:
