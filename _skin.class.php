@@ -401,10 +401,12 @@ class bricks_Skin extends Skin
 					'defaultvalue'	=> 1,
 				),
 				'header_bg_image' => array(
-					'label' => T_('Background image'),
-					'type' => 'fileselect',
-					'initialize_with' => 'skins/bricks_skin/assets/images/header/header-6.jpg',
-					'thumbnail_size' => 'fit-320x320'
+					'label' 		=> T_('Background image'),
+					'note' 			=> T_('Set background image in Main Header.'),
+					'type' 			=> 'fileselect',
+					'initialize_with' => 'shared/global/sunset/sunset.jpg',
+					// 'defaultvalue' => 'skins/bricks_skin/assets/images/header/header-6.jpg',
+					'thumbnail_size' => 'fit-320x320',
 				),
 				'header_bg_pos_x' => array(
 					'label'			=> T_( 'Horizontal Background Position' ),
@@ -1308,11 +1310,11 @@ class bricks_Skin extends Skin
 		 * ========================================================================== */
 		if( $color = $this->get_setting( 'page_bg_color' ) )
 		{ // Custom page background color:
-			$custom_css .= 'body { background-color: '.$color." }\n";
+			$custom_css .= '#skin_wrapper { background-color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'page_text_color' ) )
 		{ // Custom page text color:
-			$custom_css .= 'body, .text-muted, .dimmed, .note, .notes { color: '.$color." }\n";
+			$custom_css .= '#skin_wrapper, .text-muted, .dimmed, .note, .notes { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'page_link_color' ) )
 		{ // Custom page link color:
@@ -1472,24 +1474,16 @@ class bricks_Skin extends Skin
 			$custom_css .= '@media screen and ( min-width: 1024px ) { #main_header { padding-top: '.$padding.'px } }';
 		}
 
-		if( in_array( $disp, array( 'front', 'login', 'register', 'lostpassword', 'activateinfo', 'access_denied', 'access_requires_login' ) ) )
-		{
-			$FileCache = & get_FileCache();
+		$FileCache = & get_FileCache();
 
-			if( $this->get_setting( 'header_bg_image' ) ) {
-				$bg_image_File = & $FileCache->get_by_ID( $this->get_setting( 'header_bg_image' ), false, false );
-			}
+		if( $this->get_setting( 'header_bg_image' ) ) {
+			$bg_image_File = & $FileCache->get_by_ID( $this->get_setting( 'header_bg_image' ), false, false );
+		}
 
 
-			if( !empty( $bg_image_File ) && $bg_image_File->exists() )
-			{ // Custom body background image:
-				$custom_css .= '#main_header { background-image: url('.$bg_image_File->get_url().") }\n";
-			}
-			else
-			{
-				$color = $this->get_setting( 'front_bg_color' );
-				$custom_css .= '.evo_pictured_layout { background: '.$color." }\n";
-			}
+		if( !empty( $bg_image_File ) && $bg_image_File->exists() )
+		{ // Custom body background image:
+			$custom_css .= '#main_header { background-image: url('.$bg_image_File->get_url().") }\n";
 		}
 
 		$bg_header_x = $this->get_setting( 'header_bg_pos_x');
