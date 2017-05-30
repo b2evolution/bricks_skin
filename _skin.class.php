@@ -1348,7 +1348,7 @@ class bricks_Skin extends Skin
 			$custom_css .= 'h1, h2, h3, h4, h5, h6 { color: '.$color." !important }\n";
 		}
 		if( $color = $this->get_setting( 'panel_color' ) ) {
-			$custom_css .= "body .panel, body .panel .evo_comment_info { color: $color; }";
+			$custom_css .= "#skin_wrapper .panel, #skin_wrapper .panel .evo_comment_info { color: $color; }";
 		}
 
 		// Limit images by max height:
@@ -1369,54 +1369,54 @@ class bricks_Skin extends Skin
 					break;
 
 				case 'standard':// When standard layout
-					$custom_css .= 'html { font-size: 11.4px }';
+					$custom_css .= '#skin_wrapper { font-size: 11.4px }';
 					// $custom_css .= 'body { font-size: 16px !important'." }\n";
-					$custom_css .= 'body input.search_field { height: 100%'." }\n";
-					$custom_css .= 'body h1 { font-size: 38px'." }\n";
-					$custom_css .= 'body h2 { font-size: 32px'." }\n";
-					$custom_css .= 'body h3 { font-size: 26px'." }\n";
-					$custom_css .= 'body h4 { font-size: 18px'." }\n";
-					$custom_css .= 'body h5 { font-size: 16px'." }\n";
-					$custom_css .= 'body h6 { font-size: 14px'." }\n";
-					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
+					$custom_css .= '#skin_wrapper input.search_field { height: 100%'." }\n";
+					$custom_css .= '#skin_wrapper h1 { font-size: 38px'." }\n";
+					$custom_css .= '#skin_wrapper h2 { font-size: 32px'." }\n";
+					$custom_css .= '#skin_wrapper h3 { font-size: 26px'." }\n";
+					$custom_css .= '#skin_wrapper h4 { font-size: 18px'." }\n";
+					$custom_css .= '#skin_wrapper h5 { font-size: 16px'." }\n";
+					$custom_css .= '#skin_wrapper h6 { font-size: 14px'." }\n";
+					$custom_css .= '#skin_wrapper .small { font-size: 85% !important'." }\n";
 					break;
 
 				case 'medium': // When default font size, no CSS entry
-					$custom_css .= 'html { font-size: 12.858px; }';
-					$custom_css .= 'body { line-height: 26px !important; }';
+					$custom_css .= '#skin_wrapper { font-size: 12.858px; }';
+					$custom_css .= '#skin_wrapper { line-height: 26px !important; }';
 					// $custom_css .= 'body { font-size: 18px !important'." }\n";
-					$custom_css .= 'body input.search_field { height: 100%'." }\n";
-					$custom_css .= 'body h1 { font-size: 40px'." }\n";
-					$custom_css .= 'body h2 { font-size: 34px'." }\n";
-					$custom_css .= 'body h3 { font-size: 28px'." }\n";
-					$custom_css .= 'body h4 { font-size: 20px'." }\n";
-					$custom_css .= 'body h5 { font-size: 18px'." }\n";
-					$custom_css .= 'body h6 { font-size: 16px'." }\n";
-					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
+					$custom_css .= '#skin_wrapper input.search_field { height: 100%'." }\n";
+					$custom_css .= '#skin_wrapper h1 { font-size: 40px'." }\n";
+					$custom_css .= '#skin_wrapper h2 { font-size: 34px'." }\n";
+					$custom_css .= '#skin_wrapper h3 { font-size: 28px'." }\n";
+					$custom_css .= '#skin_wrapper h4 { font-size: 20px'." }\n";
+					$custom_css .= '#skin_wrapper h5 { font-size: 18px'." }\n";
+					$custom_css .= '#skin_wrapper h6 { font-size: 16px'." }\n";
+					$custom_css .= '#skin_wrapper .small { font-size: 85% !important'." }\n";
 					break;
 
 				case 'large': // When default font size, no CSS entry
-					$custom_css .= 'body { font-size: 20px !important'." }\n";
-					$custom_css .= 'body input.search_field { height: 100%'." }\n";
-					$custom_css .= 'body h1 { font-size: 42px'." }\n";
-					$custom_css .= 'body h2 { font-size: 36px'." }\n";
-					$custom_css .= 'body h3 { font-size: 30px'." }\n";
-					$custom_css .= 'body h4 { font-size: 22px'." }\n";
-					$custom_css .= 'body h5 { font-size: 20px'." }\n";
-					$custom_css .= 'body h6 { font-size: 18px'." }\n";
-					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
+					$custom_css .= '#skin_wrapper { font-size: 20px !important'." }\n";
+					$custom_css .= '#skin_wrapper input.search_field { height: 100%'." }\n";
+					$custom_css .= '#skin_wrapper h1 { font-size: 42px'." }\n";
+					$custom_css .= '#skin_wrapper h2 { font-size: 36px'." }\n";
+					$custom_css .= '#skin_wrapper h3 { font-size: 30px'." }\n";
+					$custom_css .= '#skin_wrapper h4 { font-size: 22px'." }\n";
+					$custom_css .= '#skin_wrapper h5 { font-size: 20px'." }\n";
+					$custom_css .= '#skin_wrapper h6 { font-size: 18px'." }\n";
+					$custom_css .= '#skin_wrapper .small { font-size: 85% !important'." }\n";
 					break;
 
 				case 'very_large': // When default font size, no CSS entry
-					$custom_css .= 'body { font-size: 22px !important'." }\n";
-					$custom_css .= 'body input.search_field { height: 100%'." }\n";
-					$custom_css .= 'body h1 { font-size: 44px'." }\n";
-					$custom_css .= 'body h2 { font-size: 38px'." }\n";
-					$custom_css .= 'body h3 { font-size: 32px'." }\n";
-					$custom_css .= 'body h4 { font-size: 24px'." }\n";
-					$custom_css .= 'body h5 { font-size: 22px'." }\n";
-					$custom_css .= 'body h6 { font-size: 20px'." }\n";
-					$custom_css .= 'body .small { font-size: 85% !important'." }\n";
+					$custom_css .= '#skin_wrapper { font-size: 22px !important'." }\n";
+					$custom_css .= '#skin_wrapper input.search_field { height: 100%'." }\n";
+					$custom_css .= '#skin_wrapper h1 { font-size: 44px'." }\n";
+					$custom_css .= '#skin_wrapper h2 { font-size: 38px'." }\n";
+					$custom_css .= '#skin_wrapper h3 { font-size: 32px'." }\n";
+					$custom_css .= '#skin_wrapper h4 { font-size: 24px'." }\n";
+					$custom_css .= '#skin_wrapper h5 { font-size: 22px'." }\n";
+					$custom_css .= '#skin_wrapper h6 { font-size: 20px'." }\n";
+					$custom_css .= '#skin_wrapper .small { font-size: 85% !important'." }\n";
 					break;
 			}
 		}

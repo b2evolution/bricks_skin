@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,300,700");
-html,
-html a {
+#skin_wrapper,
+#skin_wrapper a {
   -webkit-font-smoothing: antialiased;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
 }
