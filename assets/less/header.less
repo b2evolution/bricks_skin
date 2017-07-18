@@ -67,6 +67,11 @@
                 @media screen and ( max-width: @screen-l ) {
                     font-weight: 400;
                 }
+
+                @media screen and ( max-width: @screen-xs ) {
+                    font-size: 1.8rem;
+                    line-height: 25px;
+                }
             }
         }
 
@@ -127,6 +132,14 @@
                 position: absolute;
                 right: 50px;
                 margin-right: 0;
+            }
+        }
+
+        @media screen and ( max-width: @screen-x ) {
+            .navbar-brand {
+                max-width: 210px;
+                height: auto;
+                min-height: 62px;
             }
         }
 

@@ -196,6 +196,12 @@ textarea.message_text {
     font-weight: 400;
   }
 }
+@media screen and (max-width: 480px) {
+  #nav .navbar-header .navbar-brand h3 {
+    font-size: 1.8rem;
+    line-height: 25px;
+  }
+}
 #nav .navbar-header .navbar-brand-img {
   display: block;
   -webkit-transition: padding 0.3s ease;
@@ -249,6 +255,13 @@ textarea.message_text {
     position: absolute;
     right: 50px;
     margin-right: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  #nav .navbar-header .navbar-brand {
+    max-width: 210px;
+    height: auto;
+    min-height: 62px;
   }
 }
 #nav .nav_tabs {
