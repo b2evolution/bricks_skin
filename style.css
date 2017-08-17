@@ -29,7 +29,6 @@
 }
 a {
   color: #4b4e53;
-  -webkit-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
 a:hover,
@@ -105,7 +104,7 @@ p {
 }
 pre {
   border-color: #e4e4e4;
-  border-radius: 3px;
+  border-radius: 0;
   padding: 20px;
   margin-bottom: 20px;
   white-space: pre-wrap;
@@ -143,7 +142,6 @@ textarea.message_text {
   position: relative;
   width: 100%;
   background-color: #ffffff;
-  -webkit-transition: background 0.3s ease, height 0.6s ease;
   transition: background 0.3s ease, height 0.6s ease;
 }
 @media screen and (max-width: 1024px) {
@@ -170,7 +168,6 @@ textarea.message_text {
   }
 }
 #nav .navbar-header .navbar-brand {
-  -webkit-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
 @media screen and (min-width: 1024px) {
@@ -204,7 +201,6 @@ textarea.message_text {
 }
 #nav .navbar-header .navbar-brand-img {
   display: block;
-  -webkit-transition: padding 0.3s ease;
   transition: padding 0.3s ease;
 }
 @media screen and (min-width: 1024px) {
@@ -216,7 +212,6 @@ textarea.message_text {
 }
 #nav .navbar-header .navbar-brand-img img {
   height: 42px;
-  -webkit-transition: height 0.3s ease;
   transition: height 0.3s ease;
 }
 @media screen and (max-width: 1024px) {
@@ -391,7 +386,6 @@ textarea.message_text {
   top: 25px;
   right: 25px;
   z-index: 29;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 #nav .search_icon .search_tringger {
@@ -406,7 +400,7 @@ textarea.message_text {
   content: '';
   position: absolute;
   display: block;
-  -webkit-transition: -webkit-transform 0.3s ease, top 0.32s ease-in-out;
+  transition: -webkit-transform 0.3s ease, top 0.32s ease-in-out;
   transition: transform 0.3s ease, top 0.32s ease-in-out;
 }
 #nav .search_icon .search_tringger:before {
@@ -494,7 +488,6 @@ textarea.message_text {
   left: 0;
   z-index: -1;
   opacity: 0;
-  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -544,7 +537,6 @@ textarea.message_text {
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
   z-index: 9988;
-  -webkit-transition: background 0.3s ease, height 0.4s ease;
   transition: background 0.3s ease, height 0.4s ease;
 }
 @media screen and (min-width: 1024px) {
@@ -583,7 +575,6 @@ textarea.message_text {
 #nav.fixed ul > li > a {
   padding: 20px 3px 5px;
   margin-bottom: 13px;
-  -webkit-transition: padding 0.4s ease 0s;
   transition: padding 0.4s ease 0s;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
@@ -799,7 +790,7 @@ textarea.message_text {
   margin-top: 6px;
 }
 #content .evo_thumbnail {
-  border-radius: 2px;
+  border-radius: 0;
 }
 #content .evo_thumbnail__left {
   margin: 0 20px 5px 0;
@@ -875,7 +866,6 @@ div.bSideItem h4 {
   color: #ffffff;
   border-radius: 0;
   outline: 0;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 @media screen and (max-width: 480px) {
@@ -957,7 +947,7 @@ div.bSideItem h4 {
 .evo_comment .evo_comment_title .evo_status,
 .evo_comment .panel-title .evo_status {
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 0;
 }
 .evo_comment .evo_comment_avatar {
   float: left;
@@ -967,7 +957,7 @@ div.bSideItem h4 {
 }
 .evo_comment .evo_comment_avatar img {
   margin: 0;
-  border-radius: 2px;
+  border-radius: 0;
 }
 @media screen and (max-width: 480px) {
   .evo_comment .evo_comment_avatar {
@@ -1914,7 +1904,7 @@ div.evo_widget.widget_core_coll_search_form .search .search_submit:focus {
   box-shadow: none;
 }
 div.evo_widget.widget_core_coll_avatar img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 div.evo_widget.widget_plugin_evo_Calr .bCalendarTable {
   font-size: 90%;
@@ -2076,7 +2066,7 @@ div.evo_widget.widget_core_coll_post_list.evo_layout_list img,
 div.evo_widget.widget_core_coll_page_list.evo_layout_list img,
 div.evo_widget.widget_core_coll_flagged_list.evo_layout_list img,
 div.evo_widget.widget_core_coll_related_post_list.evo_layout_list img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 div.evo_widget.widget_core_coll_featured_posts.evo_layout_list .item_content,
 div.evo_widget.widget_core_coll_item_list.evo_layout_list .item_content,
@@ -2208,7 +2198,7 @@ div.evo_widget.widget_core_coll_flagged_list.evo_layout_rwd .widget_rwd_blocks .
 div.evo_widget.widget_core_coll_related_post_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content {
   background-color: #fafafa;
   padding: 20px;
-  border-radius: 2px;
+  border-radius: 0;
   word-wrap: break-word;
 }
 div.evo_widget.widget_core_coll_featured_posts.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content .item_title,
@@ -2245,7 +2235,7 @@ div.evo_widget.widget_core_coll_post_list.evo_layout_rwd .widget_rwd_blocks .wid
 div.evo_widget.widget_core_coll_page_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content img,
 div.evo_widget.widget_core_coll_flagged_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content img,
 div.evo_widget.widget_core_coll_related_post_list.evo_layout_rwd .widget_rwd_blocks .widget_rwd_content img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 div.evo_widget.widget_core_coll_featured_posts.evo_layout_rwd.evo_withtitle.evo_nopic.evo_noexcerpt.evo_noteaser .widget_rwd_content,
 div.evo_widget.widget_core_coll_item_list.evo_layout_rwd.evo_withtitle.evo_nopic.evo_noexcerpt.evo_noteaser .widget_rwd_content,
@@ -2453,7 +2443,7 @@ div.extended_search_form .search_options .search_option {
 .disp_single #main_content .evo_post_lists .evo_single_article .evo_post_info .evo_status,
 .disp_page #main_content .evo_post_lists .evo_single_article .evo_post_info .evo_status {
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full,
@@ -2505,7 +2495,7 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_content_single .evo_single_article .evo_post__full .evo_post_gallery img,
 .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_post_gallery img,
 .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full .evo_post_gallery img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_single #main_content .evo_content_single .evo_post_article .evo_post__full_text,
 .disp_page #main_content .evo_content_single .evo_post_article .evo_post__full_text,
@@ -2632,7 +2622,7 @@ div.extended_search_form .search_options .search_option {
 .disp_single #main_content .evo_post_lists .evo_single_article .evo_post__full_text pre,
 .disp_page #main_content .evo_post_lists .evo_single_article .evo_post__full_text pre {
   border-color: #e4e4e4;
-  border-radius: 2px;
+  border-radius: 0;
   padding: 18px;
   margin-bottom: 20px;
   white-space: pre-wrap;
@@ -3020,7 +3010,7 @@ div.extended_search_form .search_options .search_option {
 .disp_page #main_content .evo_content_single .evo_single_article .widget_core_item_about_author .evo_avatar img,
 .disp_single #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar img,
 .disp_page #main_content .evo_post_lists .evo_single_article .widget_core_item_about_author .evo_avatar img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_single #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_author_display_field,
 .disp_page #main_content .evo_content_single .evo_post_article .widget_core_item_about_author .evo_author_display_field,
@@ -3889,7 +3879,6 @@ div.extended_search_form .search_options .search_option {
   margin: 0 3px 5px;
   padding: 5px 13px;
   border: 1px solid #e4e4e4;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .disp_posts .filters .nav-gallery li.active {
@@ -3923,7 +3912,6 @@ div.extended_search_form .search_options .search_option {
   margin: 0 3px 5px;
   padding: 5px 13px;
   border: 1px solid #eeeeee;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .disp_posts .cat_list ul li a {
@@ -4011,7 +3999,6 @@ div.extended_search_form .search_options .search_option {
   margin-right: -15px;
   margin-left: -15px;
   min-height: 50px;
-  -webkit-transition: height 0.32s ease;
   transition: height 0.32s ease;
 }
 .disp_posts #grid_posts .evo_post_article {
@@ -4031,8 +4018,7 @@ div.extended_search_form .search_options .search_option {
   margin: 0;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_image img {
-  border-radius: 2px;
-  -webkit-transition: opacity 0.32s ease-in-out;
+  border-radius: 0;
   transition: opacity 0.32s ease-in-out;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_image:hover img,
@@ -4070,7 +4056,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_posts #grid_posts .evo_post_article .evo_post_info .evo_status {
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text {
@@ -4108,7 +4094,6 @@ div.extended_search_form .search_options .search_option {
   top: 4px;
   left: 0;
   opacity: 0.8;
-  -webkit-transition: all 0.32s ease;
   transition: all 0.32s ease;
 }
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt .evo_post_more_link:hover .ei,
@@ -4145,7 +4130,6 @@ div.extended_search_form .search_options .search_option {
   top: 3.5px;
   left: 0;
   opacity: 0.8;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_posts #grid_posts .evo_post_article .evo_readmore_link a:hover .ei,
@@ -4310,7 +4294,6 @@ div.extended_search_form .search_options .search_option {
 .disp_subs #main_content .evo_form .panel {
   border-radius: 0;
   border-color: #eeeeee;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_profile #main_content .evo_form .panel:hover,
@@ -4375,7 +4358,6 @@ div.extended_search_form .search_options .search_option {
   font-weight: 600;
   border-bottom-color: #eeeeee;
   text-transform: uppercase;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_profile #main_content .evo_form .ActionButton,
@@ -4453,7 +4435,7 @@ div.extended_search_form .search_options .search_option {
 .disp_comments #main_content .evo_comment .panel-heading .evo_status {
   font-size: 1rem;
   margin-left: 5px;
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_comments #main_content .evo_comment .panel-body {
   padding: 20px;
@@ -4632,7 +4614,6 @@ div.extended_search_form .search_options .search_option {
 .disp_users #main_content .results {
   box-shadow: none;
   border-color: #eeeeee;
-  -webkit-transition: border-color 0.32s ease-in-out;
   transition: border-color 0.32s ease-in-out;
 }
 .disp_threads #main_content .results .panel-heading,
@@ -4643,7 +4624,6 @@ div.extended_search_form .search_options .search_option {
   border-bottom: 1px solid transparent;
   height: auto;
   padding: 15px;
-  -webkit-transition: border-color 0.32s ease-in-out;
   transition: border-color 0.32s ease-in-out;
 }
 .disp_threads #main_content .results .panel-heading .panel-title,
@@ -4773,7 +4753,7 @@ div.extended_search_form .search_options .search_option {
 .disp_messages #main_content .results .avatar_rounded,
 .disp_users #main_content .results .avatar_rounded {
   border-color: #eeeeee;
-  border-radius: 2px;
+  border-radius: 0;
   font-size: 1.2rem;
 }
 .disp_threads #main_content .results .btn,
@@ -4937,7 +4917,7 @@ div.extended_search_form .search_options .search_option {
 .disp_messages #main_content .form_add_contacts .form-control,
 .disp_users #main_content .form_add_contacts .form-control {
   box-shadow: none;
-  border-radius: 2px;
+  border-radius: 0;
   outline: 0;
 }
 .disp_threads #main_content .form_add_contacts .SaveButton,
@@ -5108,13 +5088,12 @@ div.extended_search_form .search_options .search_option {
   height: 100%;
   background-color: #000000;
   opacity: 0;
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery img {
   max-width: 100%;
   height: auto;
-  -webkit-transition: -webkit-transform 0.32s cubic-bezier(0.3, 0.1, 0.58, 1);
+  transition: -webkit-transform 0.32s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: transform 0.32s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 .disp_mediaidx #main_content .widget_core_coll_media_index .main_content_gallery .content_gallery .note {
@@ -5135,7 +5114,6 @@ div.extended_search_form .search_options .search_option {
   -webkit-transform: translateY(-10px);
   -ms-transform: translateY(-10px);
   transform: translateY(-10px);
-  -webkit-transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
   transition: all 0.27s cubic-bezier(0.3, 0.1, 0.58, 1);
 }
 @media screen and (max-width: 768px) {
@@ -5183,7 +5161,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_flagged #main_content .evo_single_article .evo_post_info .evo_status {
   font-size: 1rem;
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_flagged #main_content .evo_single_article .evo_post__full {
   border-bottom: 1px solid #eeeeee;
@@ -5197,7 +5175,7 @@ div.extended_search_form .search_options .search_option {
   border-radius: 0;
 }
 .disp_flagged #main_content .evo_single_article .evo_post__full .evo_post_gallery img {
-  border-radius: 2px;
+  border-radius: 0;
 }
 .disp_flagged #main_content .evo_single_article .evo_post__full_text {
   word-wrap: break-word;
@@ -5233,7 +5211,7 @@ div.extended_search_form .search_options .search_option {
 }
 .disp_flagged #main_content .evo_single_article .evo_post__full_text pre {
   border-color: #e4e4e4;
-  border-radius: 2px;
+  border-radius: 0;
   padding: 18px;
   margin-bottom: 20px;
   white-space: pre-wrap;
@@ -5327,7 +5305,6 @@ div.extended_search_form .search_options .search_option {
   font-weight: 700;
   color: #7e8082;
   z-index: 0;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_result_score::before {
@@ -5343,7 +5320,6 @@ div.extended_search_form .search_options .search_option {
   -ms-transform: rotate(135deg);
   transform: rotate(135deg);
   z-index: -1;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap {
@@ -5378,7 +5354,6 @@ div.extended_search_form .search_options .search_option {
   border: 1px solid #eeeeee;
   padding: 2px 4px;
   vertical-align: middle;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .disp_search #main_content .evo_search_list .evo_search_content .search_content_wrap .result_content {
@@ -5477,7 +5452,7 @@ div.extended_search_form .search_options .search_option {
   max-width: 480px;
 }
 .disp_user #main_content .profile_content .profile_column_left .main_profile_picture {
-  border-radius: 2px;
+  border-radius: 0;
   max-width: 100%;
   width: auto;
   height: auto;
@@ -5608,7 +5583,6 @@ div.extended_search_form .search_options .search_option {
   border-radius: 0;
   border-color: #eeeeee;
   margin-top: 0;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_login #main_content .evo_panel__login .panel .panel-heading,
@@ -5625,7 +5599,6 @@ div.extended_search_form .search_options .search_option {
 .disp_access_requires_login #main_content .evo_panel__lostpass .panel .panel-heading {
   padding: 20px 25px;
   border-bottom-color: #eeeeee;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .disp_login #main_content .evo_panel__login .panel .panel-heading .panel-title,
@@ -6229,7 +6202,6 @@ div.extended_search_form .search_options .search_option {
   background-color: transparent;
   color: #4b4e53;
   width: 36px;
-  -webkit-transition: color 0.32s ease;
   transition: color 0.32s ease;
 }
 #footer .footer_bottom .social_icon .ufld_icon_links a:hover.ufld_twitter,
@@ -6331,7 +6303,6 @@ div.extended_search_form .search_options .search_option {
   z-index: 800;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.32s ease-in-out;
   transition: all 0.32s ease-in-out;
 }
 .cd_top .ei,
