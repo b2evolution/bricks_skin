@@ -99,57 +99,6 @@ class bricks_Skin extends Skin
 
 
 	/**
-	* Judge if the file is the image we want to use
-	*
-	* @param string filepath: the path of a file
-	* array arr_types: the file type we want to use
-	* @return array
-	*/
-	function isImage( $filepath, $arr_types=array( ".gif", ".jpeg", ".png", ".bmp", ".jpg" ) )
-	{
-		if(file_exists($filepath)) {
-			$info = getimagesize($filepath);
-			$ext  = image_type_to_extension($info['2']);
-			return in_array($ext,$arr_types);
-		} else {
-			return false;
-		}
-	}
-
-
-	/**
-	* Get the pictures of one local folder as an array
-	*
-	* @param string img_folder; the image folder;
-	* string img_folder_url; folder url, we would like to show the img of this folder on the screen for user viewing;
-	* int thumb_width: thumb image whdth shown on the skin setting page
-	* int thumb_height: thumb image height shown on the skin setting page
-	* @return array
-	*/
-	function get_arr_pics_from_folder( $img_folder, $img_folder_url, $thumb_width = 50, $thumb_height = 50 )
-	{
-		$arr_filenames = $filesnames =array();
-		if(file_exists($img_folder))
-		{
-			$filesnames = scandir($img_folder);
-		}
-		$count = 0;
-		foreach ( $filesnames as $name )
-		{
-			$count++;
-			if ( $name != "." && $name != ".." && $name != "_evocache" && $this->isImage($img_folder.$name) ) //not the folder and other files
-			{
-				$arr_filenames[] = array( $img_folder_url.$name,
-				"<a href='".$img_folder_url.$name."' target='blank'><img src='".$img_folder_url.$name."' width=".$thumb_width."px heigh=".$thumb_height."px /></a>" );
-			}
-			if ($count==30) break; // The max number of the images we want to show
-		}
-		$arr_filenames[] = array("none",T_("Transparent"));
-		return $arr_filenames;
-	}
-
-
-	/**
 	 * Get definitions for editable params
 	 *
 	 * @see Plugin::GetDefaultSettings()
@@ -163,13 +112,6 @@ class bricks_Skin extends Skin
 		// Load to use function get_available_thumb_sizes();
 		load_funcs( 'files/model/_image.funcs.php' );
 		load_class( 'widgets/model/_widget.class.php', 'ComponentWidget' );
-
-		// System provide bg images
-		$bodybg_cat = 'assets/images/header/'; // Background images folder relative to this skin folder
-		$arr_bodybg = $this ->get_arr_pics_from_folder( $this->get_path().$bodybg_cat, $this->get_url().$bodybg_cat, 80, 80 );
-		// User Custom bg images
-		$custom_headerbg_cat = "headerbg/"; // Background images folder which created by users themselves, and it's relative to collection media dir
-		$arr_custom_headerbg = $this->get_arr_pics_from_folder( $Blog->get_media_dir().$custom_headerbg_cat, $Blog->get_media_url().$custom_headerbg_cat, 65 ,65);
 
 
 		$r = array_merge( array(
@@ -196,27 +138,27 @@ class bricks_Skin extends Skin
 				),
 				'max_image_height' => array(
 					'label' 		=> T_('Max image height'),
-					'note' 			=> 'px',
+					'note' 			=> 'px. ' . T_('Set maximum height for post images.'),
 					'defaultvalue' 	=> '',
 					'type' 			=> 'integer',
-					'allow_empty' => true,
+					'allow_empty' 	=> true,
 				),
 				'font_size' => array(
 					'label' 		=> T_('Font size'),
 					'note' 			=> '',
 					'defaultvalue'  => 'default',
 					'options' => array(
-						'default'        => T_('Default (14px)'),
-						'standard'       => T_('Standard (16px)'),
-						'medium'         => T_('Medium (18px)'),
-						'large'          => T_('Large (20px)'),
-						'very_large'     => T_('Very large (22px)'),
+						'default'        => T_('Default').' (14px)',
+						'standard'       => T_('Standard').' (16px)',
+						'medium'         => T_('Medium').' (18px)',
+						'large'          => T_('Large').' (20px)',
+						'very_large'     => T_('Very large').' (22px)',
 					),
 					'type' => 'select',
 				),
 				'back_to_top' => array(
 					'label'			=> T_( 'Back To Top Button' ),
-					'note'			=> T_( 'Check to show back to top button.' ),
+					'note'			=> T_( 'Check to display "Back to Top" button.' ),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 1,
 				),
@@ -256,10 +198,16 @@ class bricks_Skin extends Skin
 					'type' 			=> 'color',
 				),
 				'color_heading' => array(
-					'label' 		=> T_('Color Content Heading'),
+					'label' 		=> T_('Title Color'),
 					'note' 			=> T_('Default value is').' <code>#4b4e53</code>.',
 					'defaultvalue' 	=> '#4b4e53',
 					'type' 			=> 'color',
+				),
+				'panel_color' => array(
+					'label'			=> T_( 'Panel Content Color' ),
+					'note'			=> T_( 'Default value is' ).'  <code>#7e8082</code>.',
+					'type'			=> 'color',
+					'defaultvalue' 	=> '#7e8082'
 				),
 				'bgimg_text_color' => array(
 					'label' 		=> T_('Text color on background image'),
@@ -278,12 +226,6 @@ class bricks_Skin extends Skin
 					'note' 			=> T_('Default value is').' <code>#6cb2ef</code>.',
 					'defaultvalue'  => '#6cb2ef',
 					'type' 			=> 'color',
-				),
-				'panel_color' => array(
-					'label'			=> T_( 'Color Content Panel' ),
-					'note'			=> T_( 'Default value is' ).'  <code>#7e8082</code>.',
-					'type'			=> 'color',
-					'defaultvalue' 	=> '#7e8082'
 				),
 			'section_color_end' => array(
 				'layout' => 'end_fieldset',
@@ -1193,6 +1135,12 @@ class bricks_Skin extends Skin
 			'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
 		) );
 
+		
+		// Include Font
+		// ======================================================================== /
+		add_headline('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,700" rel="stylesheet">');
+		
+		
 		// INCLUDE THE SCRIPTS
 		require_js( 'assets/scripts/masonry.pkgd.min.js', 'relative' );
 

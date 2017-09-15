@@ -96,7 +96,7 @@ if ( $Item->is_featured() ) {
 	echo '<div class="'.$content_class.$layout.'" '.$data_cat.'>'; // Beginning of post display
 }
 
-if( $disp == 'single' || $Item->is_intro() || $disp == 'page' )
+if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 {	// Display images that are linked to this post:
 	$Item->images( array(
 		'before'					 => '<div class="evo_cover_image">',
