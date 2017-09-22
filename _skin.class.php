@@ -1144,30 +1144,6 @@ class bricks_Skin extends Skin
 		// INCLUDE THE SCRIPTS
 		require_js( 'assets/scripts/masonry.pkgd.min.js', 'relative' );
 
-		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
-			add_js_headline("
-			jQuery( document ).ready( function(event){
-				'use strict';
-				var sticky = function() {
-					var num = 68; //number of pixels before modifying styles
-					if( $(window).width() > 1024 ) {
-						$(window).bind('scroll', function () {
-							if ($(window).scrollTop() > num) {
-								$('#nav').addClass('fixed');
-								$('.nav_fixed').addClass( 'static' );
-							} else {
-								$('#nav').removeClass('fixed');
-								$('.nav_fixed').removeClass( 'static' );
-							}
-						});
-					};
-				};
-
-				sticky();
-			});
-			");
-		}
-
 		if( $disp == 'posts' ) {
 			add_js_headline("
 			jQuery( document ).ready( function(event){
@@ -1281,15 +1257,15 @@ class bricks_Skin extends Skin
 		}
 		if( $color = $this->get_setting( 'bgimg_text_color' ) )
 		{	// Custom text color on background image:
-			$custom_css .= '.evo_hasbgimg { color: '.$color." }\n";
+			$custom_css .= '.evo_hasbgimg { color: '.$color." !important }\n";
 		}
 		if( $color = $this->get_setting( 'bgimg_link_color' ) )
 		{	// Custom link color on background image:
-			$custom_css .= '.evo_hasbgimg a { color: '.$color." }\n";
+			$custom_css .= '.evo_hasbgimg a:not(.btn) { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'bgimg_hover_link_color' ) )
 		{	// Custom link hover color on background image:
-			$custom_css .= '.evo_hasbgimg a:hover { color: '.$color." }\n";
+			$custom_css .= '.evo_hasbgimg a:not(.btn):hover { color: '.$color." }\n";
 		}
 		if( $color = $this->get_setting( 'color_heading' ) )
 		{ // Custom current tab text color:
@@ -1376,17 +1352,23 @@ class bricks_Skin extends Skin
 			$custom_css .= '#nav, #nav.nav_page, #nav.nav_bgt { background-color: '.$bg.' }';
 		}
 		if( $color = $this->get_setting( 'nav_background_sticky' ) ) {
-			$custom_css .= "#nav.fixed, #nav.nav_bgt.fixed{ background-color: $color }";
+			$custom_css .= "#nav.affix, #nav.nav_bgt.affix{ background-color: $color }";
 		}
 		if( $trans = $this->get_setting( 'nav_bg_transparent' ) ) {
-			$custom_css .= '#nav.nav_bgt { background-color: transparent }';
+			if( $this->get_setting( 'nav_sticky' ) == 1 ) {
+				$custom_css .= '@media screen and ( min-width: 1025px ){ #nav.affix-top.nav_bgt { background-color: transparent } }';
+			}
+			else
+			{
+				$custom_css .= '@media screen and ( min-width: 1025px ){ #nav.nav_bgt { background-color: transparent } }';
+			}
 		}
 		if( $this->get_setting( 'nav_bg_transparent' ) == 1 ) {
 			$color_nav_bgt = $this->get_setting( 'nav_cl_transparent' );
-			$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' } }';
-			$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' } }';
-			$custom_css .= '@media screen and ( min-width: 1024px ){ #nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' } }';
-			$custom_css .= '@media screen and ( min-width: 1024px ){#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; } }';
+			$custom_css .= '@media screen and ( min-width: 1025px ){ #nav.nav_bgt .nav_tabs ul a, #nav.nav_bgt .navbar-header .navbar-brand h3 a { color: '.$color_nav_bgt.' } }';
+			$custom_css .= '@media screen and ( min-width: 1025px ){ #nav.nav_bgt .search_icon .search_tringger:before { border-color: '.$color_nav_bgt.' } }';
+			$custom_css .= '@media screen and ( min-width: 1025px ){ #nav.nav_bgt .search_icon .search_tringger:after { background-color: '.$color_nav_bgt.' } }';
+			$custom_css .= '@media screen and ( min-width: 1025px ){#nav.nav_bgt .navbar-header .navbar-toggle .icon-bar { background-color: '.$color_nav_bgt.'; } }';
 
 			$color_hov_nav_bgt = $this->get_setting( 'nav_clh_transparent' );
 			$custom_css .= '#nav.nav_bgt .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.nav_bgt .nav_tabs ul a:focus { color: '.$color_hov_nav_bgt.' }';
@@ -1402,24 +1384,32 @@ class bricks_Skin extends Skin
 			$custom_css .= '#nav .navbar-header .navbar-toggle .icon-bar { background-color: '.$color.'; }';
 		}
 		if( $color = $this->get_setting( 'nav_color_link_sticky' ) ) {
-			$custom_css .= '#nav.fixed .nav_tabs ul a, #nav.fixed .navbar-header .navbar-brand h3 a { color: '.$color.' }';
-			$custom_css .= '#nav.fixed .search_icon .search_tringger:before { border-color: '.$color.' }';
-			$custom_css .= '#nav.fixed .search_icon .search_tringger:after { background-color: '.$color.' }';
-			$custom_css .= '#nav.fixed .navbar-header .navbar-toggle .icon-bar { background-color: '.$color.'; }';
+			$custom_css .= '#nav.affix .nav_tabs ul a, #nav.affix .navbar-header .navbar-brand h3 a { color: '.$color.' }';
+			$custom_css .= '#nav.affix .search_icon .search_tringger:before { border-color: '.$color.' }';
+			$custom_css .= '#nav.affix .search_icon .search_tringger:after { background-color: '.$color.' }';
+			$custom_css .= '#nav.affix .navbar-header .navbar-toggle .icon-bar { background-color: '.$color.'; }';
 		}
 		if( $hover = $this->get_setting( 'nav_color_link_hover' ) ) {
 			$custom_css .= '#nav .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav .nav_tabs ul a:focus { color: '.$hover.' }';
 			$custom_css .= '#nav .nav_tabs ul li.active > a { color: '.$hover.'; border-color: '.$hover.' }';
 
-			$custom_css .= '#nav.fixed .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.fixed .nav_tabs ul a:focus { color: '.$hover.' }';
-			$custom_css .= '#nav.fixed .nav_tabs ul li.active > a { color: '.$hover.'; border-color: '.$hover.' }';
+			$custom_css .= '#nav. .nav_tabs ul a:hover, #nav .nav_tabs ul a:active, #nav.affix .nav_tabs ul a:focus { color: '.$hover.' }';
+			$custom_css .= '#nav. .nav_tabs ul li.active > a { color: '.$hover.'; border-color: '.$hover.' }';
 		}
+		
+	
+
+		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
+			$custom_css .= "#nav.affix-top.nav_bgt{position:absolute !important;z-index:9999}";
+			$custom_css .= "#nav.affix.nav_bgt + #main_header{margin-top:0 !important}}\n";
+		}
+		
 
 
 		/* MAIN HEADER SETTINGS
 		 * ========================================================================== */
 		if( $padding = $this->get_setting( 'header_padding_top' ) ) {
-			$custom_css .= '@media screen and ( min-width: 1024px ) { #main_header { padding-top: '.$padding.'px } }';
+			$custom_css .= '@media screen and ( min-width: 1025px ) { #main_header { padding-top: '.$padding.'px } }';
 		}
 
 		$FileCache = & get_FileCache();

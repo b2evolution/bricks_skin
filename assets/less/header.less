@@ -1,9 +1,48 @@
 // ======================================================================== /
 // NAV Style
 // ======================================================================== /
-.loggedin #nav.fixed {
-    top: 26px;
+
+@affix-start-width: 1025px;
+#nav.affix {
+	
+	@media (min-width: @affix-start-width) {
+		position: fixed;
+		
+		// Prevent visual hickup upon fixed navigation activation
+		& + #main_header,
+		& + #main_header_page {
+			margin-top: 57px;
+		}
+	}
+	
+	transition: 0.1s ease-out;
+	width: 100%;
+	z-index: 9999;
+    box-shadow: 0 1px 15px rgba( 0, 0, 0, .15 );
 }
+
+@media (min-width: @affix-start-width) {
+	#nav {
+		height: 57px;
+	}
+}
+
+@media (min-width: @affix-start-width) {
+	body.loggedin #nav.affix { top: 27px }
+}
+// SEEMS TO INTERFERE WITH THE DEFAULT SITENAV BEHAVIOR
+body.anonymous #nav.affix { top: 0 }
+
+// @media (max-width: 1024px) {
+	// body.loggedin, body.anonymous {
+		// #nav.affix,
+		// #nav.affix-top {
+			// margin: 0;
+			// position: relative;
+			// top: 0;
+		// }
+	// }
+// }
 
 #nav {
     position: relative;
@@ -15,12 +54,6 @@
 
     @media screen and ( max-width: @screen-l ) {
         position: relative;
-    }
-
-    &.nav_bgt {
-        position: absolute;
-        margin-top: -1px;
-        z-index: 29;
     }
 
     &.nav_page {
@@ -47,8 +80,8 @@
             transition: padding 0.3s ease;
 
             @media screen and ( min-width: @screen-l ){
-                padding: 36px 15px 10px;
-                margin-bottom: 16px;
+                padding: 16px 15px 15px;
+                margin-bottom: 0;
                 height: auto;
             }
 
@@ -111,7 +144,7 @@
                 display: block;
                 background-color: transparent;
                 margin-right: 35px;
-                margin-top: 16px;
+                margin-top: 14px;
                 margin-bottom: 12px;
 
 
@@ -165,8 +198,8 @@
                 display: block;
 
                 & > a {
-                    padding: 38px 3px 5px;
-                    margin: 0 12px 17px;
+                    padding: 5px 3px 5px;
+                    margin: 14px 12px 0;
                     border-bottom: 2px solid rgba(45,78,83,0);
 
                     transform: translateZ(0);
@@ -296,7 +329,7 @@
     .search_icon {
         position: absolute;
         padding: 0;
-        top: 25px;
+        top: 6px;
         right: 25px;
         z-index: 29;
         transition: all 0.3s ease 0s;
@@ -377,7 +410,7 @@
         }
 
         @media screen and ( max-width: @screen-l ) {
-            top: 12px;
+            top: 9px;
             right: 10px;
 
             .search_tringger {
@@ -410,10 +443,10 @@
         transform: translateZ(0);
 
         .SearchField {
-            height: 92px;
+            height: 58px;
             border: none;
             border-radius: 0;
-            font-size: 2.8rem;
+            font-size: 2.4rem;
             font-weight: 300;
             padding-left: 20px;
             padding-right: 88px;
@@ -447,67 +480,67 @@
 
     // Style if nav Fixed
     // ======================================================================== /
-    &.fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin-top: 0;
-        box-shadow: 0 1px 15px rgba( 0, 0, 0, .15 );
-        background-color: @w;
-        z-index: 9988;
-        transition: background 0.3s ease, height 0.4s ease;
+    // &.fixed {
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // margin-top: 0;
+        // box-shadow: 0 1px 15px rgba( 0, 0, 0, .15 );
+        // background-color: @w;
+        // z-index: 9988;
+        // transition: background 0.3s ease, height 0.4s ease;
 
-        @media screen and ( min-width: @screen-l ) {
-            .navbar-brand {
-                padding: 20px 15px 10px;
-                margin-bottom: 10px;
-            }
+        // @media screen and ( min-width: @screen-l ) {
+            // .navbar-brand {
+                // padding: 20px 15px 10px;
+                // margin-bottom: 10px;
+            // }
 
-            .navbar-brand-img {
-                padding: 15px 10px 5px 5px;
+            // .navbar-brand-img {
+                // padding: 15px 10px 5px 5px;
 
-                img {
-                    height: 35px;
-                }
-            }
+                // img {
+                    // height: 35px;
+                // }
+            // }
 
-            .search_icon {
-                top: 8px;
+            // .search_icon {
+                // top: 8px;
 
-                .search_tringger.active {
-                    top: 2px;
-                    &:before, &:after {
-                        width: 26px;
-                    }
-                }
-            }
+                // .search_tringger.active {
+                    // top: 2px;
+                    // &:before, &:after {
+                        // width: 26px;
+                    // }
+                // }
+            // }
 
             // Search Content
             // ======================================================================== /
-            #cd_search {
-                .SearchField {
-                    height: 66px;
-                    font-size: 2.2rem;
-                }
-            }
-        }
+            // #cd_search {
+                // .SearchField {
+                    // height: 66px;
+                    // font-size: 2.2rem;
+                // }
+            // }
+        // }
 
-        @media screen and ( max-width: @screen-l ){
-            position: relative;
-            top: 0 !important;
-            box-shadow: none !important;
-        }
+        // @media screen and ( max-width: @screen-l ){
+            // position: relative;
+            // top: 0 !important;
+            // box-shadow: none !important;
+        // }
 
-        ul {
-            & > li > a {
-                padding: 20px 3px 5px;
-                margin-bottom: 13px;
-                transition: padding 0.4s ease 0s;
-                transform: translateZ(0);
-            }
-        }
-    }
+        // ul {
+            // & > li > a {
+                // padding: 20px 3px 5px;
+                // margin-bottom: 13px;
+                // transition: padding 0.4s ease 0s;
+                // transform: translateZ(0);
+            // }
+        // }
+    // }
 }
 
 .nav_fixed {

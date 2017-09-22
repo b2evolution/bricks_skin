@@ -24,8 +24,10 @@ if( $Skin->get_setting( 'nav_bg_transparent' ) == 1 ) {
     $trans = 'class="nav_bgt"';
 }
 
+$affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-top="42.4"' : 'data-offset-top="1"';
+
 ?>
-<header id="nav" <?php echo $trans; ?> >
+<header id="nav" <?php echo $trans; ?> data-spy="affix"<?php echo $affix_positioning_fix; ?>>
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav_tabs" aria-expanded="false">

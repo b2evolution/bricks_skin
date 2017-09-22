@@ -1,24 +1,7 @@
-// WIDGET STYLE IMPORT
-// ======================================================================== /
-
-// --------- Universal item list widget & Recent posts widget ---------
-@import "../../rsc/less/_universal_item_list_widget.module.less";
-// --------------------------------------------------------------------
-
-// ------------------- Media Index widget --------------------
-@import "../../rsc/less/_coll_media_index_widget.module.less";
-// -----------------------------------------------------------
-
-// ----------- User Avatars (User List) widget ------------
-@import "../../rsc/less/_user_avatars_widget.module.less";
-// --------------------------------------------------------
-
-// ------------- Organization Members widget -------------
-@import "../../rsc/less/_org_members_widget.module.less";
-	// Override constants used in the module:
-	@widget_core_org_members-color: #333;
-	@widget_core_org_members-user-link-color: #000;
-	@widget_core_org_members-user-link-hover-color: #23527c;
+// Override constants used in the module:
+@widget_core_org_members-color: #333;
+@widget_core_org_members-user-link-color: #000;
+@widget_core_org_members-user-link-hover-color: #23527c;
 
 
 
@@ -115,6 +98,7 @@ div.evo_widget {
 		.jumbotron {
 			font-size: 1.8rem;
 			font-weight: 300;
+			border-radius: 0;
 
 			p {
 				font-size: 1.8rem;
