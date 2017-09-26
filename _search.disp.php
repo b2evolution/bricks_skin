@@ -49,10 +49,10 @@ if ( $Skin->get_setting( 'search_box' ) == 1 ) {
 
 // Perform search (after having displayed the first part of the page) & display results:
 search_result_block( array(
-	'title_suffix_post'     => T_('<span class="s_post">Post</span>'),
-	'title_suffix_comment'  => T_('<span class="s_comment">Comment</span>'),
-	'title_suffix_category' => T_('<span class="s_cat">Category</span>'),
-	'title_suffix_tag'      => T_('<span class="s_tag">Tag</span>'),
+	'title_suffix_post'     => '<span class="s_post">'. T_('Post') .'</span>',
+	'title_suffix_comment'  => '<span class="s_comment">'. T_('Comment') .'</span>',
+	'title_suffix_category' => '<span class="s_cat">'. T_('Category') .'</span>',
+	'title_suffix_tag'      => '<span class="s_tag">'. T_('Tag') .'</span>',
     'block_start'       	=> '<div class="evo_search_list">',
     'block_end'         	=> '</div>',
     'row_start'         	=> '<div class="evo_search_content">',

@@ -199,7 +199,7 @@ if( $Skin->is_visible_container( 'header' ) ) { // Display 'Header' widget conta
 						'login_text'         => '',
 						'lostpassword_text'  => '',
 						'account_activation' => '',
-						'msgform_text'       => T_('Messagesss'),
+						'msgform_text'       => T_('Messages'),
 						'user_text'          => '',
 						'users_text'         => '',
 					) );

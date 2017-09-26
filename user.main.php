@@ -90,7 +90,7 @@ skin_include( '_body_header.inc.php' );
 						'login_text'         => '',
 						'lostpassword_text'  => '',
 						'account_activation' => '',
-						'msgform_text'       => T_('Contact <span>Us</span>'),
+						'msgform_text'       => T_('Contact').' <span>'.T_('Us').'</span>',
 						'user_text'          => '',
 						'users_text'         => '',
 					) );
@@ -132,7 +132,7 @@ skin_include( '_body_header.inc.php' );
 						'search_submit_after'  	=> '</span></div>',
 
 						// Form "Sending a message"
-						'msgform_form_title' 	=> T_('Contact <span>Us</span>'),
+						'msgform_form_title' 	=> T_('Contact').' <span>'.T_('Us').'</span>',
 					) );
 					// Note: you can customize any of the sub templates included here by
 					// copying the matching php file into your skin directory.

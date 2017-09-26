@@ -76,7 +76,7 @@ skin_include( '_body_header.inc.php' );
 						'login_text'         => '',
 						'lostpassword_text'  => '',
 						'account_activation' => '',
-						'msgform_text'       => T_('Messagesss'),
+						'msgform_text'       => T_('Messages'),
 						'user_text'          => '',
 						'users_text'         => '',
 					) );

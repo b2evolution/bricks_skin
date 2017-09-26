@@ -23,6 +23,7 @@ $params = array_merge( array(
 	'item_type_class'            => 'evo_post__ptyp_',
 	'item_status_class'          => 'evo_post__',
 	'author_link_text'        	 => 'name', // avatar_name | avatar_login | only_avatar | name | login | nickname | firstname | lastname | fullname | preferredname
+	'item_style'                 => '',
 	// Controlling the title:
 	'disp_title'                 => true,
 	'item_title_line_before'     => '<div class="evo_post_title">',	// Note: we use an extra class because it facilitates styling
@@ -37,7 +38,7 @@ $params = array_merge( array(
 	'image_class'                => 'img-responsive',
 	'image_size'                 => 'fit-1280x720',
 
-	'excerpt_more_text'          => T_('Read More <span class="ei ei-arrow_right"></span>'),
+	'excerpt_more_text'          => T_('Read More').' <span class="ei ei-arrow_right"></span>',
 ), $params );
 
 /* LAYOUT POST AND SINGLE DISP
@@ -53,7 +54,8 @@ if ( $disp == 'single' || $disp == 'page' ) {
 } elseif( $disp == 'posts' && !$Item->is_intro() ) {
 	$content_class  = 'evo_post_lists picture-item filtr-item';
 	$layout 		= " $posts_column";
-} elseif(  $Item->is_intro() ) {
+}
+elseif(  $Item->is_intro() ) {
 	$content_class  = 'evo_intro_block';
 	$layout 		= ' one_columns';
 }
@@ -120,7 +122,8 @@ if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 }
 
 ?>
-<article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>">
+<article id="<?php $Item->anchor_id() ?>" class="<?php $Item->div_classes( $params ) ?>" lang="<?php $Item->lang() ?>"<?php
+	echo empty( $params['item_style'] ) ? '' : ' style="'.format_to_output( $params['item_style'], 'htmlattr' ).'"' ?>>
 	<?php
 		$Item->locale_temp_switch();
 
@@ -211,14 +214,14 @@ if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 
 			// Author
 			$Item->author( array(
-				'before'    => T_('<span class="divider">/</span>'),
+				'before'    => '<span class="divider">/</span>',
 				'after'     => '',
 				'link_text' => $params['author_link_text'],
 			) );
 
 			if ( $disp !== 'posts' ) {
 				$Item->categories( array(
-					'before'          => T_('<span class="divider">/</span>'),
+					'before'          => '<span class="divider">/</span>',
         			'after'           => '',
         			'include_main'    => true,
         			'include_other'   => true,
@@ -229,7 +232,7 @@ if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 
 			// Link for editing
 			$Item->edit_link( array(
-				'before'    => T_('<span class="divider">/</span>'),
+				'before'    => '<span class="divider">/</span>',
 				'after'     => '',
 			) );
 		echo '</div>';
@@ -279,7 +282,6 @@ if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 
 		<nav class="post_comments_link">
 		<?php
-			if ( ! $Item->is_intro() ) {
 				// Link to comments, trackbacks, etc.:
 				$Item->feedback_link( array(
 					'type' 			 => 'comments',
@@ -303,7 +305,6 @@ if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 					'link_text_more' => '<span class="ei ei-comment_alt"></span> %d',
 					'link_title' 	 => '#',
 				) );
-			}
 		?>
 		</nav>
 	</footer>
@@ -316,12 +317,12 @@ if( $disp == 'single' || !$Item->is_intro() || $disp == 'page' )
 		item_prevnext_links( array(
 			'block_start' => '<nav class="single_pager clearfix"><ul>',
 			'prev_start'  => '<li class="previous">',
-			'prev_text'   => T_('<i class="ei ei-arrow_carrot-left"></i> Prev'),
+			'prev_text'   => '<i class="ei ei-arrow_carrot-left"></i> '.T_('Prev'),
 			'prev_class'  => '',
 			'prev_end'    => '</li>',
 			'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Post').'</a></li>',
 			'next_start'  => '<li class="next">',
-			'next_text'   => T_('Next <i class="ei ei-arrow_carrot-right"></i>'),
+			'next_text'   => T_('Next').' <i class="ei ei-arrow_carrot-right"></i>',
 			'next_class'  => '',
 			'next_end'    => '</li>',
 			'block_end'   => '</ul></nav>',
