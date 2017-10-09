@@ -301,7 +301,7 @@ class bricks_Skin extends Skin
 			),
 				'nav_bg_transparent' => array(
 					'label'			=> T_( 'Transparent Background' ),
-					'note'			=> T_( 'Check to enable transparent menu background.') . ' ' . T_('It will work with').' <strong>'.T_('Main Header Style').'</strong>.',
+					'note'			=> T_( 'Check to enable transparent menu background.'),
 					'type'			=> 'checkbox',
 					'defaultvalue'	=> 0,
 				),
