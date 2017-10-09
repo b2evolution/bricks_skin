@@ -277,7 +277,7 @@ if( $disp == 'single'|| $disp == 'page' )
 	<?php if( $disp == 'posts' && ! $Item->is_intro() ) : ?>
 	<footer class="evo_post_footer_info">
 		<div class="evo_readmore_link">
-			<a href="<?php echo $Item->get_permanent_url(); ?>">Read More <span class="ei ei-arrow_right"></span></a>
+			<a href="<?php echo $Item->get_permanent_url(); ?>"><?php echo T_('Read More'); ?> <span class="ei ei-arrow_right"></span></a>
 		</div>
 
 		<nav class="post_comments_link">
@@ -320,7 +320,7 @@ if( $disp == 'single'|| $disp == 'page' )
 			'prev_text'   => '<i class="ei ei-arrow_carrot-left"></i> '.T_('Prev'),
 			'prev_class'  => '',
 			'prev_end'    => '</li>',
-			'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Post').'</a></li>',
+			'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Posts').'</a></li>',
 			'next_start'  => '<li class="next">',
 			'next_text'   => T_('Next').' <i class="ei ei-arrow_carrot-right"></i>',
 			'next_class'  => '',
