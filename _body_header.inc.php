@@ -51,30 +51,30 @@ $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-
                 <img src="<?php echo $skin_url.'logo_white.png'; ?>" />
             </a> -->
         </div>
-        <nav id="nav_tabs" class="nav_tabs collapse navbar-collapse">
-    		<ul class="main_nav">
-    		<?php
-    			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
-    			// Display container and contents:
-    			// Note: this container is designed to be a single <ul> list
-    			skin_container( NT_('Menu'), array(
-    					// The following params will be used as defaults for widgets included in this container:
+
+			<?php
+				// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
+				// Display container and contents:
+				// Note: this container is designed to be a single <ul> list
+				widget_container( 'menu', array(
+					// The following params will be used as defaults for widgets included in this container:
+					'container_display_if_empty' => false, // If no widget, don't display container at all
+					'container_start'     => '<nav id="nav_tabs" class="nav_tabs collapse navbar-collapse"><ul class="main_nav evo_container $wico_class$">',
+					'container_end'       => '</ul></nav>',
 					'block_start'         => '',
 					'block_end'           => '',
 					'block_display_title' => false,
 					'list_start'          => '',
 					'list_end'            => '',
-					'item_start'          => '<li class="$wi_class$">',
+					'item_start'          => '<li class="evo_widget $wi_class$">',
 					'item_end'            => '</li>',
-					'item_selected_start' => '<li class="active $wi_class$">',
+					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
 					'item_selected_end'   => '</li>',
 					'item_title_before'   => '',
 					'item_title_after'    => '',
 				) );
-    			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-    		?>
-    		</ul>
-        </nav>
+				// ----------------------------- END OF "Menu" CONTAINER -----------------------------
+			?>
 
         <?php if( $Skin->get_setting( 'nav_search_icon' ) == 1 ) : ?>
         <div class="search_icon">
@@ -105,8 +105,6 @@ $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-
 <header id="main_header">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
-                <div class="site_brand">
                 <?php
 
                     // if ( $preview )  {
@@ -120,8 +118,11 @@ $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-
                     // } else {
                         // ------------------------- "Header" CONTAINER EMBEDDED HERE --------------------------
                         // Display container and contents:
-                        skin_container( NT_('Header'), array(
+                        widget_container( 'header', array(
                             // The following params will be used as defaults for widgets included in this container:
+                            'container_display_if_empty' => false, // If no widget, don't display container at all
+                            'container_start'   => '<div class="col-xs-12 col-sm-12 '.$header_md.'"><div class="site_brand evo_container $wico_class$">',
+                            'container_end'     => '</div></div>',
                             'block_start'       => '<div class="evo_widget $wi_class$">',
                             'block_end'         => '</div>',
                             'block_title_start' => '<h1>',
@@ -130,8 +131,6 @@ $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-
                         // ----------------------------- END OF "Header" CONTAINER -----------------------------
                     // }
                 ?>
-                </div>
-            </div><!-- .col -->
 
             <?php if( $Skin->get_setting('header_breadcrumb') == 1 ) : ?>
             <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">

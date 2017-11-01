@@ -1876,7 +1876,7 @@ div.extended_search_form .search_options .search_option {
   display: inline-block;
   margin-right: 10px;
 }
-.disp_front #main_content .evo_container__front_page_primary .evo_widget {
+.disp_front #main_content .evo_container__front_page_main_area .evo_widget {
   margin-bottom: 30px;
 }
 @media screen and (max-width: 480px) {

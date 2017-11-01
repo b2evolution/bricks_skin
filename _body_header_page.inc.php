@@ -51,30 +51,29 @@ $affix_positioning_fix = $Settings->get( 'site_skins_enabled' ) ? ' data-offset-
                 <img src="<?php echo $skin_url.'logo_white.png'; ?>" />
             </a> -->
         </div>
-        <nav id="nav_tabs" class="nav_tabs collapse navbar-collapse">
-    		<ul class="main_nav">
-    		<?php
-    			// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
-    			// Display container and contents:
-    			// Note: this container is designed to be a single <ul> list
-    			skin_container( NT_('Menu'), array(
-    					// The following params will be used as defaults for widgets included in this container:
+			<?php
+				// ------------------------- "Menu" CONTAINER EMBEDDED HERE --------------------------
+				// Display container and contents:
+				// Note: this container is designed to be a single <ul> list
+				widget_container( 'menu', array(
+					// The following params will be used as defaults for widgets included in this container:
+					'container_display_if_empty' => false, // If no widget, don't display container at all
+					'container_start'     => '<nav id="nav_tabs" class="nav_tabs collapse navbar-collapse"><ul class="main_nav evo_container $wico_class$">',
+					'container_end'       => '</ul></nav>',
 					'block_start'         => '',
 					'block_end'           => '',
 					'block_display_title' => false,
 					'list_start'          => '',
 					'list_end'            => '',
-					'item_start'          => '<li class="$wi_class$">',
+					'item_start'          => '<li class="evo_widget $wi_class$">',
 					'item_end'            => '</li>',
-					'item_selected_start' => '<li class="active $wi_class$">',
+					'item_selected_start' => '<li class="active evo_widget $wi_class$">',
 					'item_selected_end'   => '</li>',
 					'item_title_before'   => '',
 					'item_title_after'    => '',
 				) );
-    			// ----------------------------- END OF "Menu" CONTAINER -----------------------------
-    		?>
-    		</ul>
-        </nav>
+				// ----------------------------- END OF "Menu" CONTAINER -----------------------------
+			?>
 
         <?php if( $Skin->get_setting( 'nav_search_icon' ) == 1 ) : ?>
         <div class="search_icon">

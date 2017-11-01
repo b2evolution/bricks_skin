@@ -27,12 +27,11 @@ $params = array_merge( array(
 ), $params );
 
 // ------------------ "Front Page Main Area" CONTAINER EMBEDDED HERE -------------------
-// Display container and contents:
-?>
-<div class="evo_container evo_container__front_page_primary">
-<?php
-skin_container( NT_('Front Page Main Area'), array(
+widget_container( 'front_page_main_area', array(
 	// The following params will be used as defaults for widgets included in this container:
+	'container_display_if_empty' => false, // If no widget, don't display container at all
+	'container_start'         => '<div evo_container $wico_class$">',
+	'container_end'           => '</div>',
 	'author_link_text'        => $params['author_link_text'],
 	'featured_intro_before'   => $params['featured_intro_before'],
 	'featured_intro_after'    => $params['featured_intro_after'],
@@ -52,4 +51,3 @@ skin_container( NT_('Front Page Main Area'), array(
 ) );
 // --------------------- END OF "Front Page Main Area" CONTAINER -----------------------
 ?>
-</div>
