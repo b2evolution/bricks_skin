@@ -4,17 +4,17 @@
 
 @affix-start-width: 1025px;
 #nav.affix {
-	
+
 	@media (min-width: @affix-start-width) {
 		position: fixed;
-		
+
 		// Prevent visual hickup upon fixed navigation activation
 		& + #main_header,
 		& + #main_header_page {
 			margin-top: 57px;
 		}
 	}
-	
+
 	transition: 0.1s ease-out;
 	width: 100%;
 	z-index: 9999;
@@ -562,7 +562,8 @@ body.anonymous #nav.affix { top: 0 }
 #main_header_page {
     position: relative;
     padding: 320px 0 80px;
-    background-image: url("assets/images/header/header-6.jpg");
+    // Style below will always display a background image even if header background image is removed:
+    // background-image: url("assets/images/header/header-6.jpg");
     background-size: cover;
     background-position: 50% 20%;
     z-index: 0;

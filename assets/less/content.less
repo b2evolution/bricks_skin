@@ -65,11 +65,20 @@
 		display: table-cell;
 		margin: 0;
 		padding: 20px 0 10px;
+
+		@media screen and ( max-width: @screen-xs ) {
+			display: block;
+		}
 	}
 	.btn-group {
 		display: table-cell;
 		padding: 20px 0 10px 30px;
 		vertical-align: middle;
+
+		@media screen and ( max-width: @screen-xs ) {
+			display: block;
+			padding-left: 0;
+		}
 	}
 }
 
@@ -153,8 +162,14 @@ div.bSideItem {
 // ======================================================================== /
 .evo_comment {
 	border-bottom: 1px solid @e;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 	margin-bottom: 30px;
+
+	&:after {
+		clear: both;
+		display: table;
+		content: " ";
+	}
 
 	a {
 		&:hover, &:active, &:focus {
@@ -190,9 +205,20 @@ div.bSideItem {
 			}
 		}
 
+		.bUser-member-tag {
+			margin-right: 5px;
+		}
+
 		.evo_status {
 			font-size: 1rem;
 			border-radius: 0;
+			margin-right: 5px;
+
+			@media screen and ( max-width: @screen-xs ) {
+				float: none !important;
+				display: inline-block;
+				margin-top: 5px;
+			}
 		}
 	}
 
@@ -220,7 +246,7 @@ div.bSideItem {
 			display: block;
 			float: none;
 			margin: 0 0 15px 0;
-			text-align: center;
+			//text-align: center;
 
 			img {
 				float: none;
@@ -269,11 +295,23 @@ div.bSideItem {
 		}
 	}
 
+	.evo_comment_footer {
+		&:after {
+			display: table;
+			content: " "
+		}
+	}
+
 	.evo_comment_footer,
 	.evo_comment_info {
 		margin-top: 15px;
+		margin-bottom: 15px;
 		font-size: 1.3rem;
 		text-transform: uppercase;
+
+		.action_btn_group {
+			float: right;
+		}
 
 		.permalink_right {
 			font-size: 0.9rem;
