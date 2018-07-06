@@ -349,7 +349,7 @@ class bricks_Skin extends Skin
 			'section_transparentnav_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
-			
+
 			'section_nav_end' => array(
 				'layout'	=> 'end_fieldset',
 			),
@@ -1166,12 +1166,12 @@ class bricks_Skin extends Skin
 			'disp_auto',               // Automatically include additional CSS and/or JS required by certain disps (replace with 'disp_off' to disable this)
 		) );
 
-		
+
 		// Include Font
 		// ======================================================================== /
 		add_headline('<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,700" rel="stylesheet">');
-		
-		
+
+
 		// INCLUDE THE SCRIPTS
 		require_js( 'assets/scripts/masonry.pkgd.min.js', 'relative' );
 
@@ -1430,13 +1430,13 @@ class bricks_Skin extends Skin
 			$custom_css .= '#nav.affix .nav_tabs ul li.active > a { color: '.$hover.'; border-color: '.$hover.' }';
 			}
 		}
-		
+
 
 		if ( $this->get_setting( 'nav_sticky' ) == 1 ) {
 			$custom_css .= "@media screen and ( min-width: 1025px ) { #nav.affix-top.nav_bgt { position:absolute !important; z-index:9999 } }";
 			$custom_css .= "@media screen and ( min-width: 1025px ) { #nav.affix.nav_bgt + #main_header { margin-top:0 !important } }\n";
 		}
-		
+
 
 
 		/* MAIN HEADER SETTINGS
