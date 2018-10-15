@@ -109,52 +109,122 @@ if( $Skin->get_setting( 'nav_sticky' ) == 1 )
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-sm-12 <?php echo $header_md; ?>">
-                <div class="single_title_post">
                 <?php
+                $before_title = '<div class="single_title_post">';
+                $after_title = '</div>';
+                if( $preview )
+                {
+                    echo $before_title.'<h1>Post Preview</h1>'.$after_title;
+                }
+                elseif( $disp == 'single' || $disp == 'page' )
+                {
+                    // ------------------------- "Item Single - Header" CONTAINER EMBEDDED HERE --------------------------
+                    // Display container contents:
+                    $link_all_blog = $Blog->get( 'recentpostsurl' );
+                    widget_container( 'item_single_header', array(
+                        'widget_context' => 'item',	// Signal that we are displaying within an Item
+                        // The following (optional) params will be used as defaults for widgets included in this container:
+                        'container_display_if_empty' => false, // If no widget, don't display container at all
+                        // This will enclose each widget in a block:
+                        'block_start' => '<div class="evo_widget $wi_class$">',
+                        'block_end'   => '</div>',
+                        // This will enclose the title of each widget:
+                        'block_title_start' => '<h3>',
+                        'block_title_end'   => '</h3>',
+                        'author_link_text' => 'name',
 
-                    if ( $preview )  {
-                        echo "<h1>Post Preview</h1>"; // Show title post on the preview
-                    } else if ( $disp == 'single' || $disp == 'page' ) {
-                        $Item->title( array(
-                            'before'    => '<h1>',
-                            'after'     => '</h1>',
-                            'link_type' => '#'
-                        ) );
-                    } else if( $disp == '404' ) {
-                        echo "<h1>404 Page</h1>";
-                    } else if ( $disp == 'posts' ) {
-                        echo "<h1>Posts Page</h1>";
-                    } else {
-                        request_title( array(
-                        	'title_before'       => '<h1>',
-                        	'title_after'        => '</h1>',
-                        	'title_none'         => '',
-                        	'glue'               => ' - ',
-                        	'title_single_disp'  => false,
-                        	'title_page_disp'    => false,
-                        	'format'             => 'htmlbody',
-                        	'display_edit_links' => false,
-                        	'category_text'      => '',
-                        	'categories_text'    => '',
-                        	'catdir_text'        => '',
-                        	'comments_text'      => T_('Latest Replies'),
-                        	'front_text'         => '',
-                        	'posts_text'         => '',
-                        	'useritems_text'     => T_('User\'s topics'),
-                        	'usercomments_text'  => T_('User\'s replies'),
-                        	'register_text'      => '',
-                        	'login_text'         => '',
-                        	'lostpassword_text'  => '',
-                        	'account_activation' => '',
-                        	'msgform_text'       => T_('Contact'),
-                            'thread_text'        => T_('Contact'),
-                        	'user_text'          => '',
-                        	'users_text'         => '',
-                        	'search_text'		 => T_( 'Search Results' ),
-                        ) );
-                    }
+                        // Controlling the title:
+                        'widget_item_title_display' => true,
+                        'widget_item_title_params'  => array(
+                                'before'            => '<div class="evo_post_title single_title_post"><h1>',
+                                'after'             => '</h1></div>',
+                                'link_type'         => '#',
+                                //'edit_link_display' => $Item->is_intro()
+                            ),
+                        // Item Previous Next widget
+                        'widget_item_next_previous_params' => array(
+                                'block_start' => '<nav class="single_pager clearfix"><ul>',
+                                'prev_start'  => '<li class="previous">',
+                                'prev_text'   => '<i class="ei ei-arrow_carrot-left"></i> '.T_('Prev'),
+                                'prev_class'  => '',
+                                'prev_end'    => '</li>',
+                                'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Posts').'</a></li>',
+                                'next_start'  => '<li class="next">',
+                                'next_text'   => T_('Next').' <i class="ei ei-arrow_carrot-right"></i>',
+                                'next_class'  => '',
+                                'next_end'    => '</li>',
+                                'block_end'   => '</ul></nav>',
+                            ),
+                        // Item Visibility Badge widge template
+                        'widget_item_visibility_badge_display'  => ( ! $Item->is_intro() && $Item->status != 'published' ),
+                        'widget_item_visibility_badge_template' => '<div class="evo_post_info pull-right"><div class="evo_status evo_status__$status$ badge" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div></div>',
+                        // Template params for "Item Info Line" widget:
+                        'widget_item_info_line_before' => '<div class="evo_post_info">',
+                        'widget_item_info_line_after'  => '</div>',
+                        'widget_item_info_line_params' => array(
+                                'before_flag'         => '',
+                                'after_flag'          => ' ',
+                                'before_permalink'    => '',
+                                'after_permalink'     => ' ',
+                                'before_author'       => '<span class="divider">/</span>',
+                                'after_author'        => '',
+                                'before_post_time'    => '',
+                                'after_post_time'     => '',
+                                'before_categories'   => '<span class="divider">/</span>',
+                                'after_categories'    => '',
+                                'before_last_touched' => '<span class="divider">/</span>'.T_('Last touched').': ',
+                                'after_last_touched'  => '',
+                                'before_last_updated' => '<span class="divider">/</span>'.T_('Contents updated').': ',
+                                'after_last_updated'  => '',
+                                'before_edit_link'    => '<span class="divider">/</span>',
+                                'after_edit_link'     => '',
+                                'format'              => '$flag$$permalink$$post_time$$author$$categories$$edit_link$',
+                            ),
+
+                    ) );
+                    // ----------------------------- END OF "Item Single - Header" CONTAINER -----------------------------
+                }
+                elseif( $disp == '404' )
+                {
+                    echo $before_title."<h1>404 Page</h1>".$after_title;
+                }
+                elseif( $disp == 'posts' )
+                {
+                    echo $before_title."<h1>Posts Page</h1>".$after_title;
+                }
+                else
+                {
+                    echo $before_title;
+                    request_title( array(
+                        'title_before'       => '<h1>',
+                        'title_after'        => '</h1>',
+                        'title_none'         => '',
+                        'glue'               => ' - ',
+                        'title_single_disp'  => false,
+                        'title_page_disp'    => false,
+                        'format'             => 'htmlbody',
+                        'display_edit_links' => false,
+                        'category_text'      => '',
+                        'categories_text'    => '',
+                        'catdir_text'        => '',
+                        'comments_text'      => T_('Latest Replies'),
+                        'front_text'         => '',
+                        'posts_text'         => '',
+                        'useritems_text'     => T_('User\'s topics'),
+                        'usercomments_text'  => T_('User\'s replies'),
+                        'register_text'      => '',
+                        'login_text'         => '',
+                        'lostpassword_text'  => '',
+                        'account_activation' => '',
+                        'msgform_text'       => T_('Contact'),
+                        'thread_text'        => T_('Contact'),
+                        'user_text'          => '',
+                        'users_text'         => '',
+                        'search_text'		 => T_( 'Search Results' ),
+                    ) );
+                    echo $after_title;
+                }
                 ?>
-                </div>
             </div><!-- .col -->
 
             <?php if( $Skin->get_setting('header_breadcrumb') == 1 ) : ?>

@@ -721,6 +721,55 @@ body.anonymous #nav.affix { top: 0 }
         display: none;
     }
 
+    .widget_core_item_next_previous {
+        .single_pager {
+            margin: 30px 0;
+            padding: 15px 0 12px;
+            border-top: 1px solid @e;
+            border-bottom: 1px solid @e;
+
+            ul {
+                    list-style-type: none;
+                    margin: 0;
+                    bottom: 0;
+                    text-align: center;
+
+                li{
+                    display: inline;
+                    margin: 0;
+                    padding: 0;
+
+                    &.previous{
+                        a {
+                            float: left;
+                        }
+                    }
+
+                    &.next {
+                        a {
+                            float: right;
+                        }
+                    }
+                }
+
+                a {
+                    display: inline-block;
+                    font-size: 1.2rem;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    vertical-align: middle;
+
+                    .ei {
+                        font-size: 2.4rem;
+                        vertical-align: middle;
+                        margin-bottom: 3px;
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+    }
+
     .single_title_post {
         h1 {
             margin-top: 16px;
