@@ -118,71 +118,11 @@ if( $Skin->get_setting( 'nav_sticky' ) == 1 )
                 }
                 elseif( $disp == 'single' || $disp == 'page' )
                 {
-                    // ------------------------- "Item Single - Header" CONTAINER EMBEDDED HERE --------------------------
-                    // Display container contents:
-                    $link_all_blog = $Blog->get( 'recentpostsurl' );
-                    widget_container( 'item_single_header', array(
-                        'widget_context' => 'item',	// Signal that we are displaying within an Item
-                        // The following (optional) params will be used as defaults for widgets included in this container:
-                        'container_display_if_empty' => false, // If no widget, don't display container at all
-                        // This will enclose each widget in a block:
-                        'block_start' => '<div class="evo_widget $wi_class$">',
-                        'block_end'   => '</div>',
-                        // This will enclose the title of each widget:
-                        'block_title_start' => '<h3>',
-                        'block_title_end'   => '</h3>',
-                        'author_link_text' => 'name',
-
-                        // Controlling the title:
-                        'widget_item_title_display' => true,
-                        'widget_item_title_params'  => array(
-                                'before'            => '<div class="evo_post_title single_title_post"><h1>',
-                                'after'             => '</h1></div>',
-                                'link_type'         => '#',
-                                //'edit_link_display' => $Item->is_intro()
-                            ),
-                        // Item Previous Next widget
-                        'widget_item_next_previous_params' => array(
-                                'block_start' => '<nav class="single_pager clearfix"><ul>',
-                                'prev_start'  => '<li class="previous">',
-                                'prev_text'   => '<i class="ei ei-arrow_carrot-left"></i> '.T_('Prev'),
-                                'prev_class'  => '',
-                                'prev_end'    => '</li>',
-                                'separator'   => '<li><a href="'.$link_all_blog.'">'.T_('All Posts').'</a></li>',
-                                'next_start'  => '<li class="next">',
-                                'next_text'   => T_('Next').' <i class="ei ei-arrow_carrot-right"></i>',
-                                'next_class'  => '',
-                                'next_end'    => '</li>',
-                                'block_end'   => '</ul></nav>',
-                            ),
-                        // Item Visibility Badge widge template
-                        'widget_item_visibility_badge_display'  => ( ! $Item->is_intro() && $Item->status != 'published' ),
-                        'widget_item_visibility_badge_template' => '<div class="evo_post_info pull-right"><div class="evo_status evo_status__$status$ badge" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div></div>',
-                        // Template params for "Item Info Line" widget:
-                        'widget_item_info_line_before' => '<div class="evo_post_info">',
-                        'widget_item_info_line_after'  => '</div>',
-                        'widget_item_info_line_params' => array(
-                                'before_flag'         => '',
-                                'after_flag'          => ' ',
-                                'before_permalink'    => '',
-                                'after_permalink'     => ' ',
-                                'before_author'       => '<span class="divider">/</span>',
-                                'after_author'        => '',
-                                'before_post_time'    => '',
-                                'after_post_time'     => '',
-                                'before_categories'   => '<span class="divider">/</span>',
-                                'after_categories'    => '',
-                                'before_last_touched' => '<span class="divider">/</span>'.T_('Last touched').': ',
-                                'after_last_touched'  => '',
-                                'before_last_updated' => '<span class="divider">/</span>'.T_('Contents updated').': ',
-                                'after_last_updated'  => '',
-                                'before_edit_link'    => '<span class="divider">/</span>',
-                                'after_edit_link'     => '',
-                                'format'              => '$flag$$permalink$$post_time$$author$$categories$$edit_link$',
-                            ),
-
+                    $Item->title( array(
+                        'before'    => '<h1>',
+                        'after'     => '</h1>',
+                        'link_type' => '#'
                     ) );
-                    // ----------------------------- END OF "Item Single - Header" CONTAINER -----------------------------
                 }
                 elseif( $disp == '404' )
                 {

@@ -3639,6 +3639,21 @@ div.extended_search_form .search_options .search_option {
   font-size: 1rem;
   border-radius: 0;
 }
+.disp_posts #grid_posts .evo_post_article .widget_core_item_info_line,
+.disp_posts #grid_posts .evo_post_article .widget_core_item_visibility_badge {
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+.disp_posts #grid_posts .evo_post_article .widget_core_item_info_line .identity_link_username,
+.disp_posts #grid_posts .evo_post_article .widget_core_item_visibility_badge .identity_link_username {
+  font-weight: 400;
+}
+.disp_posts #grid_posts .evo_post_article .widget_core_item_info_line .evo_status,
+.disp_posts #grid_posts .evo_post_article .widget_core_item_visibility_badge .evo_status {
+  font-size: 1rem;
+  border-radius: 0;
+}
 .disp_posts #grid_posts .evo_post_article .evo_post__excerpt,
 .disp_posts #grid_posts .evo_post_article .evo_post__full_text {
   position: relative;
