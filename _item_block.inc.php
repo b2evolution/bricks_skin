@@ -209,8 +209,10 @@ if( $disp == 'single' || $disp == 'page' )
 						'after'  => $title_after.'</div>',
 					),
 				// Template params for "Item Visibility Badge" widget:
-				'widget_item_visibility_badge_display'  => ( ! $Item->is_intro() && $Item->status != 'published' ),
-				'widget_item_visibility_badge_template' => '<div class="evo_status evo_status__$status$ badge pull-right" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div>',
+				'widget_item_visibility_badge_display' => ( ! $Item->is_intro() && $Item->status != 'published' ),
+				'widget_item_visibility_badge_params'  => array(
+						'template' => '<div class="evo_status evo_status__$status$ badge pull-right" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div>',
+					),
 				// Template params for "Item Info Line" widget:
 				'widget_item_info_line_before' => '<div class="evo_post_info">',
 				'widget_item_info_line_after'  => '</div>',
@@ -274,8 +276,10 @@ if( $disp == 'single' || $disp == 'page' )
 							'block_end'   => '</ul></nav>',
 						),
 					// Template params for "Item Visibility Badge" widget:
-					'widget_item_visibility_badge_display'  => ( ! $Item->is_intro() && $Item->status != 'published' ),
-					'widget_item_visibility_badge_template' => '<div class="evo_post_info pull-right"><div class="evo_status evo_status__$status$ badge" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div></div>',
+					'widget_item_visibility_badge_display' => ( ! $Item->is_intro() && $Item->status != 'published' ),
+					'widget_item_visibility_badge_params'  => array(
+							'template' => '<div class="evo_post_info pull-right"><div class="evo_status evo_status__$status$ badge" data-toggle="tooltip" data-placement="top" title="$tooltip_title$">$status_title$</div></div>',
+						),
 					// Template params for "Item Info Line" widget:
 					'widget_item_info_line_before' => '<div class="evo_post_info">',
 					'widget_item_info_line_after'  => '</div>',
